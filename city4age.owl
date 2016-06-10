@@ -1,0 +1,925 @@
+<?xml version="1.0"?>
+<rdf:RDF
+    xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+    xmlns="http://www.owl-ontologies.com/city4age.owl#"
+    xmlns:protege="http://protege.stanford.edu/plugins/owl/protege#"
+    xmlns:xsp="http://www.owl-ontologies.com/2005/08/07/xsp.owl#"
+    xmlns:owl="http://www.w3.org/2002/07/owl#"
+    xmlns:xsd="http://www.w3.org/2001/XMLSchema#"
+    xmlns:swrl="http://www.w3.org/2003/11/swrl#"
+    xmlns:swrlb="http://www.w3.org/2003/11/swrlb#"
+    xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
+  xml:base="http://www.owl-ontologies.com/city4age.owl">
+  <owl:Ontology rdf:about=""/>
+  <owl:Class rdf:ID="Street">
+    <rdfs:subClassOf>
+      <owl:Class rdf:ID="City"/>
+    </rdfs:subClassOf>
+  </owl:Class>
+  <owl:Class rdf:ID="Toilet">
+    <rdfs:subClassOf>
+      <owl:Class rdf:ID="Room"/>
+    </rdfs:subClassOf>
+  </owl:Class>
+  <owl:Class rdf:ID="CognitiveIntervention">
+    <rdfs:subClassOf>
+      <owl:Class rdf:ID="InterventionBehaviour"/>
+    </rdfs:subClassOf>
+  </owl:Class>
+  <owl:Class rdf:ID="Sensor">
+    <rdfs:subClassOf>
+      <owl:Class rdf:ID="Object"/>
+    </rdfs:subClassOf>
+  </owl:Class>
+  <owl:Class rdf:ID="Fourniture">
+    <rdfs:subClassOf>
+      <owl:Class rdf:about="#Object"/>
+    </rdfs:subClassOf>
+  </owl:Class>
+  <owl:Class rdf:ID="NonPhysical">
+    <rdfs:subClassOf>
+      <owl:Class rdf:ID="Being"/>
+    </rdfs:subClassOf>
+  </owl:Class>
+  <owl:Class rdf:ID="Building">
+    <rdfs:subClassOf>
+      <owl:Class rdf:about="#City"/>
+    </rdfs:subClassOf>
+  </owl:Class>
+  <owl:Class rdf:ID="Window">
+    <rdfs:subClassOf rdf:resource="#Fourniture"/>
+  </owl:Class>
+  <owl:Class rdf:about="#InterventionBehaviour">
+    <rdfs:subClassOf>
+      <owl:Class rdf:ID="Virtual"/>
+    </rdfs:subClassOf>
+  </owl:Class>
+  <owl:Class rdf:ID="Indicator">
+    <rdfs:subClassOf>
+      <owl:Class rdf:about="#Virtual"/>
+    </rdfs:subClassOf>
+  </owl:Class>
+  <owl:Class rdf:ID="ADLChangeingBehaviour">
+    <rdfs:subClassOf>
+      <owl:Class rdf:ID="ChangeingBehaviour"/>
+    </rdfs:subClassOf>
+  </owl:Class>
+  <owl:Class rdf:ID="HealthProfile">
+    <rdfs:subClassOf>
+      <owl:Class rdf:ID="Profile"/>
+    </rdfs:subClassOf>
+  </owl:Class>
+  <owl:Class rdf:ID="House">
+    <rdfs:subClassOf>
+      <owl:Class rdf:ID="Tangible"/>
+    </rdfs:subClassOf>
+  </owl:Class>
+  <owl:Class rdf:about="#City">
+    <rdfs:subClassOf>
+      <owl:Class rdf:about="#Tangible"/>
+    </rdfs:subClassOf>
+  </owl:Class>
+  <owl:Class rdf:ID="Person">
+    <rdfs:subClassOf>
+      <owl:Class rdf:ID="Physical"/>
+    </rdfs:subClassOf>
+  </owl:Class>
+  <owl:Class rdf:ID="Device">
+    <rdfs:subClassOf>
+      <owl:Class rdf:about="#Object"/>
+    </rdfs:subClassOf>
+  </owl:Class>
+  <owl:Class rdf:ID="PhysicalCapability">
+    <rdfs:subClassOf>
+      <owl:Class rdf:ID="OrganicProfile"/>
+    </rdfs:subClassOf>
+  </owl:Class>
+  <owl:Class rdf:about="#OrganicProfile">
+    <rdfs:subClassOf>
+      <owl:Class rdf:about="#Profile"/>
+    </rdfs:subClassOf>
+  </owl:Class>
+  <owl:Class rdf:ID="Transport">
+    <rdfs:subClassOf rdf:resource="#City"/>
+  </owl:Class>
+  <owl:Class rdf:ID="PreferenceTopic">
+    <rdfs:subClassOf>
+      <owl:Class rdf:ID="Preference"/>
+    </rdfs:subClassOf>
+  </owl:Class>
+  <owl:Class rdf:ID="NonVirtual">
+    <rdfs:subClassOf>
+      <owl:Class rdf:ID="Dynamic"/>
+    </rdfs:subClassOf>
+  </owl:Class>
+  <owl:Class rdf:ID="Habit">
+    <rdfs:subClassOf>
+      <owl:Class rdf:ID="PersonalProfile"/>
+    </rdfs:subClassOf>
+  </owl:Class>
+  <owl:Class rdf:ID="MaritalState">
+    <rdfs:subClassOf>
+      <owl:Class rdf:about="#PersonalProfile"/>
+    </rdfs:subClassOf>
+  </owl:Class>
+  <owl:Class rdf:ID="Employment">
+    <rdfs:subClassOf>
+      <owl:Class rdf:about="#PersonalProfile"/>
+    </rdfs:subClassOf>
+  </owl:Class>
+  <owl:Class rdf:ID="Hospitalization">
+    <rdfs:subClassOf rdf:resource="#HealthProfile"/>
+  </owl:Class>
+  <owl:Class rdf:ID="SensorType">
+    <rdfs:subClassOf>
+      <owl:Class rdf:about="#Virtual"/>
+    </rdfs:subClassOf>
+  </owl:Class>
+  <owl:Class rdf:ID="Surgery">
+    <rdfs:subClassOf rdf:resource="#HealthProfile"/>
+  </owl:Class>
+  <owl:Class rdf:about="#PersonalProfile">
+    <rdfs:subClassOf>
+      <owl:Class rdf:about="#Profile"/>
+    </rdfs:subClassOf>
+  </owl:Class>
+  <owl:Class rdf:ID="Activity">
+    <rdfs:subClassOf rdf:resource="#NonVirtual"/>
+  </owl:Class>
+  <owl:Class rdf:ID="MobilityChangeingBehaviour">
+    <rdfs:subClassOf>
+      <owl:Class rdf:about="#ChangeingBehaviour"/>
+    </rdfs:subClassOf>
+  </owl:Class>
+  <owl:Class rdf:about="#Object">
+    <rdfs:subClassOf>
+      <owl:Class rdf:about="#Tangible"/>
+    </rdfs:subClassOf>
+  </owl:Class>
+  <owl:Class rdf:ID="Fall">
+    <rdfs:subClassOf rdf:resource="#HealthProfile"/>
+  </owl:Class>
+  <owl:Class rdf:ID="Communication">
+    <rdfs:subClassOf rdf:resource="#PersonalProfile"/>
+  </owl:Class>
+  <owl:Class rdf:ID="MCIIndicator">
+    <rdfs:subClassOf rdf:resource="#Indicator"/>
+  </owl:Class>
+  <owl:Class rdf:ID="Disease">
+    <rdfs:subClassOf rdf:resource="#HealthProfile"/>
+  </owl:Class>
+  <owl:Class rdf:ID="Level">
+    <rdfs:subClassOf>
+      <owl:Class rdf:about="#Virtual"/>
+    </rdfs:subClassOf>
+  </owl:Class>
+  <owl:Class rdf:about="#Tangible">
+    <rdfs:subClassOf>
+      <owl:Class rdf:ID="Environment"/>
+    </rdfs:subClassOf>
+  </owl:Class>
+  <owl:Class rdf:ID="MobilityIntervention">
+    <rdfs:subClassOf rdf:resource="#InterventionBehaviour"/>
+  </owl:Class>
+  <owl:Class rdf:ID="CognitiveChangeingBehaviour">
+    <rdfs:subClassOf>
+      <owl:Class rdf:about="#ChangeingBehaviour"/>
+    </rdfs:subClassOf>
+  </owl:Class>
+  <owl:Class rdf:ID="Language">
+    <rdfs:subClassOf rdf:resource="#Communication"/>
+  </owl:Class>
+  <owl:Class rdf:about="#Virtual">
+    <rdfs:subClassOf rdf:resource="#Dynamic"/>
+  </owl:Class>
+  <owl:Class rdf:about="#Room">
+    <rdfs:subClassOf rdf:resource="#House"/>
+  </owl:Class>
+  <owl:Class rdf:ID="Bed">
+    <rdfs:subClassOf rdf:resource="#Fourniture"/>
+  </owl:Class>
+  <owl:Class rdf:ID="SocialState">
+    <rdfs:subClassOf rdf:resource="#PersonalProfile"/>
+  </owl:Class>
+  <owl:Class rdf:ID="Door">
+    <rdfs:subClassOf rdf:resource="#Fourniture"/>
+  </owl:Class>
+  <owl:Class rdf:ID="Bedroom">
+    <rdfs:subClassOf rdf:resource="#Room"/>
+  </owl:Class>
+  <owl:Class rdf:ID="Service">
+    <rdfs:subClassOf rdf:resource="#Virtual"/>
+  </owl:Class>
+  <owl:Class rdf:about="#Profile">
+    <rdfs:subClassOf rdf:resource="#NonPhysical"/>
+  </owl:Class>
+  <owl:Class rdf:ID="SensorialCapability">
+    <rdfs:subClassOf rdf:resource="#OrganicProfile"/>
+  </owl:Class>
+  <owl:Class rdf:ID="SocialIntervention">
+    <rdfs:subClassOf rdf:resource="#InterventionBehaviour"/>
+  </owl:Class>
+  <owl:Class rdf:ID="Behaviour">
+    <rdfs:subClassOf rdf:resource="#Virtual"/>
+  </owl:Class>
+  <owl:Class rdf:ID="Desk">
+    <rdfs:subClassOf rdf:resource="#Fourniture"/>
+  </owl:Class>
+  <owl:Class rdf:ID="Chair">
+    <rdfs:subClassOf rdf:resource="#Fourniture"/>
+  </owl:Class>
+  <owl:Class rdf:ID="Gender">
+    <rdfs:subClassOf rdf:resource="#PersonalProfile"/>
+  </owl:Class>
+  <owl:Class rdf:ID="Park">
+    <rdfs:subClassOf rdf:resource="#City"/>
+  </owl:Class>
+  <owl:Class rdf:ID="SensorState">
+    <rdfs:subClassOf rdf:resource="#Virtual"/>
+  </owl:Class>
+  <owl:Class rdf:about="#Physical">
+    <rdfs:subClassOf rdf:resource="#Being"/>
+  </owl:Class>
+  <owl:Class rdf:about="#ChangeingBehaviour">
+    <rdfs:subClassOf rdf:resource="#Behaviour"/>
+  </owl:Class>
+  <owl:Class rdf:ID="NormalBehaviour">
+    <rdfs:subClassOf rdf:resource="#Behaviour"/>
+  </owl:Class>
+  <owl:Class rdf:ID="SocialChangeingBehaviour">
+    <rdfs:subClassOf rdf:resource="#ChangeingBehaviour"/>
+  </owl:Class>
+  <owl:Class rdf:ID="Cultural">
+    <rdfs:subClassOf rdf:resource="#PreferenceTopic"/>
+  </owl:Class>
+  <owl:Class rdf:ID="ADLIntervention">
+    <rdfs:subClassOf rdf:resource="#InterventionBehaviour"/>
+  </owl:Class>
+  <owl:Class rdf:about="#Preference">
+    <rdfs:subClassOf rdf:resource="#PersonalProfile"/>
+  </owl:Class>
+  <owl:Class rdf:ID="Kitchen">
+    <rdfs:subClassOf rdf:resource="#Room"/>
+  </owl:Class>
+  <owl:Class rdf:ID="Intangible">
+    <rdfs:subClassOf rdf:resource="#Environment"/>
+  </owl:Class>
+  <owl:Class rdf:ID="Bathroom">
+    <rdfs:subClassOf rdf:resource="#Room"/>
+  </owl:Class>
+  <owl:Class rdf:ID="EducationLevel">
+    <rdfs:subClassOf rdf:resource="#PersonalProfile"/>
+  </owl:Class>
+  <owl:Class rdf:ID="Livingroom">
+    <rdfs:subClassOf rdf:resource="#Room"/>
+  </owl:Class>
+  <owl:ObjectProperty rdf:ID="cameFrom">
+    <rdfs:range>
+      <owl:Class>
+        <owl:unionOf rdf:parseType="Collection">
+          <owl:Class rdf:about="#City"/>
+          <owl:Class rdf:about="#House"/>
+        </owl:unionOf>
+      </owl:Class>
+    </rdfs:range>
+    <rdfs:domain rdf:resource="#Person"/>
+  </owl:ObjectProperty>
+  <owl:ObjectProperty rdf:ID="hasSurgery">
+    <rdfs:domain rdf:resource="#Person"/>
+    <rdfs:range rdf:resource="#Surgery"/>
+  </owl:ObjectProperty>
+  <owl:ObjectProperty rdf:ID="hasDiseaseLevel">
+    <rdfs:range rdf:resource="#Level"/>
+    <rdfs:domain rdf:resource="#Disease"/>
+  </owl:ObjectProperty>
+  <owl:ObjectProperty rdf:ID="hasPreferedLanguage">
+    <rdfs:domain rdf:resource="#Person"/>
+    <rdfs:range rdf:resource="#Language"/>
+  </owl:ObjectProperty>
+  <owl:ObjectProperty rdf:ID="hasHabit">
+    <rdfs:range rdf:resource="#Habit"/>
+    <rdfs:domain rdf:resource="#Person"/>
+  </owl:ObjectProperty>
+  <owl:ObjectProperty rdf:ID="DoesActivity">
+    <rdfs:range rdf:resource="#Activity"/>
+    <rdfs:domain rdf:resource="#Person"/>
+  </owl:ObjectProperty>
+  <owl:ObjectProperty rdf:ID="hasMaritalStatus">
+    <rdfs:domain rdf:resource="#Person"/>
+    <rdfs:range rdf:resource="#MaritalState"/>
+  </owl:ObjectProperty>
+  <owl:ObjectProperty rdf:ID="liveIn">
+    <rdfs:range rdf:resource="#House"/>
+    <rdfs:domain rdf:resource="#Person"/>
+  </owl:ObjectProperty>
+  <owl:ObjectProperty rdf:ID="hasEmployment">
+    <rdfs:range rdf:resource="#Employment"/>
+    <rdfs:domain rdf:resource="#Person"/>
+  </owl:ObjectProperty>
+  <owl:ObjectProperty rdf:ID="partOfCity">
+    <rdfs:range rdf:resource="#City"/>
+    <rdfs:domain>
+      <owl:Class>
+        <owl:unionOf rdf:parseType="Collection">
+          <owl:Class rdf:about="#Park"/>
+          <owl:Class rdf:about="#Building"/>
+          <owl:Class rdf:about="#Street"/>
+          <owl:Class rdf:about="#Transport"/>
+        </owl:unionOf>
+      </owl:Class>
+    </rdfs:domain>
+  </owl:ObjectProperty>
+  <owl:ObjectProperty rdf:ID="hasFriend">
+    <rdfs:range rdf:resource="#Person"/>
+    <rdfs:domain rdf:resource="#Person"/>
+  </owl:ObjectProperty>
+  <owl:ObjectProperty rdf:ID="hasPreference">
+    <rdfs:domain rdf:resource="#Person"/>
+    <rdfs:range rdf:resource="#Preference"/>
+  </owl:ObjectProperty>
+  <owl:ObjectProperty rdf:ID="hasPreferenceTopic">
+    <rdfs:domain rdf:resource="#Preference"/>
+    <rdfs:range rdf:resource="#PreferenceTopic"/>
+  </owl:ObjectProperty>
+  <owl:ObjectProperty rdf:ID="hasProfile">
+    <rdfs:range rdf:resource="#Profile"/>
+    <rdfs:domain rdf:resource="#Person"/>
+  </owl:ObjectProperty>
+  <owl:ObjectProperty rdf:ID="hasSensorialCapabilityLevel">
+    <rdfs:domain rdf:resource="#Person"/>
+    <rdfs:range rdf:resource="#Level"/>
+  </owl:ObjectProperty>
+  <owl:ObjectProperty rdf:ID="relatedToPreference">
+    <rdfs:domain rdf:resource="#InterventionBehaviour"/>
+    <rdfs:range rdf:resource="#PreferenceTopic"/>
+  </owl:ObjectProperty>
+  <owl:ObjectProperty rdf:ID="isProvidedOn">
+    <rdfs:range rdf:resource="#Device"/>
+    <rdfs:domain rdf:resource="#Service"/>
+  </owl:ObjectProperty>
+  <owl:ObjectProperty rdf:ID="hasFall">
+    <rdfs:domain rdf:resource="#Person"/>
+    <rdfs:range rdf:resource="#Fall"/>
+  </owl:ObjectProperty>
+  <owl:ObjectProperty rdf:ID="detectedIn">
+    <rdfs:range>
+      <owl:Class>
+        <owl:unionOf rdf:parseType="Collection">
+          <owl:Class rdf:about="#City"/>
+          <owl:Class rdf:about="#House"/>
+        </owl:unionOf>
+      </owl:Class>
+    </rdfs:range>
+    <rdfs:domain rdf:resource="#Person"/>
+  </owl:ObjectProperty>
+  <owl:ObjectProperty rdf:ID="hasMCIIndicator">
+    <rdfs:range rdf:resource="#MCIIndicator"/>
+    <rdfs:domain rdf:resource="#Person"/>
+  </owl:ObjectProperty>
+  <owl:ObjectProperty rdf:ID="hasCommunicationLanguage">
+    <rdfs:domain rdf:resource="#Person"/>
+    <rdfs:range rdf:resource="#Language"/>
+  </owl:ObjectProperty>
+  <owl:ObjectProperty rdf:ID="partOfHouse">
+    <rdfs:range rdf:resource="#House"/>
+    <rdfs:domain rdf:resource="#Room"/>
+  </owl:ObjectProperty>
+  <owl:ObjectProperty rdf:ID="isIndicatorOf">
+    <rdfs:domain rdf:resource="#ChangeingBehaviour"/>
+    <rdfs:range rdf:resource="#MCIIndicator"/>
+  </owl:ObjectProperty>
+  <owl:ObjectProperty rdf:ID="relatedToHabit">
+    <rdfs:range rdf:resource="#Habit"/>
+    <rdfs:domain rdf:resource="#InterventionBehaviour"/>
+  </owl:ObjectProperty>
+  <owl:ObjectProperty rdf:ID="requireIntervention">
+    <rdfs:domain rdf:resource="#MCIIndicator"/>
+    <rdfs:range rdf:resource="#InterventionBehaviour"/>
+  </owl:ObjectProperty>
+  <owl:ObjectProperty rdf:ID="locatedIn">
+    <rdfs:range>
+      <owl:Class>
+        <owl:unionOf rdf:parseType="Collection">
+          <owl:Class rdf:about="#House"/>
+          <owl:Class rdf:about="#City"/>
+        </owl:unionOf>
+      </owl:Class>
+    </rdfs:range>
+    <rdfs:domain rdf:resource="#Object"/>
+  </owl:ObjectProperty>
+  <owl:ObjectProperty rdf:ID="hasRelatedActivity">
+    <rdfs:range rdf:resource="#Activity"/>
+    <rdfs:domain rdf:resource="#Habit"/>
+  </owl:ObjectProperty>
+  <owl:ObjectProperty rdf:ID="hasFamilyMember">
+    <rdfs:range rdf:resource="#Person"/>
+    <rdfs:domain rdf:resource="#Person"/>
+  </owl:ObjectProperty>
+  <owl:ObjectProperty rdf:ID="hasBehaviourChange">
+    <rdfs:domain rdf:resource="#Person"/>
+    <rdfs:range>
+      <owl:Class>
+        <owl:unionOf rdf:parseType="Collection">
+          <owl:Class rdf:about="#ChangeingBehaviour"/>
+          <owl:Class rdf:about="#NormalBehaviour"/>
+        </owl:unionOf>
+      </owl:Class>
+    </rdfs:range>
+  </owl:ObjectProperty>
+  <owl:ObjectProperty rdf:ID="hasPhyiscalCapabilityLevel">
+    <rdfs:domain rdf:resource="#PhysicalCapability"/>
+    <rdfs:range rdf:resource="#Level"/>
+  </owl:ObjectProperty>
+  <owl:ObjectProperty rdf:ID="hasBeenHospitalized">
+    <rdfs:domain rdf:resource="#Person"/>
+    <rdfs:range rdf:resource="#Hospitalization"/>
+  </owl:ObjectProperty>
+  <owl:ObjectProperty rdf:ID="attachedTo">
+    <rdfs:domain rdf:resource="#Sensor"/>
+    <rdfs:range rdf:resource="#Object"/>
+  </owl:ObjectProperty>
+  <owl:ObjectProperty rdf:ID="hasPhysicalCapability">
+    <rdfs:domain rdf:resource="#Person"/>
+    <rdfs:range rdf:resource="#PhysicalCapability"/>
+  </owl:ObjectProperty>
+  <owl:ObjectProperty rdf:ID="hasCaregiver">
+    <rdfs:domain rdf:resource="#Person"/>
+    <rdfs:range rdf:resource="#Person"/>
+  </owl:ObjectProperty>
+  <owl:ObjectProperty rdf:ID="hasPossibleState">
+    <rdfs:domain rdf:resource="#Sensor"/>
+    <rdfs:range rdf:resource="#SensorState"/>
+  </owl:ObjectProperty>
+  <owl:ObjectProperty rdf:ID="hasPreferenceLevel">
+    <rdfs:range rdf:resource="#Level"/>
+    <rdfs:domain rdf:resource="#Preference"/>
+  </owl:ObjectProperty>
+  <owl:ObjectProperty rdf:ID="hasType">
+    <rdfs:range rdf:resource="#SensorType"/>
+    <rdfs:domain rdf:resource="#Sensor"/>
+  </owl:ObjectProperty>
+  <owl:ObjectProperty rdf:ID="preferInteractionWith">
+    <rdfs:domain rdf:resource="#Person"/>
+    <rdfs:range rdf:resource="#Device"/>
+  </owl:ObjectProperty>
+  <owl:ObjectProperty rdf:ID="hasDisease">
+    <rdfs:domain rdf:resource="#Person"/>
+    <rdfs:range rdf:resource="#Disease"/>
+  </owl:ObjectProperty>
+  <owl:ObjectProperty rdf:ID="hasCurrentState">
+    <rdfs:domain rdf:resource="#Sensor"/>
+    <rdfs:range rdf:resource="#SensorState"/>
+  </owl:ObjectProperty>
+  <owl:ObjectProperty rdf:ID="hasSensorialCapability">
+    <rdfs:range rdf:resource="#SensorialCapability"/>
+    <rdfs:domain rdf:resource="#Person"/>
+  </owl:ObjectProperty>
+  <owl:ObjectProperty rdf:ID="useLanguage">
+    <rdfs:domain rdf:resource="#InterventionBehaviour"/>
+    <rdfs:range rdf:resource="#Language"/>
+  </owl:ObjectProperty>
+  <owl:ObjectProperty rdf:ID="hasEducationLevel">
+    <rdfs:range rdf:resource="#EducationLevel"/>
+    <rdfs:domain rdf:resource="#Person"/>
+  </owl:ObjectProperty>
+  <owl:ObjectProperty rdf:ID="hasGendre">
+    <rdfs:range rdf:resource="#Gender"/>
+    <rdfs:domain rdf:resource="#Person"/>
+  </owl:ObjectProperty>
+  <owl:ObjectProperty rdf:ID="isInterestedIn">
+    <rdfs:domain rdf:resource="#Person"/>
+    <rdfs:range rdf:resource="#Service"/>
+  </owl:ObjectProperty>
+  <owl:ObjectProperty rdf:ID="hasSocialState">
+    <rdfs:range rdf:resource="#SocialState"/>
+    <rdfs:domain rdf:resource="#Person"/>
+  </owl:ObjectProperty>
+  <owl:ObjectProperty rdf:ID="useNow">
+    <rdfs:domain rdf:resource="#Person"/>
+    <rdfs:range rdf:resource="#Object"/>
+  </owl:ObjectProperty>
+  <owl:DatatypeProperty rdf:ID="hasAge">
+    <rdfs:domain rdf:resource="#Person"/>
+    <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#int"/>
+  </owl:DatatypeProperty>
+  <owl:DatatypeProperty rdf:ID="hasPhoneNumber">
+    <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#int"/>
+    <rdfs:domain rdf:resource="#Person"/>
+  </owl:DatatypeProperty>
+  <owl:DatatypeProperty rdf:ID="hasCauseFall">
+    <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+    <rdfs:domain rdf:resource="#Fall"/>
+  </owl:DatatypeProperty>
+  <owl:DatatypeProperty rdf:ID="hasTime">
+    <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#dateTime"/>
+    <rdfs:domain rdf:resource="#Habit"/>
+  </owl:DatatypeProperty>
+  <owl:DatatypeProperty rdf:ID="lastUsed">
+    <rdfs:domain rdf:resource="#Object"/>
+    <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#dateTime"/>
+  </owl:DatatypeProperty>
+  <owl:DatatypeProperty rdf:ID="notUsedFor">
+    <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#int"/>
+    <rdfs:domain rdf:resource="#Object"/>
+  </owl:DatatypeProperty>
+  <owl:DatatypeProperty rdf:ID="hasAddress">
+    <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+    <rdfs:domain rdf:resource="#Person"/>
+  </owl:DatatypeProperty>
+  <owl:DatatypeProperty rdf:ID="hasHeight">
+    <rdfs:domain rdf:resource="#Person"/>
+    <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#int"/>
+  </owl:DatatypeProperty>
+  <owl:DatatypeProperty rdf:ID="hasDateHospitalisation">
+    <rdfs:domain rdf:resource="#Hospitalization"/>
+    <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#dateTime"/>
+  </owl:DatatypeProperty>
+  <owl:DatatypeProperty rdf:ID="hasCauseSurgery">
+    <rdfs:domain rdf:resource="#Surgery"/>
+    <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+  </owl:DatatypeProperty>
+  <owl:DatatypeProperty rdf:ID="isPatient">
+    <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#boolean"/>
+    <rdfs:domain rdf:resource="#Person"/>
+  </owl:DatatypeProperty>
+  <owl:DatatypeProperty rdf:ID="hasName">
+    <rdfs:domain rdf:resource="#Person"/>
+    <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+  </owl:DatatypeProperty>
+  <owl:DatatypeProperty rdf:ID="inEnvironmentSince">
+    <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#dateTime"/>
+    <rdfs:domain rdf:resource="#Person"/>
+  </owl:DatatypeProperty>
+  <owl:DatatypeProperty rdf:ID="hasWeight">
+    <rdfs:domain rdf:resource="#Person"/>
+    <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#int"/>
+  </owl:DatatypeProperty>
+  <owl:DatatypeProperty rdf:ID="hasDateFall">
+    <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#dateTime"/>
+    <rdfs:domain rdf:resource="#Fall"/>
+  </owl:DatatypeProperty>
+  <owl:DatatypeProperty rdf:ID="doesActivitySince">
+    <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#dateTime"/>
+    <rdfs:domain rdf:resource="#Person"/>
+  </owl:DatatypeProperty>
+  <owl:DatatypeProperty rdf:ID="indicateUse">
+    <rdfs:domain rdf:resource="#Sensor"/>
+    <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#boolean"/>
+  </owl:DatatypeProperty>
+  <owl:DatatypeProperty rdf:ID="doesActivityFor">
+    <rdfs:domain rdf:resource="#Person"/>
+    <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#int"/>
+  </owl:DatatypeProperty>
+  <owl:DatatypeProperty rdf:ID="hasCauseHospitalisation">
+    <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+    <rdfs:domain rdf:resource="#Hospitalization"/>
+  </owl:DatatypeProperty>
+  <owl:DatatypeProperty rdf:ID="hasFrequency">
+    <rdfs:range>
+      <owl:DataRange>
+        <owl:oneOf rdf:parseType="Resource">
+          <rdf:rest rdf:parseType="Resource">
+            <rdf:rest rdf:parseType="Resource">
+              <rdf:first rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+              >Monthly</rdf:first>
+              <rdf:rest rdf:parseType="Resource">
+                <rdf:rest rdf:parseType="Resource">
+                  <rdf:rest rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#nil"/>
+                  <rdf:first rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+                  >Hourly</rdf:first>
+                </rdf:rest>
+                <rdf:first rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+                >Yearly</rdf:first>
+              </rdf:rest>
+            </rdf:rest>
+            <rdf:first rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+            >Weekly</rdf:first>
+          </rdf:rest>
+          <rdf:first rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+          >Daily</rdf:first>
+        </owl:oneOf>
+      </owl:DataRange>
+    </rdfs:range>
+    <rdfs:domain rdf:resource="#Habit"/>
+  </owl:DatatypeProperty>
+  <owl:DatatypeProperty rdf:ID="inEnvironmentFor">
+    <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#int"/>
+    <rdfs:domain rdf:resource="#Person"/>
+  </owl:DatatypeProperty>
+  <owl:DatatypeProperty rdf:ID="hasDuration">
+    <rdfs:domain rdf:resource="#Habit"/>
+    <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#time"/>
+  </owl:DatatypeProperty>
+  <owl:DatatypeProperty rdf:ID="hasDateSurgery">
+    <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#dateTime"/>
+    <rdfs:domain rdf:resource="#Surgery"/>
+  </owl:DatatypeProperty>
+  <owl:DatatypeProperty rdf:ID="hasID">
+    <rdfs:domain rdf:resource="#Person"/>
+    <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#int"/>
+  </owl:DatatypeProperty>
+  <owl:DatatypeProperty rdf:ID="isCaregiver">
+    <rdfs:domain rdf:resource="#Person"/>
+    <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#boolean"/>
+  </owl:DatatypeProperty>
+  <owl:DatatypeProperty rdf:ID="hasLastUpdate">
+    <rdfs:domain rdf:resource="#Sensor"/>
+    <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#boolean"/>
+  </owl:DatatypeProperty>
+  <owl:DatatypeProperty rdf:ID="indicateLocation">
+    <rdfs:domain rdf:resource="#Sensor"/>
+    <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#boolean"/>
+  </owl:DatatypeProperty>
+  <PreferenceTopic rdf:ID="sport"/>
+  <MobilityChangeingBehaviour rdf:ID="walkingPatternChange">
+    <isIndicatorOf>
+      <MCIIndicator rdf:ID="mobilityIndicator">
+        <requireIntervention>
+          <MobilityIntervention rdf:ID="goToRestaurant">
+            <relatedToPreference>
+              <PreferenceTopic rdf:ID="food"/>
+            </relatedToPreference>
+          </MobilityIntervention>
+        </requireIntervention>
+        <requireIntervention>
+          <MobilityIntervention rdf:ID="goShoping"/>
+        </requireIntervention>
+      </MCIIndicator>
+    </isIndicatorOf>
+  </MobilityChangeingBehaviour>
+  <Device rdf:ID="SmartWatch"/>
+  <Activity rdf:ID="Shopping"/>
+  <Service rdf:ID="coercion"/>
+  <Transport rdf:ID="taxi">
+    <partOfCity>
+      <City rdf:ID="Montpellier"/>
+    </partOfCity>
+  </Transport>
+  <Language rdf:ID="Italian"/>
+  <Language rdf:ID="Indian"/>
+  <Language rdf:ID="English"/>
+  <Service rdf:ID="activitySuggestion"/>
+  <MaritalState rdf:ID="separeted"/>
+  <MobilityChangeingBehaviour rdf:ID="problemGettingUp">
+    <isIndicatorOf rdf:resource="#mobilityIndicator"/>
+  </MobilityChangeingBehaviour>
+  <Livingroom rdf:ID="livingroom">
+    <partOfHouse>
+      <House rdf:ID="house1"/>
+    </partOfHouse>
+  </Livingroom>
+  <SocialChangeingBehaviour rdf:ID="lessActivityOutside">
+    <isIndicatorOf>
+      <MCIIndicator rdf:ID="socialIndicator">
+        <requireIntervention>
+          <SocialIntervention rdf:ID="watchMovie">
+            <relatedToPreference>
+              <Cultural rdf:ID="cinema"/>
+            </relatedToPreference>
+          </SocialIntervention>
+        </requireIntervention>
+        <requireIntervention>
+          <SocialIntervention rdf:ID="watchTheatre">
+            <relatedToPreference>
+              <Cultural rdf:ID="theatre"/>
+            </relatedToPreference>
+          </SocialIntervention>
+        </requireIntervention>
+        <requireIntervention>
+          <SocialIntervention rdf:ID="proposeTravelDestination">
+            <relatedToPreference>
+              <PreferenceTopic rdf:ID="travel"/>
+            </relatedToPreference>
+          </SocialIntervention>
+        </requireIntervention>
+        <requireIntervention>
+          <SocialIntervention rdf:ID="goToLibrary">
+            <relatedToPreference>
+              <Cultural rdf:ID="literature"/>
+            </relatedToPreference>
+          </SocialIntervention>
+        </requireIntervention>
+        <requireIntervention>
+          <SocialIntervention rdf:ID="visitFriend"/>
+        </requireIntervention>
+        <requireIntervention>
+          <SocialIntervention rdf:ID="visitCommunityCenter"/>
+        </requireIntervention>
+        <requireIntervention>
+          <SocialIntervention rdf:ID="attendConcert">
+            <relatedToPreference>
+              <Cultural rdf:ID="music"/>
+            </relatedToPreference>
+          </SocialIntervention>
+        </requireIntervention>
+      </MCIIndicator>
+    </isIndicatorOf>
+  </SocialChangeingBehaviour>
+  <Activity rdf:ID="bedroomActivity"/>
+  <SocialChangeingBehaviour rdf:ID="lessVisits">
+    <isIndicatorOf rdf:resource="#socialIndicator"/>
+  </SocialChangeingBehaviour>
+  <Level rdf:ID="medium"/>
+  <Employment rdf:ID="unemployment"/>
+  <EducationLevel rdf:ID="secondaryEducation"/>
+  <Device rdf:ID="Tablet"/>
+  <Activity rdf:ID="visitingFriend"/>
+  <EducationLevel rdf:ID="unneducated"/>
+  <SensorialCapability rdf:ID="visual"/>
+  <SensorialCapability rdf:ID="auditory"/>
+  <Level rdf:ID="low"/>
+  <SensorialCapability rdf:ID="verbal"/>
+  <ADLChangeingBehaviour rdf:ID="nutritionProblem">
+    <isIndicatorOf>
+      <MCIIndicator rdf:ID="ADLIndicator">
+        <requireIntervention>
+          <ADLIntervention rdf:ID="prepareFood">
+            <relatedToPreference rdf:resource="#food"/>
+          </ADLIntervention>
+        </requireIntervention>
+        <requireIntervention>
+          <ADLIntervention rdf:ID="proposeRecipe">
+            <relatedToPreference rdf:resource="#food"/>
+          </ADLIntervention>
+        </requireIntervention>
+        <requireIntervention>
+          <ADLIntervention rdf:ID="listenMusic">
+            <relatedToPreference rdf:resource="#music"/>
+          </ADLIntervention>
+        </requireIntervention>
+        <requireIntervention>
+          <ADLIntervention rdf:ID="PerformHabit"/>
+        </requireIntervention>
+        <requireIntervention>
+          <ADLIntervention rdf:ID="readBook">
+            <relatedToPreference rdf:resource="#literature"/>
+          </ADLIntervention>
+        </requireIntervention>
+      </MCIIndicator>
+    </isIndicatorOf>
+  </ADLChangeingBehaviour>
+  <Bathroom rdf:ID="bathroom">
+    <partOfHouse rdf:resource="#house1"/>
+  </Bathroom>
+  <SocialState rdf:ID="middleClass"/>
+  <Activity rdf:ID="takingTransport"/>
+  <CognitiveChangeingBehaviour rdf:ID="judgementProblem">
+    <isIndicatorOf>
+      <MCIIndicator rdf:ID="cognitiveIndicator">
+        <requireIntervention>
+          <CognitiveIntervention rdf:ID="playCognitiveGames"/>
+        </requireIntervention>
+        <requireIntervention>
+          <CognitiveIntervention rdf:ID="performMemoryTest"/>
+        </requireIntervention>
+      </MCIIndicator>
+    </isIndicatorOf>
+  </CognitiveChangeingBehaviour>
+  <CognitiveChangeingBehaviour rdf:ID="thinkingProblem">
+    <isIndicatorOf rdf:resource="#cognitiveIndicator"/>
+  </CognitiveChangeingBehaviour>
+  <ADLChangeingBehaviour rdf:ID="problemPerformADL">
+    <isIndicatorOf rdf:resource="#ADLIndicator"/>
+  </ADLChangeingBehaviour>
+  <Employment rdf:ID="temproryEmployee"/>
+  <PreferenceTopic rdf:ID="politic"/>
+  <Language rdf:ID="French"/>
+  <EducationLevel rdf:ID="primaryEducation"/>
+  <Service rdf:ID="riskReaction"/>
+  <CognitiveChangeingBehaviour rdf:ID="memoryProblem">
+    <isIndicatorOf rdf:resource="#cognitiveIndicator"/>
+  </CognitiveChangeingBehaviour>
+  <Bedroom rdf:ID="bedroom">
+    <partOfHouse rdf:resource="#house1"/>
+  </Bedroom>
+  <Device rdf:ID="TV"/>
+  <Service rdf:ID="incentivisation"/>
+  <Service rdf:ID="training"/>
+  <Device rdf:ID="Smartphone"/>
+  <Person rdf:ID="Person1"/>
+  <Language rdf:ID="Mandarin"/>
+  <MaritalState rdf:ID="widowed"/>
+  <Activity rdf:ID="visitingSocialCenter"/>
+  <ADLChangeingBehaviour rdf:ID="lessEngagementADL">
+    <isIndicatorOf rdf:resource="#ADLIndicator"/>
+  </ADLChangeingBehaviour>
+  <Employment rdf:ID="partTimeEmployee"/>
+  <PhysicalCapability rdf:ID="mouvementControl"/>
+  <Service rdf:ID="persuasion"/>
+  <Language rdf:ID="Greek"/>
+  <Activity rdf:ID="goToilet"/>
+  <Employment rdf:ID="retirement"/>
+  <SocialChangeingBehaviour rdf:ID="lessGoingOutside">
+    <isIndicatorOf rdf:resource="#socialIndicator"/>
+  </SocialChangeingBehaviour>
+  <Gender rdf:ID="female"/>
+  <Activity rdf:ID="watchTV"/>
+  <Toilet rdf:ID="toilet">
+    <partOfHouse rdf:resource="#house1"/>
+  </Toilet>
+  <Employment rdf:ID="privateWork"/>
+  <EducationLevel rdf:ID="master"/>
+  <Service rdf:ID="medicalRecord"/>
+  <Activity rdf:ID="cameHome"/>
+  <ADLChangeingBehaviour rdf:ID="moreTimeADL">
+    <isIndicatorOf rdf:resource="#ADLIndicator"/>
+  </ADLChangeingBehaviour>
+  <Activity rdf:ID="eatMeal"/>
+  <Activity rdf:ID="sleep"/>
+  <Activity rdf:ID="hygiene"/>
+  <Employment rdf:ID="regularEmployee"/>
+  <CognitiveChangeingBehaviour rdf:ID="attentionProblem">
+    <isIndicatorOf rdf:resource="#cognitiveIndicator"/>
+  </CognitiveChangeingBehaviour>
+  <Disease rdf:ID="diabet"/>
+  <Gender rdf:ID="male"/>
+  <SensorType rdf:ID="switch"/>
+  <Sensor rdf:ID="a1">
+    <hasPossibleState>
+      <SensorState rdf:ID="a1_off"/>
+    </hasPossibleState>
+    <hasPossibleState>
+      <SensorState rdf:ID="a1_on"/>
+    </hasPossibleState>
+    <indicateLocation rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean"
+    >true</indicateLocation>
+    <hasType>
+      <SensorType rdf:ID="pir"/>
+    </hasType>
+    <locatedIn>
+      <Kitchen rdf:ID="kitchen">
+        <partOfHouse rdf:resource="#house1"/>
+      </Kitchen>
+    </locatedIn>
+  </Sensor>
+  <Language rdf:ID="Spanish"/>
+  <SocialState rdf:ID="lowerClass"/>
+  <Building rdf:ID="shop">
+    <partOfCity rdf:resource="#Montpellier"/>
+  </Building>
+  <ADLChangeingBehaviour rdf:ID="lessMotivationADL">
+    <isIndicatorOf rdf:resource="#ADLIndicator"/>
+  </ADLChangeingBehaviour>
+  <Level rdf:ID="hight"/>
+  <SocialState rdf:ID="upperClass"/>
+  <Employment rdf:ID="publicWorker"/>
+  <Language rdf:ID="Malay"/>
+  <Service rdf:ID="newsLetter"/>
+  <Activity rdf:ID="getUp"/>
+  <MaritalState rdf:ID="divorced"/>
+  <EducationLevel rdf:ID="doctoral"/>
+  <SocialChangeingBehaviour rdf:ID="lessSocialInteraction">
+    <isIndicatorOf rdf:resource="#socialIndicator"/>
+  </SocialChangeingBehaviour>
+  <Activity rdf:ID="cookMeal"/>
+  <Service rdf:ID="assistiveCommunication"/>
+  <EducationLevel rdf:ID="bachelor"/>
+  <Building rdf:ID="pharmacy">
+    <partOfCity rdf:resource="#Montpellier"/>
+  </Building>
+  <Disease rdf:ID="MCI"/>
+  <MaritalState rdf:ID="single"/>
+  <MobilityChangeingBehaviour rdf:ID="fallIncrease">
+    <isIndicatorOf rdf:resource="#mobilityIndicator"/>
+  </MobilityChangeingBehaviour>
+  <Activity rdf:ID="fall"/>
+  <CognitiveChangeingBehaviour rdf:ID="calculationProblem">
+    <isIndicatorOf rdf:resource="#cognitiveIndicator"/>
+  </CognitiveChangeingBehaviour>
+  <Disease rdf:ID="dementia"/>
+  <Service rdf:ID="education"/>
+  <MaritalState rdf:ID="commonLaw"/>
+  <PhysicalCapability rdf:ID="walk"/>
+  <MaritalState rdf:ID="married"/>
+  <Sensor rdf:ID="b1">
+    <hasType>
+      <SensorType rdf:ID="beacon"/>
+    </hasType>
+    <locatedIn>
+      <Building rdf:ID="communityCenter">
+        <partOfCity rdf:resource="#Montpellier"/>
+      </Building>
+    </locatedIn>
+    <hasPossibleState>
+      <SensorState rdf:ID="beacon_normal"/>
+    </hasPossibleState>
+    <hasPossibleState>
+      <SensorState rdf:ID="beacon_alert"/>
+    </hasPossibleState>
+    <indicateLocation rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean"
+    >true</indicateLocation>
+  </Sensor>
+  <Activity rdf:ID="goOut"/>
+  <Service rdf:ID="agenda"/>
+  <Transport rdf:ID="tramway">
+    <partOfCity rdf:resource="#Montpellier"/>
+  </Transport>
+  <MobilityChangeingBehaviour rdf:ID="problemUsingTransport">
+    <isIndicatorOf rdf:resource="#mobilityIndicator"/>
+  </MobilityChangeingBehaviour>
+  <Transport rdf:ID="car">
+    <partOfCity rdf:resource="#Montpellier"/>
+  </Transport>
+</rdf:RDF>
+
+<!-- Created with Protege (with OWL Plugin 3.5, Build 663)  http://protege.stanford.edu -->
