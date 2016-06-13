@@ -1,0 +1,512 @@
+{
+  "@context" : {
+    "Level" : {
+      "@id" : "http://dev.c4a.morelab.deusto.es/ontologies/city4age.owl#Level"
+    },
+    "PreferenceTopic" : {
+      "@id" : "http://dev.c4a.morelab.deusto.es/ontologies/city4age.owl#PreferenceTopic"
+    },
+    "hasPreference" : {
+      "@id" : "http://dev.c4a.morelab.deusto.es/ontologies/city4age.owl#hasPreference",
+      "@type" : "@id"
+    },
+    "hasPreferenceLevel" : {
+      "@id" : "http://dev.c4a.morelab.deusto.es/ontologies/city4age.owl#hasPreferenceLevel",
+      "@type" : "@id"
+    },
+    "SensorialCapability" : {
+      "@id" : "http://dev.c4a.morelab.deusto.es/ontologies/city4age.owl#SensorialCapability"
+    },
+    "Communication" : {
+      "@id" : "http://dev.c4a.morelab.deusto.es/ontologies/city4age.owl#Communication"
+    },
+    "Cultural" : {
+      "@id" : "http://dev.c4a.morelab.deusto.es/ontologies/city4age.owl#Cultural"
+    },
+    "hasCauseSurgery" : {
+      "@id" : "http://dev.c4a.morelab.deusto.es/ontologies/city4age.owl#hasCauseSurgery",
+      "@type" : "http://www.w3.org/2001/XMLSchema#string"
+    },
+    "relatedToHabit" : {
+      "@id" : "http://dev.c4a.morelab.deusto.es/ontologies/city4age.owl#relatedToHabit",
+      "@type" : "@id"
+    },
+    "InterventionBehaviour" : {
+      "@id" : "http://dev.c4a.morelab.deusto.es/ontologies/city4age.owl#InterventionBehaviour"
+    },
+    "hasFamilyMember" : {
+      "@id" : "http://dev.c4a.morelab.deusto.es/ontologies/city4age.owl#hasFamilyMember",
+      "@type" : "@id"
+    },
+    "Employment" : {
+      "@id" : "http://dev.c4a.morelab.deusto.es/ontologies/city4age.owl#Employment"
+    },
+    "partOfHouse" : {
+      "@id" : "http://dev.c4a.morelab.deusto.es/ontologies/city4age.owl#partOfHouse",
+      "@type" : "@id"
+    },
+    "hasCaregiver" : {
+      "@id" : "http://dev.c4a.morelab.deusto.es/ontologies/city4age.owl#hasCaregiver",
+      "@type" : "@id"
+    },
+    "Being" : {
+      "@id" : "http://dev.c4a.morelab.deusto.es/ontologies/city4age.owl#Being"
+    },
+    "CognitiveIntervention" : {
+      "@id" : "http://dev.c4a.morelab.deusto.es/ontologies/city4age.owl#CognitiveIntervention"
+    },
+    "inEnvironmentSince" : {
+      "@id" : "http://dev.c4a.morelab.deusto.es/ontologies/city4age.owl#inEnvironmentSince",
+      "@type" : "http://www.w3.org/2001/XMLSchema#dateTime"
+    },
+    "SensorType" : {
+      "@id" : "http://dev.c4a.morelab.deusto.es/ontologies/city4age.owl#SensorType"
+    },
+    "isProvidedOn" : {
+      "@id" : "http://dev.c4a.morelab.deusto.es/ontologies/city4age.owl#isProvidedOn",
+      "@type" : "@id"
+    },
+    "PhysicalCapability" : {
+      "@id" : "http://dev.c4a.morelab.deusto.es/ontologies/city4age.owl#PhysicalCapability"
+    },
+    "Room" : {
+      "@id" : "http://dev.c4a.morelab.deusto.es/ontologies/city4age.owl#Room"
+    },
+    "preferInteractionWith" : {
+      "@id" : "http://dev.c4a.morelab.deusto.es/ontologies/city4age.owl#preferInteractionWith",
+      "@type" : "@id"
+    },
+    "hasCauseHospitalisation" : {
+      "@id" : "http://dev.c4a.morelab.deusto.es/ontologies/city4age.owl#hasCauseHospitalisation",
+      "@type" : "http://www.w3.org/2001/XMLSchema#string"
+    },
+    "SocialIntervention" : {
+      "@id" : "http://dev.c4a.morelab.deusto.es/ontologies/city4age.owl#SocialIntervention"
+    },
+    "hasFriend" : {
+      "@id" : "http://dev.c4a.morelab.deusto.es/ontologies/city4age.owl#hasFriend",
+      "@type" : "@id"
+    },
+    "hasFrequency" : {
+      "@id" : "http://dev.c4a.morelab.deusto.es/ontologies/city4age.owl#hasFrequency"
+    },
+    "hasName" : {
+      "@id" : "http://dev.c4a.morelab.deusto.es/ontologies/city4age.owl#hasName",
+      "@type" : "http://www.w3.org/2001/XMLSchema#string"
+    },
+    "House" : {
+      "@id" : "http://dev.c4a.morelab.deusto.es/ontologies/city4age.owl#House"
+    },
+    "hasID" : {
+      "@id" : "http://dev.c4a.morelab.deusto.es/ontologies/city4age.owl#hasID",
+      "@type" : "http://www.w3.org/2001/XMLSchema#int"
+    },
+    "hasPreferenceTopic" : {
+      "@id" : "http://dev.c4a.morelab.deusto.es/ontologies/city4age.owl#hasPreferenceTopic",
+      "@type" : "@id"
+    },
+    "hasFall" : {
+      "@id" : "http://dev.c4a.morelab.deusto.es/ontologies/city4age.owl#hasFall",
+      "@type" : "@id"
+    },
+    "indicateUse" : {
+      "@id" : "http://dev.c4a.morelab.deusto.es/ontologies/city4age.owl#indicateUse",
+      "@type" : "http://www.w3.org/2001/XMLSchema#boolean"
+    },
+    "hasEducationLevel" : {
+      "@id" : "http://dev.c4a.morelab.deusto.es/ontologies/city4age.owl#hasEducationLevel",
+      "@type" : "@id"
+    },
+    "ADLIntervention" : {
+      "@id" : "http://dev.c4a.morelab.deusto.es/ontologies/city4age.owl#ADLIntervention"
+    },
+    "Object" : {
+      "@id" : "http://dev.c4a.morelab.deusto.es/ontologies/city4age.owl#Object"
+    },
+    "isIndicatorOf" : {
+      "@id" : "http://dev.c4a.morelab.deusto.es/ontologies/city4age.owl#isIndicatorOf",
+      "@type" : "@id"
+    },
+    "hasAddress" : {
+      "@id" : "http://dev.c4a.morelab.deusto.es/ontologies/city4age.owl#hasAddress",
+      "@type" : "http://www.w3.org/2001/XMLSchema#string"
+    },
+    "useLanguage" : {
+      "@id" : "http://dev.c4a.morelab.deusto.es/ontologies/city4age.owl#useLanguage",
+      "@type" : "@id"
+    },
+    "Indicator" : {
+      "@id" : "http://dev.c4a.morelab.deusto.es/ontologies/city4age.owl#Indicator"
+    },
+    "hasBehaviourChange" : {
+      "@id" : "http://dev.c4a.morelab.deusto.es/ontologies/city4age.owl#hasBehaviourChange",
+      "@type" : "@id"
+    },
+    "hasDiseaseLevel" : {
+      "@id" : "http://dev.c4a.morelab.deusto.es/ontologies/city4age.owl#hasDiseaseLevel",
+      "@type" : "@id"
+    },
+    "ADLChangeingBehaviour" : {
+      "@id" : "http://dev.c4a.morelab.deusto.es/ontologies/city4age.owl#ADLChangeingBehaviour"
+    },
+    "Bedroom" : {
+      "@id" : "http://dev.c4a.morelab.deusto.es/ontologies/city4age.owl#Bedroom"
+    },
+    "MCIIndicator" : {
+      "@id" : "http://dev.c4a.morelab.deusto.es/ontologies/city4age.owl#MCIIndicator"
+    },
+    "Activity" : {
+      "@id" : "http://dev.c4a.morelab.deusto.es/ontologies/city4age.owl#Activity"
+    },
+    "Transport" : {
+      "@id" : "http://dev.c4a.morelab.deusto.es/ontologies/city4age.owl#Transport"
+    },
+    "SocialChangeingBehaviour" : {
+      "@id" : "http://dev.c4a.morelab.deusto.es/ontologies/city4age.owl#SocialChangeingBehaviour"
+    },
+    "Physical" : {
+      "@id" : "http://dev.c4a.morelab.deusto.es/ontologies/city4age.owl#Physical"
+    },
+    "hasCauseFall" : {
+      "@id" : "http://dev.c4a.morelab.deusto.es/ontologies/city4age.owl#hasCauseFall",
+      "@type" : "http://www.w3.org/2001/XMLSchema#string"
+    },
+    "Fall" : {
+      "@id" : "http://dev.c4a.morelab.deusto.es/ontologies/city4age.owl#Fall"
+    },
+    "Disease" : {
+      "@id" : "http://dev.c4a.morelab.deusto.es/ontologies/city4age.owl#Disease"
+    },
+    "hasCurrentState" : {
+      "@id" : "http://dev.c4a.morelab.deusto.es/ontologies/city4age.owl#hasCurrentState",
+      "@type" : "@id"
+    },
+    "Street" : {
+      "@id" : "http://dev.c4a.morelab.deusto.es/ontologies/city4age.owl#Street"
+    },
+    "Gender" : {
+      "@id" : "http://dev.c4a.morelab.deusto.es/ontologies/city4age.owl#Gender"
+    },
+    "SensorState" : {
+      "@id" : "http://dev.c4a.morelab.deusto.es/ontologies/city4age.owl#SensorState"
+    },
+    "ChangeingBehaviour" : {
+      "@id" : "http://dev.c4a.morelab.deusto.es/ontologies/city4age.owl#ChangeingBehaviour"
+    },
+    "Person" : {
+      "@id" : "http://dev.c4a.morelab.deusto.es/ontologies/city4age.owl#Person"
+    },
+    "hasDuration" : {
+      "@id" : "http://dev.c4a.morelab.deusto.es/ontologies/city4age.owl#hasDuration",
+      "@type" : "http://www.w3.org/2001/XMLSchema#time"
+    },
+    "hasPhoneNumber" : {
+      "@id" : "http://dev.c4a.morelab.deusto.es/ontologies/city4age.owl#hasPhoneNumber",
+      "@type" : "http://www.w3.org/2001/XMLSchema#int"
+    },
+    "hasAge" : {
+      "@id" : "http://dev.c4a.morelab.deusto.es/ontologies/city4age.owl#hasAge",
+      "@type" : "http://www.w3.org/2001/XMLSchema#int"
+    },
+    "hasType" : {
+      "@id" : "http://dev.c4a.morelab.deusto.es/ontologies/city4age.owl#hasType",
+      "@type" : "@id"
+    },
+    "indicateLocation" : {
+      "@id" : "http://dev.c4a.morelab.deusto.es/ontologies/city4age.owl#indicateLocation",
+      "@type" : "http://www.w3.org/2001/XMLSchema#boolean"
+    },
+    "hasPossibleState" : {
+      "@id" : "http://dev.c4a.morelab.deusto.es/ontologies/city4age.owl#hasPossibleState",
+      "@type" : "@id"
+    },
+    "hasBeenHospitalized" : {
+      "@id" : "http://dev.c4a.morelab.deusto.es/ontologies/city4age.owl#hasBeenHospitalized",
+      "@type" : "@id"
+    },
+    "doesActivityFor" : {
+      "@id" : "http://dev.c4a.morelab.deusto.es/ontologies/city4age.owl#doesActivityFor",
+      "@type" : "http://www.w3.org/2001/XMLSchema#int"
+    },
+    "NonPhysical" : {
+      "@id" : "http://dev.c4a.morelab.deusto.es/ontologies/city4age.owl#NonPhysical"
+    },
+    "Building" : {
+      "@id" : "http://dev.c4a.morelab.deusto.es/ontologies/city4age.owl#Building"
+    },
+    "hasSensorialCapability" : {
+      "@id" : "http://dev.c4a.morelab.deusto.es/ontologies/city4age.owl#hasSensorialCapability",
+      "@type" : "@id"
+    },
+    "attachedTo" : {
+      "@id" : "http://dev.c4a.morelab.deusto.es/ontologies/city4age.owl#attachedTo",
+      "@type" : "@id"
+    },
+    "hasTime" : {
+      "@id" : "http://dev.c4a.morelab.deusto.es/ontologies/city4age.owl#hasTime",
+      "@type" : "http://www.w3.org/2001/XMLSchema#dateTime"
+    },
+    "Bathroom" : {
+      "@id" : "http://dev.c4a.morelab.deusto.es/ontologies/city4age.owl#Bathroom"
+    },
+    "Door" : {
+      "@id" : "http://dev.c4a.morelab.deusto.es/ontologies/city4age.owl#Door"
+    },
+    "hasDateFall" : {
+      "@id" : "http://dev.c4a.morelab.deusto.es/ontologies/city4age.owl#hasDateFall",
+      "@type" : "http://www.w3.org/2001/XMLSchema#dateTime"
+    },
+    "hasMaritalStatus" : {
+      "@id" : "http://dev.c4a.morelab.deusto.es/ontologies/city4age.owl#hasMaritalStatus",
+      "@type" : "@id"
+    },
+    "SocialState" : {
+      "@id" : "http://dev.c4a.morelab.deusto.es/ontologies/city4age.owl#SocialState"
+    },
+    "Dynamic" : {
+      "@id" : "http://dev.c4a.morelab.deusto.es/ontologies/city4age.owl#Dynamic"
+    },
+    "hasMCIIndicator" : {
+      "@id" : "http://dev.c4a.morelab.deusto.es/ontologies/city4age.owl#hasMCIIndicator",
+      "@type" : "@id"
+    },
+    "Profile" : {
+      "@id" : "http://dev.c4a.morelab.deusto.es/ontologies/city4age.owl#Profile"
+    },
+    "hasDateSurgery" : {
+      "@id" : "http://dev.c4a.morelab.deusto.es/ontologies/city4age.owl#hasDateSurgery",
+      "@type" : "http://www.w3.org/2001/XMLSchema#dateTime"
+    },
+    "hasSensorialCapabilityLevel" : {
+      "@id" : "http://dev.c4a.morelab.deusto.es/ontologies/city4age.owl#hasSensorialCapabilityLevel",
+      "@type" : "@id"
+    },
+    "hasGendre" : {
+      "@id" : "http://dev.c4a.morelab.deusto.es/ontologies/city4age.owl#hasGendre",
+      "@type" : "@id"
+    },
+    "Fourniture" : {
+      "@id" : "http://dev.c4a.morelab.deusto.es/ontologies/city4age.owl#Fourniture"
+    },
+    "Toilet" : {
+      "@id" : "http://dev.c4a.morelab.deusto.es/ontologies/city4age.owl#Toilet"
+    },
+    "lastUsed" : {
+      "@id" : "http://dev.c4a.morelab.deusto.es/ontologies/city4age.owl#lastUsed",
+      "@type" : "http://www.w3.org/2001/XMLSchema#dateTime"
+    },
+    "MaritalState" : {
+      "@id" : "http://dev.c4a.morelab.deusto.es/ontologies/city4age.owl#MaritalState"
+    },
+    "PersonalProfile" : {
+      "@id" : "http://dev.c4a.morelab.deusto.es/ontologies/city4age.owl#PersonalProfile"
+    },
+    "hasPhyiscalCapabilityLevel" : {
+      "@id" : "http://dev.c4a.morelab.deusto.es/ontologies/city4age.owl#hasPhyiscalCapabilityLevel",
+      "@type" : "@id"
+    },
+    "hasHeight" : {
+      "@id" : "http://dev.c4a.morelab.deusto.es/ontologies/city4age.owl#hasHeight",
+      "@type" : "http://www.w3.org/2001/XMLSchema#int"
+    },
+    "Window" : {
+      "@id" : "http://dev.c4a.morelab.deusto.es/ontologies/city4age.owl#Window"
+    },
+    "EducationLevel" : {
+      "@id" : "http://dev.c4a.morelab.deusto.es/ontologies/city4age.owl#EducationLevel"
+    },
+    "Bed" : {
+      "@id" : "http://dev.c4a.morelab.deusto.es/ontologies/city4age.owl#Bed"
+    },
+    "DoesActivity" : {
+      "@id" : "http://dev.c4a.morelab.deusto.es/ontologies/city4age.owl#DoesActivity",
+      "@type" : "@id"
+    },
+    "Environment" : {
+      "@id" : "http://dev.c4a.morelab.deusto.es/ontologies/city4age.owl#Environment"
+    },
+    "hasSocialState" : {
+      "@id" : "http://dev.c4a.morelab.deusto.es/ontologies/city4age.owl#hasSocialState",
+      "@type" : "@id"
+    },
+    "Chair" : {
+      "@id" : "http://dev.c4a.morelab.deusto.es/ontologies/city4age.owl#Chair"
+    },
+    "Desk" : {
+      "@id" : "http://dev.c4a.morelab.deusto.es/ontologies/city4age.owl#Desk"
+    },
+    "detectedIn" : {
+      "@id" : "http://dev.c4a.morelab.deusto.es/ontologies/city4age.owl#detectedIn",
+      "@type" : "@id"
+    },
+    "Tangible" : {
+      "@id" : "http://dev.c4a.morelab.deusto.es/ontologies/city4age.owl#Tangible"
+    },
+    "hasPhysicalCapability" : {
+      "@id" : "http://dev.c4a.morelab.deusto.es/ontologies/city4age.owl#hasPhysicalCapability",
+      "@type" : "@id"
+    },
+    "MobilityChangeingBehaviour" : {
+      "@id" : "http://dev.c4a.morelab.deusto.es/ontologies/city4age.owl#MobilityChangeingBehaviour"
+    },
+    "HealthProfile" : {
+      "@id" : "http://dev.c4a.morelab.deusto.es/ontologies/city4age.owl#HealthProfile"
+    },
+    "Preference" : {
+      "@id" : "http://dev.c4a.morelab.deusto.es/ontologies/city4age.owl#Preference"
+    },
+    "isPatient" : {
+      "@id" : "http://dev.c4a.morelab.deusto.es/ontologies/city4age.owl#isPatient",
+      "@type" : "http://www.w3.org/2001/XMLSchema#boolean"
+    },
+    "Habit" : {
+      "@id" : "http://dev.c4a.morelab.deusto.es/ontologies/city4age.owl#Habit"
+    },
+    "locatedIn" : {
+      "@id" : "http://dev.c4a.morelab.deusto.es/ontologies/city4age.owl#locatedIn",
+      "@type" : "@id"
+    },
+    "inEnvironmentFor" : {
+      "@id" : "http://dev.c4a.morelab.deusto.es/ontologies/city4age.owl#inEnvironmentFor",
+      "@type" : "http://www.w3.org/2001/XMLSchema#int"
+    },
+    "CognitiveChangeingBehaviour" : {
+      "@id" : "http://dev.c4a.morelab.deusto.es/ontologies/city4age.owl#CognitiveChangeingBehaviour"
+    },
+    "Kitchen" : {
+      "@id" : "http://dev.c4a.morelab.deusto.es/ontologies/city4age.owl#Kitchen"
+    },
+    "Behaviour" : {
+      "@id" : "http://dev.c4a.morelab.deusto.es/ontologies/city4age.owl#Behaviour"
+    },
+    "City" : {
+      "@id" : "http://dev.c4a.morelab.deusto.es/ontologies/city4age.owl#City"
+    },
+    "Language" : {
+      "@id" : "http://dev.c4a.morelab.deusto.es/ontologies/city4age.owl#Language"
+    },
+    "Surgery" : {
+      "@id" : "http://dev.c4a.morelab.deusto.es/ontologies/city4age.owl#Surgery"
+    },
+    "hasProfile" : {
+      "@id" : "http://dev.c4a.morelab.deusto.es/ontologies/city4age.owl#hasProfile",
+      "@type" : "@id"
+    },
+    "relatedToPreference" : {
+      "@id" : "http://dev.c4a.morelab.deusto.es/ontologies/city4age.owl#relatedToPreference",
+      "@type" : "@id"
+    },
+    "hasEmployment" : {
+      "@id" : "http://dev.c4a.morelab.deusto.es/ontologies/city4age.owl#hasEmployment",
+      "@type" : "@id"
+    },
+    "hasLastUpdate" : {
+      "@id" : "http://dev.c4a.morelab.deusto.es/ontologies/city4age.owl#hasLastUpdate",
+      "@type" : "http://www.w3.org/2001/XMLSchema#boolean"
+    },
+    "hasHabit" : {
+      "@id" : "http://dev.c4a.morelab.deusto.es/ontologies/city4age.owl#hasHabit",
+      "@type" : "@id"
+    },
+    "Hospitalization" : {
+      "@id" : "http://dev.c4a.morelab.deusto.es/ontologies/city4age.owl#Hospitalization"
+    },
+    "Livingroom" : {
+      "@id" : "http://dev.c4a.morelab.deusto.es/ontologies/city4age.owl#Livingroom"
+    },
+    "isInterestedIn" : {
+      "@id" : "http://dev.c4a.morelab.deusto.es/ontologies/city4age.owl#isInterestedIn",
+      "@type" : "@id"
+    },
+    "Service" : {
+      "@id" : "http://dev.c4a.morelab.deusto.es/ontologies/city4age.owl#Service"
+    },
+    "useNow" : {
+      "@id" : "http://dev.c4a.morelab.deusto.es/ontologies/city4age.owl#useNow",
+      "@type" : "@id"
+    },
+    "Virtual" : {
+      "@id" : "http://dev.c4a.morelab.deusto.es/ontologies/city4age.owl#Virtual"
+    },
+    "cameFrom" : {
+      "@id" : "http://dev.c4a.morelab.deusto.es/ontologies/city4age.owl#cameFrom",
+      "@type" : "@id"
+    },
+    "NonVirtual" : {
+      "@id" : "http://dev.c4a.morelab.deusto.es/ontologies/city4age.owl#NonVirtual"
+    },
+    "NormalBehaviour" : {
+      "@id" : "http://dev.c4a.morelab.deusto.es/ontologies/city4age.owl#NormalBehaviour"
+    },
+    "doesActivitySince" : {
+      "@id" : "http://dev.c4a.morelab.deusto.es/ontologies/city4age.owl#doesActivitySince",
+      "@type" : "http://www.w3.org/2001/XMLSchema#dateTime"
+    },
+    "requireIntervention" : {
+      "@id" : "http://dev.c4a.morelab.deusto.es/ontologies/city4age.owl#requireIntervention",
+      "@type" : "@id"
+    },
+    "OrganicProfile" : {
+      "@id" : "http://dev.c4a.morelab.deusto.es/ontologies/city4age.owl#OrganicProfile"
+    },
+    "hasPreferedLanguage" : {
+      "@id" : "http://dev.c4a.morelab.deusto.es/ontologies/city4age.owl#hasPreferedLanguage",
+      "@type" : "@id"
+    },
+    "Device" : {
+      "@id" : "http://dev.c4a.morelab.deusto.es/ontologies/city4age.owl#Device"
+    },
+    "isCaregiver" : {
+      "@id" : "http://dev.c4a.morelab.deusto.es/ontologies/city4age.owl#isCaregiver",
+      "@type" : "http://www.w3.org/2001/XMLSchema#boolean"
+    },
+    "partOfCity" : {
+      "@id" : "http://dev.c4a.morelab.deusto.es/ontologies/city4age.owl#partOfCity",
+      "@type" : "@id"
+    },
+    "notUsedFor" : {
+      "@id" : "http://dev.c4a.morelab.deusto.es/ontologies/city4age.owl#notUsedFor",
+      "@type" : "http://www.w3.org/2001/XMLSchema#int"
+    },
+    "Park" : {
+      "@id" : "http://dev.c4a.morelab.deusto.es/ontologies/city4age.owl#Park"
+    },
+    "hasSurgery" : {
+      "@id" : "http://dev.c4a.morelab.deusto.es/ontologies/city4age.owl#hasSurgery",
+      "@type" : "@id"
+    },
+    "MobilityIntervention" : {
+      "@id" : "http://dev.c4a.morelab.deusto.es/ontologies/city4age.owl#MobilityIntervention"
+    },
+    "Intangible" : {
+      "@id" : "http://dev.c4a.morelab.deusto.es/ontologies/city4age.owl#Intangible"
+    },
+    "hasRelatedActivity" : {
+      "@id" : "http://dev.c4a.morelab.deusto.es/ontologies/city4age.owl#hasRelatedActivity",
+      "@type" : "@id"
+    },
+    "hasWeight" : {
+      "@id" : "http://dev.c4a.morelab.deusto.es/ontologies/city4age.owl#hasWeight",
+      "@type" : "http://www.w3.org/2001/XMLSchema#int"
+    },
+    "hasDateHospitalisation" : {
+      "@id" : "http://dev.c4a.morelab.deusto.es/ontologies/city4age.owl#hasDateHospitalisation",
+      "@type" : "http://www.w3.org/2001/XMLSchema#dateTime"
+    },
+    "liveIn" : {
+      "@id" : "http://dev.c4a.morelab.deusto.es/ontologies/city4age.owl#liveIn",
+      "@type" : "@id"
+    },
+    "hasDisease" : {
+      "@id" : "http://dev.c4a.morelab.deusto.es/ontologies/city4age.owl#hasDisease",
+      "@type" : "@id"
+    },
+    "hasCommunicationLanguage" : {
+      "@id" : "http://dev.c4a.morelab.deusto.es/ontologies/city4age.owl#hasCommunicationLanguage",
+      "@type" : "@id"
+    },
+    "Sensor" : {
+      "@id" : "http://dev.c4a.morelab.deusto.es/ontologies/city4age.owl#Sensor"
+    }
+  }
+}
