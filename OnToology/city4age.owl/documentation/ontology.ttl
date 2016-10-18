@@ -1,0 +1,1187 @@
+@prefix :        <http://dev.c4a.morelab.deusto.es/ontologies/city4age.owl#> .
+@prefix rdfs:    <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix swrl:    <http://www.w3.org/2003/11/swrl#> .
+@prefix protege:  <http://protege.stanford.edu/plugins/owl/protege#> .
+@prefix xsp:     <http://www.owl-ontologies.com/2005/08/07/xsp.owl#> .
+@prefix owl:     <http://www.w3.org/2002/07/owl#> .
+@prefix xsd:     <http://www.w3.org/2001/XMLSchema#> .
+@prefix swrlb:   <http://www.w3.org/2003/11/swrlb#> .
+@prefix rdf:     <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+
+:a1   a       owl:NamedIndividual , :Sensor ;
+      :hasPossibleState :a1_off , :a1_on ;
+      :hasType :pir ;
+      :indicateLocation "true"^^xsd:boolean ;
+      :locatedIn :kitchen .
+
+:hasCurrentState
+      a       owl:ObjectProperty ;
+      rdfs:domain :Sensor ;
+      rdfs:range :SensorState .
+
+:cameHome
+      a       owl:NamedIndividual , :Activity .
+
+:hasPreferedLanguage
+      a       owl:ObjectProperty ;
+      rdfs:domain :Person ;
+      rdfs:range :Language .
+
+:hasPreference
+      a       owl:ObjectProperty ;
+      rdfs:domain :Person ;
+      rdfs:range :Preference .
+
+:Being
+      a       owl:Class .
+
+:sport
+      a       owl:NamedIndividual , :PreferenceTopic .
+
+:tramway
+      a       owl:NamedIndividual , :Transport ;
+      :partOfCity :Montpellier .
+
+:goShoping
+      a       owl:NamedIndividual , :MobilityIntervention .
+
+:hasMaritalStatus
+      a       owl:ObjectProperty ;
+      rdfs:domain :Person ;
+      rdfs:range :MaritalState .
+
+:hasSurgery
+      a       owl:ObjectProperty ;
+      rdfs:domain :Person ;
+      rdfs:range :Surgery .
+
+:bedroom
+      a       owl:NamedIndividual , :Bedroom ;
+      :partOfHouse :house1 .
+
+:EducationLevel
+      a       owl:Class ;
+      rdfs:subClassOf :PersonalProfile .
+
+:married
+      a       owl:NamedIndividual , :MaritalState .
+
+:ChangeingBehaviour
+      a       owl:Class ;
+      rdfs:subClassOf :Behaviour .
+
+:MobilityIntervention
+      a       owl:Class ;
+      rdfs:subClassOf :InterventionBehaviour .
+
+:SensorType
+      a       owl:Class ;
+      rdfs:subClassOf :Virtual .
+
+:beacon_alert
+      a       :SensorState , owl:NamedIndividual .
+
+:hasAge
+      a       owl:DatatypeProperty ;
+      rdfs:domain :Person ;
+      rdfs:range xsd:int .
+
+:Service
+      a       owl:Class ;
+      rdfs:subClassOf :Virtual .
+
+:Tablet
+      a       :Device , owl:NamedIndividual .
+
+:Park
+      a       owl:Class ;
+      rdfs:subClassOf :City .
+
+:visitFriend
+      a       owl:NamedIndividual , :SocialIntervention .
+
+:hasBeenHospitalized
+      a       owl:ObjectProperty ;
+      rdfs:domain :Person ;
+      rdfs:range :Hospitalization .
+
+:separeted
+      a       owl:NamedIndividual , :MaritalState .
+
+:problemGettingUp
+      a       owl:NamedIndividual , :MobilityChangeingBehaviour ;
+      :isIndicatorOf :mobilityIndicator .
+
+:Dynamic
+      a       owl:Class .
+
+:lowerClass
+      a       owl:NamedIndividual , :SocialState .
+
+:PersonalProfile
+      a       owl:Class ;
+      rdfs:subClassOf :Profile .
+
+:isPatient
+      a       owl:DatatypeProperty ;
+      rdfs:domain :Person ;
+      rdfs:range xsd:boolean .
+
+:Preference
+      a       owl:Class ;
+      rdfs:subClassOf :PersonalProfile .
+
+:Kitchen
+      a       owl:Class ;
+      rdfs:subClassOf :Room .
+
+:fall
+      a       owl:NamedIndividual , :Activity .
+
+:useLanguage
+      a       owl:ObjectProperty ;
+      rdfs:domain :InterventionBehaviour ;
+      rdfs:range :Language .
+
+:hasPhysicalCapability
+      a       owl:ObjectProperty ;
+      rdfs:domain :Person ;
+      rdfs:range :PhysicalCapability .
+
+:hygiene
+      a       owl:NamedIndividual , :Activity .
+
+:hasSensorialCapabilityLevel
+      a       owl:ObjectProperty ;
+      rdfs:domain :Person ;
+      rdfs:range :Level .
+
+:MaritalState
+      a       owl:Class ;
+      rdfs:subClassOf :PersonalProfile .
+
+:TV   a       :Device , owl:NamedIndividual .
+
+:visual
+      a       owl:NamedIndividual , :SensorialCapability .
+
+:hasCommunicationLanguage
+      a       owl:ObjectProperty ;
+      rdfs:domain :Person ;
+      rdfs:range :Language .
+
+:partTimeEmployee
+      a       owl:NamedIndividual , :Employment .
+
+:OrganicProfile
+      a       owl:Class ;
+      rdfs:subClassOf :Profile .
+
+:a1_off
+      a       :SensorState , owl:NamedIndividual .
+
+:hasEducationLevel
+      a       owl:ObjectProperty ;
+      rdfs:domain :Person ;
+      rdfs:range :EducationLevel .
+
+:pir  a       owl:NamedIndividual , :SensorType .
+
+:hasGendre
+      a       owl:ObjectProperty ;
+      rdfs:domain :Person ;
+      rdfs:range :Gender .
+
+:training
+      a       owl:NamedIndividual , :Service .
+
+:Sensor
+      a       owl:Class ;
+      rdfs:subClassOf :Object .
+
+:Door
+      a       owl:Class ;
+      rdfs:subClassOf :Fourniture .
+
+:lessActivityOutside
+      a       owl:NamedIndividual , :SocialChangeingBehaviour ;
+      :isIndicatorOf :socialIndicator .
+
+:indicateUse
+      a       owl:DatatypeProperty ;
+      rdfs:domain :Sensor ;
+      rdfs:range xsd:boolean .
+
+:requireIntervention
+      a       owl:ObjectProperty ;
+      rdfs:domain :MCIIndicator ;
+      rdfs:range :InterventionBehaviour .
+
+:Italian
+      a       owl:NamedIndividual , :Language .
+
+:hasTime
+      a       owl:DatatypeProperty ;
+      rdfs:domain :Habit ;
+      rdfs:range xsd:dateTime .
+
+:Habit
+      a       owl:Class ;
+      rdfs:subClassOf :PersonalProfile .
+
+:single
+      a       owl:NamedIndividual , :MaritalState .
+
+:lessGoingOutside
+      a       owl:NamedIndividual , :SocialChangeingBehaviour ;
+      :isIndicatorOf :socialIndicator .
+
+:cinema
+      a       owl:NamedIndividual , :Cultural .
+
+:incentivisation
+      a       owl:NamedIndividual , :Service .
+
+:SensorState
+      a       owl:Class ;
+      rdfs:subClassOf :Virtual .
+
+:newsLetter
+      a       owl:NamedIndividual , :Service .
+
+:hasRelatedActivity
+      a       owl:ObjectProperty ;
+      rdfs:domain :Habit ;
+      rdfs:range :Activity .
+
+:relatedToHabit
+      a       owl:ObjectProperty ;
+      rdfs:domain :InterventionBehaviour ;
+      rdfs:range :Habit .
+
+:SensorialCapability
+      a       owl:Class ;
+      rdfs:subClassOf :OrganicProfile .
+
+:house1
+      a       owl:NamedIndividual , :House .
+
+:detectedIn
+      a       owl:ObjectProperty ;
+      rdfs:domain :Person ;
+      rdfs:range
+              [ a       owl:Class ;
+                owl:unionOf (:City :House)
+              ] .
+
+:retirement
+      a       owl:NamedIndividual , :Employment .
+
+:calculationProblem
+      a       owl:NamedIndividual , :CognitiveChangeingBehaviour ;
+      :isIndicatorOf :cognitiveIndicator .
+
+:literature
+      a       owl:NamedIndividual , :Cultural .
+
+:mobilityIndicator
+      a       owl:NamedIndividual , :MCIIndicator ;
+      :requireIntervention
+              :goToRestaurant , :goShoping .
+
+:Fourniture
+      a       owl:Class ;
+      rdfs:subClassOf :Object .
+
+:NonVirtual
+      a       owl:Class ;
+      rdfs:subClassOf :Dynamic .
+
+:nutritionProblem
+      a       owl:NamedIndividual , :ADLChangeingBehaviour ;
+      :isIndicatorOf :ADLIndicator .
+
+:Profile
+      a       owl:Class ;
+      rdfs:subClassOf :NonPhysical .
+
+:hasCauseFall
+      a       owl:DatatypeProperty ;
+      rdfs:domain :Fall ;
+      rdfs:range xsd:string .
+
+:mouvementControl
+      a       :PhysicalCapability , owl:NamedIndividual .
+
+:hasDisease
+      a       owl:ObjectProperty ;
+      rdfs:domain :Person ;
+      rdfs:range :Disease .
+
+:proposeTravelDestination
+      a       owl:NamedIndividual , :SocialIntervention ;
+      :relatedToPreference
+              :travel .
+
+:regularEmployee
+      a       owl:NamedIndividual , :Employment .
+
+:hasPreferenceLevel
+      a       owl:ObjectProperty ;
+      rdfs:domain :Preference ;
+      rdfs:range :Level .
+
+:Bed  a       owl:Class ;
+      rdfs:subClassOf :Fourniture .
+
+:temproryEmployee
+      a       owl:NamedIndividual , :Employment .
+
+:Fall
+      a       owl:Class ;
+      rdfs:subClassOf :HealthProfile .
+
+:playCognitiveGames
+      a       :CognitiveIntervention , owl:NamedIndividual .
+
+:isProvidedOn
+      a       owl:ObjectProperty ;
+      rdfs:domain :Service ;
+      rdfs:range :Device .
+
+:attachedTo
+      a       owl:ObjectProperty ;
+      rdfs:domain :Sensor ;
+      rdfs:range :Object .
+
+:medicalRecord
+      a       owl:NamedIndividual , :Service .
+
+:pharmacy
+      a       owl:NamedIndividual , :Building ;
+      :partOfCity :Montpellier .
+
+:b1   a       owl:NamedIndividual , :Sensor ;
+      :hasPossibleState :beacon_alert , :beacon_normal ;
+      :hasType :beacon ;
+      :indicateLocation "true"^^xsd:boolean ;
+      :locatedIn :communityCenter .
+
+:useNow
+      a       owl:ObjectProperty ;
+      rdfs:domain :Person ;
+      rdfs:range :Object .
+
+:hasCauseHospitalisation
+      a       owl:DatatypeProperty ;
+      rdfs:domain :Hospitalization ;
+      rdfs:range xsd:string .
+
+:hasFrequency
+      a       owl:DatatypeProperty ;
+      rdfs:domain :Habit ;
+      rdfs:range
+              [ a       rdfs:Datatype ;
+                owl:oneOf
+                        [ a       rdf:List ;
+                          rdf:first "Daily"^^xsd:string ;
+                          rdf:rest
+                                  [ a       rdf:List ;
+                                    rdf:first "Hourly"^^xsd:string ;
+                                    rdf:rest
+                                            [ a       rdf:List ;
+                                              rdf:first "Monthly"^^xsd:string ;
+                                              rdf:rest
+                                                      [ a       rdf:List ;
+                                                        rdf:first "Weekly"^^xsd:string ;
+                                                        rdf:rest
+                                                                [ a       rdf:List ;
+                                                                  rdf:first "Yearly"^^xsd:string ;
+                                                                  rdf:rest ()
+                                                                ]
+                                                      ]
+                                            ]
+                                  ]
+                        ]
+              ] .
+
+:Physical
+      a       owl:Class ;
+      rdfs:subClassOf :Being .
+
+:SmartWatch
+      a       :Device , owl:NamedIndividual .
+
+:walk
+      a       :PhysicalCapability , owl:NamedIndividual .
+
+:MCI  a       owl:NamedIndividual , :Disease .
+
+:hasSensorialCapability
+      a       owl:ObjectProperty ;
+      rdfs:domain :Person ;
+      rdfs:range :SensorialCapability .
+
+:hasFamilyMember
+      a       owl:ObjectProperty ;
+      rdfs:domain :Person ;
+      rdfs:range :Person .
+
+:hasFall
+      a       owl:ObjectProperty ;
+      rdfs:domain :Person ;
+      rdfs:range :Fall .
+
+:hasWeight
+      a       owl:DatatypeProperty ;
+      rdfs:domain :Person ;
+      rdfs:range xsd:int .
+
+:travel
+      a       owl:NamedIndividual , :PreferenceTopic .
+
+:Communication
+      a       owl:Class ;
+      rdfs:subClassOf :PersonalProfile .
+
+:listenMusic
+      a       owl:NamedIndividual , :ADLIntervention ;
+      :relatedToPreference
+              :music .
+
+:master
+      a       :EducationLevel , owl:NamedIndividual .
+
+:readBook
+      a       owl:NamedIndividual , :ADLIntervention ;
+      :relatedToPreference
+              :literature .
+
+:kitchen
+      a       :Kitchen , owl:NamedIndividual ;
+      :partOfHouse :house1 .
+
+:Device
+      a       owl:Class ;
+      rdfs:subClassOf :Object .
+
+:Toilet
+      a       owl:Class ;
+      rdfs:subClassOf :Room .
+
+:Spanish
+      a       owl:NamedIndividual , :Language .
+
+:Desk
+      a       owl:Class ;
+      rdfs:subClassOf :Fourniture .
+
+:Malay
+      a       owl:NamedIndividual , :Language .
+
+:prepareFood
+      a       owl:NamedIndividual , :ADLIntervention ;
+      :relatedToPreference
+              :food .
+
+:hasLastUpdate
+      a       owl:DatatypeProperty ;
+      rdfs:domain :Sensor ;
+      rdfs:range xsd:boolean .
+
+:dementia
+      a       owl:NamedIndividual , :Disease .
+
+:Activity
+      a       owl:Class ;
+      rdfs:subClassOf :NonVirtual .
+
+:Building
+      a       owl:Class ;
+      rdfs:subClassOf :City .
+
+:hasPreferenceTopic
+      a       owl:ObjectProperty ;
+      rdfs:domain :Preference ;
+      rdfs:range :PreferenceTopic .
+
+:hasPhyiscalCapabilityLevel
+      a       owl:ObjectProperty ;
+      rdfs:domain :PhysicalCapability ;
+      rdfs:range :Level .
+
+:attentionProblem
+      a       owl:NamedIndividual , :CognitiveChangeingBehaviour ;
+      :isIndicatorOf :cognitiveIndicator .
+
+:MobilityChangeingBehaviour
+      a       owl:Class ;
+      rdfs:subClassOf :ChangeingBehaviour .
+
+:hasCauseSurgery
+      a       owl:DatatypeProperty ;
+      rdfs:domain :Surgery ;
+      rdfs:range xsd:string .
+
+:takingTransport
+      a       owl:NamedIndividual , :Activity .
+
+:bedroomActivity
+      a       owl:NamedIndividual , :Activity .
+
+:Chair
+      a       owl:Class ;
+      rdfs:subClassOf :Fourniture .
+
+:switch
+      a       owl:NamedIndividual , :SensorType .
+
+:InterventionBehaviour
+      a       owl:Class ;
+      rdfs:subClassOf :Virtual .
+
+:Level
+      a       owl:Class ;
+      rdfs:subClassOf :Virtual .
+
+:persuasion
+      a       owl:NamedIndividual , :Service .
+
+:secondaryEducation
+      a       :EducationLevel , owl:NamedIndividual .
+
+:City
+      a       owl:Class ;
+      rdfs:subClassOf :Tangible .
+
+:watchTheatre
+      a       owl:NamedIndividual , :SocialIntervention ;
+      :relatedToPreference
+              :theatre .
+
+:indicateLocation
+      a       owl:DatatypeProperty ;
+      rdfs:domain :Sensor ;
+      rdfs:range xsd:boolean .
+
+:hasAddress
+      a       owl:DatatypeProperty ;
+      rdfs:domain :Person ;
+      rdfs:range xsd:string .
+
+:Shopping
+      a       owl:NamedIndividual , :Activity .
+
+:Street
+      a       owl:Class ;
+      rdfs:subClassOf :City .
+
+:diabet
+      a       owl:NamedIndividual , :Disease .
+
+:hasEmployment
+      a       owl:ObjectProperty ;
+      rdfs:domain :Person ;
+      rdfs:range :Employment .
+
+:doctoral
+      a       :EducationLevel , owl:NamedIndividual .
+
+:relatedToPreference
+      a       owl:ObjectProperty ;
+      rdfs:domain :InterventionBehaviour ;
+      rdfs:range :PreferenceTopic .
+
+:hasSocialState
+      a       owl:ObjectProperty ;
+      rdfs:domain :Person ;
+      rdfs:range :SocialState .
+
+:Bathroom
+      a       owl:Class ;
+      rdfs:subClassOf :Room .
+
+:Transport
+      a       owl:Class ;
+      rdfs:subClassOf :City .
+
+:Virtual
+      a       owl:Class ;
+      rdfs:subClassOf :Dynamic .
+
+:hasProfile
+      a       owl:ObjectProperty ;
+      rdfs:domain :Person ;
+      rdfs:range :Profile .
+
+:Montpellier
+      a       owl:NamedIndividual , :City .
+
+:hasCaregiver
+      a       owl:ObjectProperty ;
+      rdfs:domain :Person ;
+      rdfs:range :Person .
+
+:problemPerformADL
+      a       owl:NamedIndividual , :ADLChangeingBehaviour ;
+      :isIndicatorOf :ADLIndicator .
+
+:partOfCity
+      a       owl:ObjectProperty ;
+      rdfs:domain
+              [ a       owl:Class ;
+                owl:unionOf (:Building :Park :Street :Transport)
+              ] ;
+      rdfs:range :City .
+
+:theatre
+      a       owl:NamedIndividual , :Cultural .
+
+:livingroom
+      a       :Livingroom , owl:NamedIndividual ;
+      :partOfHouse :house1 .
+
+:Cultural
+      a       owl:Class ;
+      rdfs:subClassOf :PreferenceTopic .
+
+:proposeRecipe
+      a       owl:NamedIndividual , :ADLIntervention ;
+      :relatedToPreference
+              :food .
+
+:Livingroom
+      a       owl:Class ;
+      rdfs:subClassOf :Room .
+
+:cognitiveIndicator
+      a       owl:NamedIndividual , :MCIIndicator ;
+      :requireIntervention
+              :playCognitiveGames , :performMemoryTest .
+
+:unemployment
+      a       owl:NamedIndividual , :Employment .
+
+:middleClass
+      a       owl:NamedIndividual , :SocialState .
+
+:NonPhysical
+      a       owl:Class ;
+      rdfs:subClassOf :Being .
+
+:SocialChangeingBehaviour
+      a       owl:Class ;
+      rdfs:subClassOf :ChangeingBehaviour .
+
+:Mandarin
+      a       owl:NamedIndividual , :Language .
+
+:lessVisits
+      a       owl:NamedIndividual , :SocialChangeingBehaviour ;
+      :isIndicatorOf :socialIndicator .
+
+:NormalBehaviour
+      a       owl:Class ;
+      rdfs:subClassOf :Behaviour .
+
+:performMemoryTest
+      a       :CognitiveIntervention , owl:NamedIndividual .
+
+:car  a       owl:NamedIndividual , :Transport ;
+      :partOfCity :Montpellier .
+
+<http://dev.c4a.morelab.deusto.es/ontologies/city4age.owl>
+      a       owl:Ontology .
+
+:sleep
+      a       owl:NamedIndividual , :Activity .
+
+:Tangible
+      a       owl:Class ;
+      rdfs:subClassOf :Environment .
+
+:toilet
+      a       :Toilet , owl:NamedIndividual ;
+      :partOfHouse :house1 .
+
+:thinkingProblem
+      a       owl:NamedIndividual , :CognitiveChangeingBehaviour ;
+      :isIndicatorOf :cognitiveIndicator .
+
+:House
+      a       owl:Class ;
+      rdfs:subClassOf :Tangible .
+
+:hasDiseaseLevel
+      a       owl:ObjectProperty ;
+      rdfs:domain :Disease ;
+      rdfs:range :Level .
+
+:shop
+      a       owl:NamedIndividual , :Building ;
+      :partOfCity :Montpellier .
+
+:female
+      a       owl:NamedIndividual , :Gender .
+
+:judgementProblem
+      a       owl:NamedIndividual , :CognitiveChangeingBehaviour ;
+      :isIndicatorOf :cognitiveIndicator .
+
+:English
+      a       owl:NamedIndividual , :Language .
+
+:bachelor
+      a       :EducationLevel , owl:NamedIndividual .
+
+xsd:time
+      a       rdfs:Datatype .
+
+:activitySuggestion
+      a       owl:NamedIndividual , :Service .
+
+:ADLChangeingBehaviour
+      a       owl:Class ;
+      rdfs:subClassOf :ChangeingBehaviour .
+
+:inEnvironmentSince
+      a       owl:DatatypeProperty ;
+      rdfs:domain :Person ;
+      rdfs:range xsd:dateTime .
+
+:hasPhoneNumber
+      a       owl:DatatypeProperty ;
+      rdfs:domain :Person ;
+      rdfs:range xsd:int .
+
+:Intangible
+      a       owl:Class ;
+      rdfs:subClassOf :Environment .
+
+:watchMovie
+      a       owl:NamedIndividual , :SocialIntervention ;
+      :relatedToPreference
+              :cinema .
+
+:food
+      a       owl:NamedIndividual , :PreferenceTopic .
+
+:liveIn
+      a       owl:ObjectProperty ;
+      rdfs:domain :Person ;
+      rdfs:range :House .
+
+:preferInteractionWith
+      a       owl:ObjectProperty ;
+      rdfs:domain :Person ;
+      rdfs:range :Device .
+
+:verbal
+      a       owl:NamedIndividual , :SensorialCapability .
+
+:moreTimeADL
+      a       owl:NamedIndividual , :ADLChangeingBehaviour ;
+      :isIndicatorOf :ADLIndicator .
+
+:education
+      a       owl:NamedIndividual , :Service .
+
+:Window
+      a       owl:Class ;
+      rdfs:subClassOf :Fourniture .
+
+:lessSocialInteraction
+      a       owl:NamedIndividual , :SocialChangeingBehaviour ;
+      :isIndicatorOf :socialIndicator .
+
+:hight
+      a       owl:NamedIndividual , :Level .
+
+:medium
+      a       owl:NamedIndividual , :Level .
+
+:Smartphone
+      a       :Device , owl:NamedIndividual .
+
+:French
+      a       owl:NamedIndividual , :Language .
+
+:PerformHabit
+      a       owl:NamedIndividual , :ADLIntervention .
+
+:hasHeight
+      a       owl:DatatypeProperty ;
+      rdfs:domain :Person ;
+      rdfs:range xsd:int .
+
+:Indicator
+      a       owl:Class ;
+      rdfs:subClassOf :Virtual .
+
+:doesActivitySince
+      a       owl:DatatypeProperty ;
+      rdfs:domain :Person ;
+      rdfs:range xsd:dateTime .
+
+:privateWork
+      a       owl:NamedIndividual , :Employment .
+
+:hasID
+      a       owl:DatatypeProperty ;
+      rdfs:domain :Person ;
+      rdfs:range xsd:int .
+
+:riskReaction
+      a       owl:NamedIndividual , :Service .
+
+:beacon
+      a       owl:NamedIndividual , :SensorType .
+
+:hasDateHospitalisation
+      a       owl:DatatypeProperty ;
+      rdfs:domain :Hospitalization ;
+      rdfs:range xsd:dateTime .
+
+:music
+      a       owl:NamedIndividual , :Cultural .
+
+:notUsedFor
+      a       owl:DatatypeProperty ;
+      rdfs:domain :Object ;
+      rdfs:range xsd:int .
+
+:communityCenter
+      a       owl:NamedIndividual , :Building ;
+      :partOfCity :Montpellier .
+
+:lessEngagementADL
+      a       owl:NamedIndividual , :ADLChangeingBehaviour ;
+      :isIndicatorOf :ADLIndicator .
+
+:visitingSocialCenter
+      a       owl:NamedIndividual , :Activity .
+
+:cameFrom
+      a       owl:ObjectProperty ;
+      rdfs:domain :Person ;
+      rdfs:range
+              [ a       owl:Class ;
+                owl:unionOf (:City :House)
+              ] .
+
+:Person1
+      a       :Person , owl:NamedIndividual .
+
+:hasDateFall
+      a       owl:DatatypeProperty ;
+      rdfs:domain :Fall ;
+      rdfs:range xsd:dateTime .
+
+:Person
+      a       owl:Class ;
+      rdfs:subClassOf :Physical .
+
+:SocialState
+      a       owl:Class ;
+      rdfs:subClassOf :PersonalProfile .
+
+:taxi
+      a       owl:NamedIndividual , :Transport ;
+      :partOfCity :Montpellier .
+
+:widowed
+      a       owl:NamedIndividual , :MaritalState .
+
+:DoesActivity
+      a       owl:ObjectProperty ;
+      rdfs:domain :Person ;
+      rdfs:range :Activity .
+
+:goToRestaurant
+      a       owl:NamedIndividual , :MobilityIntervention ;
+      :relatedToPreference
+              :food .
+
+:eatMeal
+      a       owl:NamedIndividual , :Activity .
+
+:watchTV
+      a       owl:NamedIndividual , :Activity .
+
+:commonLaw
+      a       owl:NamedIndividual , :MaritalState .
+
+:a1_on
+      a       :SensorState , owl:NamedIndividual .
+
+:hasHabit
+      a       owl:ObjectProperty ;
+      rdfs:domain :Person ;
+      rdfs:range :Habit .
+
+:Bedroom
+      a       owl:Class ;
+      rdfs:subClassOf :Room .
+
+:PreferenceTopic
+      a       owl:Class ;
+      rdfs:subClassOf :Preference .
+
+:inEnvironmentFor
+      a       owl:DatatypeProperty ;
+      rdfs:domain :Person ;
+      rdfs:range xsd:int .
+
+:Indian
+      a       owl:NamedIndividual , :Language .
+
+:Object
+      a       owl:Class ;
+      rdfs:subClassOf :Tangible .
+
+:goToLibrary
+      a       owl:NamedIndividual , :SocialIntervention ;
+      :relatedToPreference
+              :literature .
+
+:agenda
+      a       owl:NamedIndividual , :Service .
+
+:doesActivityFor
+      a       owl:DatatypeProperty ;
+      rdfs:domain :Person ;
+      rdfs:range xsd:int .
+
+:fallIncrease
+      a       owl:NamedIndividual , :MobilityChangeingBehaviour ;
+      :isIndicatorOf :mobilityIndicator .
+
+:hasBehaviourChange
+      a       owl:ObjectProperty ;
+      rdfs:domain :Person ;
+      rdfs:range
+              [ a       owl:Class ;
+                owl:unionOf (:ChangeingBehaviour :NormalBehaviour)
+              ] .
+
+:locatedIn
+      a       owl:ObjectProperty ;
+      rdfs:domain :Object ;
+      rdfs:range
+              [ a       owl:Class ;
+                owl:unionOf (:City :House)
+              ] .
+
+:Language
+      a       owl:Class ;
+      rdfs:subClassOf :Communication .
+
+:Surgery
+      a       owl:Class ;
+      rdfs:subClassOf :HealthProfile .
+
+:getUp
+      a       owl:NamedIndividual , :Activity .
+
+:MCIIndicator
+      a       owl:Class ;
+      rdfs:subClassOf :Indicator .
+
+:hasFriend
+      a       owl:ObjectProperty ;
+      rdfs:domain :Person ;
+      rdfs:range :Person .
+
+:attendConcert
+      a       owl:NamedIndividual , :SocialIntervention ;
+      :relatedToPreference
+              :music .
+
+:bathroom
+      a       owl:NamedIndividual , :Bathroom ;
+      :partOfHouse :house1 .
+
+:lastUsed
+      a       owl:DatatypeProperty ;
+      rdfs:domain :Object ;
+      rdfs:range xsd:dateTime .
+
+:beacon_normal
+      a       :SensorState , owl:NamedIndividual .
+
+:Greek
+      a       owl:NamedIndividual , :Language .
+
+:unneducated
+      a       :EducationLevel , owl:NamedIndividual .
+
+:upperClass
+      a       owl:NamedIndividual , :SocialState .
+
+:male
+      a       owl:NamedIndividual , :Gender .
+
+:socialIndicator
+      a       owl:NamedIndividual , :MCIIndicator ;
+      :requireIntervention
+              :goToLibrary , :attendConcert , :watchTheatre , :visitCommunityCenter , :watchMovie , :visitFriend , :proposeTravelDestination .
+
+:politic
+      a       owl:NamedIndividual , :PreferenceTopic .
+
+:partOfHouse
+      a       owl:ObjectProperty ;
+      rdfs:domain :Room ;
+      rdfs:range :House .
+
+:publicWorker
+      a       owl:NamedIndividual , :Employment .
+
+:isCaregiver
+      a       owl:DatatypeProperty ;
+      rdfs:domain :Person ;
+      rdfs:range xsd:boolean .
+
+:divorced
+      a       owl:NamedIndividual , :MaritalState .
+
+:coercion
+      a       owl:NamedIndividual , :Service .
+
+:PhysicalCapability
+      a       owl:Class ;
+      rdfs:subClassOf :OrganicProfile .
+
+:ADLIntervention
+      a       owl:Class ;
+      rdfs:subClassOf :InterventionBehaviour .
+
+:walkingPatternChange
+      a       owl:NamedIndividual , :MobilityChangeingBehaviour ;
+      :isIndicatorOf :mobilityIndicator .
+
+:visitingFriend
+      a       owl:NamedIndividual , :Activity .
+
+:Behaviour
+      a       owl:Class ;
+      rdfs:subClassOf :Virtual .
+
+:primaryEducation
+      a       :EducationLevel , owl:NamedIndividual .
+
+:Disease
+      a       owl:Class ;
+      rdfs:subClassOf :HealthProfile .
+
+:hasDateSurgery
+      a       owl:DatatypeProperty ;
+      rdfs:domain :Surgery ;
+      rdfs:range xsd:dateTime .
+
+:auditory
+      a       owl:NamedIndividual , :SensorialCapability .
+
+:isIndicatorOf
+      a       owl:ObjectProperty ;
+      rdfs:domain :ChangeingBehaviour ;
+      rdfs:range :MCIIndicator .
+
+:hasMCIIndicator
+      a       owl:ObjectProperty ;
+      rdfs:domain :Person ;
+      rdfs:range :MCIIndicator .
+
+:hasPossibleState
+      a       owl:ObjectProperty ;
+      rdfs:domain :Sensor ;
+      rdfs:range :SensorState .
+
+:Room
+      a       owl:Class ;
+      rdfs:subClassOf :House .
+
+:Hospitalization
+      a       owl:Class ;
+      rdfs:subClassOf :HealthProfile .
+
+:lessMotivationADL
+      a       owl:NamedIndividual , :ADLChangeingBehaviour ;
+      :isIndicatorOf :ADLIndicator .
+
+:hasDuration
+      a       owl:DatatypeProperty ;
+      rdfs:domain :Habit ;
+      rdfs:range xsd:time .
+
+:ADLIndicator
+      a       owl:NamedIndividual , :MCIIndicator ;
+      :requireIntervention
+              :PerformHabit , :prepareFood , :listenMusic , :proposeRecipe , :readBook .
+
+:Gender
+      a       owl:Class ;
+      rdfs:subClassOf :PersonalProfile .
+
+:SocialIntervention
+      a       owl:Class ;
+      rdfs:subClassOf :InterventionBehaviour .
+
+:isInterestedIn
+      a       owl:ObjectProperty ;
+      rdfs:domain :Person ;
+      rdfs:range :Service .
+
+:goToilet
+      a       owl:NamedIndividual , :Activity .
+
+:assistiveCommunication
+      a       owl:NamedIndividual , :Service .
+
+:Environment
+      a       owl:Class .
+
+:hasName
+      a       owl:DatatypeProperty ;
+      rdfs:domain :Person ;
+      rdfs:range xsd:string .
+
+:hasType
+      a       owl:ObjectProperty ;
+      rdfs:domain :Sensor ;
+      rdfs:range :SensorType .
+
+:CognitiveIntervention
+      a       owl:Class ;
+      rdfs:subClassOf :InterventionBehaviour .
+
+:visitCommunityCenter
+      a       owl:NamedIndividual , :SocialIntervention .
+
+:HealthProfile
+      a       owl:Class ;
+      rdfs:subClassOf :Profile .
+
+:Employment
+      a       owl:Class ;
+      rdfs:subClassOf :PersonalProfile .
+
+:goOut
+      a       owl:NamedIndividual , :Activity .
+
+:memoryProblem
+      a       owl:NamedIndividual , :CognitiveChangeingBehaviour ;
+      :isIndicatorOf :cognitiveIndicator .
+
+:CognitiveChangeingBehaviour
+      a       owl:Class ;
+      rdfs:subClassOf :ChangeingBehaviour .
+
+:problemUsingTransport
+      a       owl:NamedIndividual , :MobilityChangeingBehaviour ;
+      :isIndicatorOf :mobilityIndicator .
+
+:cookMeal
+      a       owl:NamedIndividual , :Activity .
+
+:low  a       owl:NamedIndividual , :Level .
