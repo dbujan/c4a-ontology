@@ -1,0 +1,615 @@
+{
+  "@context" : {
+    "spatial" : {
+      "@id" : "http://purl.org/dc/terms/spatial",
+      "@type" : "@id"
+    },
+    "dateAccepted" : {
+      "@id" : "http://purl.org/dc/terms/dateAccepted"
+    },
+    "PrepareHotTeaTask" : {
+      "@id" : "http://www.demcare.eu/ontologies/demlab.owl#PrepareHotTeaTask"
+    },
+    "abstract" : {
+      "@id" : "http://purl.org/dc/terms/abstract"
+    },
+    "MediaTypeOrExtent" : {
+      "@id" : "http://purl.org/dc/terms/MediaTypeOrExtent"
+    },
+    "coverage" : {
+      "@id" : "http://purl.org/dc/terms/coverage",
+      "@type" : "@id"
+    },
+    "walkingSpeedInstantaneous" : {
+      "@id" : "http://www.demcare.eu/ontologies/demlab.owl#walkingSpeedInstantaneous"
+    },
+    "DiscussionTask" : {
+      "@id" : "http://www.demcare.eu/ontologies/demlab.owl#DiscussionTask"
+    },
+    "isVersionOf" : {
+      "@id" : "http://purl.org/dc/terms/isVersionOf"
+    },
+    "hasMMSEScore" : {
+      "@id" : "http://www.demcare.eu/ontologies/demlab.owl#hasMMSEScore"
+    },
+    "WaterPlantTask" : {
+      "@id" : "http://www.demcare.eu/ontologies/demlab.owl#WaterPlantTask"
+    },
+    "StressData" : {
+      "@id" : "http://www.demcare.eu/ontologies/demlab.owl#StressData"
+    },
+    "versionInfo" : {
+      "@id" : "http://www.w3.org/2002/07/owl#versionInfo"
+    },
+    "created" : {
+      "@id" : "http://purl.org/dc/terms/created"
+    },
+    "stressLevel" : {
+      "@id" : "http://www.demcare.eu/ontologies/demlab.owl#stressLevel"
+    },
+    "DirectedTask" : {
+      "@id" : "http://www.demcare.eu/ontologies/demlab.owl#DirectedTask"
+    },
+    "participates" : {
+      "@id" : "http://www.demcare.eu/ontologies/demlab.owl#participates",
+      "@type" : "@id"
+    },
+    "RightsStatement" : {
+      "@id" : "http://purl.org/dc/terms/RightsStatement"
+    },
+    "LeaveRoomTask" : {
+      "@id" : "http://www.demcare.eu/ontologies/demlab.owl#LeaveRoomTask"
+    },
+    "FunctionalAbilitiesData" : {
+      "@id" : "http://www.demcare.eu/ontologies/demlab.owl#FunctionalAbilitiesData"
+    },
+    "articulation" : {
+      "@id" : "http://www.demcare.eu/ontologies/demlab.owl#articulation"
+    },
+    "license" : {
+      "@id" : "http://purl.org/dc/terms/license",
+      "@type" : "@id"
+    },
+    "ProvenanceStatement" : {
+      "@id" : "http://purl.org/dc/terms/ProvenanceStatement"
+    },
+    "accrualPeriodicity" : {
+      "@id" : "http://purl.org/dc/terms/accrualPeriodicity",
+      "@type" : "@id"
+    },
+    "VoiceData" : {
+      "@id" : "http://www.demcare.eu/ontologies/demlab.owl#VoiceData"
+    },
+    "bibliographicCitation" : {
+      "@id" : "http://purl.org/dc/terms/bibliographicCitation"
+    },
+    "MediaType" : {
+      "@id" : "http://purl.org/dc/terms/MediaType"
+    },
+    "speechRate" : {
+      "@id" : "http://www.demcare.eu/ontologies/demlab.owl#speechRate"
+    },
+    "issued" : {
+      "@id" : "http://purl.org/dc/terms/issued"
+    },
+    "TurnOnTVTask" : {
+      "@id" : "http://www.demcare.eu/ontologies/demlab.owl#TurnOnTVTask"
+    },
+    "topDataProperty" : {
+      "@id" : "http://www.w3.org/2002/07/owl#topDataProperty"
+    },
+    "DiagnosisAssessment" : {
+      "@id" : "http://www.demcare.eu/ontologies/demlab.owl#DiagnosisAssessment"
+    },
+    "DirectedExpressionTask" : {
+      "@id" : "http://www.demcare.eu/ontologies/demlab.owl#DirectedExpressionTask"
+    },
+    "EstablishAccountBalanceTask" : {
+      "@id" : "http://www.demcare.eu/ontologies/demlab.owl#EstablishAccountBalanceTask"
+    },
+    "PayBillTask" : {
+      "@id" : "http://www.demcare.eu/ontologies/demlab.owl#PayBillTask"
+    },
+    "references" : {
+      "@id" : "http://purl.org/dc/terms/references"
+    },
+    "speechFluency" : {
+      "@id" : "http://www.demcare.eu/ontologies/demlab.owl#speechFluency"
+    },
+    "isReplacedBy" : {
+      "@id" : "http://purl.org/dc/terms/isReplacedBy"
+    },
+    "areasOfInterestExplored" : {
+      "@id" : "http://www.demcare.eu/ontologies/demlab.owl#areasOfInterestExplored",
+      "@type" : "@id"
+    },
+    "PictureDescriptionTask" : {
+      "@id" : "http://www.demcare.eu/ontologies/demlab.owl#PictureDescriptionTask"
+    },
+    "hasVersion" : {
+      "@id" : "http://purl.org/dc/terms/hasVersion"
+    },
+    "Class" : {
+      "@id" : "http://www.w3.org/2000/01/rdf-schema#Class"
+    },
+    "FileFormat" : {
+      "@id" : "http://purl.org/dc/terms/FileFormat"
+    },
+    "AutonomyAssessment" : {
+      "@id" : "http://www.demcare.eu/ontologies/demlab.owl#AutonomyAssessment"
+    },
+    "VocabularyEncodingScheme" : {
+      "@id" : "http://purl.org/dc/dcam/VocabularyEncodingScheme"
+    },
+    "Instant" : {
+      "@id" : "http://www.w3.org/2006/time#Instant"
+    },
+    "apathyInventory" : {
+      "@id" : "http://www.demcare.eu/ontologies/demlab.owl#apathyInventory"
+    },
+    "ClinicalRecord" : {
+      "@id" : "http://www.demcare.eu/ontologies/demlab.owl#ClinicalRecord"
+    },
+    "PersonWithPredementia" : {
+      "@id" : "http://www.demcare.eu/ontologies/demlab.owl#PersonWithPredementia"
+    },
+    "DirectedDiscussionTask" : {
+      "@id" : "http://www.demcare.eu/ontologies/demlab.owl#DirectedDiscussionTask"
+    },
+    "label" : {
+      "@id" : "http://www.w3.org/2000/01/rdf-schema#label"
+    },
+    "isPartOf" : {
+      "@id" : "http://purl.org/dc/terms/isPartOf"
+    },
+    "hasPart" : {
+      "@id" : "http://purl.org/dc/terms/hasPart"
+    },
+    "isFormatOf" : {
+      "@id" : "http://purl.org/dc/terms/isFormatOf"
+    },
+    "fabScore" : {
+      "@id" : "http://www.demcare.eu/ontologies/demlab.owl#fabScore"
+    },
+    "hasUPDRSScore" : {
+      "@id" : "http://www.demcare.eu/ontologies/demlab.owl#hasUPDRSScore"
+    },
+    "Location" : {
+      "@id" : "http://purl.org/dc/terms/Location"
+    },
+    "DiscussionInvolvementData" : {
+      "@id" : "http://www.demcare.eu/ontologies/demlab.owl#DiscussionInvolvementData"
+    },
+    "LinguisticSystem" : {
+      "@id" : "http://purl.org/dc/terms/LinguisticSystem"
+    },
+    "involvesTask" : {
+      "@id" : "http://www.demcare.eu/ontologies/demlab.owl#involvesTask",
+      "@type" : "@id"
+    },
+    "WalkingCountingBackwardsTask" : {
+      "@id" : "http://www.demcare.eu/ontologies/demlab.owl#WalkingCountingBackwardsTask"
+    },
+    "homepage" : {
+      "@id" : "http://xmlns.com/foaf/0.1/homepage",
+      "@type" : "@id"
+    },
+    "npi" : {
+      "@id" : "http://www.demcare.eu/ontologies/demlab.owl#npi"
+    },
+    "areasOfNoInterestExplored" : {
+      "@id" : "http://www.demcare.eu/ontologies/demlab.owl#areasOfNoInterestExplored",
+      "@type" : "@id"
+    },
+    "medium" : {
+      "@id" : "http://purl.org/dc/terms/medium",
+      "@type" : "@id"
+    },
+    "Person" : {
+      "@id" : "http://xmlns.com/foaf/0.1/Person"
+    },
+    "note" : {
+      "@id" : "http://www.w3.org/2004/02/skos/core#note"
+    },
+    "dynamicBalance" : {
+      "@id" : "http://www.demcare.eu/ontologies/demlab.owl#dynamicBalance"
+    },
+    "rightsHolder" : {
+      "@id" : "http://purl.org/dc/terms/rightsHolder",
+      "@type" : "@id"
+    },
+    "MeasuredData" : {
+      "@id" : "http://www.demcare.eu/ontologies/demlab.owl#MeasuredData"
+    },
+    "SemiDirectedTask" : {
+      "@id" : "http://www.demcare.eu/ontologies/demlab.owl#SemiDirectedTask"
+    },
+    "PrepareDrugBoxTask" : {
+      "@id" : "http://www.demcare.eu/ontologies/demlab.owl#PrepareDrugBoxTask"
+    },
+    "Participant" : {
+      "@id" : "http://www.demcare.eu/ontologies/demlab.owl#Participant"
+    },
+    "DiscussionWithClinicianStep" : {
+      "@id" : "http://www.demcare.eu/ontologies/demlab.owl#DiscussionWithClinicianStep"
+    },
+    "measuredData" : {
+      "@id" : "http://www.demcare.eu/ontologies/demlab.owl#measuredData",
+      "@type" : "@id"
+    },
+    "LatencyData" : {
+      "@id" : "http://www.demcare.eu/ontologies/demlab.owl#LatencyData"
+    },
+    "CountingBackwardsTask" : {
+      "@id" : "http://www.demcare.eu/ontologies/demlab.owl#CountingBackwardsTask"
+    },
+    "Agent" : {
+      "@id" : "http://purl.org/dc/terms/Agent"
+    },
+    "ArticulationControlTask" : {
+      "@id" : "http://www.demcare.eu/ontologies/demlab.owl#ArticulationControlTask"
+    },
+    "creator" : {
+      "@id" : "http://purl.org/dc/terms/creator",
+      "@type" : "@id"
+    },
+    "name" : {
+      "@id" : "http://xmlns.com/foaf/0.1/name"
+    },
+    "GaitData" : {
+      "@id" : "http://www.demcare.eu/ontologies/demlab.owl#GaitData"
+    },
+    "shortCognitiveBatteryAssessment" : {
+      "@id" : "http://www.demcare.eu/ontologies/demlab.owl#shortCognitiveBatteryAssessment"
+    },
+    "topObjectProperty" : {
+      "@id" : "http://www.w3.org/2002/07/owl#topObjectProperty",
+      "@type" : "@id"
+    },
+    "compliantInstructionsOrder" : {
+      "@id" : "http://www.demcare.eu/ontologies/demlab.owl#compliantInstructionsOrder"
+    },
+    "handTrajectory" : {
+      "@id" : "http://www.demcare.eu/ontologies/demlab.owl#handTrajectory",
+      "@type" : "@id"
+    },
+    "hasClinicalRecord" : {
+      "@id" : "http://www.demcare.eu/ontologies/demlab.owl#hasClinicalRecord",
+      "@type" : "@id"
+    },
+    "valid" : {
+      "@id" : "http://purl.org/dc/terms/valid"
+    },
+    "activityStatus" : {
+      "@id" : "http://www.demcare.eu/ontologies/demlab.owl#activityStatus",
+      "@type" : "@id"
+    },
+    "hasEnd" : {
+      "@id" : "http://www.w3.org/2006/time#hasEnd",
+      "@type" : "@id"
+    },
+    "dateCopyrighted" : {
+      "@id" : "http://purl.org/dc/terms/dateCopyrighted"
+    },
+    "Zone" : {
+      "@id" : "http://www.demcare.eu/ontologies/demlab.owl#Zone"
+    },
+    "rights" : {
+      "@id" : "http://purl.org/dc/terms/rights",
+      "@type" : "@id"
+    },
+    "DirectedActivitiesStep" : {
+      "@id" : "http://www.demcare.eu/ontologies/demlab.owl#DirectedActivitiesStep"
+    },
+    "verbalReactionSpontaneity" : {
+      "@id" : "http://www.demcare.eu/ontologies/demlab.owl#verbalReactionSpontaneity"
+    },
+    "hasBeginning" : {
+      "@id" : "http://www.w3.org/2006/time#hasBeginning",
+      "@type" : "@id"
+    },
+    "MethodOfAccrual" : {
+      "@id" : "http://purl.org/dc/terms/MethodOfAccrual"
+    },
+    "PhysicalResource" : {
+      "@id" : "http://purl.org/dc/terms/PhysicalResource"
+    },
+    "ClinicalAssessment" : {
+      "@id" : "http://www.demcare.eu/ontologies/demlab.owl#ClinicalAssessment"
+    },
+    "identifier" : {
+      "@id" : "http://purl.org/dc/terms/identifier"
+    },
+    "Protocol" : {
+      "@id" : "http://www.demcare.eu/ontologies/demlab.owl#Protocol"
+    },
+    "PhysicalMedium" : {
+      "@id" : "http://purl.org/dc/terms/PhysicalMedium"
+    },
+    "CallPsychologistTask" : {
+      "@id" : "http://www.demcare.eu/ontologies/demlab.owl#CallPsychologistTask"
+    },
+    "subject" : {
+      "@id" : "http://purl.org/dc/terms/subject"
+    },
+    "Standard" : {
+      "@id" : "http://purl.org/dc/terms/Standard"
+    },
+    "preferredNamespacePrefix" : {
+      "@id" : "http://purl.org/vocab/vann/preferredNamespacePrefix"
+    },
+    "PersonWithDementia" : {
+      "@id" : "http://www.demcare.eu/ontologies/demlab.owl#PersonWithDementia"
+    },
+    "containsAssessment" : {
+      "@id" : "http://www.demcare.eu/ontologies/demlab.owl#containsAssessment",
+      "@type" : "@id"
+    },
+    "accrualMethod" : {
+      "@id" : "http://purl.org/dc/terms/accrualMethod",
+      "@type" : "@id"
+    },
+    "FindBusLineOnMapTask" : {
+      "@id" : "http://www.demcare.eu/ontologies/demlab.owl#FindBusLineOnMapTask"
+    },
+    "isDefinedBy" : {
+      "@id" : "http://www.w3.org/2000/01/rdf-schema#isDefinedBy"
+    },
+    "repetitions" : {
+      "@id" : "http://www.demcare.eu/ontologies/demlab.owl#repetitions"
+    },
+    "CognitiveAbilitiesData" : {
+      "@id" : "http://www.demcare.eu/ontologies/demlab.owl#CognitiveAbilitiesData"
+    },
+    "Jurisdiction" : {
+      "@id" : "http://purl.org/dc/terms/Jurisdiction"
+    },
+    "DiagnosisType" : {
+      "@id" : "http://www.demcare.eu/ontologies/demlab.owl#DiagnosisType"
+    },
+    "tableOfContents" : {
+      "@id" : "http://purl.org/dc/terms/tableOfContents"
+    },
+    "freeAndCuedRemindingAssessment" : {
+      "@id" : "http://www.demcare.eu/ontologies/demlab.owl#freeAndCuedRemindingAssessment"
+    },
+    "AgentClass" : {
+      "@id" : "http://purl.org/dc/terms/AgentClass"
+    },
+    "title" : {
+      "@id" : "http://purl.org/dc/terms/title"
+    },
+    "iadl_e" : {
+      "@id" : "http://www.demcare.eu/ontologies/demlab.owl#iadl_e"
+    },
+    "dateSubmitted" : {
+      "@id" : "http://purl.org/dc/terms/dateSubmitted"
+    },
+    "hasParticipant" : {
+      "@id" : "http://www.demcare.eu/ontologies/demlab.owl#hasParticipant",
+      "@type" : "@id"
+    },
+    "isRequiredBy" : {
+      "@id" : "http://purl.org/dc/terms/isRequiredBy"
+    },
+    "source" : {
+      "@id" : "http://purl.org/dc/elements/1.1/source"
+    },
+    "ProtocolStep" : {
+      "@id" : "http://www.demcare.eu/ontologies/demlab.owl#ProtocolStep"
+    },
+    "walkingSpeed" : {
+      "@id" : "http://www.demcare.eu/ontologies/demlab.owl#walkingSpeed"
+    },
+    "type" : {
+      "@id" : "http://purl.org/dc/terms/type",
+      "@type" : "@id"
+    },
+    "ReadArticleTask" : {
+      "@id" : "http://www.demcare.eu/ontologies/demlab.owl#ReadArticleTask"
+    },
+    "vowelDuration" : {
+      "@id" : "http://www.demcare.eu/ontologies/demlab.owl#vowelDuration"
+    },
+    "publisher" : {
+      "@id" : "http://purl.org/dc/terms/publisher",
+      "@type" : "@id"
+    },
+    "LicenseDocument" : {
+      "@id" : "http://purl.org/dc/terms/LicenseDocument"
+    },
+    "BibliographicResource" : {
+      "@id" : "http://purl.org/dc/terms/BibliographicResource"
+    },
+    "modified" : {
+      "@id" : "http://purl.org/dc/terms/modified"
+    },
+    "Frequency" : {
+      "@id" : "http://purl.org/dc/terms/Frequency"
+    },
+    "provenance" : {
+      "@id" : "http://purl.org/dc/terms/provenance",
+      "@type" : "@id"
+    },
+    "stepLength" : {
+      "@id" : "http://www.demcare.eu/ontologies/demlab.owl#stepLength"
+    },
+    "WalkingTask" : {
+      "@id" : "http://www.demcare.eu/ontologies/demlab.owl#WalkingTask"
+    },
+    "isReferencedBy" : {
+      "@id" : "http://purl.org/dc/terms/isReferencedBy"
+    },
+    "accessRights" : {
+      "@id" : "http://purl.org/dc/terms/accessRights",
+      "@type" : "@id"
+    },
+    "AnswerPhoneTask" : {
+      "@id" : "http://www.demcare.eu/ontologies/demlab.owl#AnswerPhoneTask"
+    },
+    "date" : {
+      "@id" : "http://purl.org/dc/terms/date"
+    },
+    "seeAlso" : {
+      "@id" : "http://www.w3.org/2000/01/rdf-schema#seeAlso"
+    },
+    "verbalReactionTime" : {
+      "@id" : "http://www.demcare.eu/ontologies/demlab.owl#verbalReactionTime"
+    },
+    "replaces" : {
+      "@id" : "http://purl.org/dc/terms/replaces"
+    },
+    "distanceWalked" : {
+      "@id" : "http://www.demcare.eu/ontologies/demlab.owl#distanceWalked"
+    },
+    "Policy" : {
+      "@id" : "http://purl.org/dc/terms/Policy"
+    },
+    "HealthyControlParticipant" : {
+      "@id" : "http://www.demcare.eu/ontologies/demlab.owl#HealthyControlParticipant"
+    },
+    "trailMakingTest" : {
+      "@id" : "http://www.demcare.eu/ontologies/demlab.owl#trailMakingTest"
+    },
+    "CognitiveAbilitiesAssessment" : {
+      "@id" : "http://www.demcare.eu/ontologies/demlab.owl#CognitiveAbilitiesAssessment"
+    },
+    "audience" : {
+      "@id" : "http://purl.org/dc/terms/audience",
+      "@type" : "@id"
+    },
+    "FreeDiscussionTask" : {
+      "@id" : "http://www.demcare.eu/ontologies/demlab.owl#FreeDiscussionTask"
+    },
+    "NeuropsychiatricAndMoodAssessment" : {
+      "@id" : "http://www.demcare.eu/ontologies/demlab.owl#NeuropsychiatricAndMoodAssessment"
+    },
+    "dsm_ivDepressionCriteria" : {
+      "@id" : "http://www.demcare.eu/ontologies/demlab.owl#dsm_ivDepressionCriteria"
+    },
+    "comment" : {
+      "@id" : "http://www.w3.org/2000/01/rdf-schema#comment"
+    },
+    "language" : {
+      "@id" : "http://purl.org/dc/terms/language",
+      "@type" : "@id"
+    },
+    "HandTrajectoryType" : {
+      "@id" : "http://www.demcare.eu/ontologies/demlab.owl#HandTrajectoryType"
+    },
+    "contributor" : {
+      "@id" : "http://purl.org/dc/terms/contributor",
+      "@type" : "@id"
+    },
+    "mediator" : {
+      "@id" : "http://purl.org/dc/terms/mediator",
+      "@type" : "@id"
+    },
+    "PictureDiscussionTask" : {
+      "@id" : "http://www.demcare.eu/ontologies/demlab.owl#PictureDiscussionTask"
+    },
+    "requires" : {
+      "@id" : "http://purl.org/dc/terms/requires"
+    },
+    "MotricityAbilitiesAssessment" : {
+      "@id" : "http://www.demcare.eu/ontologies/demlab.owl#MotricityAbilitiesAssessment"
+    },
+    "isClinicalRecordOf" : {
+      "@id" : "http://www.demcare.eu/ontologies/demlab.owl#isClinicalRecordOf",
+      "@type" : "@id"
+    },
+    "available" : {
+      "@id" : "http://purl.org/dc/terms/available"
+    },
+    "stoppingDisplacement" : {
+      "@id" : "http://www.demcare.eu/ontologies/demlab.owl#stoppingDisplacement"
+    },
+    "extent" : {
+      "@id" : "http://purl.org/dc/terms/extent",
+      "@type" : "@id"
+    },
+    "hasClinicalDiagnosis" : {
+      "@id" : "http://www.demcare.eu/ontologies/demlab.owl#hasClinicalDiagnosis",
+      "@type" : "@id"
+    },
+    "conformsTo" : {
+      "@id" : "http://purl.org/dc/terms/conformsTo",
+      "@type" : "@id"
+    },
+    "alternative" : {
+      "@id" : "http://purl.org/dc/terms/alternative"
+    },
+    "hasFormat" : {
+      "@id" : "http://purl.org/dc/terms/hasFormat"
+    },
+    "pauseRate" : {
+      "@id" : "http://www.demcare.eu/ontologies/demlab.owl#pauseRate"
+    },
+    "SemiDirectedActivitiesStep" : {
+      "@id" : "http://www.demcare.eu/ontologies/demlab.owl#SemiDirectedActivitiesStep"
+    },
+    "Literal" : {
+      "@id" : "http://www.w3.org/2000/01/rdf-schema#Literal"
+    },
+    "Task" : {
+      "@id" : "http://www.demcare.eu/ontologies/demlab.owl#Task"
+    },
+    "latency" : {
+      "@id" : "http://www.demcare.eu/ontologies/demlab.owl#latency"
+    },
+    "SentenceRepeatingTask" : {
+      "@id" : "http://www.demcare.eu/ontologies/demlab.owl#SentenceRepeatingTask"
+    },
+    "PeriodOfTime" : {
+      "@id" : "http://purl.org/dc/terms/PeriodOfTime"
+    },
+    "description" : {
+      "@id" : "http://purl.org/dc/elements/1.1/description"
+    },
+    "ActivityStatusType" : {
+      "@id" : "http://www.demcare.eu/ontologies/demlab.owl#ActivityStatusType"
+    },
+    "SizeOrDuration" : {
+      "@id" : "http://purl.org/dc/terms/SizeOrDuration"
+    },
+    "format" : {
+      "@id" : "http://purl.org/dc/terms/format",
+      "@type" : "@id"
+    },
+    "hasProtocolStep" : {
+      "@id" : "http://www.demcare.eu/ontologies/demlab.owl#hasProtocolStep",
+      "@type" : "@id"
+    },
+    "MethodOfInstruction" : {
+      "@id" : "http://purl.org/dc/terms/MethodOfInstruction"
+    },
+    "relation" : {
+      "@id" : "http://purl.org/dc/elements/1.1/relation"
+    },
+    "temporal" : {
+      "@id" : "http://purl.org/dc/terms/temporal",
+      "@type" : "@id"
+    },
+    "accrualPolicy" : {
+      "@id" : "http://purl.org/dc/terms/accrualPolicy",
+      "@type" : "@id"
+    },
+    "LocationPeriodOrJurisdiction" : {
+      "@id" : "http://purl.org/dc/terms/LocationPeriodOrJurisdiction"
+    },
+    "Collection" : {
+      "@id" : "http://purl.org/dc/dcmitype/Collection"
+    },
+    "OrganisationEfficiencyData" : {
+      "@id" : "http://www.demcare.eu/ontologies/demlab.owl#OrganisationEfficiencyData"
+    },
+    "instructionalMethod" : {
+      "@id" : "http://purl.org/dc/terms/instructionalMethod",
+      "@type" : "@id"
+    },
+    "educationLevel" : {
+      "@id" : "http://purl.org/dc/terms/educationLevel",
+      "@type" : "@id"
+    }
+  }
+}

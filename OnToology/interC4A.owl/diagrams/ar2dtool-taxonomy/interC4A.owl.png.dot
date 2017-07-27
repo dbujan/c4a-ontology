@@ -1,0 +1,41 @@
+digraph ar2dtool_diagram { 
+rankdir=LR;
+size="1000"
+node [shape = rectangle, color="black"]; "interc4a:CognitiveGame" "interc4a:Background" "interc4a:Encouragement" "interc4a:CaregivingOpportunity" "interc4a:Group" "interc4a:ActivityProposal" "interc4a:Factoid" "interc4a:ParticularScenario" "interc4a:AgendaReminder" "interc4a:Counselling" "interc4a:BaseLine" "interc4a:Caregiver" "interc4a:KindOfCommunication" "interc4a:TrainingMaterial" "interc4a:WhatsGoingOn" "interc4a:OnPurpose" "interc4a:OutsiderOpportunity" "interc4a:Risk" "interc4a:Addressee" "interc4a:EducationalMaterial" "interc4a:Indications" "interc4a:Warning" "interc4a:LocalFact" "interc4a:Acontextual" "interc4a:IndividualContent" "interc4a:MedicalParamedicalInfoNews" "interc4a:News" "interc4a:Fact" "interc4a:BetterLife" "interc4a:WellBeing" "interc4a:LocalTraining" "interc4a:Assistive" "interc4a:LocalEducation" "interc4a:Alert" "interc4a:Directions" "interc4a:Content" "interc4a:Relative" "interc4a:LocalFactoid" ; /*classes style*/
+	"interc4a:OutsiderOpportunity" -> "interc4a:ParticularScenario" [ label = "rdfs:subClassOf" ];
+	"interc4a:TrainingMaterial" -> "interc4a:Background" [ label = "rdfs:subClassOf" ];
+	"interc4a:Directions" -> "interc4a:Assistive" [ label = "rdfs:subClassOf" ];
+	"interc4a:Risk" -> "interc4a:OnPurpose" [ label = "rdfs:subClassOf" ];
+	"interc4a:Fact" -> "interc4a:WellBeing" [ label = "rdfs:subClassOf" ];
+	"interc4a:Indications" -> "interc4a:Assistive" [ label = "rdfs:subClassOf" ];
+	"interc4a:EducationalMaterial" -> "interc4a:Background" [ label = "rdfs:subClassOf" ];
+	"interc4a:Acontextual" -> "interc4a:Content" [ label = "rdfs:subClassOf" ];
+	"interc4a:News" -> "interc4a:BaseLine" [ label = "rdfs:subClassOf" ];
+	"interc4a:BetterLife" -> "interc4a:BaseLine" [ label = "rdfs:subClassOf" ];
+	"interc4a:Background" -> "interc4a:Acontextual" [ label = "rdfs:subClassOf" ];
+	"interc4a:MedicalParamedicalInfoNews" -> "interc4a:Background" [ label = "rdfs:subClassOf" ];
+	"interc4a:AgendaReminder" -> "interc4a:BaseLine" [ label = "rdfs:subClassOf" ];
+	"interc4a:Factoid" -> "interc4a:WellBeing" [ label = "rdfs:subClassOf" ];
+	"interc4a:LocalEducation" -> "interc4a:ParticularScenario" [ label = "rdfs:subClassOf" ];
+	"interc4a:ParticularScenario" -> "interc4a:Content" [ label = "rdfs:subClassOf" ];
+	"interc4a:WhatsGoingOn" -> "interc4a:Background" [ label = "rdfs:subClassOf" ];
+	"interc4a:ActivityProposal" -> "interc4a:WellBeing" [ label = "rdfs:subClassOf" ];
+	"interc4a:CaregivingOpportunity" -> "interc4a:ParticularScenario" [ label = "rdfs:subClassOf" ];
+	"interc4a:Counselling" -> "interc4a:WellBeing" [ label = "rdfs:subClassOf" ];
+	"interc4a:OnPurpose" -> "interc4a:KindOfCommunication" [ label = "rdfs:subClassOf" ];
+	"interc4a:Assistive" -> "interc4a:KindOfCommunication" [ label = "rdfs:subClassOf" ];
+	"interc4a:Caregiver" -> "interc4a:Addressee" [ label = "rdfs:subClassOf" ];
+	"interc4a:LocalTraining" -> "interc4a:ParticularScenario" [ label = "rdfs:subClassOf" ];
+	"interc4a:BaseLine" -> "interc4a:KindOfCommunication" [ label = "rdfs:subClassOf" ];
+	"interc4a:Relative" -> "interc4a:Addressee" [ label = "rdfs:subClassOf" ];
+	"interc4a:LocalFactoid" -> "interc4a:ParticularScenario" [ label = "rdfs:subClassOf" ];
+	"interc4a:LocalFact" -> "interc4a:ParticularScenario" [ label = "rdfs:subClassOf" ];
+	"interc4a:Warning" -> "interc4a:OnPurpose" [ label = "rdfs:subClassOf" ];
+	"interc4a:IndividualContent" -> "interc4a:Content" [ label = "rdfs:subClassOf" ];
+	"interc4a:WellBeing" -> "interc4a:Acontextual" [ label = "rdfs:subClassOf" ];
+	"interc4a:Alert" -> "interc4a:OnPurpose" [ label = "rdfs:subClassOf" ];
+	"interc4a:CognitiveGame" -> "interc4a:Background" [ label = "rdfs:subClassOf" ];
+	"interc4a:Group" -> "interc4a:Addressee" [ label = "rdfs:subClassOf" ];
+	"interc4a:Encouragement" -> "interc4a:OnPurpose" [ label = "rdfs:subClassOf" ];
+
+}
