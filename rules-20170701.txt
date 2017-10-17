@@ -1,0 +1,27 @@
+@prefix pre: <http://jena.hpl.hp.com/prefix#>.
+@prefix foaf: <http://xmlns.com/foaf/0.1/>.
+@prefix schm: <http://schema.org/>.
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>.
+@prefix owl: <http://www.w3.org/2002/07/owl#>.
+@prefix hlifesci: <http://health-lifesci.schema.org/>.
+@prefix city4age: <http://www.morelab.deusto.es/ontologies/city4age#>.
+
+[rule1: (?f pre:father ?a) (?u pre:brother ?f) -> (?u pre:uncle ?a)]
+[rule2: (?persona/1 schm:familyName "Mulero") -> (?persona/1 foaf:givenName "Mule")]
+[rule3: (?persona/1 schm:givenName "Ruben") -> (?persona/1 foaf:family_name "Rub")]
+[rule4: (?user_in_system/7 ?vocab/user_in_system_username "ruben") -> (?user_in_system/7 schm:givenName "Ruben")]
+
+[ruleloc1: (?location rdf:type city4age:Environment), (?location hlifesci:alternateName ?urnName), regexp(?urnName, '(.):(.):(.):(.)', ?continent, ?project, ?locationType, ?locationId) -> strConcat("city4age:", ?locationType, ?class), (?location rdf:type ?class)]
+[ruleloc2: (?location rdf:type city4age:Pharmacy) -> (?location rdf:type city4age:HealthPlace), (?location rdf:type city4age:Shop)]
+[ruleloc3: (?location rdf:type city4age:Newsshop) -> (?location rdf:type city4age:CulturalPlace), (?location rdf:type city4age:Shop)]
+
+[rulelea1: (?lea rdf:type city4age:ExecutedAction), (?lea hlifesci:startTime ?timestamp), regexp(?timestamp, '(.)T(.):(.)', ?date, ?hh, ?rest), ge(?hh, '06'), lessThan(?hh, '09') -> (?lea city4age:isPartOfTheDay 'EarlyMorning')]
+[rulelea2: (?lea rdf:type city4age:ExecutedAction), (?lea hlifesci:startTime ?timestamp), regexp(?timestamp, '(.)T(.):(.)', ?date, ?hh, ?rest), ge(?hh, '09'), lessThan(?hh, '12') -> (?lea city4age:isPartOfTheDay 'LateMorning')]
+[rulelea3: (?lea rdf:type city4age:ExecutedAction), (?lea hlifesci:startTime ?timestamp), regexp(?timestamp, '(.)T(.):(.)', ?date, ?hh, ?rest), ge(?hh, '12'), lessThan(?hh, '15') -> (?lea city4age:isPartOfTheDay 'EarlyAfternoon')]
+[rulelea4: (?lea rdf:type city4age:ExecutedAction), (?lea hlifesci:startTime ?timestamp), regexp(?timestamp, '(.)T(.):(.)', ?date, ?hh, ?rest), ge(?hh, '15'), lessThan(?hh, '18') -> (?lea city4age:isPartOfTheDay 'LateAfternoon')]
+[rulelea5: (?lea rdf:type city4age:ExecutedAction), (?lea hlifesci:startTime ?timestamp), regexp(?timestamp, '(.)T(.):(.)', ?date, ?hh, ?rest), ge(?hh, '18'), lessThan(?hh, '20') -> (?lea city4age:isPartOfTheDay 'EarlyEvening')]
+[rulelea6: (?lea rdf:type city4age:ExecutedAction), (?lea hlifesci:startTime ?timestamp), regexp(?timestamp, '(.)T(.):(.)', ?date, ?hh, ?rest), ge(?hh, '20'), lessThan(?hh, '22') -> (?lea city4age:isPartOfTheDay 'LateEvening')]
+[rulelea7: (?lea rdf:type city4age:ExecutedAction), (?lea hlifesci:startTime ?timestamp), regexp(?timestamp, '(.)T(.):(.)', ?date, ?hh, ?rest), ge(?hh, '22'), lessThan(?hh, '06') -> (?lea city4age:isPartOfTheDay 'Night')]
+
+[rulepilot1: (?pilot rdf:type city4age:Pilot), (?pilot owl:sameAs ?B) -> (?B owl:sameAs ?pilot) ]
+[rulepilot2: (?pilot rdf:type city4age:Pilot), (?pilot owl:sameAs ?B), (?pilot owl:sameAs ?C) -> (?B owl:sameAs ?C) ]
