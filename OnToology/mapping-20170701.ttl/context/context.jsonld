@@ -1,0 +1,67 @@
+{
+  "@context" : {
+    "uriPattern" : {
+      "@id" : "http://www.wiwiss.fu-berlin.de/suhl/bizer/D2RQ/0.1#uriPattern"
+    },
+    "belongsToClassMap" : {
+      "@id" : "http://www.wiwiss.fu-berlin.de/suhl/bizer/D2RQ/0.1#belongsToClassMap"
+    },
+    "class" : {
+      "@id" : "http://www.wiwiss.fu-berlin.de/suhl/bizer/D2RQ/0.1#class"
+    },
+    "jdbcDSN" : {
+      "@id" : "http://www.wiwiss.fu-berlin.de/suhl/bizer/D2RQ/0.1#jdbcDSN"
+    },
+    "PropertyBridge" : {
+      "@id" : "http://www.wiwiss.fu-berlin.de/suhl/bizer/D2RQ/0.1#PropertyBridge"
+    },
+    "username" : {
+      "@id" : "http://www.wiwiss.fu-berlin.de/suhl/bizer/D2RQ/0.1#username"
+    },
+    "dataStorage" : {
+      "@id" : "http://www.wiwiss.fu-berlin.de/suhl/bizer/D2RQ/0.1#dataStorage"
+    },
+    "refersToClassMap" : {
+      "@id" : "http://www.wiwiss.fu-berlin.de/suhl/bizer/D2RQ/0.1#refersToClassMap"
+    },
+    "classDefinitionLabel" : {
+      "@id" : "http://www.wiwiss.fu-berlin.de/suhl/bizer/D2RQ/0.1#classDefinitionLabel"
+    },
+    "valueRegex" : {
+      "@id" : "http://www.wiwiss.fu-berlin.de/suhl/bizer/D2RQ/0.1#valueRegex"
+    },
+    "jdbcDriver" : {
+      "@id" : "http://www.wiwiss.fu-berlin.de/suhl/bizer/D2RQ/0.1#jdbcDriver"
+    },
+    "property" : {
+      "@id" : "http://www.wiwiss.fu-berlin.de/suhl/bizer/D2RQ/0.1#property"
+    },
+    "column" : {
+      "@id" : "http://www.wiwiss.fu-berlin.de/suhl/bizer/D2RQ/0.1#column"
+    },
+    "pattern" : {
+      "@id" : "http://www.wiwiss.fu-berlin.de/suhl/bizer/D2RQ/0.1#pattern"
+    },
+    "propertyDefinitionLabel" : {
+      "@id" : "http://www.wiwiss.fu-berlin.de/suhl/bizer/D2RQ/0.1#propertyDefinitionLabel"
+    },
+    "join" : {
+      "@id" : "http://www.wiwiss.fu-berlin.de/suhl/bizer/D2RQ/0.1#join"
+    },
+    "ClassMap" : {
+      "@id" : "http://www.wiwiss.fu-berlin.de/suhl/bizer/D2RQ/0.1#ClassMap"
+    },
+    "password" : {
+      "@id" : "http://www.wiwiss.fu-berlin.de/suhl/bizer/D2RQ/0.1#password"
+    },
+    "datatype" : {
+      "@id" : "http://www.wiwiss.fu-berlin.de/suhl/bizer/D2RQ/0.1#datatype"
+    },
+    "alias" : {
+      "@id" : "http://www.wiwiss.fu-berlin.de/suhl/bizer/D2RQ/0.1#alias"
+    },
+    "Database" : {
+      "@id" : "http://www.wiwiss.fu-berlin.de/suhl/bizer/D2RQ/0.1#Database"
+    }
+  }
+}
