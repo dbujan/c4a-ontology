@@ -30,11 +30,15 @@
      xmlns:dc="http://purl.org/dc/elements/1.1/">
     <owl:Ontology rdf:about="http://www.morelab.deusto.es/ontologies/city4age">
         <owl:imports rdf:resource="http://www.geonames.org/ontology"/>
+        <owl:imports rdf:resource="http://www.morelab.deusto.es/ontologies/riskC4A"/>
         <owl:imports rdf:resource="http://dbpedia.org/ontology/"/>
+        <owl:imports rdf:resource="http://www.morelab.deusto.es/ontologies/demlab"/>
+        <owl:imports rdf:resource="http://www.morelab.deusto.es/ontologies/healthlife"/>
         <owl:imports rdf:resource="http://www.w3.org/ns/sosa/"/>
+        <owl:imports rdf:resource="http://www.morelab.deusto.es/ontologies/interC4A"/>
         <owl:imports rdf:resource="http://www.w3.org/ns/ssn/"/>
     </owl:Ontology>
-    
+ 
 
 
     <!-- 
