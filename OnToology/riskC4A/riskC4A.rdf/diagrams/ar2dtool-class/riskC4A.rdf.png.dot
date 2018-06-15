@@ -1,0 +1,12 @@
+digraph ar2dtool_diagram { 
+rankdir=LR;
+size="1501"
+node [shape = rectangle, color="orange"]; "base:Instrument" "base:Item" "base:Model" "base:Category" "base:Score" "base:Value" ; /*classes style*/
+	"base:Instrument" -> "base:Score" [ label = "base:hasScore" ];
+	"base:Instrument" -> "base:Category" [ label = "base:hasCategories" ];
+	"base:Model" -> "base:Value" [ label = "base:hasValues" ];
+	"base:Item" -> "base:Value" [ label = "base:hasValue" ];
+	"base:Category" -> "base:Item" [ label = "base:hasItems" ];
+	"base:Instrument" -> "base:Model" [ label = "base:hasModel" ];
+
+}

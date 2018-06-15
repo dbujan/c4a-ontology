@@ -1,0 +1,10 @@
+digraph ar2dtool_diagram { 
+rankdir=LR;
+size="1000"
+node [shape = rectangle, color="black"]; "base:Ratio" "base:Score" "base:Nominal" "base:Ordinal" "base:Interval" ; /*classes style*/
+	"base:Ordinal" -> "base:Score" [ label = "rdfs:subClassOf" ];
+	"base:Interval" -> "base:Score" [ label = "rdfs:subClassOf" ];
+	"base:Nominal" -> "base:Score" [ label = "rdfs:subClassOf" ];
+	"base:Ratio" -> "base:Score" [ label = "rdfs:subClassOf" ];
+
+}
