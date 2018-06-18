@@ -1,0 +1,15 @@
+digraph ar2dtool_diagram { 
+rankdir=LR;
+size="1501"
+node [shape = rectangle, color="orange"]; "interc4a:Style" "interc4a:KindOfCommunication" "interc4a:Scheduling" "interc4a:Goal" "interc4a:Addressee" "interc4a:Intervention" "interc4a:Content" ; /*classes style*/
+	"interc4a:hasDeliveryMode" -> "owl:topObjectProperty" [ label = "rdfs:subPropertyOf" ];
+	"http://morelab.deusto.es/ontologies/interC4A" -> "http://www.morelab.deusto.es/ontologies/COMBont" [ label = "owl:imports" ];
+	"interc4a:Intervention" -> "interc4a:Content" [ label = "interc4a:hasContent" ];
+	"interc4a:Intervention" -> "interc4a:Addressee" [ label = "interc4a:hasAddressee" ];
+	"interc4a:Intervention" -> "interc4a:Goal" [ label = "interc4a:hasGoal" ];
+	"interc4a:Intervention" -> "interc4a:Scheduling" [ label = "interc4a:hasScheduling" ];
+	"interc4a:Intervention" -> "interc4a:Style" [ label = "interc4a:hasStyle" ];
+	"interc4a:Intervention" -> "http://morelab.deusto.es/ontologies/COMBont#InterventionFunction" [ label = "interc4a:hasInterventionFunction" ];
+	"interc4a:Intervention" -> "interc4a:KindOfCommunication" [ label = "interc4a:hasKindOfCommunication" ];
+
+}
