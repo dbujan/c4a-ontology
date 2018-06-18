@@ -1,38 +1,16 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
 <catalog prefer="public" xmlns="urn:oasis:names:tc:entity:xmlns:xml:catalog">
     <group id="Folder Repository, directory=, recursive=true, Auto-Update=true, version=2" prefer="public" xml:base="">
-        <uri id="Automatically generated entry, Timestamp=1529060607302" name="file://SHOnt.owl" uri="SHOnt_v1.2.5.owl"/>
-        <uri id="Automatically generated entry, Timestamp=1529060607302" name="http://dbpedia.org/ontology/" uri="dbpedia_2014.owl"/>
-        <uri id="Automatically generated entry, Timestamp=1529060607302" name="duplicate:http://health-lifesci.schema.org/" uri="ext-health-lifesci.owl"/>
-        <uri id="Automatically generated entry, Timestamp=1529060607302" name="duplicate:http://health-lifesci.schema.org/" uri="ext-health-lifesci.rdf"/>
-        <uri id="Automatically generated entry, Timestamp=1529060607302" name="http://morelab.deusto.es/ontologies/interC4A" uri="OnToology/interC4A.owl/documentation/ontology.xml"/>
-        <uri id="Automatically generated entry, Timestamp=1529060607302" name="duplicate:http://morelab.deusto.es/ontologies/interventionsC4A" uri="interC4A.owl"/>
-        <uri id="Automatically generated entry, Timestamp=1529060607302" name="duplicate:http://morelab.deusto.es/ontologies/interventionsC4A" uri="interC4A.rdf"/>
-        <uri id="Automatically generated entry, Timestamp=1529060607302" name="duplicate:http://morelab.deusto.es/ontologies/riskC4A" uri="riskC4A.owl"/>
-        <uri id="Automatically generated entry, Timestamp=1529060607302" name="duplicate:http://morelab.deusto.es/ontologies/riskC4A" uri="riskC4A.rdf"/>
-        <uri id="Automatically generated entry, Timestamp=1529060607302" name="http://purl.oclc.org/NET/ssnx/ssn" uri="ssn.owl"/>
-        <uri id="Automatically generated entry, Timestamp=1529060607302" name="http://scai.fraunhofer.de/AlzheimerOntology" uri="ado.owl"/>
-        <uri id="Automatically generated entry, Timestamp=1529060607302" name="http://topbraid.org/schema/" uri="schema.rdf"/>
-        <uri id="Automatically generated entry, Timestamp=1529060607302" name="http://www.demcare.eu/ontologies/demlab.owl" uri="demlab.owl"/>
-        <uri id="Automatically generated entry, Timestamp=1529060607302" name="http://www.geonames.org/ontology" uri="gn_ontology_v3.1.rdf"/>
-        <uri id="Automatically generated entry, Timestamp=1529060607302" name="duplicate:http://www.morelab.deusto.es/ontologies/COMBont" uri="COMBont.owl"/>
-        <uri id="Automatically generated entry, Timestamp=1529060607302" name="duplicate:http://www.morelab.deusto.es/ontologies/COMBont" uri="COMBont.rdf"/>
-        <uri id="Automatically generated entry, Timestamp=1529060607302" name="http://www.morelab.deusto.es/ontologies/city4age" uri="OnToology/city4age.owl/documentation/ontology.xml"/>
-        <uri id="Automatically generated entry, Timestamp=1529060607302" name="duplicate:http://www.morelab.deusto.es/ontologies/city4age.owl" uri="city4age.rdf"/>
-        <uri id="Automatically generated entry, Timestamp=1529060607302" name="duplicate:http://www.morelab.deusto.es/ontologies/city4age.owl" uri="city4age-20170301.owl"/>
-        <uri id="Automatically generated entry, Timestamp=1529060607302" name="duplicate:http://www.morelab.deusto.es/ontologies/city4age.owl" uri="city4age-20170614.owl"/>
-        <uri id="Automatically generated entry, Timestamp=1529060607302" name="duplicate:http://www.morelab.deusto.es/ontologies/city4age.owl" uri="city4age-20170622.owl"/>
-        <uri id="Automatically generated entry, Timestamp=1529060607302" name="duplicate:http://www.morelab.deusto.es/ontologies/city4age.owl" uri="city4age-20170626.owl"/>
-        <uri id="Automatically generated entry, Timestamp=1529060607302" name="duplicate:http://www.morelab.deusto.es/ontologies/city4age.owl" uri="city4age-20170701.owl"/>
-        <uri id="Automatically generated entry, Timestamp=1529060607302" name="duplicate:http://www.morelab.deusto.es/ontologies/city4age.owl" uri="city4age-20170701.rdf"/>
-        <uri id="Automatically generated entry, Timestamp=1529060607302" name="duplicate:http://www.morelab.deusto.es/ontologies/city4age.owl" uri="city4age.owl"/>
-        <uri id="Automatically generated entry, Timestamp=1529060607302" name="http://www.morelab.deusto.es/ontologies/demlab#" uri="demlab.rdf"/>
-        <uri id="Automatically generated entry, Timestamp=1529060607302" name="duplicate:http://www.morelab.deusto.es/ontologies/ontoad" uri="ontoad.owl"/>
-        <uri id="Automatically generated entry, Timestamp=1529060607302" name="duplicate:http://www.morelab.deusto.es/ontologies/ontoad" uri="ontoad.rdf"/>
-        <uri id="Automatically generated entry, Timestamp=1529060607302" name="http://www.semanticweb.org/ontologies/2015/0/disorderscluster.owl" uri="disorderscluster.owl"/>
-        <uri id="Automatically generated entry, Timestamp=1529060607302" name="http://www.w3.org/2002/07/owl" uri="ado.xrdf"/>
-        <uri id="Automatically generated entry, Timestamp=1529060607302" name="shadowed:http://morelab.deusto.es/ontologies/riskC4A" uri="OnToology/riskC4A.owl/documentation/ontology.xml"/>
-        <uri id="Automatically generated entry, Timestamp=1529060607302" name="shadowed:http://www.demcare.eu/ontologies/demlab.owl" uri="OnToology/demlab.owl/documentation/ontology.xml"/>
-        <uri id="Automatically generated entry, Timestamp=1529060607302" name="shadowed:http://www.morelab.deusto.es/ontologies/COMBont" uri="OnToology/COMBont.owl/documentation/ontology.xml"/>
+        <uri id="Automatically generated entry, Timestamp=1529332469235" name="file://SHOnt.owl" uri="externalResources/SHOnt_v1.2.5.owl"/>
+        <uri id="Automatically generated entry, Timestamp=1529332469235" name="http://health-lifesci.schema.org/" uri="externalResources/ext-health-lifesci.owl"/>
+        <uri id="Automatically generated entry, Timestamp=1529332469235" name="http://morelab.deusto.es/ontologies/interC4A#" uri="interC4A/interC4A.owl"/>
+        <uri id="Automatically generated entry, Timestamp=1529332469235" name="http://morelab.deusto.es/ontologies/riskC4A#" uri="riskC4A/riskC4A.owl"/>
+        <uri id="Automatically generated entry, Timestamp=1529332469235" name="http://purl.oclc.org/NET/ssnx/ssn" uri="externalResources/ssn.owl"/>
+        <uri id="Automatically generated entry, Timestamp=1529332469235" name="http://scai.fraunhofer.de/AlzheimerOntology" uri="externalResources/ado.owl"/>
+        <uri id="Automatically generated entry, Timestamp=1529332469235" name="http://www.demcare.eu/ontologies/demlab.owl" uri="externalResources/demlab.owl"/>
+        <uri id="Automatically generated entry, Timestamp=1529332469235" name="http://www.geonames.org/ontology" uri="externalResources/gn_ontology_v3.1.rdf"/>
+        <uri id="Automatically generated entry, Timestamp=1529332469235" name="http://www.morelab.deusto.es/ontologies/COMBont#" uri="COMBont/COMBont.owl"/>
+        <uri id="Automatically generated entry, Timestamp=1529332469235" name="http://www.morelab.deusto.es/ontologies/ontoad" uri="externalResources/ontoad.owl"/>
+        <uri id="Automatically generated entry, Timestamp=1529332469235" name="http://www.semanticweb.org/ontologies/2015/0/disorderscluster.owl" uri="externalResources/disorderscluster.owl"/>
     </group>
 </catalog>

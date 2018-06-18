@@ -1,19 +1,16 @@
 <?xml version="1.0"?>
-<rdf:RDF xmlns="http://morelab.deusto.es/ontologies/interventionsC4A#"
-     xml:base="http://morelab.deusto.es/ontologies/interventionsC4A"
+<rdf:RDF xmlns="http://morelab.deusto.es/ontologies/interC4A#"
+     xml:base="http://morelab.deusto.es/ontologies/interC4A#"
      xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
      xmlns:owl="http://www.w3.org/2002/07/owl#"
      xmlns:xml="http://www.w3.org/XML/1998/namespace"
-     xmlns:untitled-ontology-57="http://morelab.deusto.es/ontologies/2016/10/untitled-ontology-57#"
      xmlns:xsd="http://www.w3.org/2001/XMLSchema#"
      xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
-     xmlns:interc4a="http://morelab.deusto.es/ontologies/interC4A#"
-     xmlns:interventionsc4a="http://morelab.deusto.es/ontologies/interventionsC4A#"
      xmlns:vann="http://purl.org/vocab/vann/"
      xmlns:foaf="http://xmlns.com/foaf/0.1/"
      xmlns:dc="http://purl.org/dc/elements/1.1/">
-    <owl:Ontology rdf:about="http://morelab.deusto.es/ontologies/interC4A">
-        <owl:imports rdf:resource="http://www.morelab.deusto.es/ontologies/COMBont"/>
+    <owl:Ontology rdf:about="http://morelab.deusto.es/ontologies/interC4A#">
+        <owl:imports rdf:resource="http://www.morelab.deusto.es/ontologies/COMBont#"/>
     </owl:Ontology>
     
 

@@ -1,8 +1,7 @@
 <?xml version="1.0"?>
-<rdf:RDF xmlns="http://www.morelab.deusto.es/ontologies/city4age.owl#"
-     xml:base="http://www.morelab.deusto.es/ontologies/city4age.owl"
+<rdf:RDF xmlns="http://www.morelab.deusto.es/ontologies/city4age#"
+     xml:base="http://www.morelab.deusto.es/ontologies/city4age#"
      xmlns:schema="http://schema.org/"
-     xmlns:city4age="http://www.morelab.deusto.es/ontologies/city4age#"
      xmlns:ns="http://creativecommons.org/ns#"
      xmlns:owl="http://www.w3.org/2002/07/owl#"
      xmlns:xsd="http://www.w3.org/2001/XMLSchema#"
@@ -20,23 +19,19 @@
      xmlns:foaf="http://xmlns.com/foaf/0.1/"
      xmlns:sosa="http://www.w3.org/ns/sosa/"
      xmlns:adms="http://www.w3.org/ns/adms#"
-     xmlns:demlab="http://www.morelab.deusto.es/ontologies/demlab#"
      xmlns:protege="http://protege.stanford.edu/plugins/owl/protege#"
      xmlns:swrl="http://www.w3.org/2003/11/swrl#"
      xmlns:dbo="http://dbpedia.org/ontology/"
      xmlns:dbp="http://dbpedia.org/property/"
      xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
      xmlns:health-lifesci="http://health-lifesci.schema.org/"
-     xmlns:dc="http://purl.org/dc/elements/1.1/">
-    <owl:Ontology rdf:about="http://www.morelab.deusto.es/ontologies/city4age">
-        <owl:imports rdf:resource="http://www.geonames.org/ontology"/>
-        <owl:imports rdf:resource="http://www.morelab.deusto.es/ontologies/riskC4A"/>
-        <owl:imports rdf:resource="http://dbpedia.org/ontology/"/>
-        <owl:imports rdf:resource="http://www.morelab.deusto.es/ontologies/demlab"/>
-        <owl:imports rdf:resource="http://www.morelab.deusto.es/ontologies/healthlife"/>
-        <owl:imports rdf:resource="http://www.w3.org/ns/sosa/"/>
-        <owl:imports rdf:resource="http://www.morelab.deusto.es/ontologies/interC4A"/>
-        <owl:imports rdf:resource="http://www.w3.org/ns/ssn/"/>
+     xmlns:dc="http://purl.org/dc/elements/1.1/"
+     xmlns:gn="http://www.geonames.org/ontology/"
+     xmlns:demlab="http://www.demcare.eu/ontologies/demlab.owl#"
+     xmlns:city4age="http://www.morelab.deusto.es/ontologies/city4age#">
+    <owl:Ontology rdf:about="http://www.morelab.deusto.es/ontologies/city4age#">
+        <owl:imports rdf:resource="http://www.morelab.deusto.es/ontologies/riskC4A#"/>
+        <owl:imports rdf:resource="http://www.morelab.deusto.es/ontologies/interC4A#"/>
     </owl:Ontology>
  
 
