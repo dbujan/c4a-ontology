@@ -1,0 +1,95 @@
+<http://morelab.deusto.es/ontologies/riskC4A> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Ontology> .
+# 
+# 
+# #################################################################
+# #
+# #    Object Properties
+# #
+# #################################################################
+# 
+# 
+# http://morelab.deusto.es/ontologies/riskC4A#hasCategories
+<http://morelab.deusto.es/ontologies/riskC4A#hasCategories> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<http://morelab.deusto.es/ontologies/riskC4A#hasCategories> <http://www.w3.org/2000/01/rdf-schema#domain> <http://morelab.deusto.es/ontologies/riskC4A#Instrument> .
+<http://morelab.deusto.es/ontologies/riskC4A#hasCategories> <http://www.w3.org/2000/01/rdf-schema#range> <http://morelab.deusto.es/ontologies/riskC4A#Category> .
+# 
+# http://morelab.deusto.es/ontologies/riskC4A#hasItems
+<http://morelab.deusto.es/ontologies/riskC4A#hasItems> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<http://morelab.deusto.es/ontologies/riskC4A#hasItems> <http://www.w3.org/2000/01/rdf-schema#domain> <http://morelab.deusto.es/ontologies/riskC4A#Category> .
+<http://morelab.deusto.es/ontologies/riskC4A#hasItems> <http://www.w3.org/2000/01/rdf-schema#range> <http://morelab.deusto.es/ontologies/riskC4A#Item> .
+# 
+# http://morelab.deusto.es/ontologies/riskC4A#hasModel
+<http://morelab.deusto.es/ontologies/riskC4A#hasModel> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<http://morelab.deusto.es/ontologies/riskC4A#hasModel> <http://www.w3.org/2000/01/rdf-schema#domain> <http://morelab.deusto.es/ontologies/riskC4A#Instrument> .
+<http://morelab.deusto.es/ontologies/riskC4A#hasModel> <http://www.w3.org/2000/01/rdf-schema#range> <http://morelab.deusto.es/ontologies/riskC4A#Model> .
+# 
+# http://morelab.deusto.es/ontologies/riskC4A#hasScore
+<http://morelab.deusto.es/ontologies/riskC4A#hasScore> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<http://morelab.deusto.es/ontologies/riskC4A#hasScore> <http://www.w3.org/2000/01/rdf-schema#domain> <http://morelab.deusto.es/ontologies/riskC4A#Instrument> .
+<http://morelab.deusto.es/ontologies/riskC4A#hasScore> <http://www.w3.org/2000/01/rdf-schema#domain> <http://morelab.deusto.es/ontologies/riskC4A#Item> .
+<http://morelab.deusto.es/ontologies/riskC4A#hasScore> <http://www.w3.org/2000/01/rdf-schema#range> <http://morelab.deusto.es/ontologies/riskC4A#Score> .
+# 
+# http://morelab.deusto.es/ontologies/riskC4A#hasValue
+<http://morelab.deusto.es/ontologies/riskC4A#hasValue> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<http://morelab.deusto.es/ontologies/riskC4A#hasValue> <http://www.w3.org/2000/01/rdf-schema#domain> <http://morelab.deusto.es/ontologies/riskC4A#Item> .
+<http://morelab.deusto.es/ontologies/riskC4A#hasValue> <http://www.w3.org/2000/01/rdf-schema#range> <http://morelab.deusto.es/ontologies/riskC4A#Value> .
+# 
+# http://morelab.deusto.es/ontologies/riskC4A#hasValues
+<http://morelab.deusto.es/ontologies/riskC4A#hasValues> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<http://morelab.deusto.es/ontologies/riskC4A#hasValues> <http://www.w3.org/2000/01/rdf-schema#domain> <http://morelab.deusto.es/ontologies/riskC4A#Model> .
+<http://morelab.deusto.es/ontologies/riskC4A#hasValues> <http://www.w3.org/2000/01/rdf-schema#range> <http://morelab.deusto.es/ontologies/riskC4A#Value> .
+# 
+# 
+# 
+# #################################################################
+# #
+# #    Classes
+# #
+# #################################################################
+# 
+# 
+# http://morelab.deusto.es/ontologies/riskC4A#Category
+<http://morelab.deusto.es/ontologies/riskC4A#Category> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://morelab.deusto.es/ontologies/riskC4A#Category> <http://www.w3.org/2000/01/rdf-schema#comment> "Group of Items (see below) that contribute to the appraisal of a certain facet of the measured health entity." .
+# 
+# http://morelab.deusto.es/ontologies/riskC4A#Instrument
+<http://morelab.deusto.es/ontologies/riskC4A#Instrument> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://morelab.deusto.es/ontologies/riskC4A#Instrument> <http://www.w3.org/2000/01/rdf-schema#comment> "Overall measuring method, aimed at providing a final, comprehensive score on a certain health entity." .
+# 
+# http://morelab.deusto.es/ontologies/riskC4A#Interval
+<http://morelab.deusto.es/ontologies/riskC4A#Interval> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://morelab.deusto.es/ontologies/riskC4A#Interval> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://morelab.deusto.es/ontologies/riskC4A#Score> .
+<http://morelab.deusto.es/ontologies/riskC4A#Interval> <http://www.w3.org/2000/01/rdf-schema#comment> "Difference among numbers is meaningful like the concept of unit of measure (e.g. temperature in \u00BAC)." .
+# 
+# http://morelab.deusto.es/ontologies/riskC4A#Item
+<http://morelab.deusto.es/ontologies/riskC4A#Item> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://morelab.deusto.es/ontologies/riskC4A#Item> <http://www.w3.org/2000/01/rdf-schema#comment> "Each actual, basic element that will be measured to produce scores." .
+# 
+# http://morelab.deusto.es/ontologies/riskC4A#Model
+<http://morelab.deusto.es/ontologies/riskC4A#Model> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://morelab.deusto.es/ontologies/riskC4A#Model> <http://www.w3.org/2000/01/rdf-schema#comment> "Mathematical entity (algorithms and/or calculations) that allows to compute the Instrument outcome score on the basis of the scores measured for single Items." .
+# 
+# http://morelab.deusto.es/ontologies/riskC4A#Nominal
+<http://morelab.deusto.es/ontologies/riskC4A#Nominal> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://morelab.deusto.es/ontologies/riskC4A#Nominal> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://morelab.deusto.es/ontologies/riskC4A#Score> .
+<http://morelab.deusto.es/ontologies/riskC4A#Nominal> <http://www.w3.org/2000/01/rdf-schema#comment> "Numbers are used just as labels for categories (e.g. 0 for false and 1 for true, for a classifier outcome)." .
+# 
+# http://morelab.deusto.es/ontologies/riskC4A#Ordinal
+<http://morelab.deusto.es/ontologies/riskC4A#Ordinal> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://morelab.deusto.es/ontologies/riskC4A#Ordinal> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://morelab.deusto.es/ontologies/riskC4A#Score> .
+<http://morelab.deusto.es/ontologies/riskC4A#Ordinal> <http://www.w3.org/2000/01/rdf-schema#comment> "Order is meaningful and represents growing quantities (e.g. 1 = mild, 2 = moderate, 3 = strong)." .
+# 
+# http://morelab.deusto.es/ontologies/riskC4A#Ratio
+<http://morelab.deusto.es/ontologies/riskC4A#Ratio> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://morelab.deusto.es/ontologies/riskC4A#Ratio> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://morelab.deusto.es/ontologies/riskC4A#Score> .
+<http://morelab.deusto.es/ontologies/riskC4A#Ratio> <http://www.w3.org/2000/01/rdf-schema#comment> "There is a meaningful zero point, so ratios among scores are also meaningful (e.g. number of seconds to complete an action)." .
+# 
+# http://morelab.deusto.es/ontologies/riskC4A#Score
+<http://morelab.deusto.es/ontologies/riskC4A#Score> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://morelab.deusto.es/ontologies/riskC4A#Score> <http://www.w3.org/2000/01/rdf-schema#comment> "The outcome of measuring an Item (or the outcome of the overall Instrument)." .
+# 
+# http://morelab.deusto.es/ontologies/riskC4A#Value
+<http://morelab.deusto.es/ontologies/riskC4A#Value> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://morelab.deusto.es/ontologies/riskC4A#Value> <http://www.w3.org/2000/01/rdf-schema#comment> "Set of values associated to an Item. The Item\u2019s measurement produces a specific score, drawn from this set." .
+# 
+# Generated by the OWL API (version 5.1.0) https://github.com/owlcs/owlapi/

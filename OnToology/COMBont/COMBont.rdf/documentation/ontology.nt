@@ -1,0 +1,259 @@
+<http://www.morelab.deusto.es/ontologies/COMBont> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Ontology> .
+<http://www.morelab.deusto.es/ontologies/COMBont> <http://purl.org/dc/elements/1.1/creator> <http://www.morelab.deusto.es/ontologies/COMBont#david.bujan> .
+<http://www.morelab.deusto.es/ontologies/COMBont> <http://purl.org/dc/elements/1.1/modified> "2016-11-09"^^<http://www.w3.org/2001/XMLSchema#date> .
+<http://www.morelab.deusto.es/ontologies/COMBont> <http://purl.org/dc/elements/1.1/title> "COMBONT Vocabulary" .
+<http://www.morelab.deusto.es/ontologies/COMBont> <http://purl.org/vocab/vann/preferredNamespacePrefix> "COMBont" .
+<http://www.morelab.deusto.es/ontologies/COMBont> <http://purl.org/vocab/vann/preferredNamespaceUri> "http://morelab.deusto.es/ontologies/COMBont#" .
+<http://www.morelab.deusto.es/ontologies/COMBont> <http://xmlns.com/foaf/0.1/page> <http://www.morelab.deusto.es/ontologies/COMBont.html> .
+# 
+# 
+# #################################################################
+# #
+# #    Annotation properties
+# #
+# #################################################################
+# 
+# 
+# http://xmlns.com/foaf/0.1/homepage
+<http://xmlns.com/foaf/0.1/homepage> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#AnnotationProperty> .
+# 
+# http://xmlns.com/foaf/0.1/member
+<http://xmlns.com/foaf/0.1/member> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#AnnotationProperty> .
+# 
+# http://xmlns.com/foaf/0.1/name
+<http://xmlns.com/foaf/0.1/name> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#AnnotationProperty> .
+# 
+# 
+# 
+# #################################################################
+# #
+# #    Object Properties
+# #
+# #################################################################
+# 
+# 
+# http://morelab.deusto.es/ontologies/COMBont#hasDeliveryMode
+<http://morelab.deusto.es/ontologies/COMBont#hasDeliveryMode> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<http://morelab.deusto.es/ontologies/COMBont#hasDeliveryMode> <http://www.w3.org/2000/01/rdf-schema#subPropertyOf> <http://www.w3.org/2002/07/owl#topObjectProperty> .
+<http://morelab.deusto.es/ontologies/COMBont#hasDeliveryMode> <http://www.w3.org/2000/01/rdf-schema#domain> <http://morelab.deusto.es/ontologies/COMBont#BehaviourChangeTechnique> .
+<http://morelab.deusto.es/ontologies/COMBont#hasDeliveryMode> <http://www.w3.org/2000/01/rdf-schema#range> <http://morelab.deusto.es/ontologies/COMBont#DeliveryMode> .
+<http://morelab.deusto.es/ontologies/COMBont#hasDeliveryMode> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <http://www.morelab.deusto.es/ontologies/COMBont> .
+<http://morelab.deusto.es/ontologies/COMBont#hasDeliveryMode> <http://www.w3.org/2000/01/rdf-schema#label> "hasDeliveryMode" .
+# 
+# http://morelab.deusto.es/ontologies/COMBont#isLinkedTo
+<http://morelab.deusto.es/ontologies/COMBont#isLinkedTo> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<http://morelab.deusto.es/ontologies/COMBont#isLinkedTo> <http://www.w3.org/2000/01/rdf-schema#domain> <http://morelab.deusto.es/ontologies/COMBont#BehaviourComponent> .
+<http://morelab.deusto.es/ontologies/COMBont#isLinkedTo> <http://www.w3.org/2000/01/rdf-schema#range> <http://morelab.deusto.es/ontologies/COMBont#InterventionFunction> .
+<http://morelab.deusto.es/ontologies/COMBont#isLinkedTo> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <http://www.morelab.deusto.es/ontologies/COMBont> .
+<http://morelab.deusto.es/ontologies/COMBont#isLinkedTo> <http://www.w3.org/2000/01/rdf-schema#label> "isLinkedTo" .
+# 
+# http://morelab.deusto.es/ontologies/COMBont#isRelatedTo
+<http://morelab.deusto.es/ontologies/COMBont#isRelatedTo> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<http://morelab.deusto.es/ontologies/COMBont#isRelatedTo> <http://www.w3.org/2000/01/rdf-schema#domain> <http://morelab.deusto.es/ontologies/COMBont#InterventionFunction> .
+<http://morelab.deusto.es/ontologies/COMBont#isRelatedTo> <http://www.w3.org/2000/01/rdf-schema#range> <http://morelab.deusto.es/ontologies/COMBont#BehaviourChangeTechnique> .
+<http://morelab.deusto.es/ontologies/COMBont#isRelatedTo> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <http://www.morelab.deusto.es/ontologies/COMBont> .
+<http://morelab.deusto.es/ontologies/COMBont#isRelatedTo> <http://www.w3.org/2000/01/rdf-schema#label> "isRelatedTo" .
+# 
+# 
+# 
+# #################################################################
+# #
+# #    Classes
+# #
+# #################################################################
+# 
+# 
+# http://morelab.deusto.es/ontologies/COMBont#BehaviourChangeTechnique
+<http://morelab.deusto.es/ontologies/COMBont#BehaviourChangeTechnique> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://morelab.deusto.es/ontologies/COMBont#BehaviourChangeTechnique> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <http://www.morelab.deusto.es/ontologies/COMBont> .
+<http://morelab.deusto.es/ontologies/COMBont#BehaviourChangeTechnique> <http://www.w3.org/2000/01/rdf-schema#label> "BehaviourChangeTechnique" .
+# 
+# http://morelab.deusto.es/ontologies/COMBont#BehaviourComponent
+<http://morelab.deusto.es/ontologies/COMBont#BehaviourComponent> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://morelab.deusto.es/ontologies/COMBont#BehaviourComponent> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://www.w3.org/2002/07/owl#Thing> .
+<http://morelab.deusto.es/ontologies/COMBont#BehaviourComponent> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <http://www.morelab.deusto.es/ontologies/COMBont> .
+<http://morelab.deusto.es/ontologies/COMBont#BehaviourComponent> <http://www.w3.org/2000/01/rdf-schema#label> "BehaviourComponent" .
+# 
+# http://morelab.deusto.es/ontologies/COMBont#Billboards
+<http://morelab.deusto.es/ontologies/COMBont#Billboards> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://morelab.deusto.es/ontologies/COMBont#Billboards> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://morelab.deusto.es/ontologies/COMBont#OutdoorMedia> .
+<http://morelab.deusto.es/ontologies/COMBont#Billboards> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <http://www.morelab.deusto.es/ontologies/COMBont> .
+<http://morelab.deusto.es/ontologies/COMBont#Billboards> <http://www.w3.org/2000/01/rdf-schema#label> "Billboards" .
+# 
+# http://morelab.deusto.es/ontologies/COMBont#BroadcastMedia
+<http://morelab.deusto.es/ontologies/COMBont#BroadcastMedia> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://morelab.deusto.es/ontologies/COMBont#BroadcastMedia> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://morelab.deusto.es/ontologies/COMBont#PopulationLevel> .
+<http://morelab.deusto.es/ontologies/COMBont#BroadcastMedia> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <http://www.morelab.deusto.es/ontologies/COMBont> .
+<http://morelab.deusto.es/ontologies/COMBont#BroadcastMedia> <http://www.w3.org/2000/01/rdf-schema#label> "BroadcastMedia" .
+# 
+# http://morelab.deusto.es/ontologies/COMBont#Capability
+<http://morelab.deusto.es/ontologies/COMBont#Capability> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://morelab.deusto.es/ontologies/COMBont#Capability> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://morelab.deusto.es/ontologies/COMBont#BehaviourComponent> .
+<http://morelab.deusto.es/ontologies/COMBont#Capability> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <http://www.morelab.deusto.es/ontologies/COMBont> .
+<http://morelab.deusto.es/ontologies/COMBont#Capability> <http://www.w3.org/2000/01/rdf-schema#label> "Capability" .
+# 
+# http://morelab.deusto.es/ontologies/COMBont#ComputerProgramme
+<http://morelab.deusto.es/ontologies/COMBont#ComputerProgramme> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://morelab.deusto.es/ontologies/COMBont#ComputerProgramme> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://morelab.deusto.es/ontologies/COMBont#IndividualLevel> .
+<http://morelab.deusto.es/ontologies/COMBont#ComputerProgramme> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <http://www.morelab.deusto.es/ontologies/COMBont> .
+<http://morelab.deusto.es/ontologies/COMBont#ComputerProgramme> <http://www.w3.org/2000/01/rdf-schema#label> "ComputerProgramme" .
+# 
+# http://morelab.deusto.es/ontologies/COMBont#DeliveryMode
+<http://morelab.deusto.es/ontologies/COMBont#DeliveryMode> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://morelab.deusto.es/ontologies/COMBont#DeliveryMode> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <http://www.morelab.deusto.es/ontologies/COMBont> .
+<http://morelab.deusto.es/ontologies/COMBont#DeliveryMode> <http://www.w3.org/2000/01/rdf-schema#label> "DeliveryMode" .
+# 
+# http://morelab.deusto.es/ontologies/COMBont#DigitalMedia
+<http://morelab.deusto.es/ontologies/COMBont#DigitalMedia> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://morelab.deusto.es/ontologies/COMBont#DigitalMedia> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://morelab.deusto.es/ontologies/COMBont#PopulationLevel> .
+<http://morelab.deusto.es/ontologies/COMBont#DigitalMedia> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <http://www.morelab.deusto.es/ontologies/COMBont> .
+<http://morelab.deusto.es/ontologies/COMBont#DigitalMedia> <http://www.w3.org/2000/01/rdf-schema#label> "DigitalMedia" .
+# 
+# http://morelab.deusto.es/ontologies/COMBont#Distance
+<http://morelab.deusto.es/ontologies/COMBont#Distance> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://morelab.deusto.es/ontologies/COMBont#Distance> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://morelab.deusto.es/ontologies/COMBont#DeliveryMode> .
+<http://morelab.deusto.es/ontologies/COMBont#Distance> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <http://www.morelab.deusto.es/ontologies/COMBont> .
+<http://morelab.deusto.es/ontologies/COMBont#Distance> <http://www.w3.org/2000/01/rdf-schema#label> "Distance" .
+# 
+# http://morelab.deusto.es/ontologies/COMBont#FaceToFace
+<http://morelab.deusto.es/ontologies/COMBont#FaceToFace> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://morelab.deusto.es/ontologies/COMBont#FaceToFace> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://morelab.deusto.es/ontologies/COMBont#DeliveryMode> .
+<http://morelab.deusto.es/ontologies/COMBont#FaceToFace> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <http://www.morelab.deusto.es/ontologies/COMBont> .
+<http://morelab.deusto.es/ontologies/COMBont#FaceToFace> <http://www.w3.org/2000/01/rdf-schema#label> "FaceToFace" .
+# 
+# http://morelab.deusto.es/ontologies/COMBont#Group
+<http://morelab.deusto.es/ontologies/COMBont#Group> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://morelab.deusto.es/ontologies/COMBont#Group> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://morelab.deusto.es/ontologies/COMBont#FaceToFace> .
+<http://morelab.deusto.es/ontologies/COMBont#Group> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <http://www.morelab.deusto.es/ontologies/COMBont> .
+<http://morelab.deusto.es/ontologies/COMBont#Group> <http://www.w3.org/2000/01/rdf-schema#label> "Group" .
+# 
+# http://morelab.deusto.es/ontologies/COMBont#Individual
+<http://morelab.deusto.es/ontologies/COMBont#Individual> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://morelab.deusto.es/ontologies/COMBont#Individual> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://morelab.deusto.es/ontologies/COMBont#FaceToFace> .
+<http://morelab.deusto.es/ontologies/COMBont#Individual> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <http://www.morelab.deusto.es/ontologies/COMBont> .
+<http://morelab.deusto.es/ontologies/COMBont#Individual> <http://www.w3.org/2000/01/rdf-schema#label> "Individual" .
+# 
+# http://morelab.deusto.es/ontologies/COMBont#IndividualLevel
+<http://morelab.deusto.es/ontologies/COMBont#IndividualLevel> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://morelab.deusto.es/ontologies/COMBont#IndividualLevel> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://morelab.deusto.es/ontologies/COMBont#Distance> .
+<http://morelab.deusto.es/ontologies/COMBont#IndividualLevel> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <http://www.morelab.deusto.es/ontologies/COMBont> .
+<http://morelab.deusto.es/ontologies/COMBont#IndividualLevel> <http://www.w3.org/2000/01/rdf-schema#label> "IndividualLevel" .
+# 
+# http://morelab.deusto.es/ontologies/COMBont#Internet
+<http://morelab.deusto.es/ontologies/COMBont#Internet> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://morelab.deusto.es/ontologies/COMBont#Internet> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://morelab.deusto.es/ontologies/COMBont#DigitalMedia> .
+<http://morelab.deusto.es/ontologies/COMBont#Internet> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <http://www.morelab.deusto.es/ontologies/COMBont> .
+<http://morelab.deusto.es/ontologies/COMBont#Internet> <http://www.w3.org/2000/01/rdf-schema#label> "Internet" .
+# 
+# http://morelab.deusto.es/ontologies/COMBont#InterventionFunction
+<http://morelab.deusto.es/ontologies/COMBont#InterventionFunction> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://morelab.deusto.es/ontologies/COMBont#InterventionFunction> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <http://www.morelab.deusto.es/ontologies/COMBont> .
+<http://morelab.deusto.es/ontologies/COMBont#InterventionFunction> <http://www.w3.org/2000/01/rdf-schema#label> "InterventionFunction" .
+# 
+# http://morelab.deusto.es/ontologies/COMBont#Leaflet
+<http://morelab.deusto.es/ontologies/COMBont#Leaflet> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://morelab.deusto.es/ontologies/COMBont#Leaflet> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://morelab.deusto.es/ontologies/COMBont#PrintMedia> .
+<http://morelab.deusto.es/ontologies/COMBont#Leaflet> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <http://www.morelab.deusto.es/ontologies/COMBont> .
+<http://morelab.deusto.es/ontologies/COMBont#Leaflet> <http://www.w3.org/2000/01/rdf-schema#label> "Leaflet" .
+# 
+# http://morelab.deusto.es/ontologies/COMBont#MobilePhoneApp
+<http://morelab.deusto.es/ontologies/COMBont#MobilePhoneApp> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://morelab.deusto.es/ontologies/COMBont#MobilePhoneApp> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://morelab.deusto.es/ontologies/COMBont#DigitalMedia> .
+<http://morelab.deusto.es/ontologies/COMBont#MobilePhoneApp> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <http://www.morelab.deusto.es/ontologies/COMBont> .
+<http://morelab.deusto.es/ontologies/COMBont#MobilePhoneApp> <http://www.w3.org/2000/01/rdf-schema#label> "MobilePhoneApp" .
+# 
+# http://morelab.deusto.es/ontologies/COMBont#MobilePhoneText
+<http://morelab.deusto.es/ontologies/COMBont#MobilePhoneText> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://morelab.deusto.es/ontologies/COMBont#MobilePhoneText> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://morelab.deusto.es/ontologies/COMBont#Phone> .
+<http://morelab.deusto.es/ontologies/COMBont#MobilePhoneText> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <http://www.morelab.deusto.es/ontologies/COMBont> .
+<http://morelab.deusto.es/ontologies/COMBont#MobilePhoneText> <http://www.w3.org/2000/01/rdf-schema#label> "MobilePhoneText" .
+# 
+# http://morelab.deusto.es/ontologies/COMBont#Motivation
+<http://morelab.deusto.es/ontologies/COMBont#Motivation> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://morelab.deusto.es/ontologies/COMBont#Motivation> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://morelab.deusto.es/ontologies/COMBont#BehaviourComponent> .
+<http://morelab.deusto.es/ontologies/COMBont#Motivation> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <http://www.morelab.deusto.es/ontologies/COMBont> .
+<http://morelab.deusto.es/ontologies/COMBont#Motivation> <http://www.w3.org/2000/01/rdf-schema#label> "Motivation" .
+# 
+# http://morelab.deusto.es/ontologies/COMBont#Newspaper
+<http://morelab.deusto.es/ontologies/COMBont#Newspaper> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://morelab.deusto.es/ontologies/COMBont#Newspaper> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://morelab.deusto.es/ontologies/COMBont#PrintMedia> .
+<http://morelab.deusto.es/ontologies/COMBont#Newspaper> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <http://www.morelab.deusto.es/ontologies/COMBont> .
+<http://morelab.deusto.es/ontologies/COMBont#Newspaper> <http://www.w3.org/2000/01/rdf-schema#label> "Newspaper" .
+# 
+# http://morelab.deusto.es/ontologies/COMBont#Opportunity
+<http://morelab.deusto.es/ontologies/COMBont#Opportunity> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://morelab.deusto.es/ontologies/COMBont#Opportunity> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://morelab.deusto.es/ontologies/COMBont#BehaviourComponent> .
+<http://morelab.deusto.es/ontologies/COMBont#Opportunity> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <http://www.morelab.deusto.es/ontologies/COMBont> .
+<http://morelab.deusto.es/ontologies/COMBont#Opportunity> <http://www.w3.org/2000/01/rdf-schema#label> "Opportunity" .
+# 
+# http://morelab.deusto.es/ontologies/COMBont#OtherWrittenMaterial
+<http://morelab.deusto.es/ontologies/COMBont#OtherWrittenMaterial> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://morelab.deusto.es/ontologies/COMBont#OtherWrittenMaterial> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://morelab.deusto.es/ontologies/COMBont#PrintMedia> .
+<http://morelab.deusto.es/ontologies/COMBont#OtherWrittenMaterial> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <http://www.morelab.deusto.es/ontologies/COMBont> .
+<http://morelab.deusto.es/ontologies/COMBont#OtherWrittenMaterial> <http://www.w3.org/2000/01/rdf-schema#label> "OtherWrittenMaterial" .
+# 
+# http://morelab.deusto.es/ontologies/COMBont#OutdoorMedia
+<http://morelab.deusto.es/ontologies/COMBont#OutdoorMedia> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://morelab.deusto.es/ontologies/COMBont#OutdoorMedia> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://morelab.deusto.es/ontologies/COMBont#PopulationLevel> .
+<http://morelab.deusto.es/ontologies/COMBont#OutdoorMedia> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <http://www.morelab.deusto.es/ontologies/COMBont> .
+<http://morelab.deusto.es/ontologies/COMBont#OutdoorMedia> <http://www.w3.org/2000/01/rdf-schema#label> "OutdoorMedia" .
+# 
+# http://morelab.deusto.es/ontologies/COMBont#Phone
+<http://morelab.deusto.es/ontologies/COMBont#Phone> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://morelab.deusto.es/ontologies/COMBont#Phone> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://morelab.deusto.es/ontologies/COMBont#IndividualLevel> .
+<http://morelab.deusto.es/ontologies/COMBont#Phone> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <http://www.morelab.deusto.es/ontologies/COMBont> .
+<http://morelab.deusto.es/ontologies/COMBont#Phone> <http://www.w3.org/2000/01/rdf-schema#label> "Phone" .
+# 
+# http://morelab.deusto.es/ontologies/COMBont#PhoneHelpLine
+<http://morelab.deusto.es/ontologies/COMBont#PhoneHelpLine> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://morelab.deusto.es/ontologies/COMBont#PhoneHelpLine> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://morelab.deusto.es/ontologies/COMBont#Phone> .
+<http://morelab.deusto.es/ontologies/COMBont#PhoneHelpLine> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <http://www.morelab.deusto.es/ontologies/COMBont> .
+<http://morelab.deusto.es/ontologies/COMBont#PhoneHelpLine> <http://www.w3.org/2000/01/rdf-schema#label> "PhoneHelpLine" .
+# 
+# http://morelab.deusto.es/ontologies/COMBont#PopulationLevel
+<http://morelab.deusto.es/ontologies/COMBont#PopulationLevel> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://morelab.deusto.es/ontologies/COMBont#PopulationLevel> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://morelab.deusto.es/ontologies/COMBont#Distance> .
+<http://morelab.deusto.es/ontologies/COMBont#PopulationLevel> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <http://www.morelab.deusto.es/ontologies/COMBont> .
+<http://morelab.deusto.es/ontologies/COMBont#PopulationLevel> <http://www.w3.org/2000/01/rdf-schema#label> "PopulationLevel" .
+# 
+# http://morelab.deusto.es/ontologies/COMBont#Posters
+<http://morelab.deusto.es/ontologies/COMBont#Posters> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://morelab.deusto.es/ontologies/COMBont#Posters> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://morelab.deusto.es/ontologies/COMBont#OutdoorMedia> .
+<http://morelab.deusto.es/ontologies/COMBont#Posters> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <http://www.morelab.deusto.es/ontologies/COMBont> .
+<http://morelab.deusto.es/ontologies/COMBont#Posters> <http://www.w3.org/2000/01/rdf-schema#label> "Posters" .
+# 
+# http://morelab.deusto.es/ontologies/COMBont#PrintMedia
+<http://morelab.deusto.es/ontologies/COMBont#PrintMedia> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://morelab.deusto.es/ontologies/COMBont#PrintMedia> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://morelab.deusto.es/ontologies/COMBont#PopulationLevel> .
+<http://morelab.deusto.es/ontologies/COMBont#PrintMedia> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <http://www.morelab.deusto.es/ontologies/COMBont> .
+<http://morelab.deusto.es/ontologies/COMBont#PrintMedia> <http://www.w3.org/2000/01/rdf-schema#label> "PrintMedia" .
+# 
+# http://morelab.deusto.es/ontologies/COMBont#Radio
+<http://morelab.deusto.es/ontologies/COMBont#Radio> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://morelab.deusto.es/ontologies/COMBont#Radio> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://morelab.deusto.es/ontologies/COMBont#BroadcastMedia> .
+<http://morelab.deusto.es/ontologies/COMBont#Radio> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <http://www.morelab.deusto.es/ontologies/COMBont> .
+<http://morelab.deusto.es/ontologies/COMBont#Radio> <http://www.w3.org/2000/01/rdf-schema#label> "Radio" .
+# 
+# http://morelab.deusto.es/ontologies/COMBont#TV
+<http://morelab.deusto.es/ontologies/COMBont#TV> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://morelab.deusto.es/ontologies/COMBont#TV> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://morelab.deusto.es/ontologies/COMBont#BroadcastMedia> .
+<http://morelab.deusto.es/ontologies/COMBont#TV> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <http://www.morelab.deusto.es/ontologies/COMBont> .
+<http://morelab.deusto.es/ontologies/COMBont#TV> <http://www.w3.org/2000/01/rdf-schema#label> "TV" .
+# 
+# 
+# 
+# #################################################################
+# #
+# #    Annotations
+# #
+# #################################################################
+# 
+# 
+<http://www.morelab.deusto.es/ontologies/COMBont#david.bujan> <http://xmlns.com/foaf/0.1/homepage> <http://paginaspersonales.deusto.es/dbujan/> .
+<http://www.morelab.deusto.es/ontologies/COMBont#david.bujan> <http://xmlns.com/foaf/0.1/name> "David Buj\u00E1n Carballal" .
+# 
+<http://www.morelab.deusto.es/ontologies/COMBont#DeustoTech%20-%20Deusto%20Institute%20of%20Technology> <http://xmlns.com/foaf/0.1/homepage> <http://morelab.deusto.es> .
+<http://www.morelab.deusto.es/ontologies/COMBont#DeustoTech%20-%20Deusto%20Institute%20of%20Technology> <http://xmlns.com/foaf/0.1/member> <http://www.morelab.deusto.es/ontologies/COMBont#david.bujan> .
+<http://www.morelab.deusto.es/ontologies/COMBont#DeustoTech%20-%20Deusto%20Institute%20of%20Technology> <http://xmlns.com/foaf/0.1/name> "DeustoTech - Deusto Institute of Technology" .
+# 
+# Generated by the OWL API (version 5.1.0) https://github.com/owlcs/owlapi/
