@@ -1,0 +1,1807 @@
+<http://www.morelab.deusto.es/ontologies/city4age#> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Ontology> .
+<http://www.morelab.deusto.es/ontologies/city4age#> <http://www.w3.org/2002/07/owl#imports> <http://www.morelab.deusto.es/ontologies/interC4A#> .
+<http://www.morelab.deusto.es/ontologies/city4age#> <http://www.w3.org/2002/07/owl#imports> <http://www.morelab.deusto.es/ontologies/riskC4A#> .
+# 
+# 
+# #################################################################
+# #
+# #    Datatypes
+# #
+# #################################################################
+# 
+# 
+# http://www.w3.org/2001/XMLSchema#time
+<http://www.w3.org/2001/XMLSchema#time> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2000/01/rdf-schema#Datatype> .
+# 
+# 
+# 
+# #################################################################
+# #
+# #    Object Properties
+# #
+# #################################################################
+# 
+# 
+# http://www.morelab.deusto.es/ontologies/city4age#DoesActivity
+<http://www.morelab.deusto.es/ontologies/city4age#DoesActivity> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<http://www.morelab.deusto.es/ontologies/city4age#DoesActivity> <http://www.w3.org/2000/01/rdf-schema#domain> <http://www.morelab.deusto.es/ontologies/city4age#Elderly> .
+<http://www.morelab.deusto.es/ontologies/city4age#DoesActivity> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.morelab.deusto.es/ontologies/city4age#Activity> .
+# 
+# http://www.morelab.deusto.es/ontologies/city4age#attachedTo
+<http://www.morelab.deusto.es/ontologies/city4age#attachedTo> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<http://www.morelab.deusto.es/ontologies/city4age#attachedTo> <http://www.w3.org/2000/01/rdf-schema#domain> <http://www.morelab.deusto.es/ontologies/city4age#Sensor> .
+<http://www.morelab.deusto.es/ontologies/city4age#attachedTo> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.morelab.deusto.es/ontologies/city4age#Object> .
+# 
+# http://www.morelab.deusto.es/ontologies/city4age#cameFrom
+<http://www.morelab.deusto.es/ontologies/city4age#cameFrom> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<http://www.morelab.deusto.es/ontologies/city4age#cameFrom> <http://www.w3.org/2000/01/rdf-schema#domain> <http://www.morelab.deusto.es/ontologies/city4age#Elderly> .
+<http://www.morelab.deusto.es/ontologies/city4age#cameFrom> <http://www.w3.org/2000/01/rdf-schema#range> _:genid1 .
+_:genid1 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+_:genid1 <http://www.w3.org/2002/07/owl#unionOf> _:genid3 .
+_:genid3 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#List> .
+_:genid3 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> <http://www.morelab.deusto.es/ontologies/city4age#CityZone> .
+_:genid3 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> _:genid2 .
+_:genid2 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#List> .
+_:genid2 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> <http://www.morelab.deusto.es/ontologies/city4age#Home> .
+_:genid2 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> <http://www.w3.org/1999/02/22-rdf-syntax-ns#nil> .
+# 
+# http://www.morelab.deusto.es/ontologies/city4age#capturedBy
+<http://www.morelab.deusto.es/ontologies/city4age#capturedBy> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<http://www.morelab.deusto.es/ontologies/city4age#capturedBy> <http://www.w3.org/2000/01/rdf-schema#domain> <http://www.morelab.deusto.es/ontologies/city4age#ExecutedAction> .
+<http://www.morelab.deusto.es/ontologies/city4age#capturedBy> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.morelab.deusto.es/ontologies/city4age#Sensor> .
+# 
+# http://www.morelab.deusto.es/ontologies/city4age#detectedIn
+<http://www.morelab.deusto.es/ontologies/city4age#detectedIn> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<http://www.morelab.deusto.es/ontologies/city4age#detectedIn> <http://www.w3.org/2000/01/rdf-schema#domain> <http://www.morelab.deusto.es/ontologies/city4age#Elderly> .
+<http://www.morelab.deusto.es/ontologies/city4age#detectedIn> <http://www.w3.org/2000/01/rdf-schema#range> _:genid4 .
+_:genid4 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+_:genid4 <http://www.w3.org/2002/07/owl#unionOf> _:genid6 .
+_:genid6 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#List> .
+_:genid6 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> <http://www.morelab.deusto.es/ontologies/city4age#CityZone> .
+_:genid6 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> _:genid5 .
+_:genid5 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#List> .
+_:genid5 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> <http://www.morelab.deusto.es/ontologies/city4age#Home> .
+_:genid5 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> <http://www.w3.org/1999/02/22-rdf-syntax-ns#nil> .
+# 
+# http://www.morelab.deusto.es/ontologies/city4age#execute
+<http://www.morelab.deusto.es/ontologies/city4age#execute> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<http://www.morelab.deusto.es/ontologies/city4age#execute> <http://www.w3.org/2002/07/owl#inverseOf> <http://www.morelab.deusto.es/ontologies/city4age#isExecutedBy> .
+<http://www.morelab.deusto.es/ontologies/city4age#execute> <http://www.w3.org/2000/01/rdf-schema#domain> <http://www.morelab.deusto.es/ontologies/city4age#Elderly> .
+<http://www.morelab.deusto.es/ontologies/city4age#execute> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.morelab.deusto.es/ontologies/city4age#ExecutedAction> .
+<http://www.morelab.deusto.es/ontologies/city4age#execute> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.morelab.deusto.es/ontologies/city4age#ExecutedActivity> .
+# 
+# http://www.morelab.deusto.es/ontologies/city4age#hasBeenHospitalized
+<http://www.morelab.deusto.es/ontologies/city4age#hasBeenHospitalized> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<http://www.morelab.deusto.es/ontologies/city4age#hasBeenHospitalized> <http://www.w3.org/2000/01/rdf-schema#domain> <http://www.morelab.deusto.es/ontologies/city4age#Elderly> .
+<http://www.morelab.deusto.es/ontologies/city4age#hasBeenHospitalized> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.morelab.deusto.es/ontologies/city4age#Hospitalization> .
+# 
+# http://www.morelab.deusto.es/ontologies/city4age#hasBehaviourChange
+<http://www.morelab.deusto.es/ontologies/city4age#hasBehaviourChange> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<http://www.morelab.deusto.es/ontologies/city4age#hasBehaviourChange> <http://www.w3.org/2000/01/rdf-schema#domain> <http://www.morelab.deusto.es/ontologies/city4age#Elderly> .
+<http://www.morelab.deusto.es/ontologies/city4age#hasBehaviourChange> <http://www.w3.org/2000/01/rdf-schema#range> _:genid7 .
+_:genid7 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+_:genid7 <http://www.w3.org/2002/07/owl#unionOf> _:genid9 .
+_:genid9 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#List> .
+_:genid9 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> <http://www.morelab.deusto.es/ontologies/city4age#ChangeingBehaviour> .
+_:genid9 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> _:genid8 .
+_:genid8 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#List> .
+_:genid8 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> <http://www.morelab.deusto.es/ontologies/city4age#NormalBehaviour> .
+_:genid8 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> <http://www.w3.org/1999/02/22-rdf-syntax-ns#nil> .
+# 
+# http://www.morelab.deusto.es/ontologies/city4age#hasCaregiver
+<http://www.morelab.deusto.es/ontologies/city4age#hasCaregiver> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<http://www.morelab.deusto.es/ontologies/city4age#hasCaregiver> <http://www.w3.org/2000/01/rdf-schema#domain> <http://www.morelab.deusto.es/ontologies/city4age#Elderly> .
+<http://www.morelab.deusto.es/ontologies/city4age#hasCaregiver> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.morelab.deusto.es/ontologies/city4age#Elderly> .
+# 
+# http://www.morelab.deusto.es/ontologies/city4age#hasCommunicationLanguage
+<http://www.morelab.deusto.es/ontologies/city4age#hasCommunicationLanguage> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<http://www.morelab.deusto.es/ontologies/city4age#hasCommunicationLanguage> <http://www.w3.org/2000/01/rdf-schema#domain> <http://www.morelab.deusto.es/ontologies/city4age#Elderly> .
+<http://www.morelab.deusto.es/ontologies/city4age#hasCommunicationLanguage> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.morelab.deusto.es/ontologies/city4age#Language> .
+# 
+# http://www.morelab.deusto.es/ontologies/city4age#hasCurrentState
+<http://www.morelab.deusto.es/ontologies/city4age#hasCurrentState> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<http://www.morelab.deusto.es/ontologies/city4age#hasCurrentState> <http://www.w3.org/2000/01/rdf-schema#domain> <http://www.morelab.deusto.es/ontologies/city4age#Sensor> .
+<http://www.morelab.deusto.es/ontologies/city4age#hasCurrentState> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.morelab.deusto.es/ontologies/city4age#SensorState> .
+# 
+# http://www.morelab.deusto.es/ontologies/city4age#hasDisease
+<http://www.morelab.deusto.es/ontologies/city4age#hasDisease> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<http://www.morelab.deusto.es/ontologies/city4age#hasDisease> <http://www.w3.org/2000/01/rdf-schema#domain> <http://www.morelab.deusto.es/ontologies/city4age#Elderly> .
+<http://www.morelab.deusto.es/ontologies/city4age#hasDisease> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.morelab.deusto.es/ontologies/city4age#Disease> .
+# 
+# http://www.morelab.deusto.es/ontologies/city4age#hasDiseaseLevel
+<http://www.morelab.deusto.es/ontologies/city4age#hasDiseaseLevel> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<http://www.morelab.deusto.es/ontologies/city4age#hasDiseaseLevel> <http://www.w3.org/2000/01/rdf-schema#domain> <http://www.morelab.deusto.es/ontologies/city4age#Disease> .
+<http://www.morelab.deusto.es/ontologies/city4age#hasDiseaseLevel> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.morelab.deusto.es/ontologies/city4age#Level> .
+# 
+# http://www.morelab.deusto.es/ontologies/city4age#hasEducationLevel
+<http://www.morelab.deusto.es/ontologies/city4age#hasEducationLevel> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<http://www.morelab.deusto.es/ontologies/city4age#hasEducationLevel> <http://www.w3.org/2000/01/rdf-schema#domain> <http://www.morelab.deusto.es/ontologies/city4age#Elderly> .
+<http://www.morelab.deusto.es/ontologies/city4age#hasEducationLevel> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.morelab.deusto.es/ontologies/city4age#EducationLevel> .
+# 
+# http://www.morelab.deusto.es/ontologies/city4age#hasEmployment
+<http://www.morelab.deusto.es/ontologies/city4age#hasEmployment> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<http://www.morelab.deusto.es/ontologies/city4age#hasEmployment> <http://www.w3.org/2000/01/rdf-schema#domain> <http://www.morelab.deusto.es/ontologies/city4age#Elderly> .
+<http://www.morelab.deusto.es/ontologies/city4age#hasEmployment> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.morelab.deusto.es/ontologies/city4age#Employment> .
+# 
+# http://www.morelab.deusto.es/ontologies/city4age#hasFall
+<http://www.morelab.deusto.es/ontologies/city4age#hasFall> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<http://www.morelab.deusto.es/ontologies/city4age#hasFall> <http://www.w3.org/2000/01/rdf-schema#domain> <http://www.morelab.deusto.es/ontologies/city4age#Elderly> .
+<http://www.morelab.deusto.es/ontologies/city4age#hasFall> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.morelab.deusto.es/ontologies/city4age#Fall> .
+# 
+# http://www.morelab.deusto.es/ontologies/city4age#hasFamilyMember
+<http://www.morelab.deusto.es/ontologies/city4age#hasFamilyMember> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<http://www.morelab.deusto.es/ontologies/city4age#hasFamilyMember> <http://www.w3.org/2000/01/rdf-schema#domain> <http://www.morelab.deusto.es/ontologies/city4age#Elderly> .
+<http://www.morelab.deusto.es/ontologies/city4age#hasFamilyMember> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.morelab.deusto.es/ontologies/city4age#Elderly> .
+# 
+# http://www.morelab.deusto.es/ontologies/city4age#hasFriend
+<http://www.morelab.deusto.es/ontologies/city4age#hasFriend> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<http://www.morelab.deusto.es/ontologies/city4age#hasFriend> <http://www.w3.org/2000/01/rdf-schema#domain> <http://www.morelab.deusto.es/ontologies/city4age#Elderly> .
+<http://www.morelab.deusto.es/ontologies/city4age#hasFriend> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.morelab.deusto.es/ontologies/city4age#Elderly> .
+# 
+# http://www.morelab.deusto.es/ontologies/city4age#hasGendre
+<http://www.morelab.deusto.es/ontologies/city4age#hasGendre> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<http://www.morelab.deusto.es/ontologies/city4age#hasGendre> <http://www.w3.org/2000/01/rdf-schema#domain> <http://www.morelab.deusto.es/ontologies/city4age#Elderly> .
+<http://www.morelab.deusto.es/ontologies/city4age#hasGendre> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.morelab.deusto.es/ontologies/city4age#Gender> .
+# 
+# http://www.morelab.deusto.es/ontologies/city4age#hasHabit
+<http://www.morelab.deusto.es/ontologies/city4age#hasHabit> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<http://www.morelab.deusto.es/ontologies/city4age#hasHabit> <http://www.w3.org/2000/01/rdf-schema#domain> <http://www.morelab.deusto.es/ontologies/city4age#Elderly> .
+<http://www.morelab.deusto.es/ontologies/city4age#hasHabit> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.morelab.deusto.es/ontologies/city4age#Habit> .
+# 
+# http://www.morelab.deusto.es/ontologies/city4age#hasMCIIndicator
+<http://www.morelab.deusto.es/ontologies/city4age#hasMCIIndicator> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<http://www.morelab.deusto.es/ontologies/city4age#hasMCIIndicator> <http://www.w3.org/2000/01/rdf-schema#domain> <http://www.morelab.deusto.es/ontologies/city4age#Elderly> .
+<http://www.morelab.deusto.es/ontologies/city4age#hasMCIIndicator> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.morelab.deusto.es/ontologies/city4age#MCIIndicator> .
+# 
+# http://www.morelab.deusto.es/ontologies/city4age#hasMaritalStatus
+<http://www.morelab.deusto.es/ontologies/city4age#hasMaritalStatus> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<http://www.morelab.deusto.es/ontologies/city4age#hasMaritalStatus> <http://www.w3.org/2000/01/rdf-schema#domain> <http://www.morelab.deusto.es/ontologies/city4age#Elderly> .
+<http://www.morelab.deusto.es/ontologies/city4age#hasMaritalStatus> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.morelab.deusto.es/ontologies/city4age#MaritalState> .
+# 
+# http://www.morelab.deusto.es/ontologies/city4age#hasPhyiscalCapabilityLevel
+<http://www.morelab.deusto.es/ontologies/city4age#hasPhyiscalCapabilityLevel> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<http://www.morelab.deusto.es/ontologies/city4age#hasPhyiscalCapabilityLevel> <http://www.w3.org/2000/01/rdf-schema#domain> <http://www.morelab.deusto.es/ontologies/city4age#PhysicalCapability> .
+<http://www.morelab.deusto.es/ontologies/city4age#hasPhyiscalCapabilityLevel> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.morelab.deusto.es/ontologies/city4age#Level> .
+# 
+# http://www.morelab.deusto.es/ontologies/city4age#hasPhysicalCapability
+<http://www.morelab.deusto.es/ontologies/city4age#hasPhysicalCapability> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<http://www.morelab.deusto.es/ontologies/city4age#hasPhysicalCapability> <http://www.w3.org/2000/01/rdf-schema#domain> <http://www.morelab.deusto.es/ontologies/city4age#Elderly> .
+<http://www.morelab.deusto.es/ontologies/city4age#hasPhysicalCapability> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.morelab.deusto.es/ontologies/city4age#PhysicalCapability> .
+# 
+# http://www.morelab.deusto.es/ontologies/city4age#hasPossibleState
+<http://www.morelab.deusto.es/ontologies/city4age#hasPossibleState> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<http://www.morelab.deusto.es/ontologies/city4age#hasPossibleState> <http://www.w3.org/2000/01/rdf-schema#domain> <http://www.morelab.deusto.es/ontologies/city4age#Sensor> .
+<http://www.morelab.deusto.es/ontologies/city4age#hasPossibleState> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.morelab.deusto.es/ontologies/city4age#SensorState> .
+# 
+# http://www.morelab.deusto.es/ontologies/city4age#hasPreferedLanguage
+<http://www.morelab.deusto.es/ontologies/city4age#hasPreferedLanguage> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<http://www.morelab.deusto.es/ontologies/city4age#hasPreferedLanguage> <http://www.w3.org/2000/01/rdf-schema#domain> <http://www.morelab.deusto.es/ontologies/city4age#Elderly> .
+<http://www.morelab.deusto.es/ontologies/city4age#hasPreferedLanguage> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.morelab.deusto.es/ontologies/city4age#Language> .
+# 
+# http://www.morelab.deusto.es/ontologies/city4age#hasPreference
+<http://www.morelab.deusto.es/ontologies/city4age#hasPreference> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<http://www.morelab.deusto.es/ontologies/city4age#hasPreference> <http://www.w3.org/2000/01/rdf-schema#domain> <http://www.morelab.deusto.es/ontologies/city4age#Elderly> .
+<http://www.morelab.deusto.es/ontologies/city4age#hasPreference> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.morelab.deusto.es/ontologies/city4age#Preference> .
+# 
+# http://www.morelab.deusto.es/ontologies/city4age#hasPreferenceLevel
+<http://www.morelab.deusto.es/ontologies/city4age#hasPreferenceLevel> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<http://www.morelab.deusto.es/ontologies/city4age#hasPreferenceLevel> <http://www.w3.org/2000/01/rdf-schema#domain> <http://www.morelab.deusto.es/ontologies/city4age#Preference> .
+<http://www.morelab.deusto.es/ontologies/city4age#hasPreferenceLevel> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.morelab.deusto.es/ontologies/city4age#Level> .
+# 
+# http://www.morelab.deusto.es/ontologies/city4age#hasPreferenceTopic
+<http://www.morelab.deusto.es/ontologies/city4age#hasPreferenceTopic> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<http://www.morelab.deusto.es/ontologies/city4age#hasPreferenceTopic> <http://www.w3.org/2000/01/rdf-schema#domain> <http://www.morelab.deusto.es/ontologies/city4age#Preference> .
+<http://www.morelab.deusto.es/ontologies/city4age#hasPreferenceTopic> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.morelab.deusto.es/ontologies/city4age#PreferenceTopic> .
+# 
+# http://www.morelab.deusto.es/ontologies/city4age#hasProfile
+<http://www.morelab.deusto.es/ontologies/city4age#hasProfile> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<http://www.morelab.deusto.es/ontologies/city4age#hasProfile> <http://www.w3.org/2002/07/owl#inverseOf> <http://www.morelab.deusto.es/ontologies/city4age#isProfileOf> .
+<http://www.morelab.deusto.es/ontologies/city4age#hasProfile> <http://www.w3.org/2000/01/rdf-schema#domain> <http://www.morelab.deusto.es/ontologies/city4age#Elderly> .
+<http://www.morelab.deusto.es/ontologies/city4age#hasProfile> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.morelab.deusto.es/ontologies/city4age#Profile> .
+# 
+# http://www.morelab.deusto.es/ontologies/city4age#hasRelatedAction
+<http://www.morelab.deusto.es/ontologies/city4age#hasRelatedAction> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<http://www.morelab.deusto.es/ontologies/city4age#hasRelatedAction> <http://www.w3.org/2000/01/rdf-schema#domain> <http://www.morelab.deusto.es/ontologies/city4age#ExecutedAction> .
+<http://www.morelab.deusto.es/ontologies/city4age#hasRelatedAction> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.morelab.deusto.es/ontologies/city4age#Action> .
+# 
+# http://www.morelab.deusto.es/ontologies/city4age#hasRelatedActivity
+<http://www.morelab.deusto.es/ontologies/city4age#hasRelatedActivity> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<http://www.morelab.deusto.es/ontologies/city4age#hasRelatedActivity> <http://www.w3.org/2000/01/rdf-schema#domain> <http://www.morelab.deusto.es/ontologies/city4age#EAM> .
+<http://www.morelab.deusto.es/ontologies/city4age#hasRelatedActivity> <http://www.w3.org/2000/01/rdf-schema#domain> <http://www.morelab.deusto.es/ontologies/city4age#ExecutedActivity> .
+<http://www.morelab.deusto.es/ontologies/city4age#hasRelatedActivity> <http://www.w3.org/2000/01/rdf-schema#domain> <http://www.morelab.deusto.es/ontologies/city4age#Habit> .
+<http://www.morelab.deusto.es/ontologies/city4age#hasRelatedActivity> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.morelab.deusto.es/ontologies/city4age#Activity> .
+# 
+# http://www.morelab.deusto.es/ontologies/city4age#hasSensorialCapability
+<http://www.morelab.deusto.es/ontologies/city4age#hasSensorialCapability> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<http://www.morelab.deusto.es/ontologies/city4age#hasSensorialCapability> <http://www.w3.org/2000/01/rdf-schema#domain> <http://www.morelab.deusto.es/ontologies/city4age#Elderly> .
+<http://www.morelab.deusto.es/ontologies/city4age#hasSensorialCapability> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.morelab.deusto.es/ontologies/city4age#SensorialCapability> .
+# 
+# http://www.morelab.deusto.es/ontologies/city4age#hasSensorialCapabilityLevel
+<http://www.morelab.deusto.es/ontologies/city4age#hasSensorialCapabilityLevel> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<http://www.morelab.deusto.es/ontologies/city4age#hasSensorialCapabilityLevel> <http://www.w3.org/2000/01/rdf-schema#domain> <http://www.morelab.deusto.es/ontologies/city4age#Elderly> .
+<http://www.morelab.deusto.es/ontologies/city4age#hasSensorialCapabilityLevel> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.morelab.deusto.es/ontologies/city4age#Level> .
+# 
+# http://www.morelab.deusto.es/ontologies/city4age#hasSocialState
+<http://www.morelab.deusto.es/ontologies/city4age#hasSocialState> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<http://www.morelab.deusto.es/ontologies/city4age#hasSocialState> <http://www.w3.org/2000/01/rdf-schema#domain> <http://www.morelab.deusto.es/ontologies/city4age#Elderly> .
+<http://www.morelab.deusto.es/ontologies/city4age#hasSocialState> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.morelab.deusto.es/ontologies/city4age#SocialState> .
+# 
+# http://www.morelab.deusto.es/ontologies/city4age#hasSurgery
+<http://www.morelab.deusto.es/ontologies/city4age#hasSurgery> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<http://www.morelab.deusto.es/ontologies/city4age#hasSurgery> <http://www.w3.org/2000/01/rdf-schema#domain> <http://www.morelab.deusto.es/ontologies/city4age#Elderly> .
+<http://www.morelab.deusto.es/ontologies/city4age#hasSurgery> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.morelab.deusto.es/ontologies/city4age#Surgery> .
+# 
+# http://www.morelab.deusto.es/ontologies/city4age#hasType
+<http://www.morelab.deusto.es/ontologies/city4age#hasType> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<http://www.morelab.deusto.es/ontologies/city4age#hasType> <http://www.w3.org/2000/01/rdf-schema#domain> <http://www.morelab.deusto.es/ontologies/city4age#Sensor> .
+<http://www.morelab.deusto.es/ontologies/city4age#hasType> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.morelab.deusto.es/ontologies/city4age#SensorType> .
+# 
+# http://www.morelab.deusto.es/ontologies/city4age#isConcurrent
+<http://www.morelab.deusto.es/ontologies/city4age#isConcurrent> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<http://www.morelab.deusto.es/ontologies/city4age#isConcurrent> <http://www.w3.org/2000/01/rdf-schema#domain> <http://www.morelab.deusto.es/ontologies/city4age#ExecutedAction> .
+<http://www.morelab.deusto.es/ontologies/city4age#isConcurrent> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.morelab.deusto.es/ontologies/city4age#ExecutedAction> .
+# 
+# http://www.morelab.deusto.es/ontologies/city4age#isExecutedBy
+<http://www.morelab.deusto.es/ontologies/city4age#isExecutedBy> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<http://www.morelab.deusto.es/ontologies/city4age#isExecutedBy> <http://www.w3.org/2000/01/rdf-schema#domain> <http://www.morelab.deusto.es/ontologies/city4age#ExecutedAction> .
+<http://www.morelab.deusto.es/ontologies/city4age#isExecutedBy> <http://www.w3.org/2000/01/rdf-schema#domain> <http://www.morelab.deusto.es/ontologies/city4age#ExecutedActivity> .
+<http://www.morelab.deusto.es/ontologies/city4age#isExecutedBy> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.morelab.deusto.es/ontologies/city4age#Elderly> .
+# 
+# http://www.morelab.deusto.es/ontologies/city4age#isIndicatorOf
+<http://www.morelab.deusto.es/ontologies/city4age#isIndicatorOf> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<http://www.morelab.deusto.es/ontologies/city4age#isIndicatorOf> <http://www.w3.org/2000/01/rdf-schema#domain> <http://www.morelab.deusto.es/ontologies/city4age#ChangeingBehaviour> .
+<http://www.morelab.deusto.es/ontologies/city4age#isIndicatorOf> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.morelab.deusto.es/ontologies/city4age#MCIIndicator> .
+# 
+# http://www.morelab.deusto.es/ontologies/city4age#isInterestedIn
+<http://www.morelab.deusto.es/ontologies/city4age#isInterestedIn> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<http://www.morelab.deusto.es/ontologies/city4age#isInterestedIn> <http://www.w3.org/2000/01/rdf-schema#domain> <http://www.morelab.deusto.es/ontologies/city4age#Elderly> .
+<http://www.morelab.deusto.es/ontologies/city4age#isInterestedIn> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.morelab.deusto.es/ontologies/city4age#Service> .
+# 
+# http://www.morelab.deusto.es/ontologies/city4age#isProfileOf
+<http://www.morelab.deusto.es/ontologies/city4age#isProfileOf> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<http://www.morelab.deusto.es/ontologies/city4age#isProfileOf> <http://www.w3.org/2000/01/rdf-schema#domain> <http://www.morelab.deusto.es/ontologies/city4age#Profile> .
+<http://www.morelab.deusto.es/ontologies/city4age#isProfileOf> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.morelab.deusto.es/ontologies/city4age#Elderly> .
+# 
+# http://www.morelab.deusto.es/ontologies/city4age#isProvidedOn
+<http://www.morelab.deusto.es/ontologies/city4age#isProvidedOn> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<http://www.morelab.deusto.es/ontologies/city4age#isProvidedOn> <http://www.w3.org/2000/01/rdf-schema#domain> <http://www.morelab.deusto.es/ontologies/city4age#Service> .
+<http://www.morelab.deusto.es/ontologies/city4age#isProvidedOn> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.morelab.deusto.es/ontologies/city4age#Device> .
+# 
+# http://www.morelab.deusto.es/ontologies/city4age#liveIn
+<http://www.morelab.deusto.es/ontologies/city4age#liveIn> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<http://www.morelab.deusto.es/ontologies/city4age#liveIn> <http://www.w3.org/2000/01/rdf-schema#domain> <http://www.morelab.deusto.es/ontologies/city4age#Elderly> .
+<http://www.morelab.deusto.es/ontologies/city4age#liveIn> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.morelab.deusto.es/ontologies/city4age#Home> .
+# 
+# http://www.morelab.deusto.es/ontologies/city4age#locatedIn
+<http://www.morelab.deusto.es/ontologies/city4age#locatedIn> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<http://www.morelab.deusto.es/ontologies/city4age#locatedIn> <http://www.w3.org/2000/01/rdf-schema#domain> <http://www.morelab.deusto.es/ontologies/city4age#ExecutedAction> .
+<http://www.morelab.deusto.es/ontologies/city4age#locatedIn> <http://www.w3.org/2000/01/rdf-schema#domain> <http://www.morelab.deusto.es/ontologies/city4age#Object> .
+<http://www.morelab.deusto.es/ontologies/city4age#locatedIn> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.morelab.deusto.es/ontologies/city4age#Environment> .
+<http://www.morelab.deusto.es/ontologies/city4age#locatedIn> <http://www.w3.org/2000/01/rdf-schema#range> _:genid10 .
+_:genid10 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+_:genid10 <http://www.w3.org/2002/07/owl#unionOf> _:genid13 .
+_:genid13 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#List> .
+_:genid13 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> <http://www.morelab.deusto.es/ontologies/city4age#CityZone> .
+_:genid13 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> _:genid12 .
+_:genid12 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#List> .
+_:genid12 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> <http://www.morelab.deusto.es/ontologies/city4age#Home> .
+_:genid12 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> _:genid11 .
+_:genid11 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#List> .
+_:genid11 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> <http://www.morelab.deusto.es/ontologies/city4age#Room> .
+_:genid11 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> <http://www.w3.org/1999/02/22-rdf-syntax-ns#nil> .
+# 
+# http://www.morelab.deusto.es/ontologies/city4age#partOfCity
+<http://www.morelab.deusto.es/ontologies/city4age#partOfCity> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<http://www.morelab.deusto.es/ontologies/city4age#partOfCity> <http://www.w3.org/2000/01/rdf-schema#domain> _:genid14 .
+_:genid14 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+_:genid14 <http://www.w3.org/2002/07/owl#unionOf> _:genid18 .
+_:genid18 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#List> .
+_:genid18 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> <http://www.morelab.deusto.es/ontologies/city4age#Building> .
+_:genid18 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> _:genid17 .
+_:genid17 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#List> .
+_:genid17 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> <http://www.morelab.deusto.es/ontologies/city4age#Park> .
+_:genid17 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> _:genid16 .
+_:genid16 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#List> .
+_:genid16 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> <http://www.morelab.deusto.es/ontologies/city4age#Street> .
+_:genid16 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> _:genid15 .
+_:genid15 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#List> .
+_:genid15 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> <http://www.morelab.deusto.es/ontologies/city4age#TransportationMean> .
+_:genid15 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> <http://www.w3.org/1999/02/22-rdf-syntax-ns#nil> .
+<http://www.morelab.deusto.es/ontologies/city4age#partOfCity> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.morelab.deusto.es/ontologies/city4age#CityZone> .
+# 
+# http://www.morelab.deusto.es/ontologies/city4age#partOfHouse
+<http://www.morelab.deusto.es/ontologies/city4age#partOfHouse> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<http://www.morelab.deusto.es/ontologies/city4age#partOfHouse> <http://www.w3.org/2000/01/rdf-schema#domain> <http://www.morelab.deusto.es/ontologies/city4age#Room> .
+<http://www.morelab.deusto.es/ontologies/city4age#partOfHouse> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.morelab.deusto.es/ontologies/city4age#Home> .
+# 
+# http://www.morelab.deusto.es/ontologies/city4age#preferInteractionWith
+<http://www.morelab.deusto.es/ontologies/city4age#preferInteractionWith> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<http://www.morelab.deusto.es/ontologies/city4age#preferInteractionWith> <http://www.w3.org/2000/01/rdf-schema#domain> <http://www.morelab.deusto.es/ontologies/city4age#Elderly> .
+<http://www.morelab.deusto.es/ontologies/city4age#preferInteractionWith> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.morelab.deusto.es/ontologies/city4age#Device> .
+# 
+# http://www.morelab.deusto.es/ontologies/city4age#relatedToHabit
+<http://www.morelab.deusto.es/ontologies/city4age#relatedToHabit> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<http://www.morelab.deusto.es/ontologies/city4age#relatedToHabit> <http://www.w3.org/2000/01/rdf-schema#domain> <http://www.morelab.deusto.es/ontologies/city4age#InterventionBehaviour> .
+<http://www.morelab.deusto.es/ontologies/city4age#relatedToHabit> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.morelab.deusto.es/ontologies/city4age#Habit> .
+# 
+# http://www.morelab.deusto.es/ontologies/city4age#relatedToPreference
+<http://www.morelab.deusto.es/ontologies/city4age#relatedToPreference> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<http://www.morelab.deusto.es/ontologies/city4age#relatedToPreference> <http://www.w3.org/2000/01/rdf-schema#domain> <http://www.morelab.deusto.es/ontologies/city4age#InterventionBehaviour> .
+<http://www.morelab.deusto.es/ontologies/city4age#relatedToPreference> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.morelab.deusto.es/ontologies/city4age#PreferenceTopic> .
+# 
+# http://www.morelab.deusto.es/ontologies/city4age#requireIntervention
+<http://www.morelab.deusto.es/ontologies/city4age#requireIntervention> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<http://www.morelab.deusto.es/ontologies/city4age#requireIntervention> <http://www.w3.org/2000/01/rdf-schema#domain> <http://www.morelab.deusto.es/ontologies/city4age#MCIIndicator> .
+<http://www.morelab.deusto.es/ontologies/city4age#requireIntervention> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.morelab.deusto.es/ontologies/city4age#InterventionBehaviour> .
+# 
+# http://www.morelab.deusto.es/ontologies/city4age#useLanguage
+<http://www.morelab.deusto.es/ontologies/city4age#useLanguage> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<http://www.morelab.deusto.es/ontologies/city4age#useLanguage> <http://www.w3.org/2000/01/rdf-schema#domain> <http://www.morelab.deusto.es/ontologies/city4age#InterventionBehaviour> .
+<http://www.morelab.deusto.es/ontologies/city4age#useLanguage> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.morelab.deusto.es/ontologies/city4age#Language> .
+# 
+# http://www.morelab.deusto.es/ontologies/city4age#useNow
+<http://www.morelab.deusto.es/ontologies/city4age#useNow> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<http://www.morelab.deusto.es/ontologies/city4age#useNow> <http://www.w3.org/2000/01/rdf-schema#domain> <http://www.morelab.deusto.es/ontologies/city4age#Elderly> .
+<http://www.morelab.deusto.es/ontologies/city4age#useNow> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.morelab.deusto.es/ontologies/city4age#Object> .
+# 
+# 
+# 
+# #################################################################
+# #
+# #    Data properties
+# #
+# #################################################################
+# 
+# 
+# http://www.morelab.deusto.es/ontologies/city4age#doesActivityFor
+<http://www.morelab.deusto.es/ontologies/city4age#doesActivityFor> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+<http://www.morelab.deusto.es/ontologies/city4age#doesActivityFor> <http://www.w3.org/2000/01/rdf-schema#domain> <http://www.morelab.deusto.es/ontologies/city4age#Elderly> .
+<http://www.morelab.deusto.es/ontologies/city4age#doesActivityFor> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#int> .
+# 
+# http://www.morelab.deusto.es/ontologies/city4age#doesActivitySince
+<http://www.morelab.deusto.es/ontologies/city4age#doesActivitySince> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+<http://www.morelab.deusto.es/ontologies/city4age#doesActivitySince> <http://www.w3.org/2000/01/rdf-schema#domain> <http://www.morelab.deusto.es/ontologies/city4age#Elderly> .
+<http://www.morelab.deusto.es/ontologies/city4age#doesActivitySince> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#dateTime> .
+# 
+# http://www.morelab.deusto.es/ontologies/city4age#hasAddress
+<http://www.morelab.deusto.es/ontologies/city4age#hasAddress> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+<http://www.morelab.deusto.es/ontologies/city4age#hasAddress> <http://www.w3.org/2000/01/rdf-schema#domain> <http://www.morelab.deusto.es/ontologies/city4age#Elderly> .
+<http://www.morelab.deusto.es/ontologies/city4age#hasAddress> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#string> .
+# 
+# http://www.morelab.deusto.es/ontologies/city4age#hasAge
+<http://www.morelab.deusto.es/ontologies/city4age#hasAge> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+<http://www.morelab.deusto.es/ontologies/city4age#hasAge> <http://www.w3.org/2000/01/rdf-schema#domain> <http://www.morelab.deusto.es/ontologies/city4age#Elderly> .
+<http://www.morelab.deusto.es/ontologies/city4age#hasAge> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#int> .
+# 
+# http://www.morelab.deusto.es/ontologies/city4age#hasCauseFall
+<http://www.morelab.deusto.es/ontologies/city4age#hasCauseFall> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+<http://www.morelab.deusto.es/ontologies/city4age#hasCauseFall> <http://www.w3.org/2000/01/rdf-schema#domain> <http://www.morelab.deusto.es/ontologies/city4age#Fall> .
+<http://www.morelab.deusto.es/ontologies/city4age#hasCauseFall> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#string> .
+# 
+# http://www.morelab.deusto.es/ontologies/city4age#hasCauseHospitalisation
+<http://www.morelab.deusto.es/ontologies/city4age#hasCauseHospitalisation> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+<http://www.morelab.deusto.es/ontologies/city4age#hasCauseHospitalisation> <http://www.w3.org/2000/01/rdf-schema#domain> <http://www.morelab.deusto.es/ontologies/city4age#Hospitalization> .
+<http://www.morelab.deusto.es/ontologies/city4age#hasCauseHospitalisation> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#string> .
+# 
+# http://www.morelab.deusto.es/ontologies/city4age#hasCauseSurgery
+<http://www.morelab.deusto.es/ontologies/city4age#hasCauseSurgery> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+<http://www.morelab.deusto.es/ontologies/city4age#hasCauseSurgery> <http://www.w3.org/2000/01/rdf-schema#domain> <http://www.morelab.deusto.es/ontologies/city4age#Surgery> .
+<http://www.morelab.deusto.es/ontologies/city4age#hasCauseSurgery> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#string> .
+# 
+# http://www.morelab.deusto.es/ontologies/city4age#hasDateFall
+<http://www.morelab.deusto.es/ontologies/city4age#hasDateFall> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+<http://www.morelab.deusto.es/ontologies/city4age#hasDateFall> <http://www.w3.org/2000/01/rdf-schema#domain> <http://www.morelab.deusto.es/ontologies/city4age#Fall> .
+<http://www.morelab.deusto.es/ontologies/city4age#hasDateFall> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#dateTime> .
+# 
+# http://www.morelab.deusto.es/ontologies/city4age#hasDateHospitalisation
+<http://www.morelab.deusto.es/ontologies/city4age#hasDateHospitalisation> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+<http://www.morelab.deusto.es/ontologies/city4age#hasDateHospitalisation> <http://www.w3.org/2000/01/rdf-schema#domain> <http://www.morelab.deusto.es/ontologies/city4age#Hospitalization> .
+<http://www.morelab.deusto.es/ontologies/city4age#hasDateHospitalisation> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#dateTime> .
+# 
+# http://www.morelab.deusto.es/ontologies/city4age#hasDateSurgery
+<http://www.morelab.deusto.es/ontologies/city4age#hasDateSurgery> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+<http://www.morelab.deusto.es/ontologies/city4age#hasDateSurgery> <http://www.w3.org/2000/01/rdf-schema#domain> <http://www.morelab.deusto.es/ontologies/city4age#Surgery> .
+<http://www.morelab.deusto.es/ontologies/city4age#hasDateSurgery> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#dateTime> .
+# 
+# http://www.morelab.deusto.es/ontologies/city4age#hasDuration
+<http://www.morelab.deusto.es/ontologies/city4age#hasDuration> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+<http://www.morelab.deusto.es/ontologies/city4age#hasDuration> <http://www.w3.org/2000/01/rdf-schema#domain> <http://www.morelab.deusto.es/ontologies/city4age#Habit> .
+<http://www.morelab.deusto.es/ontologies/city4age#hasDuration> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#time> .
+# 
+# http://www.morelab.deusto.es/ontologies/city4age#hasFrequency
+<http://www.morelab.deusto.es/ontologies/city4age#hasFrequency> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+<http://www.morelab.deusto.es/ontologies/city4age#hasFrequency> <http://www.w3.org/2000/01/rdf-schema#domain> <http://www.morelab.deusto.es/ontologies/city4age#Habit> .
+<http://www.morelab.deusto.es/ontologies/city4age#hasFrequency> <http://www.w3.org/2000/01/rdf-schema#range> _:genid19 .
+_:genid19 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2000/01/rdf-schema#Datatype> .
+_:genid19 <http://www.w3.org/2002/07/owl#oneOf> _:genid24 .
+_:genid24 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#List> .
+_:genid24 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> "Daily" .
+_:genid24 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> _:genid23 .
+_:genid23 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#List> .
+_:genid23 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> "Hourly" .
+_:genid23 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> _:genid22 .
+_:genid22 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#List> .
+_:genid22 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> "Monthly" .
+_:genid22 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> _:genid21 .
+_:genid21 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#List> .
+_:genid21 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> "Weekly" .
+_:genid21 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> _:genid20 .
+_:genid20 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#List> .
+_:genid20 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> "Yearly" .
+_:genid20 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> <http://www.w3.org/1999/02/22-rdf-syntax-ns#nil> .
+# 
+# http://www.morelab.deusto.es/ontologies/city4age#hasHeight
+<http://www.morelab.deusto.es/ontologies/city4age#hasHeight> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+<http://www.morelab.deusto.es/ontologies/city4age#hasHeight> <http://www.w3.org/2000/01/rdf-schema#domain> <http://www.morelab.deusto.es/ontologies/city4age#Elderly> .
+<http://www.morelab.deusto.es/ontologies/city4age#hasHeight> <http://www.w3.org/2000/01/rdf-schema#domain> <http://www.morelab.deusto.es/ontologies/city4age#Profile> .
+<http://www.morelab.deusto.es/ontologies/city4age#hasHeight> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#int> .
+# 
+# http://www.morelab.deusto.es/ontologies/city4age#hasID
+<http://www.morelab.deusto.es/ontologies/city4age#hasID> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+<http://www.morelab.deusto.es/ontologies/city4age#hasID> <http://www.w3.org/2000/01/rdf-schema#domain> <http://www.morelab.deusto.es/ontologies/city4age#Elderly> .
+<http://www.morelab.deusto.es/ontologies/city4age#hasID> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#int> .
+# 
+# http://www.morelab.deusto.es/ontologies/city4age#hasLastUpdate
+<http://www.morelab.deusto.es/ontologies/city4age#hasLastUpdate> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+<http://www.morelab.deusto.es/ontologies/city4age#hasLastUpdate> <http://www.w3.org/2000/01/rdf-schema#domain> <http://www.morelab.deusto.es/ontologies/city4age#Sensor> .
+<http://www.morelab.deusto.es/ontologies/city4age#hasLastUpdate> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#boolean> .
+# 
+# http://www.morelab.deusto.es/ontologies/city4age#hasName
+<http://www.morelab.deusto.es/ontologies/city4age#hasName> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+<http://www.morelab.deusto.es/ontologies/city4age#hasName> <http://www.w3.org/2000/01/rdf-schema#domain> <http://www.morelab.deusto.es/ontologies/city4age#Elderly> .
+<http://www.morelab.deusto.es/ontologies/city4age#hasName> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#string> .
+# 
+# http://www.morelab.deusto.es/ontologies/city4age#hasPhoneNumber
+<http://www.morelab.deusto.es/ontologies/city4age#hasPhoneNumber> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+<http://www.morelab.deusto.es/ontologies/city4age#hasPhoneNumber> <http://www.w3.org/2000/01/rdf-schema#domain> <http://www.morelab.deusto.es/ontologies/city4age#Elderly> .
+<http://www.morelab.deusto.es/ontologies/city4age#hasPhoneNumber> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#int> .
+# 
+# http://www.morelab.deusto.es/ontologies/city4age#hasTime
+<http://www.morelab.deusto.es/ontologies/city4age#hasTime> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+<http://www.morelab.deusto.es/ontologies/city4age#hasTime> <http://www.w3.org/2000/01/rdf-schema#domain> <http://www.morelab.deusto.es/ontologies/city4age#Activity> .
+<http://www.morelab.deusto.es/ontologies/city4age#hasTime> <http://www.w3.org/2000/01/rdf-schema#domain> <http://www.morelab.deusto.es/ontologies/city4age#ExecutedAction> .
+<http://www.morelab.deusto.es/ontologies/city4age#hasTime> <http://www.w3.org/2000/01/rdf-schema#domain> <http://www.morelab.deusto.es/ontologies/city4age#Habit> .
+<http://www.morelab.deusto.es/ontologies/city4age#hasTime> <http://www.w3.org/2000/01/rdf-schema#domain> <http://www.morelab.deusto.es/ontologies/city4age#Profile> .
+<http://www.morelab.deusto.es/ontologies/city4age#hasTime> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#dateTime> .
+# 
+# http://www.morelab.deusto.es/ontologies/city4age#hasWeight
+<http://www.morelab.deusto.es/ontologies/city4age#hasWeight> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+<http://www.morelab.deusto.es/ontologies/city4age#hasWeight> <http://www.w3.org/2000/01/rdf-schema#domain> <http://www.morelab.deusto.es/ontologies/city4age#Elderly> .
+<http://www.morelab.deusto.es/ontologies/city4age#hasWeight> <http://www.w3.org/2000/01/rdf-schema#domain> <http://www.morelab.deusto.es/ontologies/city4age#Profile> .
+<http://www.morelab.deusto.es/ontologies/city4age#hasWeight> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#int> .
+# 
+# http://www.morelab.deusto.es/ontologies/city4age#inEnvironmentFor
+<http://www.morelab.deusto.es/ontologies/city4age#inEnvironmentFor> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+<http://www.morelab.deusto.es/ontologies/city4age#inEnvironmentFor> <http://www.w3.org/2000/01/rdf-schema#domain> <http://www.morelab.deusto.es/ontologies/city4age#Elderly> .
+<http://www.morelab.deusto.es/ontologies/city4age#inEnvironmentFor> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#int> .
+# 
+# http://www.morelab.deusto.es/ontologies/city4age#inEnvironmentSince
+<http://www.morelab.deusto.es/ontologies/city4age#inEnvironmentSince> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+<http://www.morelab.deusto.es/ontologies/city4age#inEnvironmentSince> <http://www.w3.org/2000/01/rdf-schema#domain> <http://www.morelab.deusto.es/ontologies/city4age#Elderly> .
+<http://www.morelab.deusto.es/ontologies/city4age#inEnvironmentSince> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#dateTime> .
+# 
+# http://www.morelab.deusto.es/ontologies/city4age#indicateLocation
+<http://www.morelab.deusto.es/ontologies/city4age#indicateLocation> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+<http://www.morelab.deusto.es/ontologies/city4age#indicateLocation> <http://www.w3.org/2000/01/rdf-schema#domain> <http://www.morelab.deusto.es/ontologies/city4age#Sensor> .
+<http://www.morelab.deusto.es/ontologies/city4age#indicateLocation> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#boolean> .
+# 
+# http://www.morelab.deusto.es/ontologies/city4age#indicateUse
+<http://www.morelab.deusto.es/ontologies/city4age#indicateUse> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+<http://www.morelab.deusto.es/ontologies/city4age#indicateUse> <http://www.w3.org/2000/01/rdf-schema#domain> <http://www.morelab.deusto.es/ontologies/city4age#Sensor> .
+<http://www.morelab.deusto.es/ontologies/city4age#indicateUse> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#boolean> .
+# 
+# http://www.morelab.deusto.es/ontologies/city4age#isCaregiver
+<http://www.morelab.deusto.es/ontologies/city4age#isCaregiver> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+<http://www.morelab.deusto.es/ontologies/city4age#isCaregiver> <http://www.w3.org/2000/01/rdf-schema#domain> <http://www.morelab.deusto.es/ontologies/city4age#Elderly> .
+<http://www.morelab.deusto.es/ontologies/city4age#isCaregiver> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#boolean> .
+# 
+# http://www.morelab.deusto.es/ontologies/city4age#isPartOfTheDay
+<http://www.morelab.deusto.es/ontologies/city4age#isPartOfTheDay> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+<http://www.morelab.deusto.es/ontologies/city4age#isPartOfTheDay> <http://www.w3.org/2000/01/rdf-schema#domain> <http://www.morelab.deusto.es/ontologies/city4age#ExecutedAction> .
+<http://www.morelab.deusto.es/ontologies/city4age#isPartOfTheDay> <http://www.w3.org/2000/01/rdf-schema#range> _:genid25 .
+_:genid25 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2000/01/rdf-schema#Datatype> .
+_:genid25 <http://www.w3.org/2002/07/owl#oneOf> _:genid32 .
+_:genid32 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#List> .
+_:genid32 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> "EarlyAfternoon" .
+_:genid32 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> _:genid31 .
+_:genid31 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#List> .
+_:genid31 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> "EarlyEvening" .
+_:genid31 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> _:genid30 .
+_:genid30 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#List> .
+_:genid30 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> "EarlyMorning" .
+_:genid30 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> _:genid29 .
+_:genid29 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#List> .
+_:genid29 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> "LateAfternoon" .
+_:genid29 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> _:genid28 .
+_:genid28 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#List> .
+_:genid28 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> "LateEvening" .
+_:genid28 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> _:genid27 .
+_:genid27 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#List> .
+_:genid27 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> "LateMorning" .
+_:genid27 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> _:genid26 .
+_:genid26 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#List> .
+_:genid26 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> "Night" .
+_:genid26 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> <http://www.w3.org/1999/02/22-rdf-syntax-ns#nil> .
+# 
+# http://www.morelab.deusto.es/ontologies/city4age#isPatient
+<http://www.morelab.deusto.es/ontologies/city4age#isPatient> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+<http://www.morelab.deusto.es/ontologies/city4age#isPatient> <http://www.w3.org/2000/01/rdf-schema#domain> <http://www.morelab.deusto.es/ontologies/city4age#Elderly> .
+<http://www.morelab.deusto.es/ontologies/city4age#isPatient> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#boolean> .
+# 
+# http://www.morelab.deusto.es/ontologies/city4age#lastUsed
+<http://www.morelab.deusto.es/ontologies/city4age#lastUsed> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+<http://www.morelab.deusto.es/ontologies/city4age#lastUsed> <http://www.w3.org/2000/01/rdf-schema#domain> <http://www.morelab.deusto.es/ontologies/city4age#Object> .
+<http://www.morelab.deusto.es/ontologies/city4age#lastUsed> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#dateTime> .
+# 
+# http://www.morelab.deusto.es/ontologies/city4age#notUsedFor
+<http://www.morelab.deusto.es/ontologies/city4age#notUsedFor> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+<http://www.morelab.deusto.es/ontologies/city4age#notUsedFor> <http://www.w3.org/2000/01/rdf-schema#domain> <http://www.morelab.deusto.es/ontologies/city4age#Object> .
+<http://www.morelab.deusto.es/ontologies/city4age#notUsedFor> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#int> .
+# 
+# 
+# 
+# #################################################################
+# #
+# #    Classes
+# #
+# #################################################################
+# 
+# 
+# http://dbpedia.org/ontology/Activity
+<http://dbpedia.org/ontology/Activity> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+# 
+# http://dbpedia.org/ontology/Place
+<http://dbpedia.org/ontology/Place> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+# 
+# http://geovocab.org/spatial#Feature
+<http://geovocab.org/spatial#Feature> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+# 
+# http://health-lifesci.schema.org/LocalBusiness
+<http://health-lifesci.schema.org/LocalBusiness> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+# 
+# http://health-lifesci.schema.org/MedicalBusiness
+<http://health-lifesci.schema.org/MedicalBusiness> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+# 
+# http://health-lifesci.schema.org/MedicalCondition
+<http://health-lifesci.schema.org/MedicalCondition> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+# 
+# http://health-lifesci.schema.org/Patient
+<http://health-lifesci.schema.org/Patient> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+# 
+# http://health-lifesci.schema.org/Person
+<http://health-lifesci.schema.org/Person> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+# 
+# http://health-lifesci.schema.org/Pharmacy
+<http://health-lifesci.schema.org/Pharmacy> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://health-lifesci.schema.org/Pharmacy> <http://www.w3.org/2002/07/owl#equivalentClass> <http://www.morelab.deusto.es/ontologies/city4age#Pharmacy> .
+# 
+# http://schema.org/Patient
+<http://schema.org/Patient> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+# 
+# http://www.morelab.deusto.es/ontologies/city4age#ADLChangeingBehaviour
+<http://www.morelab.deusto.es/ontologies/city4age#ADLChangeingBehaviour> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://www.morelab.deusto.es/ontologies/city4age#ADLChangeingBehaviour> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://www.morelab.deusto.es/ontologies/city4age#ChangeingBehaviour> .
+# 
+# http://www.morelab.deusto.es/ontologies/city4age#ADLIntervention
+<http://www.morelab.deusto.es/ontologies/city4age#ADLIntervention> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://www.morelab.deusto.es/ontologies/city4age#ADLIntervention> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://www.morelab.deusto.es/ontologies/city4age#InterventionBehaviour> .
+# 
+# http://www.morelab.deusto.es/ontologies/city4age#Action
+<http://www.morelab.deusto.es/ontologies/city4age#Action> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://www.morelab.deusto.es/ontologies/city4age#Action> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://www.morelab.deusto.es/ontologies/city4age#NonVirtual> .
+# 
+# http://www.morelab.deusto.es/ontologies/city4age#Activity
+<http://www.morelab.deusto.es/ontologies/city4age#Activity> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://www.morelab.deusto.es/ontologies/city4age#Activity> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://dbpedia.org/ontology/Activity> .
+<http://www.morelab.deusto.es/ontologies/city4age#Activity> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://www.morelab.deusto.es/ontologies/city4age#NonVirtual> .
+# 
+# http://www.morelab.deusto.es/ontologies/city4age#Anteroom
+<http://www.morelab.deusto.es/ontologies/city4age#Anteroom> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://www.morelab.deusto.es/ontologies/city4age#Anteroom> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://www.morelab.deusto.es/ontologies/city4age#Room> .
+# 
+# http://www.morelab.deusto.es/ontologies/city4age#Appliance
+<http://www.morelab.deusto.es/ontologies/city4age#Appliance> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://www.morelab.deusto.es/ontologies/city4age#Appliance> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://www.morelab.deusto.es/ontologies/city4age#Object> .
+# 
+# http://www.morelab.deusto.es/ontologies/city4age#Awake
+<http://www.morelab.deusto.es/ontologies/city4age#Awake> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://www.morelab.deusto.es/ontologies/city4age#Awake> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://www.morelab.deusto.es/ontologies/city4age#InBed> .
+# 
+# http://www.morelab.deusto.es/ontologies/city4age#Bathroom
+<http://www.morelab.deusto.es/ontologies/city4age#Bathroom> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://www.morelab.deusto.es/ontologies/city4age#Bathroom> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://www.morelab.deusto.es/ontologies/city4age#Room> .
+# 
+# http://www.morelab.deusto.es/ontologies/city4age#Bed
+<http://www.morelab.deusto.es/ontologies/city4age#Bed> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://www.morelab.deusto.es/ontologies/city4age#Bed> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://www.morelab.deusto.es/ontologies/city4age#Furniture> .
+# 
+# http://www.morelab.deusto.es/ontologies/city4age#Bedroom
+<http://www.morelab.deusto.es/ontologies/city4age#Bedroom> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://www.morelab.deusto.es/ontologies/city4age#Bedroom> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://www.morelab.deusto.es/ontologies/city4age#Room> .
+# 
+# http://www.morelab.deusto.es/ontologies/city4age#Behaviour
+<http://www.morelab.deusto.es/ontologies/city4age#Behaviour> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://www.morelab.deusto.es/ontologies/city4age#Behaviour> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://www.morelab.deusto.es/ontologies/city4age#Virtual> .
+# 
+# http://www.morelab.deusto.es/ontologies/city4age#Being
+<http://www.morelab.deusto.es/ontologies/city4age#Being> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+# 
+# http://www.morelab.deusto.es/ontologies/city4age#Building
+<http://www.morelab.deusto.es/ontologies/city4age#Building> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://www.morelab.deusto.es/ontologies/city4age#Building> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://www.morelab.deusto.es/ontologies/city4age#CityZone> .
+# 
+# http://www.morelab.deusto.es/ontologies/city4age#Bus
+<http://www.morelab.deusto.es/ontologies/city4age#Bus> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://www.morelab.deusto.es/ontologies/city4age#Bus> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://www.morelab.deusto.es/ontologies/city4age#PublicTransportationMean> .
+# 
+# http://www.morelab.deusto.es/ontologies/city4age#Car
+<http://www.morelab.deusto.es/ontologies/city4age#Car> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://www.morelab.deusto.es/ontologies/city4age#Car> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://www.morelab.deusto.es/ontologies/city4age#PrivateTransportationMean> .
+# 
+# http://www.morelab.deusto.es/ontologies/city4age#Chair
+<http://www.morelab.deusto.es/ontologies/city4age#Chair> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://www.morelab.deusto.es/ontologies/city4age#Chair> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://www.morelab.deusto.es/ontologies/city4age#Furniture> .
+# 
+# http://www.morelab.deusto.es/ontologies/city4age#ChangeingBehaviour
+<http://www.morelab.deusto.es/ontologies/city4age#ChangeingBehaviour> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://www.morelab.deusto.es/ontologies/city4age#ChangeingBehaviour> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://www.morelab.deusto.es/ontologies/city4age#Behaviour> .
+# 
+# http://www.morelab.deusto.es/ontologies/city4age#Cinema
+<http://www.morelab.deusto.es/ontologies/city4age#Cinema> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://www.morelab.deusto.es/ontologies/city4age#Cinema> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://www.morelab.deusto.es/ontologies/city4age#Building> .
+<http://www.morelab.deusto.es/ontologies/city4age#Cinema> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://www.morelab.deusto.es/ontologies/city4age#CulturalPlace> .
+# 
+# http://www.morelab.deusto.es/ontologies/city4age#CityZone
+<http://www.morelab.deusto.es/ontologies/city4age#CityZone> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://www.morelab.deusto.es/ontologies/city4age#CityZone> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://www.morelab.deusto.es/ontologies/city4age#Environment> .
+# 
+# http://www.morelab.deusto.es/ontologies/city4age#ClimbingStairs
+<http://www.morelab.deusto.es/ontologies/city4age#ClimbingStairs> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://www.morelab.deusto.es/ontologies/city4age#ClimbingStairs> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://www.morelab.deusto.es/ontologies/city4age#ElderlyState> .
+# 
+# http://www.morelab.deusto.es/ontologies/city4age#CognitiveChangeingBehaviour
+<http://www.morelab.deusto.es/ontologies/city4age#CognitiveChangeingBehaviour> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://www.morelab.deusto.es/ontologies/city4age#CognitiveChangeingBehaviour> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://www.morelab.deusto.es/ontologies/city4age#ChangeingBehaviour> .
+# 
+# http://www.morelab.deusto.es/ontologies/city4age#CognitiveIntervention
+<http://www.morelab.deusto.es/ontologies/city4age#CognitiveIntervention> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://www.morelab.deusto.es/ontologies/city4age#CognitiveIntervention> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://www.morelab.deusto.es/ontologies/city4age#InterventionBehaviour> .
+# 
+# http://www.morelab.deusto.es/ontologies/city4age#Communication
+<http://www.morelab.deusto.es/ontologies/city4age#Communication> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://www.morelab.deusto.es/ontologies/city4age#Communication> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://www.morelab.deusto.es/ontologies/city4age#PersonalProfile> .
+# 
+# http://www.morelab.deusto.es/ontologies/city4age#Cooker
+<http://www.morelab.deusto.es/ontologies/city4age#Cooker> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://www.morelab.deusto.es/ontologies/city4age#Cooker> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://www.morelab.deusto.es/ontologies/city4age#KitchenAppliance> .
+# 
+# http://www.morelab.deusto.es/ontologies/city4age#Cultural
+<http://www.morelab.deusto.es/ontologies/city4age#Cultural> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://www.morelab.deusto.es/ontologies/city4age#Cultural> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://www.morelab.deusto.es/ontologies/city4age#PreferenceTopic> .
+# 
+# http://www.morelab.deusto.es/ontologies/city4age#CulturalAppliance
+<http://www.morelab.deusto.es/ontologies/city4age#CulturalAppliance> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://www.morelab.deusto.es/ontologies/city4age#CulturalAppliance> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://www.morelab.deusto.es/ontologies/city4age#Appliance> .
+# 
+# http://www.morelab.deusto.es/ontologies/city4age#CulturalPlace
+<http://www.morelab.deusto.es/ontologies/city4age#CulturalPlace> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://www.morelab.deusto.es/ontologies/city4age#CulturalPlace> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://www.morelab.deusto.es/ontologies/city4age#Environment> .
+# 
+# http://www.morelab.deusto.es/ontologies/city4age#Cupboard
+<http://www.morelab.deusto.es/ontologies/city4age#Cupboard> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://www.morelab.deusto.es/ontologies/city4age#Cupboard> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://www.morelab.deusto.es/ontologies/city4age#KitchenFurniture> .
+# 
+# http://www.morelab.deusto.es/ontologies/city4age#DeepSleep
+<http://www.morelab.deusto.es/ontologies/city4age#DeepSleep> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://www.morelab.deusto.es/ontologies/city4age#DeepSleep> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://www.morelab.deusto.es/ontologies/city4age#Sleeping> .
+# 
+# http://www.morelab.deusto.es/ontologies/city4age#Desk
+<http://www.morelab.deusto.es/ontologies/city4age#Desk> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://www.morelab.deusto.es/ontologies/city4age#Desk> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://www.morelab.deusto.es/ontologies/city4age#Furniture> .
+# 
+# http://www.morelab.deusto.es/ontologies/city4age#Device
+<http://www.morelab.deusto.es/ontologies/city4age#Device> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://www.morelab.deusto.es/ontologies/city4age#Device> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://www.morelab.deusto.es/ontologies/city4age#Object> .
+# 
+# http://www.morelab.deusto.es/ontologies/city4age#Disease
+<http://www.morelab.deusto.es/ontologies/city4age#Disease> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://www.morelab.deusto.es/ontologies/city4age#Disease> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://www.morelab.deusto.es/ontologies/city4age#HealthProfile> .
+# 
+# http://www.morelab.deusto.es/ontologies/city4age#Door
+<http://www.morelab.deusto.es/ontologies/city4age#Door> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://www.morelab.deusto.es/ontologies/city4age#Door> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://www.morelab.deusto.es/ontologies/city4age#Furniture> .
+# 
+# http://www.morelab.deusto.es/ontologies/city4age#Dynamic
+<http://www.morelab.deusto.es/ontologies/city4age#Dynamic> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+# 
+# http://www.morelab.deusto.es/ontologies/city4age#EAM
+<http://www.morelab.deusto.es/ontologies/city4age#EAM> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://www.morelab.deusto.es/ontologies/city4age#EAM> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://www.morelab.deusto.es/ontologies/city4age#NonVirtual> .
+# 
+# http://www.morelab.deusto.es/ontologies/city4age#EducationLevel
+<http://www.morelab.deusto.es/ontologies/city4age#EducationLevel> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://www.morelab.deusto.es/ontologies/city4age#EducationLevel> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://www.morelab.deusto.es/ontologies/city4age#PersonalProfile> .
+# 
+# http://www.morelab.deusto.es/ontologies/city4age#Elderly
+<http://www.morelab.deusto.es/ontologies/city4age#Elderly> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://www.morelab.deusto.es/ontologies/city4age#Elderly> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://health-lifesci.schema.org/Patient> .
+<http://www.morelab.deusto.es/ontologies/city4age#Elderly> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://www.morelab.deusto.es/ontologies/city4age#Physical> .
+<http://www.morelab.deusto.es/ontologies/city4age#Elderly> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://www.morelab.deusto.es/ontologies/demlab#Participant> .
+# 
+# http://www.morelab.deusto.es/ontologies/city4age#ElderlyState
+<http://www.morelab.deusto.es/ontologies/city4age#ElderlyState> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://www.morelab.deusto.es/ontologies/city4age#ElderlyState> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://www.morelab.deusto.es/ontologies/city4age#Virtual> .
+# 
+# http://www.morelab.deusto.es/ontologies/city4age#Employment
+<http://www.morelab.deusto.es/ontologies/city4age#Employment> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://www.morelab.deusto.es/ontologies/city4age#Employment> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://www.morelab.deusto.es/ontologies/city4age#PersonalProfile> .
+# 
+# http://www.morelab.deusto.es/ontologies/city4age#Environment
+<http://www.morelab.deusto.es/ontologies/city4age#Environment> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://www.morelab.deusto.es/ontologies/city4age#Environment> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://dbpedia.org/ontology/Place> .
+<http://www.morelab.deusto.es/ontologies/city4age#Environment> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://geovocab.org/spatial#Feature> .
+# 
+# http://www.morelab.deusto.es/ontologies/city4age#ExecutedAction
+<http://www.morelab.deusto.es/ontologies/city4age#ExecutedAction> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://www.morelab.deusto.es/ontologies/city4age#ExecutedAction> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://www.morelab.deusto.es/ontologies/city4age#NonVirtual> .
+# 
+# http://www.morelab.deusto.es/ontologies/city4age#ExecutedActivity
+<http://www.morelab.deusto.es/ontologies/city4age#ExecutedActivity> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://www.morelab.deusto.es/ontologies/city4age#ExecutedActivity> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://www.morelab.deusto.es/ontologies/city4age#NonVirtual> .
+# 
+# http://www.morelab.deusto.es/ontologies/city4age#Fall
+<http://www.morelab.deusto.es/ontologies/city4age#Fall> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://www.morelab.deusto.es/ontologies/city4age#Fall> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://www.morelab.deusto.es/ontologies/city4age#HealthProfile> .
+# 
+# http://www.morelab.deusto.es/ontologies/city4age#FamilyMemberHome
+<http://www.morelab.deusto.es/ontologies/city4age#FamilyMemberHome> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://www.morelab.deusto.es/ontologies/city4age#FamilyMemberHome> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://www.morelab.deusto.es/ontologies/city4age#Home> .
+<http://www.morelab.deusto.es/ontologies/city4age#FamilyMemberHome> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://www.morelab.deusto.es/ontologies/city4age#SocializingPlace> .
+# 
+# http://www.morelab.deusto.es/ontologies/city4age#FoodCourt
+<http://www.morelab.deusto.es/ontologies/city4age#FoodCourt> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://www.morelab.deusto.es/ontologies/city4age#FoodCourt> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://www.morelab.deusto.es/ontologies/city4age#Shop> .
+<http://www.morelab.deusto.es/ontologies/city4age#FoodCourt> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://www.morelab.deusto.es/ontologies/city4age#SocializingPlace> .
+# 
+# http://www.morelab.deusto.es/ontologies/city4age#Fridge
+<http://www.morelab.deusto.es/ontologies/city4age#Fridge> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://www.morelab.deusto.es/ontologies/city4age#Fridge> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://www.morelab.deusto.es/ontologies/city4age#KitchenFurniture> .
+# 
+# http://www.morelab.deusto.es/ontologies/city4age#FriendHome
+<http://www.morelab.deusto.es/ontologies/city4age#FriendHome> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://www.morelab.deusto.es/ontologies/city4age#FriendHome> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://www.morelab.deusto.es/ontologies/city4age#Home> .
+<http://www.morelab.deusto.es/ontologies/city4age#FriendHome> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://www.morelab.deusto.es/ontologies/city4age#SocializingPlace> .
+# 
+# http://www.morelab.deusto.es/ontologies/city4age#Furniture
+<http://www.morelab.deusto.es/ontologies/city4age#Furniture> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://www.morelab.deusto.es/ontologies/city4age#Furniture> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://www.morelab.deusto.es/ontologies/city4age#Object> .
+# 
+# http://www.morelab.deusto.es/ontologies/city4age#GP
+<http://www.morelab.deusto.es/ontologies/city4age#GP> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://www.morelab.deusto.es/ontologies/city4age#GP> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://www.morelab.deusto.es/ontologies/city4age#HealthPlace> .
+# 
+# http://www.morelab.deusto.es/ontologies/city4age#Gender
+<http://www.morelab.deusto.es/ontologies/city4age#Gender> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://www.morelab.deusto.es/ontologies/city4age#Gender> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://www.morelab.deusto.es/ontologies/city4age#PersonalProfile> .
+# 
+# http://www.morelab.deusto.es/ontologies/city4age#GenericOutdoor
+<http://www.morelab.deusto.es/ontologies/city4age#GenericOutdoor> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://www.morelab.deusto.es/ontologies/city4age#GenericOutdoor> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://www.morelab.deusto.es/ontologies/city4age#Environment> .
+# 
+# http://www.morelab.deusto.es/ontologies/city4age#Habit
+<http://www.morelab.deusto.es/ontologies/city4age#Habit> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://www.morelab.deusto.es/ontologies/city4age#Habit> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://www.morelab.deusto.es/ontologies/city4age#PersonalProfile> .
+# 
+# http://www.morelab.deusto.es/ontologies/city4age#HealthPlace
+<http://www.morelab.deusto.es/ontologies/city4age#HealthPlace> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://www.morelab.deusto.es/ontologies/city4age#HealthPlace> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://health-lifesci.schema.org/MedicalBusiness> .
+<http://www.morelab.deusto.es/ontologies/city4age#HealthPlace> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://www.morelab.deusto.es/ontologies/city4age#Environment> .
+# 
+# http://www.morelab.deusto.es/ontologies/city4age#HealthProfile
+<http://www.morelab.deusto.es/ontologies/city4age#HealthProfile> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://www.morelab.deusto.es/ontologies/city4age#HealthProfile> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://www.morelab.deusto.es/ontologies/city4age#Profile> .
+# 
+# http://www.morelab.deusto.es/ontologies/city4age#Home
+<http://www.morelab.deusto.es/ontologies/city4age#Home> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://www.morelab.deusto.es/ontologies/city4age#Home> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://www.morelab.deusto.es/ontologies/city4age#Environment> .
+# 
+# http://www.morelab.deusto.es/ontologies/city4age#Hospitalization
+<http://www.morelab.deusto.es/ontologies/city4age#Hospitalization> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://www.morelab.deusto.es/ontologies/city4age#Hospitalization> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://www.morelab.deusto.es/ontologies/city4age#HealthProfile> .
+# 
+# http://www.morelab.deusto.es/ontologies/city4age#InBed
+<http://www.morelab.deusto.es/ontologies/city4age#InBed> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://www.morelab.deusto.es/ontologies/city4age#InBed> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://www.morelab.deusto.es/ontologies/city4age#ElderlyState> .
+# 
+# http://www.morelab.deusto.es/ontologies/city4age#Indicator
+<http://www.morelab.deusto.es/ontologies/city4age#Indicator> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://www.morelab.deusto.es/ontologies/city4age#Indicator> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://www.morelab.deusto.es/ontologies/city4age#Virtual> .
+# 
+# http://www.morelab.deusto.es/ontologies/city4age#InterventionBehaviour
+<http://www.morelab.deusto.es/ontologies/city4age#InterventionBehaviour> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://www.morelab.deusto.es/ontologies/city4age#InterventionBehaviour> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://www.morelab.deusto.es/ontologies/city4age#Virtual> .
+# 
+# http://www.morelab.deusto.es/ontologies/city4age#Kitchen
+<http://www.morelab.deusto.es/ontologies/city4age#Kitchen> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://www.morelab.deusto.es/ontologies/city4age#Kitchen> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://www.morelab.deusto.es/ontologies/city4age#Room> .
+# 
+# http://www.morelab.deusto.es/ontologies/city4age#KitchenAppliance
+<http://www.morelab.deusto.es/ontologies/city4age#KitchenAppliance> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://www.morelab.deusto.es/ontologies/city4age#KitchenAppliance> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://www.morelab.deusto.es/ontologies/city4age#Appliance> .
+# 
+# http://www.morelab.deusto.es/ontologies/city4age#KitchenFurniture
+<http://www.morelab.deusto.es/ontologies/city4age#KitchenFurniture> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://www.morelab.deusto.es/ontologies/city4age#KitchenFurniture> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://www.morelab.deusto.es/ontologies/city4age#Furniture> .
+# 
+# http://www.morelab.deusto.es/ontologies/city4age#Language
+<http://www.morelab.deusto.es/ontologies/city4age#Language> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://www.morelab.deusto.es/ontologies/city4age#Language> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://www.morelab.deusto.es/ontologies/city4age#Communication> .
+# 
+# http://www.morelab.deusto.es/ontologies/city4age#LaundryAppliance
+<http://www.morelab.deusto.es/ontologies/city4age#LaundryAppliance> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://www.morelab.deusto.es/ontologies/city4age#LaundryAppliance> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://www.morelab.deusto.es/ontologies/city4age#Appliance> .
+# 
+# http://www.morelab.deusto.es/ontologies/city4age#Level
+<http://www.morelab.deusto.es/ontologies/city4age#Level> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://www.morelab.deusto.es/ontologies/city4age#Level> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://www.morelab.deusto.es/ontologies/city4age#Virtual> .
+# 
+# http://www.morelab.deusto.es/ontologies/city4age#LightSleep
+<http://www.morelab.deusto.es/ontologies/city4age#LightSleep> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://www.morelab.deusto.es/ontologies/city4age#LightSleep> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://www.morelab.deusto.es/ontologies/city4age#Sleeping> .
+# 
+# http://www.morelab.deusto.es/ontologies/city4age#Livingroom
+<http://www.morelab.deusto.es/ontologies/city4age#Livingroom> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://www.morelab.deusto.es/ontologies/city4age#Livingroom> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://www.morelab.deusto.es/ontologies/city4age#Room> .
+# 
+# http://www.morelab.deusto.es/ontologies/city4age#MCIIndicator
+<http://www.morelab.deusto.es/ontologies/city4age#MCIIndicator> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://www.morelab.deusto.es/ontologies/city4age#MCIIndicator> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://www.morelab.deusto.es/ontologies/city4age#Indicator> .
+# 
+# http://www.morelab.deusto.es/ontologies/city4age#MaritalState
+<http://www.morelab.deusto.es/ontologies/city4age#MaritalState> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://www.morelab.deusto.es/ontologies/city4age#MaritalState> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://www.morelab.deusto.es/ontologies/city4age#PersonalProfile> .
+# 
+# http://www.morelab.deusto.es/ontologies/city4age#Microwave
+<http://www.morelab.deusto.es/ontologies/city4age#Microwave> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://www.morelab.deusto.es/ontologies/city4age#Microwave> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://www.morelab.deusto.es/ontologies/city4age#Oven> .
+# 
+# http://www.morelab.deusto.es/ontologies/city4age#MobilityChangeingBehaviour
+<http://www.morelab.deusto.es/ontologies/city4age#MobilityChangeingBehaviour> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://www.morelab.deusto.es/ontologies/city4age#MobilityChangeingBehaviour> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://www.morelab.deusto.es/ontologies/city4age#ChangeingBehaviour> .
+# 
+# http://www.morelab.deusto.es/ontologies/city4age#MobilityIntervention
+<http://www.morelab.deusto.es/ontologies/city4age#MobilityIntervention> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://www.morelab.deusto.es/ontologies/city4age#MobilityIntervention> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://www.morelab.deusto.es/ontologies/city4age#InterventionBehaviour> .
+# 
+# http://www.morelab.deusto.es/ontologies/city4age#Museum
+<http://www.morelab.deusto.es/ontologies/city4age#Museum> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://www.morelab.deusto.es/ontologies/city4age#Museum> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://www.morelab.deusto.es/ontologies/city4age#Building> .
+<http://www.morelab.deusto.es/ontologies/city4age#Museum> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://www.morelab.deusto.es/ontologies/city4age#CulturalPlace> .
+# 
+# http://www.morelab.deusto.es/ontologies/city4age#NeighbourHome
+<http://www.morelab.deusto.es/ontologies/city4age#NeighbourHome> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://www.morelab.deusto.es/ontologies/city4age#NeighbourHome> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://www.morelab.deusto.es/ontologies/city4age#Home> .
+<http://www.morelab.deusto.es/ontologies/city4age#NeighbourHome> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://www.morelab.deusto.es/ontologies/city4age#SocializingPlace> .
+# 
+# http://www.morelab.deusto.es/ontologies/city4age#Newsshop
+<http://www.morelab.deusto.es/ontologies/city4age#Newsshop> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://www.morelab.deusto.es/ontologies/city4age#Newsshop> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://www.morelab.deusto.es/ontologies/city4age#CulturalPlace> .
+<http://www.morelab.deusto.es/ontologies/city4age#Newsshop> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://www.morelab.deusto.es/ontologies/city4age#Shop> .
+# 
+# http://www.morelab.deusto.es/ontologies/city4age#NonPhysical
+<http://www.morelab.deusto.es/ontologies/city4age#NonPhysical> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://www.morelab.deusto.es/ontologies/city4age#NonPhysical> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://www.morelab.deusto.es/ontologies/city4age#Being> .
+# 
+# http://www.morelab.deusto.es/ontologies/city4age#NonVirtual
+<http://www.morelab.deusto.es/ontologies/city4age#NonVirtual> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://www.morelab.deusto.es/ontologies/city4age#NonVirtual> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://www.morelab.deusto.es/ontologies/city4age#Dynamic> .
+# 
+# http://www.morelab.deusto.es/ontologies/city4age#NormalBehaviour
+<http://www.morelab.deusto.es/ontologies/city4age#NormalBehaviour> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://www.morelab.deusto.es/ontologies/city4age#NormalBehaviour> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://www.morelab.deusto.es/ontologies/city4age#Behaviour> .
+# 
+# http://www.morelab.deusto.es/ontologies/city4age#Object
+<http://www.morelab.deusto.es/ontologies/city4age#Object> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://www.morelab.deusto.es/ontologies/city4age#Object> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://www.w3.org/2002/07/owl#Thing> .
+# 
+# http://www.morelab.deusto.es/ontologies/city4age#OrganicProfile
+<http://www.morelab.deusto.es/ontologies/city4age#OrganicProfile> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://www.morelab.deusto.es/ontologies/city4age#OrganicProfile> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://www.morelab.deusto.es/ontologies/city4age#Profile> .
+# 
+# http://www.morelab.deusto.es/ontologies/city4age#OtherSocialPlace
+<http://www.morelab.deusto.es/ontologies/city4age#OtherSocialPlace> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://www.morelab.deusto.es/ontologies/city4age#OtherSocialPlace> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://www.morelab.deusto.es/ontologies/city4age#SocializingPlace> .
+# 
+# http://www.morelab.deusto.es/ontologies/city4age#Oven
+<http://www.morelab.deusto.es/ontologies/city4age#Oven> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://www.morelab.deusto.es/ontologies/city4age#Oven> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://www.morelab.deusto.es/ontologies/city4age#KitchenAppliance> .
+<http://www.morelab.deusto.es/ontologies/city4age#Oven> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://www.morelab.deusto.es/ontologies/city4age#KitchenFurniture> .
+# 
+# http://www.morelab.deusto.es/ontologies/city4age#PaidVisit
+<http://www.morelab.deusto.es/ontologies/city4age#PaidVisit> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://www.morelab.deusto.es/ontologies/city4age#PaidVisit> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://www.morelab.deusto.es/ontologies/city4age#Visiting> .
+# 
+# http://www.morelab.deusto.es/ontologies/city4age#Park
+<http://www.morelab.deusto.es/ontologies/city4age#Park> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://www.morelab.deusto.es/ontologies/city4age#Park> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://www.morelab.deusto.es/ontologies/city4age#CityZone> .
+# 
+# http://www.morelab.deusto.es/ontologies/city4age#PersonalProfile
+<http://www.morelab.deusto.es/ontologies/city4age#PersonalProfile> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://www.morelab.deusto.es/ontologies/city4age#PersonalProfile> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://health-lifesci.schema.org/Person> .
+<http://www.morelab.deusto.es/ontologies/city4age#PersonalProfile> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://www.morelab.deusto.es/ontologies/city4age#Profile> .
+# 
+# http://www.morelab.deusto.es/ontologies/city4age#Pharmacy
+<http://www.morelab.deusto.es/ontologies/city4age#Pharmacy> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://www.morelab.deusto.es/ontologies/city4age#Pharmacy> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://www.morelab.deusto.es/ontologies/city4age#HealthPlace> .
+<http://www.morelab.deusto.es/ontologies/city4age#Pharmacy> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://www.morelab.deusto.es/ontologies/city4age#Shop> .
+# 
+# http://www.morelab.deusto.es/ontologies/city4age#Physical
+<http://www.morelab.deusto.es/ontologies/city4age#Physical> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://www.morelab.deusto.es/ontologies/city4age#Physical> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://www.morelab.deusto.es/ontologies/city4age#Being> .
+# 
+# http://www.morelab.deusto.es/ontologies/city4age#PhysicalCapability
+<http://www.morelab.deusto.es/ontologies/city4age#PhysicalCapability> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://www.morelab.deusto.es/ontologies/city4age#PhysicalCapability> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://www.morelab.deusto.es/ontologies/city4age#OrganicProfile> .
+# 
+# http://www.morelab.deusto.es/ontologies/city4age#Pilot
+<http://www.morelab.deusto.es/ontologies/city4age#Pilot> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://www.morelab.deusto.es/ontologies/city4age#Pilot> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://dbpedia.org/ontology/Place> .
+<http://www.morelab.deusto.es/ontologies/city4age#Pilot> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://www.w3.org/ns/ssn/Deployment> .
+# 
+# http://www.morelab.deusto.es/ontologies/city4age#Preference
+<http://www.morelab.deusto.es/ontologies/city4age#Preference> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://www.morelab.deusto.es/ontologies/city4age#Preference> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://www.morelab.deusto.es/ontologies/city4age#PersonalProfile> .
+# 
+# http://www.morelab.deusto.es/ontologies/city4age#PreferenceTopic
+<http://www.morelab.deusto.es/ontologies/city4age#PreferenceTopic> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://www.morelab.deusto.es/ontologies/city4age#PreferenceTopic> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://www.morelab.deusto.es/ontologies/city4age#Preference> .
+# 
+# http://www.morelab.deusto.es/ontologies/city4age#PrivateTransportationMean
+<http://www.morelab.deusto.es/ontologies/city4age#PrivateTransportationMean> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://www.morelab.deusto.es/ontologies/city4age#PrivateTransportationMean> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://www.morelab.deusto.es/ontologies/city4age#TransportationMean> .
+# 
+# http://www.morelab.deusto.es/ontologies/city4age#Profile
+<http://www.morelab.deusto.es/ontologies/city4age#Profile> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://www.morelab.deusto.es/ontologies/city4age#Profile> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://health-lifesci.schema.org/MedicalCondition> .
+<http://www.morelab.deusto.es/ontologies/city4age#Profile> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://www.morelab.deusto.es/ontologies/city4age#NonPhysical> .
+<http://www.morelab.deusto.es/ontologies/city4age#Profile> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://www.morelab.deusto.es/ontologies/demlab#ClinicalRecord> .
+# 
+# http://www.morelab.deusto.es/ontologies/city4age#PublicPark
+<http://www.morelab.deusto.es/ontologies/city4age#PublicPark> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://www.morelab.deusto.es/ontologies/city4age#PublicPark> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://www.morelab.deusto.es/ontologies/city4age#Park> .
+<http://www.morelab.deusto.es/ontologies/city4age#PublicPark> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://www.morelab.deusto.es/ontologies/city4age#SocializingPlace> .
+# 
+# http://www.morelab.deusto.es/ontologies/city4age#PublicTransportationMean
+<http://www.morelab.deusto.es/ontologies/city4age#PublicTransportationMean> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://www.morelab.deusto.es/ontologies/city4age#PublicTransportationMean> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://www.morelab.deusto.es/ontologies/city4age#TransportationMean> .
+# 
+# http://www.morelab.deusto.es/ontologies/city4age#ReceivedVisit
+<http://www.morelab.deusto.es/ontologies/city4age#ReceivedVisit> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://www.morelab.deusto.es/ontologies/city4age#ReceivedVisit> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://www.morelab.deusto.es/ontologies/city4age#Visiting> .
+# 
+# http://www.morelab.deusto.es/ontologies/city4age#Restaurant
+<http://www.morelab.deusto.es/ontologies/city4age#Restaurant> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://www.morelab.deusto.es/ontologies/city4age#Restaurant> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://www.morelab.deusto.es/ontologies/city4age#Shop> .
+<http://www.morelab.deusto.es/ontologies/city4age#Restaurant> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://www.morelab.deusto.es/ontologies/city4age#SocializingPlace> .
+# 
+# http://www.morelab.deusto.es/ontologies/city4age#Restroom
+<http://www.morelab.deusto.es/ontologies/city4age#Restroom> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://www.morelab.deusto.es/ontologies/city4age#Restroom> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://www.morelab.deusto.es/ontologies/city4age#Room> .
+# 
+# http://www.morelab.deusto.es/ontologies/city4age#Room
+<http://www.morelab.deusto.es/ontologies/city4age#Room> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://www.morelab.deusto.es/ontologies/city4age#Room> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://www.morelab.deusto.es/ontologies/city4age#Environment> .
+# 
+# http://www.morelab.deusto.es/ontologies/city4age#SeniorCenter
+<http://www.morelab.deusto.es/ontologies/city4age#SeniorCenter> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://www.morelab.deusto.es/ontologies/city4age#SeniorCenter> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://www.morelab.deusto.es/ontologies/city4age#SocializingPlace> .
+# 
+# http://www.morelab.deusto.es/ontologies/city4age#Sensor
+<http://www.morelab.deusto.es/ontologies/city4age#Sensor> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://www.morelab.deusto.es/ontologies/city4age#Sensor> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://www.morelab.deusto.es/ontologies/city4age#Object> .
+# 
+# http://www.morelab.deusto.es/ontologies/city4age#SensorState
+<http://www.morelab.deusto.es/ontologies/city4age#SensorState> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://www.morelab.deusto.es/ontologies/city4age#SensorState> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://www.morelab.deusto.es/ontologies/city4age#Virtual> .
+# 
+# http://www.morelab.deusto.es/ontologies/city4age#SensorType
+<http://www.morelab.deusto.es/ontologies/city4age#SensorType> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://www.morelab.deusto.es/ontologies/city4age#SensorType> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://www.morelab.deusto.es/ontologies/city4age#Virtual> .
+# 
+# http://www.morelab.deusto.es/ontologies/city4age#SensorialCapability
+<http://www.morelab.deusto.es/ontologies/city4age#SensorialCapability> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://www.morelab.deusto.es/ontologies/city4age#SensorialCapability> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://www.morelab.deusto.es/ontologies/city4age#OrganicProfile> .
+# 
+# http://www.morelab.deusto.es/ontologies/city4age#Service
+<http://www.morelab.deusto.es/ontologies/city4age#Service> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://www.morelab.deusto.es/ontologies/city4age#Service> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://www.morelab.deusto.es/ontologies/city4age#Virtual> .
+# 
+# http://www.morelab.deusto.es/ontologies/city4age#Shop
+<http://www.morelab.deusto.es/ontologies/city4age#Shop> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://www.morelab.deusto.es/ontologies/city4age#Shop> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://health-lifesci.schema.org/LocalBusiness> .
+<http://www.morelab.deusto.es/ontologies/city4age#Shop> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://www.morelab.deusto.es/ontologies/city4age#Environment> .
+# 
+# http://www.morelab.deusto.es/ontologies/city4age#Sleeping
+<http://www.morelab.deusto.es/ontologies/city4age#Sleeping> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://www.morelab.deusto.es/ontologies/city4age#Sleeping> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://www.morelab.deusto.es/ontologies/city4age#InBed> .
+# 
+# http://www.morelab.deusto.es/ontologies/city4age#SocialChangeingBehaviour
+<http://www.morelab.deusto.es/ontologies/city4age#SocialChangeingBehaviour> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://www.morelab.deusto.es/ontologies/city4age#SocialChangeingBehaviour> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://www.morelab.deusto.es/ontologies/city4age#ChangeingBehaviour> .
+# 
+# http://www.morelab.deusto.es/ontologies/city4age#SocialIntervention
+<http://www.morelab.deusto.es/ontologies/city4age#SocialIntervention> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://www.morelab.deusto.es/ontologies/city4age#SocialIntervention> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://www.morelab.deusto.es/ontologies/city4age#InterventionBehaviour> .
+# 
+# http://www.morelab.deusto.es/ontologies/city4age#SocialState
+<http://www.morelab.deusto.es/ontologies/city4age#SocialState> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://www.morelab.deusto.es/ontologies/city4age#SocialState> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://www.morelab.deusto.es/ontologies/city4age#PersonalProfile> .
+# 
+# http://www.morelab.deusto.es/ontologies/city4age#SocializingPlace
+<http://www.morelab.deusto.es/ontologies/city4age#SocializingPlace> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://www.morelab.deusto.es/ontologies/city4age#SocializingPlace> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://www.morelab.deusto.es/ontologies/city4age#Environment> .
+# 
+# http://www.morelab.deusto.es/ontologies/city4age#StairsUp
+<http://www.morelab.deusto.es/ontologies/city4age#StairsUp> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://www.morelab.deusto.es/ontologies/city4age#StairsUp> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://www.morelab.deusto.es/ontologies/city4age#ClimbingStairs> .
+# 
+# http://www.morelab.deusto.es/ontologies/city4age#Still
+<http://www.morelab.deusto.es/ontologies/city4age#Still> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://www.morelab.deusto.es/ontologies/city4age#Still> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://www.morelab.deusto.es/ontologies/city4age#ElderlyState> .
+# 
+# http://www.morelab.deusto.es/ontologies/city4age#Street
+<http://www.morelab.deusto.es/ontologies/city4age#Street> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://www.morelab.deusto.es/ontologies/city4age#Street> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://www.morelab.deusto.es/ontologies/city4age#CityZone> .
+# 
+# http://www.morelab.deusto.es/ontologies/city4age#Supermarket
+<http://www.morelab.deusto.es/ontologies/city4age#Supermarket> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://www.morelab.deusto.es/ontologies/city4age#Supermarket> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://www.morelab.deusto.es/ontologies/city4age#Shop> .
+# 
+# http://www.morelab.deusto.es/ontologies/city4age#Surgery
+<http://www.morelab.deusto.es/ontologies/city4age#Surgery> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://www.morelab.deusto.es/ontologies/city4age#Surgery> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://www.morelab.deusto.es/ontologies/city4age#HealthProfile> .
+# 
+# http://www.morelab.deusto.es/ontologies/city4age#TVSet
+<http://www.morelab.deusto.es/ontologies/city4age#TVSet> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://www.morelab.deusto.es/ontologies/city4age#TVSet> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://www.morelab.deusto.es/ontologies/city4age#CulturalAppliance> .
+# 
+# http://www.morelab.deusto.es/ontologies/city4age#Taxi
+<http://www.morelab.deusto.es/ontologies/city4age#Taxi> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://www.morelab.deusto.es/ontologies/city4age#Taxi> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://www.morelab.deusto.es/ontologies/city4age#PublicTransportationMean> .
+# 
+# http://www.morelab.deusto.es/ontologies/city4age#Toilet
+<http://www.morelab.deusto.es/ontologies/city4age#Toilet> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://www.morelab.deusto.es/ontologies/city4age#Toilet> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://www.morelab.deusto.es/ontologies/city4age#Bathroom> .
+# 
+# http://www.morelab.deusto.es/ontologies/city4age#Tram
+<http://www.morelab.deusto.es/ontologies/city4age#Tram> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://www.morelab.deusto.es/ontologies/city4age#Tram> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://www.morelab.deusto.es/ontologies/city4age#PublicTransportationMean> .
+# 
+# http://www.morelab.deusto.es/ontologies/city4age#TransportationMean
+<http://www.morelab.deusto.es/ontologies/city4age#TransportationMean> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://www.morelab.deusto.es/ontologies/city4age#TransportationMean> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://www.morelab.deusto.es/ontologies/city4age#CityZone> .
+<http://www.morelab.deusto.es/ontologies/city4age#TransportationMean> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://www.morelab.deusto.es/ontologies/city4age#Environment> .
+# 
+# http://www.morelab.deusto.es/ontologies/city4age#Virtual
+<http://www.morelab.deusto.es/ontologies/city4age#Virtual> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://www.morelab.deusto.es/ontologies/city4age#Virtual> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://www.morelab.deusto.es/ontologies/city4age#Dynamic> .
+# 
+# http://www.morelab.deusto.es/ontologies/city4age#VisitSocialCentre
+<http://www.morelab.deusto.es/ontologies/city4age#VisitSocialCentre> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://www.morelab.deusto.es/ontologies/city4age#VisitSocialCentre> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://www.morelab.deusto.es/ontologies/city4age#PaidVisit> .
+# 
+# http://www.morelab.deusto.es/ontologies/city4age#VisitToFamily
+<http://www.morelab.deusto.es/ontologies/city4age#VisitToFamily> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://www.morelab.deusto.es/ontologies/city4age#VisitToFamily> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://www.morelab.deusto.es/ontologies/city4age#PaidVisit> .
+# 
+# http://www.morelab.deusto.es/ontologies/city4age#VisitToFriend
+<http://www.morelab.deusto.es/ontologies/city4age#VisitToFriend> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://www.morelab.deusto.es/ontologies/city4age#VisitToFriend> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://www.morelab.deusto.es/ontologies/city4age#PaidVisit> .
+# 
+# http://www.morelab.deusto.es/ontologies/city4age#VisitToNeighbour
+<http://www.morelab.deusto.es/ontologies/city4age#VisitToNeighbour> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://www.morelab.deusto.es/ontologies/city4age#VisitToNeighbour> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://www.morelab.deusto.es/ontologies/city4age#PaidVisit> .
+# 
+# http://www.morelab.deusto.es/ontologies/city4age#Visiting
+<http://www.morelab.deusto.es/ontologies/city4age#Visiting> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://www.morelab.deusto.es/ontologies/city4age#Visiting> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://www.morelab.deusto.es/ontologies/city4age#Action> .
+# 
+# http://www.morelab.deusto.es/ontologies/city4age#Walking
+<http://www.morelab.deusto.es/ontologies/city4age#Walking> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://www.morelab.deusto.es/ontologies/city4age#Walking> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://www.morelab.deusto.es/ontologies/city4age#ElderlyState> .
+# 
+# http://www.morelab.deusto.es/ontologies/city4age#WashingMachine
+<http://www.morelab.deusto.es/ontologies/city4age#WashingMachine> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://www.morelab.deusto.es/ontologies/city4age#WashingMachine> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://www.morelab.deusto.es/ontologies/city4age#LaundryAppliance> .
+# 
+# http://www.morelab.deusto.es/ontologies/city4age#Window
+<http://www.morelab.deusto.es/ontologies/city4age#Window> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://www.morelab.deusto.es/ontologies/city4age#Window> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://www.morelab.deusto.es/ontologies/city4age#Furniture> .
+# 
+# http://www.morelab.deusto.es/ontologies/demlab#ClinicalRecord
+<http://www.morelab.deusto.es/ontologies/demlab#ClinicalRecord> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+# 
+# http://www.morelab.deusto.es/ontologies/demlab#Participant
+<http://www.morelab.deusto.es/ontologies/demlab#Participant> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+# 
+# http://www.w3.org/ns/ssn/Deployment
+<http://www.w3.org/ns/ssn/Deployment> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+# 
+# 
+# 
+# #################################################################
+# #
+# #    Individuals
+# #
+# #################################################################
+# 
+# 
+# http://www.morelab.deusto.es/ontologies/city4age#ADLIndicator
+<http://www.morelab.deusto.es/ontologies/city4age#ADLIndicator> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
+<http://www.morelab.deusto.es/ontologies/city4age#ADLIndicator> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.morelab.deusto.es/ontologies/city4age#MCIIndicator> .
+<http://www.morelab.deusto.es/ontologies/city4age#ADLIndicator> <http://www.morelab.deusto.es/ontologies/city4age#requireIntervention> <http://www.morelab.deusto.es/ontologies/city4age#PerformHabit> .
+<http://www.morelab.deusto.es/ontologies/city4age#ADLIndicator> <http://www.morelab.deusto.es/ontologies/city4age#requireIntervention> <http://www.morelab.deusto.es/ontologies/city4age#listenMusic> .
+<http://www.morelab.deusto.es/ontologies/city4age#ADLIndicator> <http://www.morelab.deusto.es/ontologies/city4age#requireIntervention> <http://www.morelab.deusto.es/ontologies/city4age#prepareFood> .
+<http://www.morelab.deusto.es/ontologies/city4age#ADLIndicator> <http://www.morelab.deusto.es/ontologies/city4age#requireIntervention> <http://www.morelab.deusto.es/ontologies/city4age#proposeRecipe> .
+<http://www.morelab.deusto.es/ontologies/city4age#ADLIndicator> <http://www.morelab.deusto.es/ontologies/city4age#requireIntervention> <http://www.morelab.deusto.es/ontologies/city4age#readBook> .
+# 
+# http://www.morelab.deusto.es/ontologies/city4age#ATH
+<http://www.morelab.deusto.es/ontologies/city4age#ATH> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
+<http://www.morelab.deusto.es/ontologies/city4age#ATH> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.morelab.deusto.es/ontologies/city4age#Pilot> .
+# 
+# http://www.morelab.deusto.es/ontologies/city4age#BHX
+<http://www.morelab.deusto.es/ontologies/city4age#BHX> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
+<http://www.morelab.deusto.es/ontologies/city4age#BHX> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.morelab.deusto.es/ontologies/city4age#Pilot> .
+# 
+# http://www.morelab.deusto.es/ontologies/city4age#English
+<http://www.morelab.deusto.es/ontologies/city4age#English> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
+<http://www.morelab.deusto.es/ontologies/city4age#English> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.morelab.deusto.es/ontologies/city4age#Language> .
+# 
+# http://www.morelab.deusto.es/ontologies/city4age#French
+<http://www.morelab.deusto.es/ontologies/city4age#French> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
+<http://www.morelab.deusto.es/ontologies/city4age#French> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.morelab.deusto.es/ontologies/city4age#Language> .
+# 
+# http://www.morelab.deusto.es/ontologies/city4age#Greek
+<http://www.morelab.deusto.es/ontologies/city4age#Greek> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
+<http://www.morelab.deusto.es/ontologies/city4age#Greek> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.morelab.deusto.es/ontologies/city4age#Language> .
+# 
+# http://www.morelab.deusto.es/ontologies/city4age#Indian
+<http://www.morelab.deusto.es/ontologies/city4age#Indian> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
+<http://www.morelab.deusto.es/ontologies/city4age#Indian> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.morelab.deusto.es/ontologies/city4age#Language> .
+# 
+# http://www.morelab.deusto.es/ontologies/city4age#Italian
+<http://www.morelab.deusto.es/ontologies/city4age#Italian> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
+<http://www.morelab.deusto.es/ontologies/city4age#Italian> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.morelab.deusto.es/ontologies/city4age#Language> .
+# 
+# http://www.morelab.deusto.es/ontologies/city4age#LCC
+<http://www.morelab.deusto.es/ontologies/city4age#LCC> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
+<http://www.morelab.deusto.es/ontologies/city4age#LCC> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.morelab.deusto.es/ontologies/city4age#Pilot> .
+# 
+# http://www.morelab.deusto.es/ontologies/city4age#MAD
+<http://www.morelab.deusto.es/ontologies/city4age#MAD> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
+<http://www.morelab.deusto.es/ontologies/city4age#MAD> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.morelab.deusto.es/ontologies/city4age#Pilot> .
+# 
+# http://www.morelab.deusto.es/ontologies/city4age#MCI
+<http://www.morelab.deusto.es/ontologies/city4age#MCI> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
+<http://www.morelab.deusto.es/ontologies/city4age#MCI> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.morelab.deusto.es/ontologies/city4age#Disease> .
+# 
+# http://www.morelab.deusto.es/ontologies/city4age#MPL
+<http://www.morelab.deusto.es/ontologies/city4age#MPL> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
+<http://www.morelab.deusto.es/ontologies/city4age#MPL> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.morelab.deusto.es/ontologies/city4age#Pilot> .
+# 
+# http://www.morelab.deusto.es/ontologies/city4age#Malay
+<http://www.morelab.deusto.es/ontologies/city4age#Malay> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
+<http://www.morelab.deusto.es/ontologies/city4age#Malay> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.morelab.deusto.es/ontologies/city4age#Language> .
+# 
+# http://www.morelab.deusto.es/ontologies/city4age#Mandarin
+<http://www.morelab.deusto.es/ontologies/city4age#Mandarin> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
+<http://www.morelab.deusto.es/ontologies/city4age#Mandarin> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.morelab.deusto.es/ontologies/city4age#Language> .
+# 
+# http://www.morelab.deusto.es/ontologies/city4age#Montpellier
+<http://www.morelab.deusto.es/ontologies/city4age#Montpellier> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
+<http://www.morelab.deusto.es/ontologies/city4age#Montpellier> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.morelab.deusto.es/ontologies/city4age#CityZone> .
+# 
+# http://www.morelab.deusto.es/ontologies/city4age#PerformHabit
+<http://www.morelab.deusto.es/ontologies/city4age#PerformHabit> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
+<http://www.morelab.deusto.es/ontologies/city4age#PerformHabit> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.morelab.deusto.es/ontologies/city4age#ADLIntervention> .
+# 
+# http://www.morelab.deusto.es/ontologies/city4age#Person1
+<http://www.morelab.deusto.es/ontologies/city4age#Person1> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
+<http://www.morelab.deusto.es/ontologies/city4age#Person1> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.morelab.deusto.es/ontologies/city4age#Elderly> .
+# 
+# http://www.morelab.deusto.es/ontologies/city4age#SIN
+<http://www.morelab.deusto.es/ontologies/city4age#SIN> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
+<http://www.morelab.deusto.es/ontologies/city4age#SIN> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.morelab.deusto.es/ontologies/city4age#Pilot> .
+# 
+# http://www.morelab.deusto.es/ontologies/city4age#Shopping
+<http://www.morelab.deusto.es/ontologies/city4age#Shopping> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
+<http://www.morelab.deusto.es/ontologies/city4age#Shopping> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.morelab.deusto.es/ontologies/city4age#Activity> .
+# 
+# http://www.morelab.deusto.es/ontologies/city4age#SmartWatch
+<http://www.morelab.deusto.es/ontologies/city4age#SmartWatch> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
+<http://www.morelab.deusto.es/ontologies/city4age#SmartWatch> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.morelab.deusto.es/ontologies/city4age#Device> .
+# 
+# http://www.morelab.deusto.es/ontologies/city4age#Smartphone
+<http://www.morelab.deusto.es/ontologies/city4age#Smartphone> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
+<http://www.morelab.deusto.es/ontologies/city4age#Smartphone> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.morelab.deusto.es/ontologies/city4age#Device> .
+# 
+# http://www.morelab.deusto.es/ontologies/city4age#Spanish
+<http://www.morelab.deusto.es/ontologies/city4age#Spanish> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
+<http://www.morelab.deusto.es/ontologies/city4age#Spanish> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.morelab.deusto.es/ontologies/city4age#Language> .
+# 
+# http://www.morelab.deusto.es/ontologies/city4age#TV
+<http://www.morelab.deusto.es/ontologies/city4age#TV> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
+<http://www.morelab.deusto.es/ontologies/city4age#TV> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.morelab.deusto.es/ontologies/city4age#Device> .
+# 
+# http://www.morelab.deusto.es/ontologies/city4age#Tablet
+<http://www.morelab.deusto.es/ontologies/city4age#Tablet> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
+<http://www.morelab.deusto.es/ontologies/city4age#Tablet> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.morelab.deusto.es/ontologies/city4age#Device> .
+# 
+# http://www.morelab.deusto.es/ontologies/city4age#a1
+<http://www.morelab.deusto.es/ontologies/city4age#a1> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
+<http://www.morelab.deusto.es/ontologies/city4age#a1> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.morelab.deusto.es/ontologies/city4age#Sensor> .
+<http://www.morelab.deusto.es/ontologies/city4age#a1> <http://www.morelab.deusto.es/ontologies/city4age#hasPossibleState> <http://www.morelab.deusto.es/ontologies/city4age#a1_off> .
+<http://www.morelab.deusto.es/ontologies/city4age#a1> <http://www.morelab.deusto.es/ontologies/city4age#hasPossibleState> <http://www.morelab.deusto.es/ontologies/city4age#a1_on> .
+<http://www.morelab.deusto.es/ontologies/city4age#a1> <http://www.morelab.deusto.es/ontologies/city4age#hasType> <http://www.morelab.deusto.es/ontologies/city4age#pir> .
+<http://www.morelab.deusto.es/ontologies/city4age#a1> <http://www.morelab.deusto.es/ontologies/city4age#locatedIn> <http://www.morelab.deusto.es/ontologies/city4age#kitchen> .
+<http://www.morelab.deusto.es/ontologies/city4age#a1> <http://www.morelab.deusto.es/ontologies/city4age#indicateLocation> "true"^^<http://www.w3.org/2001/XMLSchema#boolean> .
+# 
+# http://www.morelab.deusto.es/ontologies/city4age#a1_off
+<http://www.morelab.deusto.es/ontologies/city4age#a1_off> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
+<http://www.morelab.deusto.es/ontologies/city4age#a1_off> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.morelab.deusto.es/ontologies/city4age#SensorState> .
+# 
+# http://www.morelab.deusto.es/ontologies/city4age#a1_on
+<http://www.morelab.deusto.es/ontologies/city4age#a1_on> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
+<http://www.morelab.deusto.es/ontologies/city4age#a1_on> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.morelab.deusto.es/ontologies/city4age#SensorState> .
+# 
+# http://www.morelab.deusto.es/ontologies/city4age#activitySuggestion
+<http://www.morelab.deusto.es/ontologies/city4age#activitySuggestion> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
+<http://www.morelab.deusto.es/ontologies/city4age#activitySuggestion> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.morelab.deusto.es/ontologies/city4age#Service> .
+# 
+# http://www.morelab.deusto.es/ontologies/city4age#agenda
+<http://www.morelab.deusto.es/ontologies/city4age#agenda> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
+<http://www.morelab.deusto.es/ontologies/city4age#agenda> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.morelab.deusto.es/ontologies/city4age#Service> .
+# 
+# http://www.morelab.deusto.es/ontologies/city4age#assistiveCommunication
+<http://www.morelab.deusto.es/ontologies/city4age#assistiveCommunication> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
+<http://www.morelab.deusto.es/ontologies/city4age#assistiveCommunication> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.morelab.deusto.es/ontologies/city4age#Service> .
+# 
+# http://www.morelab.deusto.es/ontologies/city4age#attendConcert
+<http://www.morelab.deusto.es/ontologies/city4age#attendConcert> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
+<http://www.morelab.deusto.es/ontologies/city4age#attendConcert> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.morelab.deusto.es/ontologies/city4age#SocialIntervention> .
+<http://www.morelab.deusto.es/ontologies/city4age#attendConcert> <http://www.morelab.deusto.es/ontologies/city4age#relatedToPreference> <http://www.morelab.deusto.es/ontologies/city4age#music> .
+# 
+# http://www.morelab.deusto.es/ontologies/city4age#attentionProblem
+<http://www.morelab.deusto.es/ontologies/city4age#attentionProblem> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
+<http://www.morelab.deusto.es/ontologies/city4age#attentionProblem> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.morelab.deusto.es/ontologies/city4age#CognitiveChangeingBehaviour> .
+<http://www.morelab.deusto.es/ontologies/city4age#attentionProblem> <http://www.morelab.deusto.es/ontologies/city4age#isIndicatorOf> <http://www.morelab.deusto.es/ontologies/city4age#cognitiveIndicator> .
+# 
+# http://www.morelab.deusto.es/ontologies/city4age#auditory
+<http://www.morelab.deusto.es/ontologies/city4age#auditory> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
+<http://www.morelab.deusto.es/ontologies/city4age#auditory> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.morelab.deusto.es/ontologies/city4age#SensorialCapability> .
+# 
+# http://www.morelab.deusto.es/ontologies/city4age#b1
+<http://www.morelab.deusto.es/ontologies/city4age#b1> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
+<http://www.morelab.deusto.es/ontologies/city4age#b1> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.morelab.deusto.es/ontologies/city4age#Sensor> .
+<http://www.morelab.deusto.es/ontologies/city4age#b1> <http://www.morelab.deusto.es/ontologies/city4age#hasPossibleState> <http://www.morelab.deusto.es/ontologies/city4age#beacon_alert> .
+<http://www.morelab.deusto.es/ontologies/city4age#b1> <http://www.morelab.deusto.es/ontologies/city4age#hasPossibleState> <http://www.morelab.deusto.es/ontologies/city4age#beacon_normal> .
+<http://www.morelab.deusto.es/ontologies/city4age#b1> <http://www.morelab.deusto.es/ontologies/city4age#hasType> <http://www.morelab.deusto.es/ontologies/city4age#beacon> .
+<http://www.morelab.deusto.es/ontologies/city4age#b1> <http://www.morelab.deusto.es/ontologies/city4age#locatedIn> <http://www.morelab.deusto.es/ontologies/city4age#communityCenter> .
+<http://www.morelab.deusto.es/ontologies/city4age#b1> <http://www.morelab.deusto.es/ontologies/city4age#indicateLocation> "true"^^<http://www.w3.org/2001/XMLSchema#boolean> .
+# 
+# http://www.morelab.deusto.es/ontologies/city4age#bachelor
+<http://www.morelab.deusto.es/ontologies/city4age#bachelor> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
+<http://www.morelab.deusto.es/ontologies/city4age#bachelor> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.morelab.deusto.es/ontologies/city4age#EducationLevel> .
+# 
+# http://www.morelab.deusto.es/ontologies/city4age#bathroom
+<http://www.morelab.deusto.es/ontologies/city4age#bathroom> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
+<http://www.morelab.deusto.es/ontologies/city4age#bathroom> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.morelab.deusto.es/ontologies/city4age#Bathroom> .
+<http://www.morelab.deusto.es/ontologies/city4age#bathroom> <http://www.morelab.deusto.es/ontologies/city4age#partOfHouse> <http://www.morelab.deusto.es/ontologies/city4age#house1> .
+# 
+# http://www.morelab.deusto.es/ontologies/city4age#beacon
+<http://www.morelab.deusto.es/ontologies/city4age#beacon> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
+<http://www.morelab.deusto.es/ontologies/city4age#beacon> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.morelab.deusto.es/ontologies/city4age#SensorType> .
+# 
+# http://www.morelab.deusto.es/ontologies/city4age#beacon_alert
+<http://www.morelab.deusto.es/ontologies/city4age#beacon_alert> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
+<http://www.morelab.deusto.es/ontologies/city4age#beacon_alert> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.morelab.deusto.es/ontologies/city4age#SensorState> .
+# 
+# http://www.morelab.deusto.es/ontologies/city4age#beacon_normal
+<http://www.morelab.deusto.es/ontologies/city4age#beacon_normal> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
+<http://www.morelab.deusto.es/ontologies/city4age#beacon_normal> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.morelab.deusto.es/ontologies/city4age#SensorState> .
+# 
+# http://www.morelab.deusto.es/ontologies/city4age#bedroom
+<http://www.morelab.deusto.es/ontologies/city4age#bedroom> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
+<http://www.morelab.deusto.es/ontologies/city4age#bedroom> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.morelab.deusto.es/ontologies/city4age#Bedroom> .
+<http://www.morelab.deusto.es/ontologies/city4age#bedroom> <http://www.morelab.deusto.es/ontologies/city4age#partOfHouse> <http://www.morelab.deusto.es/ontologies/city4age#house1> .
+# 
+# http://www.morelab.deusto.es/ontologies/city4age#bedroomActivity
+<http://www.morelab.deusto.es/ontologies/city4age#bedroomActivity> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
+<http://www.morelab.deusto.es/ontologies/city4age#bedroomActivity> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.morelab.deusto.es/ontologies/city4age#Activity> .
+# 
+# http://www.morelab.deusto.es/ontologies/city4age#calculationProblem
+<http://www.morelab.deusto.es/ontologies/city4age#calculationProblem> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
+<http://www.morelab.deusto.es/ontologies/city4age#calculationProblem> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.morelab.deusto.es/ontologies/city4age#CognitiveChangeingBehaviour> .
+<http://www.morelab.deusto.es/ontologies/city4age#calculationProblem> <http://www.morelab.deusto.es/ontologies/city4age#isIndicatorOf> <http://www.morelab.deusto.es/ontologies/city4age#cognitiveIndicator> .
+# 
+# http://www.morelab.deusto.es/ontologies/city4age#cameHome
+<http://www.morelab.deusto.es/ontologies/city4age#cameHome> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
+<http://www.morelab.deusto.es/ontologies/city4age#cameHome> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.morelab.deusto.es/ontologies/city4age#Activity> .
+# 
+# http://www.morelab.deusto.es/ontologies/city4age#car
+<http://www.morelab.deusto.es/ontologies/city4age#car> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
+<http://www.morelab.deusto.es/ontologies/city4age#car> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.morelab.deusto.es/ontologies/city4age#Car> .
+<http://www.morelab.deusto.es/ontologies/city4age#car> <http://www.morelab.deusto.es/ontologies/city4age#partOfCity> <http://www.morelab.deusto.es/ontologies/city4age#Montpellier> .
+# 
+# http://www.morelab.deusto.es/ontologies/city4age#cinema
+<http://www.morelab.deusto.es/ontologies/city4age#cinema> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
+<http://www.morelab.deusto.es/ontologies/city4age#cinema> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.morelab.deusto.es/ontologies/city4age#Cultural> .
+# 
+# http://www.morelab.deusto.es/ontologies/city4age#coercion
+<http://www.morelab.deusto.es/ontologies/city4age#coercion> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
+<http://www.morelab.deusto.es/ontologies/city4age#coercion> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.morelab.deusto.es/ontologies/city4age#Service> .
+# 
+# http://www.morelab.deusto.es/ontologies/city4age#cognitiveIndicator
+<http://www.morelab.deusto.es/ontologies/city4age#cognitiveIndicator> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
+<http://www.morelab.deusto.es/ontologies/city4age#cognitiveIndicator> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.morelab.deusto.es/ontologies/city4age#MCIIndicator> .
+<http://www.morelab.deusto.es/ontologies/city4age#cognitiveIndicator> <http://www.morelab.deusto.es/ontologies/city4age#requireIntervention> <http://www.morelab.deusto.es/ontologies/city4age#performMemoryTest> .
+<http://www.morelab.deusto.es/ontologies/city4age#cognitiveIndicator> <http://www.morelab.deusto.es/ontologies/city4age#requireIntervention> <http://www.morelab.deusto.es/ontologies/city4age#playCognitiveGames> .
+# 
+# http://www.morelab.deusto.es/ontologies/city4age#commonLaw
+<http://www.morelab.deusto.es/ontologies/city4age#commonLaw> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
+<http://www.morelab.deusto.es/ontologies/city4age#commonLaw> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.morelab.deusto.es/ontologies/city4age#MaritalState> .
+# 
+# http://www.morelab.deusto.es/ontologies/city4age#communityCenter
+<http://www.morelab.deusto.es/ontologies/city4age#communityCenter> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
+<http://www.morelab.deusto.es/ontologies/city4age#communityCenter> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.morelab.deusto.es/ontologies/city4age#Building> .
+<http://www.morelab.deusto.es/ontologies/city4age#communityCenter> <http://www.morelab.deusto.es/ontologies/city4age#partOfCity> <http://www.morelab.deusto.es/ontologies/city4age#Montpellier> .
+# 
+# http://www.morelab.deusto.es/ontologies/city4age#cookMeal
+<http://www.morelab.deusto.es/ontologies/city4age#cookMeal> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
+<http://www.morelab.deusto.es/ontologies/city4age#cookMeal> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.morelab.deusto.es/ontologies/city4age#Activity> .
+# 
+# http://www.morelab.deusto.es/ontologies/city4age#dementia
+<http://www.morelab.deusto.es/ontologies/city4age#dementia> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
+<http://www.morelab.deusto.es/ontologies/city4age#dementia> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.morelab.deusto.es/ontologies/city4age#Disease> .
+# 
+# http://www.morelab.deusto.es/ontologies/city4age#diabet
+<http://www.morelab.deusto.es/ontologies/city4age#diabet> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
+<http://www.morelab.deusto.es/ontologies/city4age#diabet> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.morelab.deusto.es/ontologies/city4age#Disease> .
+# 
+# http://www.morelab.deusto.es/ontologies/city4age#divorced
+<http://www.morelab.deusto.es/ontologies/city4age#divorced> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
+<http://www.morelab.deusto.es/ontologies/city4age#divorced> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.morelab.deusto.es/ontologies/city4age#MaritalState> .
+# 
+# http://www.morelab.deusto.es/ontologies/city4age#doctoral
+<http://www.morelab.deusto.es/ontologies/city4age#doctoral> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
+<http://www.morelab.deusto.es/ontologies/city4age#doctoral> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.morelab.deusto.es/ontologies/city4age#EducationLevel> .
+# 
+# http://www.morelab.deusto.es/ontologies/city4age#eatMeal
+<http://www.morelab.deusto.es/ontologies/city4age#eatMeal> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
+<http://www.morelab.deusto.es/ontologies/city4age#eatMeal> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.morelab.deusto.es/ontologies/city4age#Activity> .
+# 
+# http://www.morelab.deusto.es/ontologies/city4age#education
+<http://www.morelab.deusto.es/ontologies/city4age#education> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
+<http://www.morelab.deusto.es/ontologies/city4age#education> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.morelab.deusto.es/ontologies/city4age#Service> .
+# 
+# http://www.morelab.deusto.es/ontologies/city4age#fall
+<http://www.morelab.deusto.es/ontologies/city4age#fall> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
+<http://www.morelab.deusto.es/ontologies/city4age#fall> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.morelab.deusto.es/ontologies/city4age#Activity> .
+# 
+# http://www.morelab.deusto.es/ontologies/city4age#fallIncrease
+<http://www.morelab.deusto.es/ontologies/city4age#fallIncrease> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
+<http://www.morelab.deusto.es/ontologies/city4age#fallIncrease> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.morelab.deusto.es/ontologies/city4age#MobilityChangeingBehaviour> .
+<http://www.morelab.deusto.es/ontologies/city4age#fallIncrease> <http://www.morelab.deusto.es/ontologies/city4age#isIndicatorOf> <http://www.morelab.deusto.es/ontologies/city4age#mobilityIndicator> .
+# 
+# http://www.morelab.deusto.es/ontologies/city4age#female
+<http://www.morelab.deusto.es/ontologies/city4age#female> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
+<http://www.morelab.deusto.es/ontologies/city4age#female> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.morelab.deusto.es/ontologies/city4age#Gender> .
+# 
+# http://www.morelab.deusto.es/ontologies/city4age#food
+<http://www.morelab.deusto.es/ontologies/city4age#food> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
+<http://www.morelab.deusto.es/ontologies/city4age#food> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.morelab.deusto.es/ontologies/city4age#PreferenceTopic> .
+# 
+# http://www.morelab.deusto.es/ontologies/city4age#getUp
+<http://www.morelab.deusto.es/ontologies/city4age#getUp> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
+<http://www.morelab.deusto.es/ontologies/city4age#getUp> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.morelab.deusto.es/ontologies/city4age#Activity> .
+# 
+# http://www.morelab.deusto.es/ontologies/city4age#goOut
+<http://www.morelab.deusto.es/ontologies/city4age#goOut> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
+<http://www.morelab.deusto.es/ontologies/city4age#goOut> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.morelab.deusto.es/ontologies/city4age#Activity> .
+# 
+# http://www.morelab.deusto.es/ontologies/city4age#goShoping
+<http://www.morelab.deusto.es/ontologies/city4age#goShoping> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
+<http://www.morelab.deusto.es/ontologies/city4age#goShoping> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.morelab.deusto.es/ontologies/city4age#MobilityIntervention> .
+# 
+# http://www.morelab.deusto.es/ontologies/city4age#goToLibrary
+<http://www.morelab.deusto.es/ontologies/city4age#goToLibrary> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
+<http://www.morelab.deusto.es/ontologies/city4age#goToLibrary> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.morelab.deusto.es/ontologies/city4age#SocialIntervention> .
+<http://www.morelab.deusto.es/ontologies/city4age#goToLibrary> <http://www.morelab.deusto.es/ontologies/city4age#relatedToPreference> <http://www.morelab.deusto.es/ontologies/city4age#literature> .
+# 
+# http://www.morelab.deusto.es/ontologies/city4age#goToRestaurant
+<http://www.morelab.deusto.es/ontologies/city4age#goToRestaurant> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
+<http://www.morelab.deusto.es/ontologies/city4age#goToRestaurant> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.morelab.deusto.es/ontologies/city4age#MobilityIntervention> .
+<http://www.morelab.deusto.es/ontologies/city4age#goToRestaurant> <http://www.morelab.deusto.es/ontologies/city4age#relatedToPreference> <http://www.morelab.deusto.es/ontologies/city4age#food> .
+# 
+# http://www.morelab.deusto.es/ontologies/city4age#goToilet
+<http://www.morelab.deusto.es/ontologies/city4age#goToilet> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
+<http://www.morelab.deusto.es/ontologies/city4age#goToilet> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.morelab.deusto.es/ontologies/city4age#Activity> .
+# 
+# http://www.morelab.deusto.es/ontologies/city4age#hight
+<http://www.morelab.deusto.es/ontologies/city4age#hight> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
+<http://www.morelab.deusto.es/ontologies/city4age#hight> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.morelab.deusto.es/ontologies/city4age#Level> .
+# 
+# http://www.morelab.deusto.es/ontologies/city4age#house1
+<http://www.morelab.deusto.es/ontologies/city4age#house1> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
+<http://www.morelab.deusto.es/ontologies/city4age#house1> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.morelab.deusto.es/ontologies/city4age#Home> .
+# 
+# http://www.morelab.deusto.es/ontologies/city4age#hygiene
+<http://www.morelab.deusto.es/ontologies/city4age#hygiene> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
+<http://www.morelab.deusto.es/ontologies/city4age#hygiene> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.morelab.deusto.es/ontologies/city4age#Activity> .
+# 
+# http://www.morelab.deusto.es/ontologies/city4age#incentivisation
+<http://www.morelab.deusto.es/ontologies/city4age#incentivisation> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
+<http://www.morelab.deusto.es/ontologies/city4age#incentivisation> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.morelab.deusto.es/ontologies/city4age#Service> .
+# 
+# http://www.morelab.deusto.es/ontologies/city4age#judgementProblem
+<http://www.morelab.deusto.es/ontologies/city4age#judgementProblem> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
+<http://www.morelab.deusto.es/ontologies/city4age#judgementProblem> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.morelab.deusto.es/ontologies/city4age#CognitiveChangeingBehaviour> .
+<http://www.morelab.deusto.es/ontologies/city4age#judgementProblem> <http://www.morelab.deusto.es/ontologies/city4age#isIndicatorOf> <http://www.morelab.deusto.es/ontologies/city4age#cognitiveIndicator> .
+# 
+# http://www.morelab.deusto.es/ontologies/city4age#kitchen
+<http://www.morelab.deusto.es/ontologies/city4age#kitchen> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
+<http://www.morelab.deusto.es/ontologies/city4age#kitchen> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.morelab.deusto.es/ontologies/city4age#Kitchen> .
+<http://www.morelab.deusto.es/ontologies/city4age#kitchen> <http://www.morelab.deusto.es/ontologies/city4age#partOfHouse> <http://www.morelab.deusto.es/ontologies/city4age#house1> .
+# 
+# http://www.morelab.deusto.es/ontologies/city4age#lessActivityOutside
+<http://www.morelab.deusto.es/ontologies/city4age#lessActivityOutside> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
+<http://www.morelab.deusto.es/ontologies/city4age#lessActivityOutside> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.morelab.deusto.es/ontologies/city4age#SocialChangeingBehaviour> .
+<http://www.morelab.deusto.es/ontologies/city4age#lessActivityOutside> <http://www.morelab.deusto.es/ontologies/city4age#isIndicatorOf> <http://www.morelab.deusto.es/ontologies/city4age#socialIndicator> .
+# 
+# http://www.morelab.deusto.es/ontologies/city4age#lessEngagementADL
+<http://www.morelab.deusto.es/ontologies/city4age#lessEngagementADL> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
+<http://www.morelab.deusto.es/ontologies/city4age#lessEngagementADL> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.morelab.deusto.es/ontologies/city4age#ADLChangeingBehaviour> .
+<http://www.morelab.deusto.es/ontologies/city4age#lessEngagementADL> <http://www.morelab.deusto.es/ontologies/city4age#isIndicatorOf> <http://www.morelab.deusto.es/ontologies/city4age#ADLIndicator> .
+# 
+# http://www.morelab.deusto.es/ontologies/city4age#lessGoingOutside
+<http://www.morelab.deusto.es/ontologies/city4age#lessGoingOutside> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
+<http://www.morelab.deusto.es/ontologies/city4age#lessGoingOutside> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.morelab.deusto.es/ontologies/city4age#SocialChangeingBehaviour> .
+<http://www.morelab.deusto.es/ontologies/city4age#lessGoingOutside> <http://www.morelab.deusto.es/ontologies/city4age#isIndicatorOf> <http://www.morelab.deusto.es/ontologies/city4age#socialIndicator> .
+# 
+# http://www.morelab.deusto.es/ontologies/city4age#lessMotivationADL
+<http://www.morelab.deusto.es/ontologies/city4age#lessMotivationADL> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
+<http://www.morelab.deusto.es/ontologies/city4age#lessMotivationADL> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.morelab.deusto.es/ontologies/city4age#ADLChangeingBehaviour> .
+<http://www.morelab.deusto.es/ontologies/city4age#lessMotivationADL> <http://www.morelab.deusto.es/ontologies/city4age#isIndicatorOf> <http://www.morelab.deusto.es/ontologies/city4age#ADLIndicator> .
+# 
+# http://www.morelab.deusto.es/ontologies/city4age#lessSocialInteraction
+<http://www.morelab.deusto.es/ontologies/city4age#lessSocialInteraction> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
+<http://www.morelab.deusto.es/ontologies/city4age#lessSocialInteraction> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.morelab.deusto.es/ontologies/city4age#SocialChangeingBehaviour> .
+<http://www.morelab.deusto.es/ontologies/city4age#lessSocialInteraction> <http://www.morelab.deusto.es/ontologies/city4age#isIndicatorOf> <http://www.morelab.deusto.es/ontologies/city4age#socialIndicator> .
+# 
+# http://www.morelab.deusto.es/ontologies/city4age#lessVisits
+<http://www.morelab.deusto.es/ontologies/city4age#lessVisits> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
+<http://www.morelab.deusto.es/ontologies/city4age#lessVisits> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.morelab.deusto.es/ontologies/city4age#SocialChangeingBehaviour> .
+<http://www.morelab.deusto.es/ontologies/city4age#lessVisits> <http://www.morelab.deusto.es/ontologies/city4age#isIndicatorOf> <http://www.morelab.deusto.es/ontologies/city4age#socialIndicator> .
+# 
+# http://www.morelab.deusto.es/ontologies/city4age#listenMusic
+<http://www.morelab.deusto.es/ontologies/city4age#listenMusic> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
+<http://www.morelab.deusto.es/ontologies/city4age#listenMusic> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.morelab.deusto.es/ontologies/city4age#ADLIntervention> .
+<http://www.morelab.deusto.es/ontologies/city4age#listenMusic> <http://www.morelab.deusto.es/ontologies/city4age#relatedToPreference> <http://www.morelab.deusto.es/ontologies/city4age#music> .
+# 
+# http://www.morelab.deusto.es/ontologies/city4age#literature
+<http://www.morelab.deusto.es/ontologies/city4age#literature> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
+<http://www.morelab.deusto.es/ontologies/city4age#literature> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.morelab.deusto.es/ontologies/city4age#Cultural> .
+# 
+# http://www.morelab.deusto.es/ontologies/city4age#livingroom
+<http://www.morelab.deusto.es/ontologies/city4age#livingroom> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
+<http://www.morelab.deusto.es/ontologies/city4age#livingroom> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.morelab.deusto.es/ontologies/city4age#Livingroom> .
+<http://www.morelab.deusto.es/ontologies/city4age#livingroom> <http://www.morelab.deusto.es/ontologies/city4age#partOfHouse> <http://www.morelab.deusto.es/ontologies/city4age#house1> .
+# 
+# http://www.morelab.deusto.es/ontologies/city4age#low
+<http://www.morelab.deusto.es/ontologies/city4age#low> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
+<http://www.morelab.deusto.es/ontologies/city4age#low> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.morelab.deusto.es/ontologies/city4age#Level> .
+# 
+# http://www.morelab.deusto.es/ontologies/city4age#lowerClass
+<http://www.morelab.deusto.es/ontologies/city4age#lowerClass> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
+<http://www.morelab.deusto.es/ontologies/city4age#lowerClass> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.morelab.deusto.es/ontologies/city4age#SocialState> .
+# 
+# http://www.morelab.deusto.es/ontologies/city4age#male
+<http://www.morelab.deusto.es/ontologies/city4age#male> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
+<http://www.morelab.deusto.es/ontologies/city4age#male> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.morelab.deusto.es/ontologies/city4age#Gender> .
+# 
+# http://www.morelab.deusto.es/ontologies/city4age#married
+<http://www.morelab.deusto.es/ontologies/city4age#married> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
+<http://www.morelab.deusto.es/ontologies/city4age#married> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.morelab.deusto.es/ontologies/city4age#MaritalState> .
+# 
+# http://www.morelab.deusto.es/ontologies/city4age#master
+<http://www.morelab.deusto.es/ontologies/city4age#master> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
+<http://www.morelab.deusto.es/ontologies/city4age#master> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.morelab.deusto.es/ontologies/city4age#EducationLevel> .
+# 
+# http://www.morelab.deusto.es/ontologies/city4age#medicalRecord
+<http://www.morelab.deusto.es/ontologies/city4age#medicalRecord> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
+<http://www.morelab.deusto.es/ontologies/city4age#medicalRecord> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.morelab.deusto.es/ontologies/city4age#Service> .
+# 
+# http://www.morelab.deusto.es/ontologies/city4age#medium
+<http://www.morelab.deusto.es/ontologies/city4age#medium> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
+<http://www.morelab.deusto.es/ontologies/city4age#medium> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.morelab.deusto.es/ontologies/city4age#Level> .
+# 
+# http://www.morelab.deusto.es/ontologies/city4age#memoryProblem
+<http://www.morelab.deusto.es/ontologies/city4age#memoryProblem> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
+<http://www.morelab.deusto.es/ontologies/city4age#memoryProblem> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.morelab.deusto.es/ontologies/city4age#CognitiveChangeingBehaviour> .
+<http://www.morelab.deusto.es/ontologies/city4age#memoryProblem> <http://www.morelab.deusto.es/ontologies/city4age#isIndicatorOf> <http://www.morelab.deusto.es/ontologies/city4age#cognitiveIndicator> .
+# 
+# http://www.morelab.deusto.es/ontologies/city4age#middleClass
+<http://www.morelab.deusto.es/ontologies/city4age#middleClass> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
+<http://www.morelab.deusto.es/ontologies/city4age#middleClass> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.morelab.deusto.es/ontologies/city4age#SocialState> .
+# 
+# http://www.morelab.deusto.es/ontologies/city4age#mobilityIndicator
+<http://www.morelab.deusto.es/ontologies/city4age#mobilityIndicator> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
+<http://www.morelab.deusto.es/ontologies/city4age#mobilityIndicator> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.morelab.deusto.es/ontologies/city4age#MCIIndicator> .
+<http://www.morelab.deusto.es/ontologies/city4age#mobilityIndicator> <http://www.morelab.deusto.es/ontologies/city4age#requireIntervention> <http://www.morelab.deusto.es/ontologies/city4age#goShoping> .
+<http://www.morelab.deusto.es/ontologies/city4age#mobilityIndicator> <http://www.morelab.deusto.es/ontologies/city4age#requireIntervention> <http://www.morelab.deusto.es/ontologies/city4age#goToRestaurant> .
+# 
+# http://www.morelab.deusto.es/ontologies/city4age#moreTimeADL
+<http://www.morelab.deusto.es/ontologies/city4age#moreTimeADL> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
+<http://www.morelab.deusto.es/ontologies/city4age#moreTimeADL> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.morelab.deusto.es/ontologies/city4age#ADLChangeingBehaviour> .
+<http://www.morelab.deusto.es/ontologies/city4age#moreTimeADL> <http://www.morelab.deusto.es/ontologies/city4age#isIndicatorOf> <http://www.morelab.deusto.es/ontologies/city4age#ADLIndicator> .
+# 
+# http://www.morelab.deusto.es/ontologies/city4age#mouvementControl
+<http://www.morelab.deusto.es/ontologies/city4age#mouvementControl> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
+<http://www.morelab.deusto.es/ontologies/city4age#mouvementControl> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.morelab.deusto.es/ontologies/city4age#PhysicalCapability> .
+# 
+# http://www.morelab.deusto.es/ontologies/city4age#music
+<http://www.morelab.deusto.es/ontologies/city4age#music> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
+<http://www.morelab.deusto.es/ontologies/city4age#music> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.morelab.deusto.es/ontologies/city4age#Cultural> .
+# 
+# http://www.morelab.deusto.es/ontologies/city4age#newsLetter
+<http://www.morelab.deusto.es/ontologies/city4age#newsLetter> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
+<http://www.morelab.deusto.es/ontologies/city4age#newsLetter> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.morelab.deusto.es/ontologies/city4age#Service> .
+# 
+# http://www.morelab.deusto.es/ontologies/city4age#nutritionProblem
+<http://www.morelab.deusto.es/ontologies/city4age#nutritionProblem> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
+<http://www.morelab.deusto.es/ontologies/city4age#nutritionProblem> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.morelab.deusto.es/ontologies/city4age#ADLChangeingBehaviour> .
+<http://www.morelab.deusto.es/ontologies/city4age#nutritionProblem> <http://www.morelab.deusto.es/ontologies/city4age#isIndicatorOf> <http://www.morelab.deusto.es/ontologies/city4age#ADLIndicator> .
+# 
+# http://www.morelab.deusto.es/ontologies/city4age#partTimeEmployee
+<http://www.morelab.deusto.es/ontologies/city4age#partTimeEmployee> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
+<http://www.morelab.deusto.es/ontologies/city4age#partTimeEmployee> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.morelab.deusto.es/ontologies/city4age#Employment> .
+# 
+# http://www.morelab.deusto.es/ontologies/city4age#performMemoryTest
+<http://www.morelab.deusto.es/ontologies/city4age#performMemoryTest> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
+<http://www.morelab.deusto.es/ontologies/city4age#performMemoryTest> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.morelab.deusto.es/ontologies/city4age#CognitiveIntervention> .
+# 
+# http://www.morelab.deusto.es/ontologies/city4age#persuasion
+<http://www.morelab.deusto.es/ontologies/city4age#persuasion> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
+<http://www.morelab.deusto.es/ontologies/city4age#persuasion> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.morelab.deusto.es/ontologies/city4age#Service> .
+# 
+# http://www.morelab.deusto.es/ontologies/city4age#pharmacy
+<http://www.morelab.deusto.es/ontologies/city4age#pharmacy> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
+<http://www.morelab.deusto.es/ontologies/city4age#pharmacy> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.morelab.deusto.es/ontologies/city4age#Building> .
+<http://www.morelab.deusto.es/ontologies/city4age#pharmacy> <http://www.morelab.deusto.es/ontologies/city4age#partOfCity> <http://www.morelab.deusto.es/ontologies/city4age#Montpellier> .
+# 
+# http://www.morelab.deusto.es/ontologies/city4age#pir
+<http://www.morelab.deusto.es/ontologies/city4age#pir> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
+<http://www.morelab.deusto.es/ontologies/city4age#pir> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.morelab.deusto.es/ontologies/city4age#SensorType> .
+# 
+# http://www.morelab.deusto.es/ontologies/city4age#playCognitiveGames
+<http://www.morelab.deusto.es/ontologies/city4age#playCognitiveGames> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
+<http://www.morelab.deusto.es/ontologies/city4age#playCognitiveGames> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.morelab.deusto.es/ontologies/city4age#CognitiveIntervention> .
+# 
+# http://www.morelab.deusto.es/ontologies/city4age#politic
+<http://www.morelab.deusto.es/ontologies/city4age#politic> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
+<http://www.morelab.deusto.es/ontologies/city4age#politic> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.morelab.deusto.es/ontologies/city4age#PreferenceTopic> .
+# 
+# http://www.morelab.deusto.es/ontologies/city4age#prepareFood
+<http://www.morelab.deusto.es/ontologies/city4age#prepareFood> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
+<http://www.morelab.deusto.es/ontologies/city4age#prepareFood> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.morelab.deusto.es/ontologies/city4age#ADLIntervention> .
+<http://www.morelab.deusto.es/ontologies/city4age#prepareFood> <http://www.morelab.deusto.es/ontologies/city4age#relatedToPreference> <http://www.morelab.deusto.es/ontologies/city4age#food> .
+# 
+# http://www.morelab.deusto.es/ontologies/city4age#primaryEducation
+<http://www.morelab.deusto.es/ontologies/city4age#primaryEducation> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
+<http://www.morelab.deusto.es/ontologies/city4age#primaryEducation> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.morelab.deusto.es/ontologies/city4age#EducationLevel> .
+# 
+# http://www.morelab.deusto.es/ontologies/city4age#privateWork
+<http://www.morelab.deusto.es/ontologies/city4age#privateWork> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
+<http://www.morelab.deusto.es/ontologies/city4age#privateWork> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.morelab.deusto.es/ontologies/city4age#Employment> .
+# 
+# http://www.morelab.deusto.es/ontologies/city4age#problemGettingUp
+<http://www.morelab.deusto.es/ontologies/city4age#problemGettingUp> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
+<http://www.morelab.deusto.es/ontologies/city4age#problemGettingUp> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.morelab.deusto.es/ontologies/city4age#MobilityChangeingBehaviour> .
+<http://www.morelab.deusto.es/ontologies/city4age#problemGettingUp> <http://www.morelab.deusto.es/ontologies/city4age#isIndicatorOf> <http://www.morelab.deusto.es/ontologies/city4age#mobilityIndicator> .
+# 
+# http://www.morelab.deusto.es/ontologies/city4age#problemPerformADL
+<http://www.morelab.deusto.es/ontologies/city4age#problemPerformADL> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
+<http://www.morelab.deusto.es/ontologies/city4age#problemPerformADL> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.morelab.deusto.es/ontologies/city4age#ADLChangeingBehaviour> .
+<http://www.morelab.deusto.es/ontologies/city4age#problemPerformADL> <http://www.morelab.deusto.es/ontologies/city4age#isIndicatorOf> <http://www.morelab.deusto.es/ontologies/city4age#ADLIndicator> .
+# 
+# http://www.morelab.deusto.es/ontologies/city4age#problemUsingTransport
+<http://www.morelab.deusto.es/ontologies/city4age#problemUsingTransport> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
+<http://www.morelab.deusto.es/ontologies/city4age#problemUsingTransport> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.morelab.deusto.es/ontologies/city4age#MobilityChangeingBehaviour> .
+<http://www.morelab.deusto.es/ontologies/city4age#problemUsingTransport> <http://www.morelab.deusto.es/ontologies/city4age#isIndicatorOf> <http://www.morelab.deusto.es/ontologies/city4age#mobilityIndicator> .
+# 
+# http://www.morelab.deusto.es/ontologies/city4age#proposeRecipe
+<http://www.morelab.deusto.es/ontologies/city4age#proposeRecipe> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
+<http://www.morelab.deusto.es/ontologies/city4age#proposeRecipe> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.morelab.deusto.es/ontologies/city4age#ADLIntervention> .
+<http://www.morelab.deusto.es/ontologies/city4age#proposeRecipe> <http://www.morelab.deusto.es/ontologies/city4age#relatedToPreference> <http://www.morelab.deusto.es/ontologies/city4age#food> .
+# 
+# http://www.morelab.deusto.es/ontologies/city4age#proposeTravelDestination
+<http://www.morelab.deusto.es/ontologies/city4age#proposeTravelDestination> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
+<http://www.morelab.deusto.es/ontologies/city4age#proposeTravelDestination> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.morelab.deusto.es/ontologies/city4age#SocialIntervention> .
+<http://www.morelab.deusto.es/ontologies/city4age#proposeTravelDestination> <http://www.morelab.deusto.es/ontologies/city4age#relatedToPreference> <http://www.morelab.deusto.es/ontologies/city4age#travel> .
+# 
+# http://www.morelab.deusto.es/ontologies/city4age#publicWorker
+<http://www.morelab.deusto.es/ontologies/city4age#publicWorker> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
+<http://www.morelab.deusto.es/ontologies/city4age#publicWorker> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.morelab.deusto.es/ontologies/city4age#Employment> .
+# 
+# http://www.morelab.deusto.es/ontologies/city4age#readBook
+<http://www.morelab.deusto.es/ontologies/city4age#readBook> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
+<http://www.morelab.deusto.es/ontologies/city4age#readBook> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.morelab.deusto.es/ontologies/city4age#ADLIntervention> .
+<http://www.morelab.deusto.es/ontologies/city4age#readBook> <http://www.morelab.deusto.es/ontologies/city4age#relatedToPreference> <http://www.morelab.deusto.es/ontologies/city4age#literature> .
+# 
+# http://www.morelab.deusto.es/ontologies/city4age#regularEmployee
+<http://www.morelab.deusto.es/ontologies/city4age#regularEmployee> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
+<http://www.morelab.deusto.es/ontologies/city4age#regularEmployee> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.morelab.deusto.es/ontologies/city4age#Employment> .
+# 
+# http://www.morelab.deusto.es/ontologies/city4age#retirement
+<http://www.morelab.deusto.es/ontologies/city4age#retirement> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
+<http://www.morelab.deusto.es/ontologies/city4age#retirement> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.morelab.deusto.es/ontologies/city4age#Employment> .
+# 
+# http://www.morelab.deusto.es/ontologies/city4age#riskReaction
+<http://www.morelab.deusto.es/ontologies/city4age#riskReaction> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
+<http://www.morelab.deusto.es/ontologies/city4age#riskReaction> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.morelab.deusto.es/ontologies/city4age#Service> .
+# 
+# http://www.morelab.deusto.es/ontologies/city4age#secondaryEducation
+<http://www.morelab.deusto.es/ontologies/city4age#secondaryEducation> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
+<http://www.morelab.deusto.es/ontologies/city4age#secondaryEducation> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.morelab.deusto.es/ontologies/city4age#EducationLevel> .
+# 
+# http://www.morelab.deusto.es/ontologies/city4age#separeted
+<http://www.morelab.deusto.es/ontologies/city4age#separeted> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
+<http://www.morelab.deusto.es/ontologies/city4age#separeted> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.morelab.deusto.es/ontologies/city4age#MaritalState> .
+# 
+# http://www.morelab.deusto.es/ontologies/city4age#shop
+<http://www.morelab.deusto.es/ontologies/city4age#shop> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
+<http://www.morelab.deusto.es/ontologies/city4age#shop> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.morelab.deusto.es/ontologies/city4age#Building> .
+<http://www.morelab.deusto.es/ontologies/city4age#shop> <http://www.morelab.deusto.es/ontologies/city4age#partOfCity> <http://www.morelab.deusto.es/ontologies/city4age#Montpellier> .
+# 
+# http://www.morelab.deusto.es/ontologies/city4age#single
+<http://www.morelab.deusto.es/ontologies/city4age#single> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
+<http://www.morelab.deusto.es/ontologies/city4age#single> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.morelab.deusto.es/ontologies/city4age#MaritalState> .
+# 
+# http://www.morelab.deusto.es/ontologies/city4age#sleep
+<http://www.morelab.deusto.es/ontologies/city4age#sleep> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
+<http://www.morelab.deusto.es/ontologies/city4age#sleep> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.morelab.deusto.es/ontologies/city4age#Activity> .
+# 
+# http://www.morelab.deusto.es/ontologies/city4age#socialIndicator
+<http://www.morelab.deusto.es/ontologies/city4age#socialIndicator> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
+<http://www.morelab.deusto.es/ontologies/city4age#socialIndicator> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.morelab.deusto.es/ontologies/city4age#MCIIndicator> .
+<http://www.morelab.deusto.es/ontologies/city4age#socialIndicator> <http://www.morelab.deusto.es/ontologies/city4age#requireIntervention> <http://www.morelab.deusto.es/ontologies/city4age#attendConcert> .
+<http://www.morelab.deusto.es/ontologies/city4age#socialIndicator> <http://www.morelab.deusto.es/ontologies/city4age#requireIntervention> <http://www.morelab.deusto.es/ontologies/city4age#goToLibrary> .
+<http://www.morelab.deusto.es/ontologies/city4age#socialIndicator> <http://www.morelab.deusto.es/ontologies/city4age#requireIntervention> <http://www.morelab.deusto.es/ontologies/city4age#proposeTravelDestination> .
+<http://www.morelab.deusto.es/ontologies/city4age#socialIndicator> <http://www.morelab.deusto.es/ontologies/city4age#requireIntervention> <http://www.morelab.deusto.es/ontologies/city4age#visitCommunityCenter> .
+<http://www.morelab.deusto.es/ontologies/city4age#socialIndicator> <http://www.morelab.deusto.es/ontologies/city4age#requireIntervention> <http://www.morelab.deusto.es/ontologies/city4age#visitFriend> .
+<http://www.morelab.deusto.es/ontologies/city4age#socialIndicator> <http://www.morelab.deusto.es/ontologies/city4age#requireIntervention> <http://www.morelab.deusto.es/ontologies/city4age#watchMovie> .
+<http://www.morelab.deusto.es/ontologies/city4age#socialIndicator> <http://www.morelab.deusto.es/ontologies/city4age#requireIntervention> <http://www.morelab.deusto.es/ontologies/city4age#watchTheatre> .
+# 
+# http://www.morelab.deusto.es/ontologies/city4age#sport
+<http://www.morelab.deusto.es/ontologies/city4age#sport> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
+<http://www.morelab.deusto.es/ontologies/city4age#sport> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.morelab.deusto.es/ontologies/city4age#PreferenceTopic> .
+# 
+# http://www.morelab.deusto.es/ontologies/city4age#switch
+<http://www.morelab.deusto.es/ontologies/city4age#switch> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
+<http://www.morelab.deusto.es/ontologies/city4age#switch> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.morelab.deusto.es/ontologies/city4age#SensorType> .
+# 
+# http://www.morelab.deusto.es/ontologies/city4age#takingTransport
+<http://www.morelab.deusto.es/ontologies/city4age#takingTransport> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
+<http://www.morelab.deusto.es/ontologies/city4age#takingTransport> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.morelab.deusto.es/ontologies/city4age#Activity> .
+# 
+# http://www.morelab.deusto.es/ontologies/city4age#taxi
+<http://www.morelab.deusto.es/ontologies/city4age#taxi> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
+<http://www.morelab.deusto.es/ontologies/city4age#taxi> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.morelab.deusto.es/ontologies/city4age#Taxi> .
+<http://www.morelab.deusto.es/ontologies/city4age#taxi> <http://www.morelab.deusto.es/ontologies/city4age#partOfCity> <http://www.morelab.deusto.es/ontologies/city4age#Montpellier> .
+# 
+# http://www.morelab.deusto.es/ontologies/city4age#temproryEmployee
+<http://www.morelab.deusto.es/ontologies/city4age#temproryEmployee> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
+<http://www.morelab.deusto.es/ontologies/city4age#temproryEmployee> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.morelab.deusto.es/ontologies/city4age#Employment> .
+# 
+# http://www.morelab.deusto.es/ontologies/city4age#theatre
+<http://www.morelab.deusto.es/ontologies/city4age#theatre> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
+<http://www.morelab.deusto.es/ontologies/city4age#theatre> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.morelab.deusto.es/ontologies/city4age#Cultural> .
+# 
+# http://www.morelab.deusto.es/ontologies/city4age#thinkingProblem
+<http://www.morelab.deusto.es/ontologies/city4age#thinkingProblem> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
+<http://www.morelab.deusto.es/ontologies/city4age#thinkingProblem> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.morelab.deusto.es/ontologies/city4age#CognitiveChangeingBehaviour> .
+<http://www.morelab.deusto.es/ontologies/city4age#thinkingProblem> <http://www.morelab.deusto.es/ontologies/city4age#isIndicatorOf> <http://www.morelab.deusto.es/ontologies/city4age#cognitiveIndicator> .
+# 
+# http://www.morelab.deusto.es/ontologies/city4age#toilet
+<http://www.morelab.deusto.es/ontologies/city4age#toilet> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
+<http://www.morelab.deusto.es/ontologies/city4age#toilet> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.morelab.deusto.es/ontologies/city4age#Toilet> .
+<http://www.morelab.deusto.es/ontologies/city4age#toilet> <http://www.morelab.deusto.es/ontologies/city4age#partOfHouse> <http://www.morelab.deusto.es/ontologies/city4age#house1> .
+# 
+# http://www.morelab.deusto.es/ontologies/city4age#training
+<http://www.morelab.deusto.es/ontologies/city4age#training> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
+<http://www.morelab.deusto.es/ontologies/city4age#training> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.morelab.deusto.es/ontologies/city4age#Service> .
+# 
+# http://www.morelab.deusto.es/ontologies/city4age#tramway
+<http://www.morelab.deusto.es/ontologies/city4age#tramway> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
+<http://www.morelab.deusto.es/ontologies/city4age#tramway> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.morelab.deusto.es/ontologies/city4age#Tram> .
+<http://www.morelab.deusto.es/ontologies/city4age#tramway> <http://www.morelab.deusto.es/ontologies/city4age#partOfCity> <http://www.morelab.deusto.es/ontologies/city4age#Montpellier> .
+# 
+# http://www.morelab.deusto.es/ontologies/city4age#travel
+<http://www.morelab.deusto.es/ontologies/city4age#travel> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
+<http://www.morelab.deusto.es/ontologies/city4age#travel> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.morelab.deusto.es/ontologies/city4age#PreferenceTopic> .
+# 
+# http://www.morelab.deusto.es/ontologies/city4age#unemployment
+<http://www.morelab.deusto.es/ontologies/city4age#unemployment> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
+<http://www.morelab.deusto.es/ontologies/city4age#unemployment> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.morelab.deusto.es/ontologies/city4age#Employment> .
+# 
+# http://www.morelab.deusto.es/ontologies/city4age#unneducated
+<http://www.morelab.deusto.es/ontologies/city4age#unneducated> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
+<http://www.morelab.deusto.es/ontologies/city4age#unneducated> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.morelab.deusto.es/ontologies/city4age#EducationLevel> .
+# 
+# http://www.morelab.deusto.es/ontologies/city4age#upperClass
+<http://www.morelab.deusto.es/ontologies/city4age#upperClass> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
+<http://www.morelab.deusto.es/ontologies/city4age#upperClass> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.morelab.deusto.es/ontologies/city4age#SocialState> .
+# 
+# http://www.morelab.deusto.es/ontologies/city4age#verbal
+<http://www.morelab.deusto.es/ontologies/city4age#verbal> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
+<http://www.morelab.deusto.es/ontologies/city4age#verbal> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.morelab.deusto.es/ontologies/city4age#SensorialCapability> .
+# 
+# http://www.morelab.deusto.es/ontologies/city4age#visitCommunityCenter
+<http://www.morelab.deusto.es/ontologies/city4age#visitCommunityCenter> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
+<http://www.morelab.deusto.es/ontologies/city4age#visitCommunityCenter> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.morelab.deusto.es/ontologies/city4age#SocialIntervention> .
+# 
+# http://www.morelab.deusto.es/ontologies/city4age#visitFriend
+<http://www.morelab.deusto.es/ontologies/city4age#visitFriend> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
+<http://www.morelab.deusto.es/ontologies/city4age#visitFriend> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.morelab.deusto.es/ontologies/city4age#SocialIntervention> .
+# 
+# http://www.morelab.deusto.es/ontologies/city4age#visitingFriend
+<http://www.morelab.deusto.es/ontologies/city4age#visitingFriend> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
+<http://www.morelab.deusto.es/ontologies/city4age#visitingFriend> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.morelab.deusto.es/ontologies/city4age#VisitToFriend> .
+# 
+# http://www.morelab.deusto.es/ontologies/city4age#visitingSocialCenter
+<http://www.morelab.deusto.es/ontologies/city4age#visitingSocialCenter> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
+<http://www.morelab.deusto.es/ontologies/city4age#visitingSocialCenter> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.morelab.deusto.es/ontologies/city4age#VisitSocialCentre> .
+# 
+# http://www.morelab.deusto.es/ontologies/city4age#visual
+<http://www.morelab.deusto.es/ontologies/city4age#visual> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
+<http://www.morelab.deusto.es/ontologies/city4age#visual> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.morelab.deusto.es/ontologies/city4age#SensorialCapability> .
+# 
+# http://www.morelab.deusto.es/ontologies/city4age#walk
+<http://www.morelab.deusto.es/ontologies/city4age#walk> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
+<http://www.morelab.deusto.es/ontologies/city4age#walk> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.morelab.deusto.es/ontologies/city4age#PhysicalCapability> .
+# 
+# http://www.morelab.deusto.es/ontologies/city4age#walkingPatternChange
+<http://www.morelab.deusto.es/ontologies/city4age#walkingPatternChange> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
+<http://www.morelab.deusto.es/ontologies/city4age#walkingPatternChange> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.morelab.deusto.es/ontologies/city4age#MobilityChangeingBehaviour> .
+<http://www.morelab.deusto.es/ontologies/city4age#walkingPatternChange> <http://www.morelab.deusto.es/ontologies/city4age#isIndicatorOf> <http://www.morelab.deusto.es/ontologies/city4age#mobilityIndicator> .
+# 
+# http://www.morelab.deusto.es/ontologies/city4age#watchMovie
+<http://www.morelab.deusto.es/ontologies/city4age#watchMovie> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
+<http://www.morelab.deusto.es/ontologies/city4age#watchMovie> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.morelab.deusto.es/ontologies/city4age#SocialIntervention> .
+<http://www.morelab.deusto.es/ontologies/city4age#watchMovie> <http://www.morelab.deusto.es/ontologies/city4age#relatedToPreference> <http://www.morelab.deusto.es/ontologies/city4age#cinema> .
+# 
+# http://www.morelab.deusto.es/ontologies/city4age#watchTV
+<http://www.morelab.deusto.es/ontologies/city4age#watchTV> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
+<http://www.morelab.deusto.es/ontologies/city4age#watchTV> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.morelab.deusto.es/ontologies/city4age#Activity> .
+# 
+# http://www.morelab.deusto.es/ontologies/city4age#watchTheatre
+<http://www.morelab.deusto.es/ontologies/city4age#watchTheatre> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
+<http://www.morelab.deusto.es/ontologies/city4age#watchTheatre> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.morelab.deusto.es/ontologies/city4age#SocialIntervention> .
+<http://www.morelab.deusto.es/ontologies/city4age#watchTheatre> <http://www.morelab.deusto.es/ontologies/city4age#relatedToPreference> <http://www.morelab.deusto.es/ontologies/city4age#theatre> .
+# 
+# http://www.morelab.deusto.es/ontologies/city4age#widowed
+<http://www.morelab.deusto.es/ontologies/city4age#widowed> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
+<http://www.morelab.deusto.es/ontologies/city4age#widowed> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.morelab.deusto.es/ontologies/city4age#MaritalState> .
+# 
+# 
+# 
+# #################################################################
+# #
+# #    Annotations
+# #
+# #################################################################
+# 
+# 
+<http://dbpedia.org/property/> <http://www.w3.org/2000/01/rdf-schema#label> "4 "@en .
+# 
+# Generated by the OWL API (version 5.1.0) https://github.com/owlcs/owlapi/
