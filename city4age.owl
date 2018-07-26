@@ -1,7 +1,8 @@
 <?xml version="1.0"?>
 <rdf:RDF xmlns="http://www.morelab.deusto.es/ontologies/city4age#"
-     xml:base="http://www.morelab.deusto.es/ontologies/city4age#"
+     xml:base="http://www.morelab.deusto.es/ontologies/city4age"
      xmlns:schema="http://schema.org/"
+     xmlns:city4age="http://www.morelab.deusto.es/ontologies/city4age#"
      xmlns:ns="http://creativecommons.org/ns#"
      xmlns:owl="http://www.w3.org/2002/07/owl#"
      xmlns:xsd="http://www.w3.org/2001/XMLSchema#"
@@ -19,21 +20,20 @@
      xmlns:foaf="http://xmlns.com/foaf/0.1/"
      xmlns:sosa="http://www.w3.org/ns/sosa/"
      xmlns:adms="http://www.w3.org/ns/adms#"
+     xmlns:demlab="http://www.demcare.eu/ontologies/demlab.owl#"
+     xmlns:gn="http://www.geonames.org/ontology/"
      xmlns:protege="http://protege.stanford.edu/plugins/owl/protege#"
      xmlns:swrl="http://www.w3.org/2003/11/swrl#"
      xmlns:dbo="http://dbpedia.org/ontology/"
      xmlns:dbp="http://dbpedia.org/property/"
      xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
      xmlns:health-lifesci="http://health-lifesci.schema.org/"
-     xmlns:dc="http://purl.org/dc/elements/1.1/"
-     xmlns:gn="http://www.geonames.org/ontology/"
-     xmlns:demlab="http://www.demcare.eu/ontologies/demlab.owl#"
-     xmlns:city4age="http://www.morelab.deusto.es/ontologies/city4age#">
+     xmlns:dc="http://purl.org/dc/elements/1.1/">
     <owl:Ontology rdf:about="http://www.morelab.deusto.es/ontologies/city4age#">
         <owl:imports rdf:resource="http://www.morelab.deusto.es/ontologies/riskC4A#"/>
         <owl:imports rdf:resource="http://www.morelab.deusto.es/ontologies/interC4A#"/>
     </owl:Ontology>
- 
+    
 
 
     <!-- 
@@ -123,12 +123,13 @@
     
 
 
-    <!-- http://www.morelab.deusto.es/ontologies/city4age#executeAction -->
+    <!-- http://www.morelab.deusto.es/ontologies/city4age#execute -->
 
-    <owl:ObjectProperty rdf:about="http://www.morelab.deusto.es/ontologies/city4age#executeAction">
+    <owl:ObjectProperty rdf:about="http://www.morelab.deusto.es/ontologies/city4age#execute">
         <owl:inverseOf rdf:resource="http://www.morelab.deusto.es/ontologies/city4age#isExecutedBy"/>
         <rdfs:domain rdf:resource="http://www.morelab.deusto.es/ontologies/city4age#Elderly"/>
         <rdfs:range rdf:resource="http://www.morelab.deusto.es/ontologies/city4age#ExecutedAction"/>
+        <rdfs:range rdf:resource="http://www.morelab.deusto.es/ontologies/city4age#ExecutedActivity"/>
     </owl:ObjectProperty>
     
 
@@ -370,7 +371,7 @@
 
     <owl:ObjectProperty rdf:about="http://www.morelab.deusto.es/ontologies/city4age#hasRelatedActivity">
         <rdfs:domain rdf:resource="http://www.morelab.deusto.es/ontologies/city4age#EAM"/>
-        <rdfs:domain rdf:resource="http://www.morelab.deusto.es/ontologies/city4age#ExecutedAction"/>
+        <rdfs:domain rdf:resource="http://www.morelab.deusto.es/ontologies/city4age#ExecutedActivity"/>
         <rdfs:domain rdf:resource="http://www.morelab.deusto.es/ontologies/city4age#Habit"/>
         <rdfs:range rdf:resource="http://www.morelab.deusto.es/ontologies/city4age#Activity"/>
     </owl:ObjectProperty>
@@ -435,6 +436,7 @@
 
     <owl:ObjectProperty rdf:about="http://www.morelab.deusto.es/ontologies/city4age#isExecutedBy">
         <rdfs:domain rdf:resource="http://www.morelab.deusto.es/ontologies/city4age#ExecutedAction"/>
+        <rdfs:domain rdf:resource="http://www.morelab.deusto.es/ontologies/city4age#ExecutedActivity"/>
         <rdfs:range rdf:resource="http://www.morelab.deusto.es/ontologies/city4age#Elderly"/>
     </owl:ObjectProperty>
     
@@ -956,11 +958,47 @@
     
 
 
+    <!-- http://geovocab.org/spatial#Feature -->
+
+    <owl:Class rdf:about="http://geovocab.org/spatial#Feature"/>
+    
+
+
+    <!-- http://health-lifesci.schema.org/LocalBusiness -->
+
+    <owl:Class rdf:about="http://health-lifesci.schema.org/LocalBusiness"/>
+    
+
+
+    <!-- http://health-lifesci.schema.org/MedicalBusiness -->
+
+    <owl:Class rdf:about="http://health-lifesci.schema.org/MedicalBusiness"/>
+    
+
+
+    <!-- http://health-lifesci.schema.org/MedicalCondition -->
+
+    <owl:Class rdf:about="http://health-lifesci.schema.org/MedicalCondition"/>
+    
+
+
+    <!-- http://health-lifesci.schema.org/Patient -->
+
+    <owl:Class rdf:about="http://health-lifesci.schema.org/Patient"/>
+    
+
+
+    <!-- http://health-lifesci.schema.org/Person -->
+
+    <owl:Class rdf:about="http://health-lifesci.schema.org/Person"/>
+    
+
+
     <!-- http://health-lifesci.schema.org/Pharmacy -->
 
-    <rdf:Description rdf:about="http://health-lifesci.schema.org/Pharmacy">
+    <owl:Class rdf:about="http://health-lifesci.schema.org/Pharmacy">
         <owl:equivalentClass rdf:resource="http://www.morelab.deusto.es/ontologies/city4age#Pharmacy"/>
-    </rdf:Description>
+    </owl:Class>
     
 
 
@@ -1294,6 +1332,14 @@
     <!-- http://www.morelab.deusto.es/ontologies/city4age#ExecutedAction -->
 
     <owl:Class rdf:about="http://www.morelab.deusto.es/ontologies/city4age#ExecutedAction">
+        <rdfs:subClassOf rdf:resource="http://www.morelab.deusto.es/ontologies/city4age#NonVirtual"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.morelab.deusto.es/ontologies/city4age#ExecutedActivity -->
+
+    <owl:Class rdf:about="http://www.morelab.deusto.es/ontologies/city4age#ExecutedActivity">
         <rdfs:subClassOf rdf:resource="http://www.morelab.deusto.es/ontologies/city4age#NonVirtual"/>
     </owl:Class>
     
@@ -2020,6 +2066,24 @@
     
 
 
+    <!-- http://www.morelab.deusto.es/ontologies/demlab#ClinicalRecord -->
+
+    <owl:Class rdf:about="http://www.morelab.deusto.es/ontologies/demlab#ClinicalRecord"/>
+    
+
+
+    <!-- http://www.morelab.deusto.es/ontologies/demlab#Participant -->
+
+    <owl:Class rdf:about="http://www.morelab.deusto.es/ontologies/demlab#Participant"/>
+    
+
+
+    <!-- http://www.w3.org/ns/ssn/Deployment -->
+
+    <owl:Class rdf:about="http://www.w3.org/ns/ssn/Deployment"/>
+    
+
+
     <!-- 
     ///////////////////////////////////////////////////////////////////////////////////////
     //
@@ -2035,11 +2099,11 @@
 
     <owl:NamedIndividual rdf:about="http://www.morelab.deusto.es/ontologies/city4age#ADLIndicator">
         <rdf:type rdf:resource="http://www.morelab.deusto.es/ontologies/city4age#MCIIndicator"/>
-        <city4age:requireIntervention rdf:resource="http://www.morelab.deusto.es/ontologies/city4age#PerformHabit"/>
-        <city4age:requireIntervention rdf:resource="http://www.morelab.deusto.es/ontologies/city4age#listenMusic"/>
-        <city4age:requireIntervention rdf:resource="http://www.morelab.deusto.es/ontologies/city4age#prepareFood"/>
-        <city4age:requireIntervention rdf:resource="http://www.morelab.deusto.es/ontologies/city4age#proposeRecipe"/>
-        <city4age:requireIntervention rdf:resource="http://www.morelab.deusto.es/ontologies/city4age#readBook"/>
+        <requireIntervention rdf:resource="http://www.morelab.deusto.es/ontologies/city4age#PerformHabit"/>
+        <requireIntervention rdf:resource="http://www.morelab.deusto.es/ontologies/city4age#listenMusic"/>
+        <requireIntervention rdf:resource="http://www.morelab.deusto.es/ontologies/city4age#prepareFood"/>
+        <requireIntervention rdf:resource="http://www.morelab.deusto.es/ontologies/city4age#proposeRecipe"/>
+        <requireIntervention rdf:resource="http://www.morelab.deusto.es/ontologies/city4age#readBook"/>
     </owl:NamedIndividual>
     
 
@@ -2232,11 +2296,11 @@
 
     <owl:NamedIndividual rdf:about="http://www.morelab.deusto.es/ontologies/city4age#a1">
         <rdf:type rdf:resource="http://www.morelab.deusto.es/ontologies/city4age#Sensor"/>
-        <city4age:hasPossibleState rdf:resource="http://www.morelab.deusto.es/ontologies/city4age#a1_off"/>
-        <city4age:hasPossibleState rdf:resource="http://www.morelab.deusto.es/ontologies/city4age#a1_on"/>
-        <city4age:hasType rdf:resource="http://www.morelab.deusto.es/ontologies/city4age#pir"/>
-        <city4age:locatedIn rdf:resource="http://www.morelab.deusto.es/ontologies/city4age#kitchen"/>
-        <city4age:indicateLocation rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</city4age:indicateLocation>
+        <hasPossibleState rdf:resource="http://www.morelab.deusto.es/ontologies/city4age#a1_off"/>
+        <hasPossibleState rdf:resource="http://www.morelab.deusto.es/ontologies/city4age#a1_on"/>
+        <hasType rdf:resource="http://www.morelab.deusto.es/ontologies/city4age#pir"/>
+        <locatedIn rdf:resource="http://www.morelab.deusto.es/ontologies/city4age#kitchen"/>
+        <indicateLocation rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</indicateLocation>
     </owl:NamedIndividual>
     
 
@@ -2285,7 +2349,7 @@
 
     <owl:NamedIndividual rdf:about="http://www.morelab.deusto.es/ontologies/city4age#attendConcert">
         <rdf:type rdf:resource="http://www.morelab.deusto.es/ontologies/city4age#SocialIntervention"/>
-        <city4age:relatedToPreference rdf:resource="http://www.morelab.deusto.es/ontologies/city4age#music"/>
+        <relatedToPreference rdf:resource="http://www.morelab.deusto.es/ontologies/city4age#music"/>
     </owl:NamedIndividual>
     
 
@@ -2294,7 +2358,7 @@
 
     <owl:NamedIndividual rdf:about="http://www.morelab.deusto.es/ontologies/city4age#attentionProblem">
         <rdf:type rdf:resource="http://www.morelab.deusto.es/ontologies/city4age#CognitiveChangeingBehaviour"/>
-        <city4age:isIndicatorOf rdf:resource="http://www.morelab.deusto.es/ontologies/city4age#cognitiveIndicator"/>
+        <isIndicatorOf rdf:resource="http://www.morelab.deusto.es/ontologies/city4age#cognitiveIndicator"/>
     </owl:NamedIndividual>
     
 
@@ -2311,11 +2375,11 @@
 
     <owl:NamedIndividual rdf:about="http://www.morelab.deusto.es/ontologies/city4age#b1">
         <rdf:type rdf:resource="http://www.morelab.deusto.es/ontologies/city4age#Sensor"/>
-        <city4age:hasPossibleState rdf:resource="http://www.morelab.deusto.es/ontologies/city4age#beacon_alert"/>
-        <city4age:hasPossibleState rdf:resource="http://www.morelab.deusto.es/ontologies/city4age#beacon_normal"/>
-        <city4age:hasType rdf:resource="http://www.morelab.deusto.es/ontologies/city4age#beacon"/>
-        <city4age:locatedIn rdf:resource="http://www.morelab.deusto.es/ontologies/city4age#communityCenter"/>
-        <city4age:indicateLocation rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</city4age:indicateLocation>
+        <hasPossibleState rdf:resource="http://www.morelab.deusto.es/ontologies/city4age#beacon_alert"/>
+        <hasPossibleState rdf:resource="http://www.morelab.deusto.es/ontologies/city4age#beacon_normal"/>
+        <hasType rdf:resource="http://www.morelab.deusto.es/ontologies/city4age#beacon"/>
+        <locatedIn rdf:resource="http://www.morelab.deusto.es/ontologies/city4age#communityCenter"/>
+        <indicateLocation rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</indicateLocation>
     </owl:NamedIndividual>
     
 
@@ -2332,7 +2396,7 @@
 
     <owl:NamedIndividual rdf:about="http://www.morelab.deusto.es/ontologies/city4age#bathroom">
         <rdf:type rdf:resource="http://www.morelab.deusto.es/ontologies/city4age#Bathroom"/>
-        <city4age:partOfHouse rdf:resource="http://www.morelab.deusto.es/ontologies/city4age#house1"/>
+        <partOfHouse rdf:resource="http://www.morelab.deusto.es/ontologies/city4age#house1"/>
     </owl:NamedIndividual>
     
 
@@ -2365,7 +2429,7 @@
 
     <owl:NamedIndividual rdf:about="http://www.morelab.deusto.es/ontologies/city4age#bedroom">
         <rdf:type rdf:resource="http://www.morelab.deusto.es/ontologies/city4age#Bedroom"/>
-        <city4age:partOfHouse rdf:resource="http://www.morelab.deusto.es/ontologies/city4age#house1"/>
+        <partOfHouse rdf:resource="http://www.morelab.deusto.es/ontologies/city4age#house1"/>
     </owl:NamedIndividual>
     
 
@@ -2382,7 +2446,7 @@
 
     <owl:NamedIndividual rdf:about="http://www.morelab.deusto.es/ontologies/city4age#calculationProblem">
         <rdf:type rdf:resource="http://www.morelab.deusto.es/ontologies/city4age#CognitiveChangeingBehaviour"/>
-        <city4age:isIndicatorOf rdf:resource="http://www.morelab.deusto.es/ontologies/city4age#cognitiveIndicator"/>
+        <isIndicatorOf rdf:resource="http://www.morelab.deusto.es/ontologies/city4age#cognitiveIndicator"/>
     </owl:NamedIndividual>
     
 
@@ -2399,7 +2463,7 @@
 
     <owl:NamedIndividual rdf:about="http://www.morelab.deusto.es/ontologies/city4age#car">
         <rdf:type rdf:resource="http://www.morelab.deusto.es/ontologies/city4age#Car"/>
-        <city4age:partOfCity rdf:resource="http://www.morelab.deusto.es/ontologies/city4age#Montpellier"/>
+        <partOfCity rdf:resource="http://www.morelab.deusto.es/ontologies/city4age#Montpellier"/>
     </owl:NamedIndividual>
     
 
@@ -2424,8 +2488,8 @@
 
     <owl:NamedIndividual rdf:about="http://www.morelab.deusto.es/ontologies/city4age#cognitiveIndicator">
         <rdf:type rdf:resource="http://www.morelab.deusto.es/ontologies/city4age#MCIIndicator"/>
-        <city4age:requireIntervention rdf:resource="http://www.morelab.deusto.es/ontologies/city4age#performMemoryTest"/>
-        <city4age:requireIntervention rdf:resource="http://www.morelab.deusto.es/ontologies/city4age#playCognitiveGames"/>
+        <requireIntervention rdf:resource="http://www.morelab.deusto.es/ontologies/city4age#performMemoryTest"/>
+        <requireIntervention rdf:resource="http://www.morelab.deusto.es/ontologies/city4age#playCognitiveGames"/>
     </owl:NamedIndividual>
     
 
@@ -2442,7 +2506,7 @@
 
     <owl:NamedIndividual rdf:about="http://www.morelab.deusto.es/ontologies/city4age#communityCenter">
         <rdf:type rdf:resource="http://www.morelab.deusto.es/ontologies/city4age#Building"/>
-        <city4age:partOfCity rdf:resource="http://www.morelab.deusto.es/ontologies/city4age#Montpellier"/>
+        <partOfCity rdf:resource="http://www.morelab.deusto.es/ontologies/city4age#Montpellier"/>
     </owl:NamedIndividual>
     
 
@@ -2515,7 +2579,7 @@
 
     <owl:NamedIndividual rdf:about="http://www.morelab.deusto.es/ontologies/city4age#fallIncrease">
         <rdf:type rdf:resource="http://www.morelab.deusto.es/ontologies/city4age#MobilityChangeingBehaviour"/>
-        <city4age:isIndicatorOf rdf:resource="http://www.morelab.deusto.es/ontologies/city4age#mobilityIndicator"/>
+        <isIndicatorOf rdf:resource="http://www.morelab.deusto.es/ontologies/city4age#mobilityIndicator"/>
     </owl:NamedIndividual>
     
 
@@ -2564,7 +2628,7 @@
 
     <owl:NamedIndividual rdf:about="http://www.morelab.deusto.es/ontologies/city4age#goToLibrary">
         <rdf:type rdf:resource="http://www.morelab.deusto.es/ontologies/city4age#SocialIntervention"/>
-        <city4age:relatedToPreference rdf:resource="http://www.morelab.deusto.es/ontologies/city4age#literature"/>
+        <relatedToPreference rdf:resource="http://www.morelab.deusto.es/ontologies/city4age#literature"/>
     </owl:NamedIndividual>
     
 
@@ -2573,7 +2637,7 @@
 
     <owl:NamedIndividual rdf:about="http://www.morelab.deusto.es/ontologies/city4age#goToRestaurant">
         <rdf:type rdf:resource="http://www.morelab.deusto.es/ontologies/city4age#MobilityIntervention"/>
-        <city4age:relatedToPreference rdf:resource="http://www.morelab.deusto.es/ontologies/city4age#food"/>
+        <relatedToPreference rdf:resource="http://www.morelab.deusto.es/ontologies/city4age#food"/>
     </owl:NamedIndividual>
     
 
@@ -2622,7 +2686,7 @@
 
     <owl:NamedIndividual rdf:about="http://www.morelab.deusto.es/ontologies/city4age#judgementProblem">
         <rdf:type rdf:resource="http://www.morelab.deusto.es/ontologies/city4age#CognitiveChangeingBehaviour"/>
-        <city4age:isIndicatorOf rdf:resource="http://www.morelab.deusto.es/ontologies/city4age#cognitiveIndicator"/>
+        <isIndicatorOf rdf:resource="http://www.morelab.deusto.es/ontologies/city4age#cognitiveIndicator"/>
     </owl:NamedIndividual>
     
 
@@ -2631,7 +2695,7 @@
 
     <owl:NamedIndividual rdf:about="http://www.morelab.deusto.es/ontologies/city4age#kitchen">
         <rdf:type rdf:resource="http://www.morelab.deusto.es/ontologies/city4age#Kitchen"/>
-        <city4age:partOfHouse rdf:resource="http://www.morelab.deusto.es/ontologies/city4age#house1"/>
+        <partOfHouse rdf:resource="http://www.morelab.deusto.es/ontologies/city4age#house1"/>
     </owl:NamedIndividual>
     
 
@@ -2640,7 +2704,7 @@
 
     <owl:NamedIndividual rdf:about="http://www.morelab.deusto.es/ontologies/city4age#lessActivityOutside">
         <rdf:type rdf:resource="http://www.morelab.deusto.es/ontologies/city4age#SocialChangeingBehaviour"/>
-        <city4age:isIndicatorOf rdf:resource="http://www.morelab.deusto.es/ontologies/city4age#socialIndicator"/>
+        <isIndicatorOf rdf:resource="http://www.morelab.deusto.es/ontologies/city4age#socialIndicator"/>
     </owl:NamedIndividual>
     
 
@@ -2649,7 +2713,7 @@
 
     <owl:NamedIndividual rdf:about="http://www.morelab.deusto.es/ontologies/city4age#lessEngagementADL">
         <rdf:type rdf:resource="http://www.morelab.deusto.es/ontologies/city4age#ADLChangeingBehaviour"/>
-        <city4age:isIndicatorOf rdf:resource="http://www.morelab.deusto.es/ontologies/city4age#ADLIndicator"/>
+        <isIndicatorOf rdf:resource="http://www.morelab.deusto.es/ontologies/city4age#ADLIndicator"/>
     </owl:NamedIndividual>
     
 
@@ -2658,7 +2722,7 @@
 
     <owl:NamedIndividual rdf:about="http://www.morelab.deusto.es/ontologies/city4age#lessGoingOutside">
         <rdf:type rdf:resource="http://www.morelab.deusto.es/ontologies/city4age#SocialChangeingBehaviour"/>
-        <city4age:isIndicatorOf rdf:resource="http://www.morelab.deusto.es/ontologies/city4age#socialIndicator"/>
+        <isIndicatorOf rdf:resource="http://www.morelab.deusto.es/ontologies/city4age#socialIndicator"/>
     </owl:NamedIndividual>
     
 
@@ -2667,7 +2731,7 @@
 
     <owl:NamedIndividual rdf:about="http://www.morelab.deusto.es/ontologies/city4age#lessMotivationADL">
         <rdf:type rdf:resource="http://www.morelab.deusto.es/ontologies/city4age#ADLChangeingBehaviour"/>
-        <city4age:isIndicatorOf rdf:resource="http://www.morelab.deusto.es/ontologies/city4age#ADLIndicator"/>
+        <isIndicatorOf rdf:resource="http://www.morelab.deusto.es/ontologies/city4age#ADLIndicator"/>
     </owl:NamedIndividual>
     
 
@@ -2676,7 +2740,7 @@
 
     <owl:NamedIndividual rdf:about="http://www.morelab.deusto.es/ontologies/city4age#lessSocialInteraction">
         <rdf:type rdf:resource="http://www.morelab.deusto.es/ontologies/city4age#SocialChangeingBehaviour"/>
-        <city4age:isIndicatorOf rdf:resource="http://www.morelab.deusto.es/ontologies/city4age#socialIndicator"/>
+        <isIndicatorOf rdf:resource="http://www.morelab.deusto.es/ontologies/city4age#socialIndicator"/>
     </owl:NamedIndividual>
     
 
@@ -2685,7 +2749,7 @@
 
     <owl:NamedIndividual rdf:about="http://www.morelab.deusto.es/ontologies/city4age#lessVisits">
         <rdf:type rdf:resource="http://www.morelab.deusto.es/ontologies/city4age#SocialChangeingBehaviour"/>
-        <city4age:isIndicatorOf rdf:resource="http://www.morelab.deusto.es/ontologies/city4age#socialIndicator"/>
+        <isIndicatorOf rdf:resource="http://www.morelab.deusto.es/ontologies/city4age#socialIndicator"/>
     </owl:NamedIndividual>
     
 
@@ -2694,7 +2758,7 @@
 
     <owl:NamedIndividual rdf:about="http://www.morelab.deusto.es/ontologies/city4age#listenMusic">
         <rdf:type rdf:resource="http://www.morelab.deusto.es/ontologies/city4age#ADLIntervention"/>
-        <city4age:relatedToPreference rdf:resource="http://www.morelab.deusto.es/ontologies/city4age#music"/>
+        <relatedToPreference rdf:resource="http://www.morelab.deusto.es/ontologies/city4age#music"/>
     </owl:NamedIndividual>
     
 
@@ -2711,7 +2775,7 @@
 
     <owl:NamedIndividual rdf:about="http://www.morelab.deusto.es/ontologies/city4age#livingroom">
         <rdf:type rdf:resource="http://www.morelab.deusto.es/ontologies/city4age#Livingroom"/>
-        <city4age:partOfHouse rdf:resource="http://www.morelab.deusto.es/ontologies/city4age#house1"/>
+        <partOfHouse rdf:resource="http://www.morelab.deusto.es/ontologies/city4age#house1"/>
     </owl:NamedIndividual>
     
 
@@ -2776,7 +2840,7 @@
 
     <owl:NamedIndividual rdf:about="http://www.morelab.deusto.es/ontologies/city4age#memoryProblem">
         <rdf:type rdf:resource="http://www.morelab.deusto.es/ontologies/city4age#CognitiveChangeingBehaviour"/>
-        <city4age:isIndicatorOf rdf:resource="http://www.morelab.deusto.es/ontologies/city4age#cognitiveIndicator"/>
+        <isIndicatorOf rdf:resource="http://www.morelab.deusto.es/ontologies/city4age#cognitiveIndicator"/>
     </owl:NamedIndividual>
     
 
@@ -2793,8 +2857,8 @@
 
     <owl:NamedIndividual rdf:about="http://www.morelab.deusto.es/ontologies/city4age#mobilityIndicator">
         <rdf:type rdf:resource="http://www.morelab.deusto.es/ontologies/city4age#MCIIndicator"/>
-        <city4age:requireIntervention rdf:resource="http://www.morelab.deusto.es/ontologies/city4age#goShoping"/>
-        <city4age:requireIntervention rdf:resource="http://www.morelab.deusto.es/ontologies/city4age#goToRestaurant"/>
+        <requireIntervention rdf:resource="http://www.morelab.deusto.es/ontologies/city4age#goShoping"/>
+        <requireIntervention rdf:resource="http://www.morelab.deusto.es/ontologies/city4age#goToRestaurant"/>
     </owl:NamedIndividual>
     
 
@@ -2803,7 +2867,7 @@
 
     <owl:NamedIndividual rdf:about="http://www.morelab.deusto.es/ontologies/city4age#moreTimeADL">
         <rdf:type rdf:resource="http://www.morelab.deusto.es/ontologies/city4age#ADLChangeingBehaviour"/>
-        <city4age:isIndicatorOf rdf:resource="http://www.morelab.deusto.es/ontologies/city4age#ADLIndicator"/>
+        <isIndicatorOf rdf:resource="http://www.morelab.deusto.es/ontologies/city4age#ADLIndicator"/>
     </owl:NamedIndividual>
     
 
@@ -2836,7 +2900,7 @@
 
     <owl:NamedIndividual rdf:about="http://www.morelab.deusto.es/ontologies/city4age#nutritionProblem">
         <rdf:type rdf:resource="http://www.morelab.deusto.es/ontologies/city4age#ADLChangeingBehaviour"/>
-        <city4age:isIndicatorOf rdf:resource="http://www.morelab.deusto.es/ontologies/city4age#ADLIndicator"/>
+        <isIndicatorOf rdf:resource="http://www.morelab.deusto.es/ontologies/city4age#ADLIndicator"/>
     </owl:NamedIndividual>
     
 
@@ -2869,7 +2933,7 @@
 
     <owl:NamedIndividual rdf:about="http://www.morelab.deusto.es/ontologies/city4age#pharmacy">
         <rdf:type rdf:resource="http://www.morelab.deusto.es/ontologies/city4age#Building"/>
-        <city4age:partOfCity rdf:resource="http://www.morelab.deusto.es/ontologies/city4age#Montpellier"/>
+        <partOfCity rdf:resource="http://www.morelab.deusto.es/ontologies/city4age#Montpellier"/>
     </owl:NamedIndividual>
     
 
@@ -2902,7 +2966,7 @@
 
     <owl:NamedIndividual rdf:about="http://www.morelab.deusto.es/ontologies/city4age#prepareFood">
         <rdf:type rdf:resource="http://www.morelab.deusto.es/ontologies/city4age#ADLIntervention"/>
-        <city4age:relatedToPreference rdf:resource="http://www.morelab.deusto.es/ontologies/city4age#food"/>
+        <relatedToPreference rdf:resource="http://www.morelab.deusto.es/ontologies/city4age#food"/>
     </owl:NamedIndividual>
     
 
@@ -2927,7 +2991,7 @@
 
     <owl:NamedIndividual rdf:about="http://www.morelab.deusto.es/ontologies/city4age#problemGettingUp">
         <rdf:type rdf:resource="http://www.morelab.deusto.es/ontologies/city4age#MobilityChangeingBehaviour"/>
-        <city4age:isIndicatorOf rdf:resource="http://www.morelab.deusto.es/ontologies/city4age#mobilityIndicator"/>
+        <isIndicatorOf rdf:resource="http://www.morelab.deusto.es/ontologies/city4age#mobilityIndicator"/>
     </owl:NamedIndividual>
     
 
@@ -2936,7 +3000,7 @@
 
     <owl:NamedIndividual rdf:about="http://www.morelab.deusto.es/ontologies/city4age#problemPerformADL">
         <rdf:type rdf:resource="http://www.morelab.deusto.es/ontologies/city4age#ADLChangeingBehaviour"/>
-        <city4age:isIndicatorOf rdf:resource="http://www.morelab.deusto.es/ontologies/city4age#ADLIndicator"/>
+        <isIndicatorOf rdf:resource="http://www.morelab.deusto.es/ontologies/city4age#ADLIndicator"/>
     </owl:NamedIndividual>
     
 
@@ -2945,7 +3009,7 @@
 
     <owl:NamedIndividual rdf:about="http://www.morelab.deusto.es/ontologies/city4age#problemUsingTransport">
         <rdf:type rdf:resource="http://www.morelab.deusto.es/ontologies/city4age#MobilityChangeingBehaviour"/>
-        <city4age:isIndicatorOf rdf:resource="http://www.morelab.deusto.es/ontologies/city4age#mobilityIndicator"/>
+        <isIndicatorOf rdf:resource="http://www.morelab.deusto.es/ontologies/city4age#mobilityIndicator"/>
     </owl:NamedIndividual>
     
 
@@ -2954,7 +3018,7 @@
 
     <owl:NamedIndividual rdf:about="http://www.morelab.deusto.es/ontologies/city4age#proposeRecipe">
         <rdf:type rdf:resource="http://www.morelab.deusto.es/ontologies/city4age#ADLIntervention"/>
-        <city4age:relatedToPreference rdf:resource="http://www.morelab.deusto.es/ontologies/city4age#food"/>
+        <relatedToPreference rdf:resource="http://www.morelab.deusto.es/ontologies/city4age#food"/>
     </owl:NamedIndividual>
     
 
@@ -2963,7 +3027,7 @@
 
     <owl:NamedIndividual rdf:about="http://www.morelab.deusto.es/ontologies/city4age#proposeTravelDestination">
         <rdf:type rdf:resource="http://www.morelab.deusto.es/ontologies/city4age#SocialIntervention"/>
-        <city4age:relatedToPreference rdf:resource="http://www.morelab.deusto.es/ontologies/city4age#travel"/>
+        <relatedToPreference rdf:resource="http://www.morelab.deusto.es/ontologies/city4age#travel"/>
     </owl:NamedIndividual>
     
 
@@ -2980,7 +3044,7 @@
 
     <owl:NamedIndividual rdf:about="http://www.morelab.deusto.es/ontologies/city4age#readBook">
         <rdf:type rdf:resource="http://www.morelab.deusto.es/ontologies/city4age#ADLIntervention"/>
-        <city4age:relatedToPreference rdf:resource="http://www.morelab.deusto.es/ontologies/city4age#literature"/>
+        <relatedToPreference rdf:resource="http://www.morelab.deusto.es/ontologies/city4age#literature"/>
     </owl:NamedIndividual>
     
 
@@ -3029,7 +3093,7 @@
 
     <owl:NamedIndividual rdf:about="http://www.morelab.deusto.es/ontologies/city4age#shop">
         <rdf:type rdf:resource="http://www.morelab.deusto.es/ontologies/city4age#Building"/>
-        <city4age:partOfCity rdf:resource="http://www.morelab.deusto.es/ontologies/city4age#Montpellier"/>
+        <partOfCity rdf:resource="http://www.morelab.deusto.es/ontologies/city4age#Montpellier"/>
     </owl:NamedIndividual>
     
 
@@ -3054,13 +3118,13 @@
 
     <owl:NamedIndividual rdf:about="http://www.morelab.deusto.es/ontologies/city4age#socialIndicator">
         <rdf:type rdf:resource="http://www.morelab.deusto.es/ontologies/city4age#MCIIndicator"/>
-        <city4age:requireIntervention rdf:resource="http://www.morelab.deusto.es/ontologies/city4age#attendConcert"/>
-        <city4age:requireIntervention rdf:resource="http://www.morelab.deusto.es/ontologies/city4age#goToLibrary"/>
-        <city4age:requireIntervention rdf:resource="http://www.morelab.deusto.es/ontologies/city4age#proposeTravelDestination"/>
-        <city4age:requireIntervention rdf:resource="http://www.morelab.deusto.es/ontologies/city4age#visitCommunityCenter"/>
-        <city4age:requireIntervention rdf:resource="http://www.morelab.deusto.es/ontologies/city4age#visitFriend"/>
-        <city4age:requireIntervention rdf:resource="http://www.morelab.deusto.es/ontologies/city4age#watchMovie"/>
-        <city4age:requireIntervention rdf:resource="http://www.morelab.deusto.es/ontologies/city4age#watchTheatre"/>
+        <requireIntervention rdf:resource="http://www.morelab.deusto.es/ontologies/city4age#attendConcert"/>
+        <requireIntervention rdf:resource="http://www.morelab.deusto.es/ontologies/city4age#goToLibrary"/>
+        <requireIntervention rdf:resource="http://www.morelab.deusto.es/ontologies/city4age#proposeTravelDestination"/>
+        <requireIntervention rdf:resource="http://www.morelab.deusto.es/ontologies/city4age#visitCommunityCenter"/>
+        <requireIntervention rdf:resource="http://www.morelab.deusto.es/ontologies/city4age#visitFriend"/>
+        <requireIntervention rdf:resource="http://www.morelab.deusto.es/ontologies/city4age#watchMovie"/>
+        <requireIntervention rdf:resource="http://www.morelab.deusto.es/ontologies/city4age#watchTheatre"/>
     </owl:NamedIndividual>
     
 
@@ -3093,7 +3157,7 @@
 
     <owl:NamedIndividual rdf:about="http://www.morelab.deusto.es/ontologies/city4age#taxi">
         <rdf:type rdf:resource="http://www.morelab.deusto.es/ontologies/city4age#Taxi"/>
-        <city4age:partOfCity rdf:resource="http://www.morelab.deusto.es/ontologies/city4age#Montpellier"/>
+        <partOfCity rdf:resource="http://www.morelab.deusto.es/ontologies/city4age#Montpellier"/>
     </owl:NamedIndividual>
     
 
@@ -3118,7 +3182,7 @@
 
     <owl:NamedIndividual rdf:about="http://www.morelab.deusto.es/ontologies/city4age#thinkingProblem">
         <rdf:type rdf:resource="http://www.morelab.deusto.es/ontologies/city4age#CognitiveChangeingBehaviour"/>
-        <city4age:isIndicatorOf rdf:resource="http://www.morelab.deusto.es/ontologies/city4age#cognitiveIndicator"/>
+        <isIndicatorOf rdf:resource="http://www.morelab.deusto.es/ontologies/city4age#cognitiveIndicator"/>
     </owl:NamedIndividual>
     
 
@@ -3127,7 +3191,7 @@
 
     <owl:NamedIndividual rdf:about="http://www.morelab.deusto.es/ontologies/city4age#toilet">
         <rdf:type rdf:resource="http://www.morelab.deusto.es/ontologies/city4age#Toilet"/>
-        <city4age:partOfHouse rdf:resource="http://www.morelab.deusto.es/ontologies/city4age#house1"/>
+        <partOfHouse rdf:resource="http://www.morelab.deusto.es/ontologies/city4age#house1"/>
     </owl:NamedIndividual>
     
 
@@ -3144,7 +3208,7 @@
 
     <owl:NamedIndividual rdf:about="http://www.morelab.deusto.es/ontologies/city4age#tramway">
         <rdf:type rdf:resource="http://www.morelab.deusto.es/ontologies/city4age#Tram"/>
-        <city4age:partOfCity rdf:resource="http://www.morelab.deusto.es/ontologies/city4age#Montpellier"/>
+        <partOfCity rdf:resource="http://www.morelab.deusto.es/ontologies/city4age#Montpellier"/>
     </owl:NamedIndividual>
     
 
@@ -3241,7 +3305,7 @@
 
     <owl:NamedIndividual rdf:about="http://www.morelab.deusto.es/ontologies/city4age#walkingPatternChange">
         <rdf:type rdf:resource="http://www.morelab.deusto.es/ontologies/city4age#MobilityChangeingBehaviour"/>
-        <city4age:isIndicatorOf rdf:resource="http://www.morelab.deusto.es/ontologies/city4age#mobilityIndicator"/>
+        <isIndicatorOf rdf:resource="http://www.morelab.deusto.es/ontologies/city4age#mobilityIndicator"/>
     </owl:NamedIndividual>
     
 
@@ -3250,7 +3314,7 @@
 
     <owl:NamedIndividual rdf:about="http://www.morelab.deusto.es/ontologies/city4age#watchMovie">
         <rdf:type rdf:resource="http://www.morelab.deusto.es/ontologies/city4age#SocialIntervention"/>
-        <city4age:relatedToPreference rdf:resource="http://www.morelab.deusto.es/ontologies/city4age#cinema"/>
+        <relatedToPreference rdf:resource="http://www.morelab.deusto.es/ontologies/city4age#cinema"/>
     </owl:NamedIndividual>
     
 
@@ -3267,7 +3331,7 @@
 
     <owl:NamedIndividual rdf:about="http://www.morelab.deusto.es/ontologies/city4age#watchTheatre">
         <rdf:type rdf:resource="http://www.morelab.deusto.es/ontologies/city4age#SocialIntervention"/>
-        <city4age:relatedToPreference rdf:resource="http://www.morelab.deusto.es/ontologies/city4age#theatre"/>
+        <relatedToPreference rdf:resource="http://www.morelab.deusto.es/ontologies/city4age#theatre"/>
     </owl:NamedIndividual>
     
 
@@ -3295,5 +3359,5 @@
 
 
 
-<!-- Generated by the OWL API (version 4.2.1.20160306-0033) https://github.com/owlcs/owlapi -->
+<!-- Generated by the OWL API (version 4.2.8.20170104-2310) https://github.com/owlcs/owlapi -->
 
