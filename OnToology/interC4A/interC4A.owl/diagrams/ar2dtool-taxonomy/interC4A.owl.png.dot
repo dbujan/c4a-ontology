@@ -1,0 +1,41 @@
+digraph ar2dtool_diagram { 
+rankdir=LR;
+size="1000"
+node [shape = rectangle, color="black"]; "base:CognitiveGame" "base:Background" "base:Encouragement" "base:CaregivingOpportunity" "base:Group" "base:ActivityProposal" "base:Factoid" "base:ParticularScenario" "base:AgendaReminder" "base:Counselling" "base:BaseLine" "base:Caregiver" "base:KindOfCommunication" "base:TrainingMaterial" "base:WhatsGoingOn" "base:OnPurpose" "base:OutsiderOpportunity" "base:Risk" "base:Addressee" "base:EducationalMaterial" "base:Indications" "base:Warning" "base:LocalFact" "base:Acontextual" "base:IndividualContent" "base:MedicalParamedicalInfoNews" "base:News" "base:Fact" "base:BetterLife" "base:WellBeing" "base:LocalTraining" "base:Assistive" "base:LocalEducation" "base:Alert" "base:Directions" "base:Content" "base:Relative" "base:LocalFactoid" ; /*classes style*/
+	"base:OutsiderOpportunity" -> "base:ParticularScenario" [ label = "rdfs:subClassOf" ];
+	"base:TrainingMaterial" -> "base:Background" [ label = "rdfs:subClassOf" ];
+	"base:Directions" -> "base:Assistive" [ label = "rdfs:subClassOf" ];
+	"base:Risk" -> "base:OnPurpose" [ label = "rdfs:subClassOf" ];
+	"base:Fact" -> "base:WellBeing" [ label = "rdfs:subClassOf" ];
+	"base:Indications" -> "base:Assistive" [ label = "rdfs:subClassOf" ];
+	"base:EducationalMaterial" -> "base:Background" [ label = "rdfs:subClassOf" ];
+	"base:Acontextual" -> "base:Content" [ label = "rdfs:subClassOf" ];
+	"base:News" -> "base:BaseLine" [ label = "rdfs:subClassOf" ];
+	"base:BetterLife" -> "base:BaseLine" [ label = "rdfs:subClassOf" ];
+	"base:Background" -> "base:Acontextual" [ label = "rdfs:subClassOf" ];
+	"base:MedicalParamedicalInfoNews" -> "base:Background" [ label = "rdfs:subClassOf" ];
+	"base:AgendaReminder" -> "base:BaseLine" [ label = "rdfs:subClassOf" ];
+	"base:Factoid" -> "base:WellBeing" [ label = "rdfs:subClassOf" ];
+	"base:LocalEducation" -> "base:ParticularScenario" [ label = "rdfs:subClassOf" ];
+	"base:ParticularScenario" -> "base:Content" [ label = "rdfs:subClassOf" ];
+	"base:WhatsGoingOn" -> "base:Background" [ label = "rdfs:subClassOf" ];
+	"base:ActivityProposal" -> "base:WellBeing" [ label = "rdfs:subClassOf" ];
+	"base:CaregivingOpportunity" -> "base:ParticularScenario" [ label = "rdfs:subClassOf" ];
+	"base:Counselling" -> "base:WellBeing" [ label = "rdfs:subClassOf" ];
+	"base:OnPurpose" -> "base:KindOfCommunication" [ label = "rdfs:subClassOf" ];
+	"base:Assistive" -> "base:KindOfCommunication" [ label = "rdfs:subClassOf" ];
+	"base:Caregiver" -> "base:Addressee" [ label = "rdfs:subClassOf" ];
+	"base:LocalTraining" -> "base:ParticularScenario" [ label = "rdfs:subClassOf" ];
+	"base:BaseLine" -> "base:KindOfCommunication" [ label = "rdfs:subClassOf" ];
+	"base:Relative" -> "base:Addressee" [ label = "rdfs:subClassOf" ];
+	"base:LocalFactoid" -> "base:ParticularScenario" [ label = "rdfs:subClassOf" ];
+	"base:LocalFact" -> "base:ParticularScenario" [ label = "rdfs:subClassOf" ];
+	"base:Warning" -> "base:OnPurpose" [ label = "rdfs:subClassOf" ];
+	"base:IndividualContent" -> "base:Content" [ label = "rdfs:subClassOf" ];
+	"base:WellBeing" -> "base:Acontextual" [ label = "rdfs:subClassOf" ];
+	"base:Alert" -> "base:OnPurpose" [ label = "rdfs:subClassOf" ];
+	"base:CognitiveGame" -> "base:Background" [ label = "rdfs:subClassOf" ];
+	"base:Group" -> "base:Addressee" [ label = "rdfs:subClassOf" ];
+	"base:Encouragement" -> "base:OnPurpose" [ label = "rdfs:subClassOf" ];
+
+}
