@@ -1,0 +1,15 @@
+digraph ar2dtool_diagram { 
+rankdir=LR;
+size="1501"
+node [shape = rectangle, color="orange"]; "base:Style" "base:KindOfCommunication" "base:Scheduling" "base:Goal" "base:Addressee" "base:Intervention" "base:Content" ; /*classes style*/
+	"base:" -> "http://www.morelab.deusto.es/ontologies/COMBont#" [ label = "owl:imports" ];
+	"base:hasDeliveryMode" -> "owl:topObjectProperty" [ label = "rdfs:subPropertyOf" ];
+	"base:Intervention" -> "base:Content" [ label = "base:hasContent" ];
+	"base:Intervention" -> "base:Addressee" [ label = "base:hasAddressee" ];
+	"base:Intervention" -> "base:Goal" [ label = "base:hasGoal" ];
+	"base:Intervention" -> "base:Scheduling" [ label = "base:hasScheduling" ];
+	"base:Intervention" -> "base:Style" [ label = "base:hasStyle" ];
+	"base:Intervention" -> "http://morelab.deusto.es/ontologies/COMBont#InterventionFunction" [ label = "base:hasInterventionFunction" ];
+	"base:Intervention" -> "base:KindOfCommunication" [ label = "base:hasKindOfCommunication" ];
+
+}

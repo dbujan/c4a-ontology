@@ -1,0 +1,15 @@
+digraph ar2dtool_diagram { 
+rankdir=LR;
+size="1501"
+node [shape = rectangle, color="orange"]; "http://morelab.deusto.es/ontologies/COMBont#InterventionFunction" "http://morelab.deusto.es/ontologies/COMBont#BehaviourComponent" "http://morelab.deusto.es/ontologies/COMBont#BehaviourChangeTechnique" "http://morelab.deusto.es/ontologies/COMBont#DeliveryMode" ; /*classes style*/
+	"COMBont:" -> "COMBont:david.bujan" [ label = "dc:creator" ];
+	"COMBont:" -> "http://www.morelab.deusto.es/ontologies/COMBont.html" [ label = "foaf:page" ];
+	"COMBont:david.bujan" -> "http://paginaspersonales.deusto.es/dbujan/" [ label = "foaf:homepage" ];
+	"http://morelab.deusto.es/ontologies/COMBont#hasDeliveryMode" -> "owl:topObjectProperty" [ label = "rdfs:subPropertyOf" ];
+	"http://www.morelab.deusto.es/ontologies/COMBont#DeustoTech%20-%20Deusto%20Institute%20of%20Technology" -> "COMBont:david.bujan" [ label = "foaf:member" ];
+	"http://www.morelab.deusto.es/ontologies/COMBont#DeustoTech%20-%20Deusto%20Institute%20of%20Technology" -> "http://morelab.deusto.es" [ label = "foaf:homepage" ];
+	"http://morelab.deusto.es/ontologies/COMBont#BehaviourChangeTechnique" -> "http://morelab.deusto.es/ontologies/COMBont#DeliveryMode" [ label = "http://morelab.deusto.es/ontologies/COMBont#hasDeliveryMode" ];
+	"http://morelab.deusto.es/ontologies/COMBont#InterventionFunction" -> "http://morelab.deusto.es/ontologies/COMBont#BehaviourChangeTechnique" [ label = "http://morelab.deusto.es/ontologies/COMBont#isRelatedTo" ];
+	"http://morelab.deusto.es/ontologies/COMBont#BehaviourComponent" -> "http://morelab.deusto.es/ontologies/COMBont#InterventionFunction" [ label = "http://morelab.deusto.es/ontologies/COMBont#isLinkedTo" ];
+
+}

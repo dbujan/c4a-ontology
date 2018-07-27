@@ -1,0 +1,488 @@
+<h2  id="crossreference" class="list">Cross reference for [Ontology Name] classes, properties and dataproperties <span class="backlink"> back to <a href="#toc">ToC</a></span></h2>
+This section provides details for each class and property defined by [Ontology Name].
+<div id="classes">
+   <h3 id="classes-headline" class="list">Classes</h3>
+   <ul class="hlist">
+      <li>
+         <a href="#Category"
+            title="http://morelab.deusto.es/ontologies/riskC4A#Category">
+            <span>category</span>
+         </a>
+      </li>
+      <li>
+         <a href="#Instrument"
+            title="http://morelab.deusto.es/ontologies/riskC4A#Instrument">
+            <span>instrument</span>
+         </a>
+      </li>
+      <li>
+         <a href="#Interval"
+            title="http://morelab.deusto.es/ontologies/riskC4A#Interval">
+            <span>interval</span>
+         </a>
+      </li>
+      <li>
+         <a href="#Item" title="http://morelab.deusto.es/ontologies/riskC4A#Item">
+            <span>item</span>
+         </a>
+      </li>
+      <li>
+         <a href="#Model"
+            title="http://morelab.deusto.es/ontologies/riskC4A#Model">
+            <span>model</span>
+         </a>
+      </li>
+      <li>
+         <a href="#Nominal"
+            title="http://morelab.deusto.es/ontologies/riskC4A#Nominal">
+            <span>nominal</span>
+         </a>
+      </li>
+      <li>
+         <a href="#Ordinal"
+            title="http://morelab.deusto.es/ontologies/riskC4A#Ordinal">
+            <span>ordinal</span>
+         </a>
+      </li>
+      <li>
+         <a href="#Ratio"
+            title="http://morelab.deusto.es/ontologies/riskC4A#Ratio">
+            <span>ratio</span>
+         </a>
+      </li>
+      <li>
+         <a href="#Score"
+            title="http://morelab.deusto.es/ontologies/riskC4A#Score">
+            <span>score</span>
+         </a>
+      </li>
+      <li>
+         <a href="#Value"
+            title="http://morelab.deusto.es/ontologies/riskC4A#Value">
+            <span>value</span>
+         </a>
+      </li>
+   </ul>
+   <div class="entity" id="Category">
+      <h3>category<sup class="type-c" title="class">c</sup>
+         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#classes">Class ToC</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> http://morelab.deusto.es/ontologies/riskC4A#Category</p>
+      <div class="comment">
+         <span class="markdown">Group of Items (see below) that contribute to the appraisal of a certain facet of the measured health entity.</span>
+      </div>
+      <dl class="description">
+         <dt>is in domain of</dt>
+         <dd>
+            <a href="#hasItems"
+               title="http://morelab.deusto.es/ontologies/riskC4A#hasItems">has items</a>
+            <sup class="type-op" title="object property">op</sup>
+         </dd>
+         <dt>is in range of</dt>
+         <dd>
+            <a href="#hasCategories"
+               title="http://morelab.deusto.es/ontologies/riskC4A#hasCategories">has categories</a>
+            <sup class="type-op" title="object property">op</sup>
+         </dd>
+      </dl>
+   </div>
+   <div class="entity" id="Instrument">
+      <h3>instrument<sup class="type-c" title="class">c</sup>
+         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#classes">Class ToC</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> http://morelab.deusto.es/ontologies/riskC4A#Instrument</p>
+      <div class="comment">
+         <span class="markdown">Overall measuring method, aimed at providing a final, comprehensive score on a certain health entity.</span>
+      </div>
+      <dl class="description">
+         <dt>is in domain of</dt>
+         <dd>
+            <a href="#hasCategories"
+               title="http://morelab.deusto.es/ontologies/riskC4A#hasCategories">has categories</a>
+            <sup class="type-op" title="object property">op</sup>, <a href="#hasModel"
+               title="http://morelab.deusto.es/ontologies/riskC4A#hasModel">has model</a>
+            <sup class="type-op" title="object property">op</sup>, <a href="#hasScore"
+               title="http://morelab.deusto.es/ontologies/riskC4A#hasScore">has score</a>
+            <sup class="type-op" title="object property">op</sup>
+         </dd>
+      </dl>
+   </div>
+   <div class="entity" id="Interval">
+      <h3>interval<sup class="type-c" title="class">c</sup>
+         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#classes">Class ToC</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> http://morelab.deusto.es/ontologies/riskC4A#Interval</p>
+      <div class="comment">
+         <span class="markdown">Difference among numbers is meaningful like the concept of unit of measure (e.g. temperature in ºC).</span>
+      </div>
+      <dl class="description">
+         <dt>has super-classes</dt>
+         <dd>
+            <a href="#Score"
+               title="http://morelab.deusto.es/ontologies/riskC4A#Score">score</a>
+            <sup class="type-c" title="class">c</sup>
+         </dd>
+      </dl>
+   </div>
+   <div class="entity" id="Item">
+      <h3>item<sup class="type-c" title="class">c</sup>
+         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#classes">Class ToC</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> http://morelab.deusto.es/ontologies/riskC4A#Item</p>
+      <div class="comment">
+         <span class="markdown">Each actual, basic element that will be measured to produce scores.</span>
+      </div>
+      <dl class="description">
+         <dt>is in domain of</dt>
+         <dd>
+            <a href="#hasScore"
+               title="http://morelab.deusto.es/ontologies/riskC4A#hasScore">has score</a>
+            <sup class="type-op" title="object property">op</sup>, <a href="#hasValue"
+               title="http://morelab.deusto.es/ontologies/riskC4A#hasValue">has value</a>
+            <sup class="type-op" title="object property">op</sup>
+         </dd>
+         <dt>is in range of</dt>
+         <dd>
+            <a href="#hasItems"
+               title="http://morelab.deusto.es/ontologies/riskC4A#hasItems">has items</a>
+            <sup class="type-op" title="object property">op</sup>
+         </dd>
+      </dl>
+   </div>
+   <div class="entity" id="Model">
+      <h3>model<sup class="type-c" title="class">c</sup>
+         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#classes">Class ToC</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> http://morelab.deusto.es/ontologies/riskC4A#Model</p>
+      <div class="comment">
+         <span class="markdown">Mathematical entity (algorithms and/or calculations) that allows to compute the Instrument outcome score on the basis of the scores measured for single Items.</span>
+      </div>
+      <dl class="description">
+         <dt>is in domain of</dt>
+         <dd>
+            <a href="#hasValues"
+               title="http://morelab.deusto.es/ontologies/riskC4A#hasValues">has values</a>
+            <sup class="type-op" title="object property">op</sup>
+         </dd>
+         <dt>is in range of</dt>
+         <dd>
+            <a href="#hasModel"
+               title="http://morelab.deusto.es/ontologies/riskC4A#hasModel">has model</a>
+            <sup class="type-op" title="object property">op</sup>
+         </dd>
+      </dl>
+   </div>
+   <div class="entity" id="Nominal">
+      <h3>nominal<sup class="type-c" title="class">c</sup>
+         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#classes">Class ToC</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> http://morelab.deusto.es/ontologies/riskC4A#Nominal</p>
+      <div class="comment">
+         <span class="markdown">Numbers are used just as labels for categories (e.g. 0 for false and 1 for true, for a classifier outcome).</span>
+      </div>
+      <dl class="description">
+         <dt>has super-classes</dt>
+         <dd>
+            <a href="#Score"
+               title="http://morelab.deusto.es/ontologies/riskC4A#Score">score</a>
+            <sup class="type-c" title="class">c</sup>
+         </dd>
+      </dl>
+   </div>
+   <div class="entity" id="Ordinal">
+      <h3>ordinal<sup class="type-c" title="class">c</sup>
+         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#classes">Class ToC</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> http://morelab.deusto.es/ontologies/riskC4A#Ordinal</p>
+      <div class="comment">
+         <span class="markdown">Order is meaningful and represents growing quantities (e.g. 1 = mild, 2 = moderate, 3 = strong).</span>
+      </div>
+      <dl class="description">
+         <dt>has super-classes</dt>
+         <dd>
+            <a href="#Score"
+               title="http://morelab.deusto.es/ontologies/riskC4A#Score">score</a>
+            <sup class="type-c" title="class">c</sup>
+         </dd>
+      </dl>
+   </div>
+   <div class="entity" id="Ratio">
+      <h3>ratio<sup class="type-c" title="class">c</sup>
+         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#classes">Class ToC</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> http://morelab.deusto.es/ontologies/riskC4A#Ratio</p>
+      <div class="comment">
+         <span class="markdown">There is a meaningful zero point, so ratios among scores are also meaningful (e.g. number of seconds to complete an action).</span>
+      </div>
+      <dl class="description">
+         <dt>has super-classes</dt>
+         <dd>
+            <a href="#Score"
+               title="http://morelab.deusto.es/ontologies/riskC4A#Score">score</a>
+            <sup class="type-c" title="class">c</sup>
+         </dd>
+      </dl>
+   </div>
+   <div class="entity" id="Score">
+      <h3>score<sup class="type-c" title="class">c</sup>
+         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#classes">Class ToC</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> http://morelab.deusto.es/ontologies/riskC4A#Score</p>
+      <div class="comment">
+         <span class="markdown">The outcome of measuring an Item (or the outcome of the overall Instrument).</span>
+      </div>
+      <dl class="description">
+         <dt>has sub-classes</dt>
+         <dd>
+            <a href="#Interval"
+               title="http://morelab.deusto.es/ontologies/riskC4A#Interval">interval</a>
+            <sup class="type-c" title="class">c</sup>, <a href="#Nominal"
+               title="http://morelab.deusto.es/ontologies/riskC4A#Nominal">nominal</a>
+            <sup class="type-c" title="class">c</sup>, <a href="#Ordinal"
+               title="http://morelab.deusto.es/ontologies/riskC4A#Ordinal">ordinal</a>
+            <sup class="type-c" title="class">c</sup>, <a href="#Ratio"
+               title="http://morelab.deusto.es/ontologies/riskC4A#Ratio">ratio</a>
+            <sup class="type-c" title="class">c</sup>
+         </dd>
+         <dt>is in range of</dt>
+         <dd>
+            <a href="#hasScore"
+               title="http://morelab.deusto.es/ontologies/riskC4A#hasScore">has score</a>
+            <sup class="type-op" title="object property">op</sup>
+         </dd>
+      </dl>
+   </div>
+   <div class="entity" id="Value">
+      <h3>value<sup class="type-c" title="class">c</sup>
+         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#classes">Class ToC</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> http://morelab.deusto.es/ontologies/riskC4A#Value</p>
+      <div class="comment">
+         <span class="markdown">Set of values associated to an Item. The Item’s measurement produces a specific score, drawn from this set.</span>
+      </div>
+      <dl class="description">
+         <dt>is in range of</dt>
+         <dd>
+            <a href="#hasValue"
+               title="http://morelab.deusto.es/ontologies/riskC4A#hasValue">has value</a>
+            <sup class="type-op" title="object property">op</sup>, <a href="#hasValues"
+               title="http://morelab.deusto.es/ontologies/riskC4A#hasValues">has values</a>
+            <sup class="type-op" title="object property">op</sup>
+         </dd>
+      </dl>
+   </div>
+</div><div id="objectproperties">
+   <h3 id="properties" class="list">Object Properties</h3>
+   <ul class="hlist">
+      <li>
+         <a href="#hasCategories"
+            title="http://morelab.deusto.es/ontologies/riskC4A#hasCategories">
+            <span>has categories</span>
+         </a>
+      </li>
+      <li>
+         <a href="#hasItems"
+            title="http://morelab.deusto.es/ontologies/riskC4A#hasItems">
+            <span>has items</span>
+         </a>
+      </li>
+      <li>
+         <a href="#hasModel"
+            title="http://morelab.deusto.es/ontologies/riskC4A#hasModel">
+            <span>has model</span>
+         </a>
+      </li>
+      <li>
+         <a href="#hasScore"
+            title="http://morelab.deusto.es/ontologies/riskC4A#hasScore">
+            <span>has score</span>
+         </a>
+      </li>
+      <li>
+         <a href="#hasValue"
+            title="http://morelab.deusto.es/ontologies/riskC4A#hasValue">
+            <span>has value</span>
+         </a>
+      </li>
+      <li>
+         <a href="#hasValues"
+            title="http://morelab.deusto.es/ontologies/riskC4A#hasValues">
+            <span>has values</span>
+         </a>
+      </li>
+   </ul>
+   <div class="entity" id="hasCategories">
+      <h3>has categories<sup class="type-op" title="object property">op</sup>
+         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#objectproperties">Object Property ToC</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> http://morelab.deusto.es/ontologies/riskC4A#hasCategories</p>
+      <div class="description">
+         <dl>
+            <dt>has domain</dt>
+            <dd>
+               <a href="#Instrument"
+                  title="http://morelab.deusto.es/ontologies/riskC4A#Instrument">instrument</a>
+               <sup class="type-c" title="class">c</sup>
+            </dd>
+            <dt>has range</dt>
+            <dd>
+               <a href="#Category"
+                  title="http://morelab.deusto.es/ontologies/riskC4A#Category">category</a>
+               <sup class="type-c" title="class">c</sup>
+            </dd>
+         </dl>
+      </div>
+   </div>
+   <div class="entity" id="hasItems">
+      <h3>has items<sup class="type-op" title="object property">op</sup>
+         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#objectproperties">Object Property ToC</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> http://morelab.deusto.es/ontologies/riskC4A#hasItems</p>
+      <div class="description">
+         <dl>
+            <dt>has domain</dt>
+            <dd>
+               <a href="#Category"
+                  title="http://morelab.deusto.es/ontologies/riskC4A#Category">category</a>
+               <sup class="type-c" title="class">c</sup>
+            </dd>
+            <dt>has range</dt>
+            <dd>
+               <a href="#Item" title="http://morelab.deusto.es/ontologies/riskC4A#Item">item</a>
+               <sup class="type-c" title="class">c</sup>
+            </dd>
+         </dl>
+      </div>
+   </div>
+   <div class="entity" id="hasModel">
+      <h3>has model<sup class="type-op" title="object property">op</sup>
+         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#objectproperties">Object Property ToC</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> http://morelab.deusto.es/ontologies/riskC4A#hasModel</p>
+      <div class="description">
+         <dl>
+            <dt>has domain</dt>
+            <dd>
+               <a href="#Instrument"
+                  title="http://morelab.deusto.es/ontologies/riskC4A#Instrument">instrument</a>
+               <sup class="type-c" title="class">c</sup>
+            </dd>
+            <dt>has range</dt>
+            <dd>
+               <a href="#Model"
+                  title="http://morelab.deusto.es/ontologies/riskC4A#Model">model</a>
+               <sup class="type-c" title="class">c</sup>
+            </dd>
+         </dl>
+      </div>
+   </div>
+   <div class="entity" id="hasScore">
+      <h3>has score<sup class="type-op" title="object property">op</sup>
+         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#objectproperties">Object Property ToC</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> http://morelab.deusto.es/ontologies/riskC4A#hasScore</p>
+      <div class="description">
+         <dl>
+            <dt>has domain</dt>
+            <dd>
+               <a href="#Instrument"
+                  title="http://morelab.deusto.es/ontologies/riskC4A#Instrument">instrument</a>
+               <sup class="type-c" title="class">c</sup>
+            </dd>
+            <dd>
+               <a href="#Item" title="http://morelab.deusto.es/ontologies/riskC4A#Item">item</a>
+               <sup class="type-c" title="class">c</sup>
+            </dd>
+            <dt>has range</dt>
+            <dd>
+               <a href="#Score"
+                  title="http://morelab.deusto.es/ontologies/riskC4A#Score">score</a>
+               <sup class="type-c" title="class">c</sup>
+            </dd>
+         </dl>
+      </div>
+   </div>
+   <div class="entity" id="hasValue">
+      <h3>has value<sup class="type-op" title="object property">op</sup>
+         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#objectproperties">Object Property ToC</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> http://morelab.deusto.es/ontologies/riskC4A#hasValue</p>
+      <div class="description">
+         <dl>
+            <dt>has domain</dt>
+            <dd>
+               <a href="#Item" title="http://morelab.deusto.es/ontologies/riskC4A#Item">item</a>
+               <sup class="type-c" title="class">c</sup>
+            </dd>
+            <dt>has range</dt>
+            <dd>
+               <a href="#Value"
+                  title="http://morelab.deusto.es/ontologies/riskC4A#Value">value</a>
+               <sup class="type-c" title="class">c</sup>
+            </dd>
+         </dl>
+      </div>
+   </div>
+   <div class="entity" id="hasValues">
+      <h3>has values<sup class="type-op" title="object property">op</sup>
+         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#objectproperties">Object Property ToC</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> http://morelab.deusto.es/ontologies/riskC4A#hasValues</p>
+      <div class="description">
+         <dl>
+            <dt>has domain</dt>
+            <dd>
+               <a href="#Model"
+                  title="http://morelab.deusto.es/ontologies/riskC4A#Model">model</a>
+               <sup class="type-c" title="class">c</sup>
+            </dd>
+            <dt>has range</dt>
+            <dd>
+               <a href="#Value"
+                  title="http://morelab.deusto.es/ontologies/riskC4A#Value">value</a>
+               <sup class="type-c" title="class">c</sup>
+            </dd>
+         </dl>
+      </div>
+   </div>
+</div><div id="legend">
+<h2>Legend <span class="backlink"> back to <a href="#toc">ToC</a></span></h2>
+<div   class="entity">
+<sup class="type-c" title="Classes">c</sup>: Classes <br/>
+<sup class="type-op" title="Object Properties">op</sup>: Object Properties <br/>
+<sup class="type-dp" title="Data Properties">dp</sup>: Data Properties <br/>
+<sup class="type-ni" title="Named Individuals">ni</sup>: Named Individuals
+</div>
+</div>
