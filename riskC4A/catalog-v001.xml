@@ -1,6 +1,7 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
 <catalog prefer="public" xmlns="urn:oasis:names:tc:entity:xmlns:xml:catalog">
     <group id="Folder Repository, directory=, recursive=true, Auto-Update=true, version=2" prefer="public" xml:base="">
-        <uri id="Automatically generated entry, Timestamp=1529334148193" name="http://morelab.deusto.es/ontologies/riskC4A" uri="riskC4A.owl"/>
+        <uri id="Automatically generated entry, Timestamp=1532696957648" name="duplicate:http://morelab.deusto.es/ontologies/riskC4A" uri="riskC4A.owl"/>
+        <uri id="Automatically generated entry, Timestamp=1532696957648" name="duplicate:http://morelab.deusto.es/ontologies/riskC4A" uri="riskC4A.rdf"/>
     </group>
 </catalog>

@@ -1,0 +1,177 @@
+<?xml version="1.0"?>
+<rdf:RDF xmlns="http://morelab.deusto.es/ontologies/riskC4A#"
+     xml:base="http://morelab.deusto.es/ontologies/riskC4A"
+     xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+     xmlns:owl="http://www.w3.org/2002/07/owl#"
+     xmlns:xml="http://www.w3.org/XML/1998/namespace"
+     xmlns:riskC4A="http://morelab.deusto.es/ontologies/riskC4A#"
+     xmlns:xsd="http://www.w3.org/2001/XMLSchema#"
+     xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#">
+    <owl:Ontology rdf:about="http://morelab.deusto.es/ontologies/riskC4A#"/>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Object Properties
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://morelab.deusto.es/ontologies/riskC4A#hasCategories -->
+
+    <owl:ObjectProperty rdf:about="http://morelab.deusto.es/ontologies/riskC4A#hasCategories">
+        <rdfs:domain rdf:resource="http://morelab.deusto.es/ontologies/riskC4A#Instrument"/>
+        <rdfs:range rdf:resource="http://morelab.deusto.es/ontologies/riskC4A#Category"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://morelab.deusto.es/ontologies/riskC4A#hasItems -->
+
+    <owl:ObjectProperty rdf:about="http://morelab.deusto.es/ontologies/riskC4A#hasItems">
+        <rdfs:domain rdf:resource="http://morelab.deusto.es/ontologies/riskC4A#Category"/>
+        <rdfs:range rdf:resource="http://morelab.deusto.es/ontologies/riskC4A#Item"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://morelab.deusto.es/ontologies/riskC4A#hasModel -->
+
+    <owl:ObjectProperty rdf:about="http://morelab.deusto.es/ontologies/riskC4A#hasModel">
+        <rdfs:domain rdf:resource="http://morelab.deusto.es/ontologies/riskC4A#Instrument"/>
+        <rdfs:range rdf:resource="http://morelab.deusto.es/ontologies/riskC4A#Model"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://morelab.deusto.es/ontologies/riskC4A#hasScore -->
+
+    <owl:ObjectProperty rdf:about="http://morelab.deusto.es/ontologies/riskC4A#hasScore">
+        <rdfs:domain rdf:resource="http://morelab.deusto.es/ontologies/riskC4A#Instrument"/>
+        <rdfs:domain rdf:resource="http://morelab.deusto.es/ontologies/riskC4A#Item"/>
+        <rdfs:range rdf:resource="http://morelab.deusto.es/ontologies/riskC4A#Score"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://morelab.deusto.es/ontologies/riskC4A#hasValue -->
+
+    <owl:ObjectProperty rdf:about="http://morelab.deusto.es/ontologies/riskC4A#hasValue">
+        <rdfs:domain rdf:resource="http://morelab.deusto.es/ontologies/riskC4A#Item"/>
+        <rdfs:range rdf:resource="http://morelab.deusto.es/ontologies/riskC4A#Value"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://morelab.deusto.es/ontologies/riskC4A#hasValues -->
+
+    <owl:ObjectProperty rdf:about="http://morelab.deusto.es/ontologies/riskC4A#hasValues">
+        <rdfs:domain rdf:resource="http://morelab.deusto.es/ontologies/riskC4A#Model"/>
+        <rdfs:range rdf:resource="http://morelab.deusto.es/ontologies/riskC4A#Value"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Classes
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://morelab.deusto.es/ontologies/riskC4A#Category -->
+
+    <owl:Class rdf:about="http://morelab.deusto.es/ontologies/riskC4A#Category">
+        <rdfs:comment>Group of Items (see below) that contribute to the appraisal of a certain facet of the measured health entity.</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://morelab.deusto.es/ontologies/riskC4A#Instrument -->
+
+    <owl:Class rdf:about="http://morelab.deusto.es/ontologies/riskC4A#Instrument">
+        <rdfs:comment>Overall measuring method, aimed at providing a final, comprehensive score on a certain health entity.</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://morelab.deusto.es/ontologies/riskC4A#Interval -->
+
+    <owl:Class rdf:about="http://morelab.deusto.es/ontologies/riskC4A#Interval">
+        <rdfs:subClassOf rdf:resource="http://morelab.deusto.es/ontologies/riskC4A#Score"/>
+        <rdfs:comment>Difference among numbers is meaningful like the concept of unit of measure (e.g. temperature in ºC).</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://morelab.deusto.es/ontologies/riskC4A#Item -->
+
+    <owl:Class rdf:about="http://morelab.deusto.es/ontologies/riskC4A#Item">
+        <rdfs:comment>Each actual, basic element that will be measured to produce scores.</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://morelab.deusto.es/ontologies/riskC4A#Model -->
+
+    <owl:Class rdf:about="http://morelab.deusto.es/ontologies/riskC4A#Model">
+        <rdfs:comment>Mathematical entity (algorithms and/or calculations) that allows to compute the Instrument outcome score on the basis of the scores measured for single Items.</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://morelab.deusto.es/ontologies/riskC4A#Nominal -->
+
+    <owl:Class rdf:about="http://morelab.deusto.es/ontologies/riskC4A#Nominal">
+        <rdfs:subClassOf rdf:resource="http://morelab.deusto.es/ontologies/riskC4A#Score"/>
+        <rdfs:comment>Numbers are used just as labels for categories (e.g. 0 for false and 1 for true, for a classifier outcome).</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://morelab.deusto.es/ontologies/riskC4A#Ordinal -->
+
+    <owl:Class rdf:about="http://morelab.deusto.es/ontologies/riskC4A#Ordinal">
+        <rdfs:subClassOf rdf:resource="http://morelab.deusto.es/ontologies/riskC4A#Score"/>
+        <rdfs:comment>Order is meaningful and represents growing quantities (e.g. 1 = mild, 2 = moderate, 3 = strong).</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://morelab.deusto.es/ontologies/riskC4A#Ratio -->
+
+    <owl:Class rdf:about="http://morelab.deusto.es/ontologies/riskC4A#Ratio">
+        <rdfs:subClassOf rdf:resource="http://morelab.deusto.es/ontologies/riskC4A#Score"/>
+        <rdfs:comment>There is a meaningful zero point, so ratios among scores are also meaningful (e.g. number of seconds to complete an action).</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://morelab.deusto.es/ontologies/riskC4A#Score -->
+
+    <owl:Class rdf:about="http://morelab.deusto.es/ontologies/riskC4A#Score">
+        <rdfs:comment>The outcome of measuring an Item (or the outcome of the overall Instrument).</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://morelab.deusto.es/ontologies/riskC4A#Value -->
+
+    <owl:Class rdf:about="http://morelab.deusto.es/ontologies/riskC4A#Value">
+        <rdfs:comment>Set of values associated to an Item. The Item’s measurement produces a specific score, drawn from this set.</rdfs:comment>
+    </owl:Class>
+</rdf:RDF>
+
+
+
+<!-- Generated by the OWL API (version 4.2.8.20170104-2310) https://github.com/owlcs/owlapi -->
+
