@@ -1,0 +1,594 @@
+<?xml version="1.0"?>
+<rdf:RDF xmlns="http://morelab.deusto.es/ontologies/interC4A#"
+     xml:base="http://morelab.deusto.es/ontologies/interC4A#"
+     xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+     xmlns:owl="http://www.w3.org/2002/07/owl#"
+     xmlns:xml="http://www.w3.org/XML/1998/namespace"
+     xmlns:xsd="http://www.w3.org/2001/XMLSchema#"
+     xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
+     xmlns:vann="http://purl.org/vocab/vann/"
+     xmlns:foaf="http://xmlns.com/foaf/0.1/"
+     xmlns:dc="http://purl.org/dc/elements/1.1/">
+    <owl:Ontology rdf:about="http://morelab.deusto.es/ontologies/interC4A#">
+        <owl:imports rdf:resource="http://www.morelab.deusto.es/ontologies/COMBont#"/>
+    </owl:Ontology>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Object Properties
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://morelab.deusto.es/ontologies/interC4A#hasAddressee -->
+
+    <owl:ObjectProperty rdf:about="http://morelab.deusto.es/ontologies/interC4A#hasAddressee">
+        <rdfs:domain rdf:resource="http://morelab.deusto.es/ontologies/interC4A#Intervention"/>
+        <rdfs:range rdf:resource="http://morelab.deusto.es/ontologies/interC4A#Addressee"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://morelab.deusto.es/ontologies/interC4A#hasContent -->
+
+    <owl:ObjectProperty rdf:about="http://morelab.deusto.es/ontologies/interC4A#hasContent">
+        <rdfs:domain rdf:resource="http://morelab.deusto.es/ontologies/interC4A#Intervention"/>
+        <rdfs:range rdf:resource="http://morelab.deusto.es/ontologies/interC4A#Content"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://morelab.deusto.es/ontologies/interC4A#hasDeliveryMode -->
+
+    <owl:ObjectProperty rdf:about="http://morelab.deusto.es/ontologies/interC4A#hasDeliveryMode">
+        <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topObjectProperty"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://morelab.deusto.es/ontologies/interC4A#hasGoal -->
+
+    <owl:ObjectProperty rdf:about="http://morelab.deusto.es/ontologies/interC4A#hasGoal">
+        <rdfs:domain rdf:resource="http://morelab.deusto.es/ontologies/interC4A#Intervention"/>
+        <rdfs:range rdf:resource="http://morelab.deusto.es/ontologies/interC4A#Goal"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://morelab.deusto.es/ontologies/interC4A#hasInterventionFunction -->
+
+    <owl:ObjectProperty rdf:about="http://morelab.deusto.es/ontologies/interC4A#hasInterventionFunction">
+        <rdfs:domain rdf:resource="http://morelab.deusto.es/ontologies/interC4A#Intervention"/>
+        <rdfs:range rdf:resource="http://morelab.deusto.es/ontologies/COMBont#InterventionFunction"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://morelab.deusto.es/ontologies/interC4A#hasKindOfCommunication -->
+
+    <owl:ObjectProperty rdf:about="http://morelab.deusto.es/ontologies/interC4A#hasKindOfCommunication">
+        <rdfs:domain rdf:resource="http://morelab.deusto.es/ontologies/interC4A#Intervention"/>
+        <rdfs:range rdf:resource="http://morelab.deusto.es/ontologies/interC4A#KindOfCommunication"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://morelab.deusto.es/ontologies/interC4A#hasScheduling -->
+
+    <owl:ObjectProperty rdf:about="http://morelab.deusto.es/ontologies/interC4A#hasScheduling">
+        <rdfs:domain rdf:resource="http://morelab.deusto.es/ontologies/interC4A#Intervention"/>
+        <rdfs:range rdf:resource="http://morelab.deusto.es/ontologies/interC4A#Scheduling"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://morelab.deusto.es/ontologies/interC4A#hasStyle -->
+
+    <owl:ObjectProperty rdf:about="http://morelab.deusto.es/ontologies/interC4A#hasStyle">
+        <rdfs:domain rdf:resource="http://morelab.deusto.es/ontologies/interC4A#Intervention"/>
+        <rdfs:range rdf:resource="http://morelab.deusto.es/ontologies/interC4A#Style"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://morelab.deusto.es/ontologies/interC4A#isLinkedTo -->
+
+    <owl:ObjectProperty rdf:about="http://morelab.deusto.es/ontologies/interC4A#isLinkedTo"/>
+    
+
+
+    <!-- http://morelab.deusto.es/ontologies/interC4A#isRelatedTo -->
+
+    <owl:ObjectProperty rdf:about="http://morelab.deusto.es/ontologies/interC4A#isRelatedTo"/>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Classes
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://morelab.deusto.es/ontologies/interC4A#Acontextual -->
+
+    <owl:Class rdf:about="http://morelab.deusto.es/ontologies/interC4A#Acontextual">
+        <rdfs:subClassOf rdf:resource="http://morelab.deusto.es/ontologies/interC4A#Content"/>
+    </owl:Class>
+    
+
+
+    <!-- http://morelab.deusto.es/ontologies/interC4A#ActivityProposal -->
+
+    <owl:Class rdf:about="http://morelab.deusto.es/ontologies/interC4A#ActivityProposal">
+        <rdfs:subClassOf rdf:resource="http://morelab.deusto.es/ontologies/interC4A#WellBeing"/>
+    </owl:Class>
+    
+
+
+    <!-- http://morelab.deusto.es/ontologies/interC4A#Addressee -->
+
+    <owl:Class rdf:about="http://morelab.deusto.es/ontologies/interC4A#Addressee"/>
+    
+
+
+    <!-- http://morelab.deusto.es/ontologies/interC4A#AgendaReminder -->
+
+    <owl:Class rdf:about="http://morelab.deusto.es/ontologies/interC4A#AgendaReminder">
+        <rdfs:subClassOf rdf:resource="http://morelab.deusto.es/ontologies/interC4A#BaseLine"/>
+    </owl:Class>
+    
+
+
+    <!-- http://morelab.deusto.es/ontologies/interC4A#Alert -->
+
+    <owl:Class rdf:about="http://morelab.deusto.es/ontologies/interC4A#Alert">
+        <rdfs:subClassOf rdf:resource="http://morelab.deusto.es/ontologies/interC4A#OnPurpose"/>
+    </owl:Class>
+    
+
+
+    <!-- http://morelab.deusto.es/ontologies/interC4A#Assistive -->
+
+    <owl:Class rdf:about="http://morelab.deusto.es/ontologies/interC4A#Assistive">
+        <rdfs:subClassOf rdf:resource="http://morelab.deusto.es/ontologies/interC4A#KindOfCommunication"/>
+    </owl:Class>
+    
+
+
+    <!-- http://morelab.deusto.es/ontologies/interC4A#Background -->
+
+    <owl:Class rdf:about="http://morelab.deusto.es/ontologies/interC4A#Background">
+        <rdfs:subClassOf rdf:resource="http://morelab.deusto.es/ontologies/interC4A#Acontextual"/>
+    </owl:Class>
+    
+
+
+    <!-- http://morelab.deusto.es/ontologies/interC4A#BaseLine -->
+
+    <owl:Class rdf:about="http://morelab.deusto.es/ontologies/interC4A#BaseLine">
+        <rdfs:subClassOf rdf:resource="http://morelab.deusto.es/ontologies/interC4A#KindOfCommunication"/>
+    </owl:Class>
+    
+
+
+    <!-- http://morelab.deusto.es/ontologies/interC4A#BetterLife -->
+
+    <owl:Class rdf:about="http://morelab.deusto.es/ontologies/interC4A#BetterLife">
+        <rdfs:subClassOf rdf:resource="http://morelab.deusto.es/ontologies/interC4A#BaseLine"/>
+    </owl:Class>
+    
+
+
+    <!-- http://morelab.deusto.es/ontologies/interC4A#Caregiver -->
+
+    <owl:Class rdf:about="http://morelab.deusto.es/ontologies/interC4A#Caregiver">
+        <rdfs:subClassOf rdf:resource="http://morelab.deusto.es/ontologies/interC4A#Addressee"/>
+    </owl:Class>
+    
+
+
+    <!-- http://morelab.deusto.es/ontologies/interC4A#CaregivingOpportunity -->
+
+    <owl:Class rdf:about="http://morelab.deusto.es/ontologies/interC4A#CaregivingOpportunity">
+        <rdfs:subClassOf rdf:resource="http://morelab.deusto.es/ontologies/interC4A#ParticularScenario"/>
+    </owl:Class>
+    
+
+
+    <!-- http://morelab.deusto.es/ontologies/interC4A#CognitiveGame -->
+
+    <owl:Class rdf:about="http://morelab.deusto.es/ontologies/interC4A#CognitiveGame">
+        <rdfs:subClassOf rdf:resource="http://morelab.deusto.es/ontologies/interC4A#Background"/>
+    </owl:Class>
+    
+
+
+    <!-- http://morelab.deusto.es/ontologies/interC4A#Content -->
+
+    <owl:Class rdf:about="http://morelab.deusto.es/ontologies/interC4A#Content"/>
+    
+
+
+    <!-- http://morelab.deusto.es/ontologies/interC4A#Counselling -->
+
+    <owl:Class rdf:about="http://morelab.deusto.es/ontologies/interC4A#Counselling">
+        <rdfs:subClassOf rdf:resource="http://morelab.deusto.es/ontologies/interC4A#WellBeing"/>
+    </owl:Class>
+    
+
+
+    <!-- http://morelab.deusto.es/ontologies/interC4A#Directions -->
+
+    <owl:Class rdf:about="http://morelab.deusto.es/ontologies/interC4A#Directions">
+        <rdfs:subClassOf rdf:resource="http://morelab.deusto.es/ontologies/interC4A#Assistive"/>
+    </owl:Class>
+    
+
+
+    <!-- http://morelab.deusto.es/ontologies/interC4A#EducationalMaterial -->
+
+    <owl:Class rdf:about="http://morelab.deusto.es/ontologies/interC4A#EducationalMaterial">
+        <rdfs:subClassOf rdf:resource="http://morelab.deusto.es/ontologies/interC4A#Background"/>
+    </owl:Class>
+    
+
+
+    <!-- http://morelab.deusto.es/ontologies/interC4A#Encouragement -->
+
+    <owl:Class rdf:about="http://morelab.deusto.es/ontologies/interC4A#Encouragement">
+        <rdfs:subClassOf rdf:resource="http://morelab.deusto.es/ontologies/interC4A#OnPurpose"/>
+    </owl:Class>
+    
+
+
+    <!-- http://morelab.deusto.es/ontologies/interC4A#Fact -->
+
+    <owl:Class rdf:about="http://morelab.deusto.es/ontologies/interC4A#Fact">
+        <rdfs:subClassOf rdf:resource="http://morelab.deusto.es/ontologies/interC4A#WellBeing"/>
+    </owl:Class>
+    
+
+
+    <!-- http://morelab.deusto.es/ontologies/interC4A#Factoid -->
+
+    <owl:Class rdf:about="http://morelab.deusto.es/ontologies/interC4A#Factoid">
+        <rdfs:subClassOf rdf:resource="http://morelab.deusto.es/ontologies/interC4A#WellBeing"/>
+    </owl:Class>
+    
+
+
+    <!-- http://morelab.deusto.es/ontologies/interC4A#Goal -->
+
+    <owl:Class rdf:about="http://morelab.deusto.es/ontologies/interC4A#Goal"/>
+    
+
+
+    <!-- http://morelab.deusto.es/ontologies/interC4A#Group -->
+
+    <owl:Class rdf:about="http://morelab.deusto.es/ontologies/interC4A#Group">
+        <rdfs:subClassOf rdf:resource="http://morelab.deusto.es/ontologies/interC4A#Addressee"/>
+    </owl:Class>
+    
+
+
+    <!-- http://morelab.deusto.es/ontologies/interC4A#Indications -->
+
+    <owl:Class rdf:about="http://morelab.deusto.es/ontologies/interC4A#Indications">
+        <rdfs:subClassOf rdf:resource="http://morelab.deusto.es/ontologies/interC4A#Assistive"/>
+    </owl:Class>
+    
+
+
+    <!-- http://morelab.deusto.es/ontologies/interC4A#IndividualContent -->
+
+    <owl:Class rdf:about="http://morelab.deusto.es/ontologies/interC4A#IndividualContent">
+        <rdfs:subClassOf rdf:resource="http://morelab.deusto.es/ontologies/interC4A#Content"/>
+    </owl:Class>
+    
+
+
+    <!-- http://morelab.deusto.es/ontologies/interC4A#Intervention -->
+
+    <owl:Class rdf:about="http://morelab.deusto.es/ontologies/interC4A#Intervention"/>
+    
+
+
+    <!-- http://morelab.deusto.es/ontologies/interC4A#KindOfCommunication -->
+
+    <owl:Class rdf:about="http://morelab.deusto.es/ontologies/interC4A#KindOfCommunication"/>
+    
+
+
+    <!-- http://morelab.deusto.es/ontologies/interC4A#LocalEducation -->
+
+    <owl:Class rdf:about="http://morelab.deusto.es/ontologies/interC4A#LocalEducation">
+        <rdfs:subClassOf rdf:resource="http://morelab.deusto.es/ontologies/interC4A#ParticularScenario"/>
+    </owl:Class>
+    
+
+
+    <!-- http://morelab.deusto.es/ontologies/interC4A#LocalFact -->
+
+    <owl:Class rdf:about="http://morelab.deusto.es/ontologies/interC4A#LocalFact">
+        <rdfs:subClassOf rdf:resource="http://morelab.deusto.es/ontologies/interC4A#ParticularScenario"/>
+    </owl:Class>
+    
+
+
+    <!-- http://morelab.deusto.es/ontologies/interC4A#LocalFactoid -->
+
+    <owl:Class rdf:about="http://morelab.deusto.es/ontologies/interC4A#LocalFactoid">
+        <rdfs:subClassOf rdf:resource="http://morelab.deusto.es/ontologies/interC4A#ParticularScenario"/>
+    </owl:Class>
+    
+
+
+    <!-- http://morelab.deusto.es/ontologies/interC4A#LocalTraining -->
+
+    <owl:Class rdf:about="http://morelab.deusto.es/ontologies/interC4A#LocalTraining">
+        <rdfs:subClassOf rdf:resource="http://morelab.deusto.es/ontologies/interC4A#ParticularScenario"/>
+    </owl:Class>
+    
+
+
+    <!-- http://morelab.deusto.es/ontologies/interC4A#MedicalParamedicalInfoNews -->
+
+    <owl:Class rdf:about="http://morelab.deusto.es/ontologies/interC4A#MedicalParamedicalInfoNews">
+        <rdfs:subClassOf rdf:resource="http://morelab.deusto.es/ontologies/interC4A#Background"/>
+    </owl:Class>
+    
+
+
+    <!-- http://morelab.deusto.es/ontologies/interC4A#News -->
+
+    <owl:Class rdf:about="http://morelab.deusto.es/ontologies/interC4A#News">
+        <rdfs:subClassOf rdf:resource="http://morelab.deusto.es/ontologies/interC4A#BaseLine"/>
+    </owl:Class>
+    
+
+
+    <!-- http://morelab.deusto.es/ontologies/interC4A#OnPurpose -->
+
+    <owl:Class rdf:about="http://morelab.deusto.es/ontologies/interC4A#OnPurpose">
+        <rdfs:subClassOf rdf:resource="http://morelab.deusto.es/ontologies/interC4A#KindOfCommunication"/>
+    </owl:Class>
+    
+
+
+    <!-- http://morelab.deusto.es/ontologies/interC4A#OutsiderOpportunity -->
+
+    <owl:Class rdf:about="http://morelab.deusto.es/ontologies/interC4A#OutsiderOpportunity">
+        <rdfs:subClassOf rdf:resource="http://morelab.deusto.es/ontologies/interC4A#ParticularScenario"/>
+    </owl:Class>
+    
+
+
+    <!-- http://morelab.deusto.es/ontologies/interC4A#ParticularScenario -->
+
+    <owl:Class rdf:about="http://morelab.deusto.es/ontologies/interC4A#ParticularScenario">
+        <rdfs:subClassOf rdf:resource="http://morelab.deusto.es/ontologies/interC4A#Content"/>
+    </owl:Class>
+    
+
+
+    <!-- http://morelab.deusto.es/ontologies/interC4A#Relative -->
+
+    <owl:Class rdf:about="http://morelab.deusto.es/ontologies/interC4A#Relative">
+        <rdfs:subClassOf rdf:resource="http://morelab.deusto.es/ontologies/interC4A#Addressee"/>
+    </owl:Class>
+    
+
+
+    <!-- http://morelab.deusto.es/ontologies/interC4A#Risk -->
+
+    <owl:Class rdf:about="http://morelab.deusto.es/ontologies/interC4A#Risk">
+        <rdfs:subClassOf rdf:resource="http://morelab.deusto.es/ontologies/interC4A#OnPurpose"/>
+    </owl:Class>
+    
+
+
+    <!-- http://morelab.deusto.es/ontologies/interC4A#Scheduling -->
+
+    <owl:Class rdf:about="http://morelab.deusto.es/ontologies/interC4A#Scheduling"/>
+    
+
+
+    <!-- http://morelab.deusto.es/ontologies/interC4A#Style -->
+
+    <owl:Class rdf:about="http://morelab.deusto.es/ontologies/interC4A#Style"/>
+    
+
+
+    <!-- http://morelab.deusto.es/ontologies/interC4A#TrainingMaterial -->
+
+    <owl:Class rdf:about="http://morelab.deusto.es/ontologies/interC4A#TrainingMaterial">
+        <rdfs:subClassOf rdf:resource="http://morelab.deusto.es/ontologies/interC4A#Background"/>
+    </owl:Class>
+    
+
+
+    <!-- http://morelab.deusto.es/ontologies/interC4A#Warning -->
+
+    <owl:Class rdf:about="http://morelab.deusto.es/ontologies/interC4A#Warning">
+        <rdfs:subClassOf rdf:resource="http://morelab.deusto.es/ontologies/interC4A#OnPurpose"/>
+    </owl:Class>
+    
+
+
+    <!-- http://morelab.deusto.es/ontologies/interC4A#WellBeing -->
+
+    <owl:Class rdf:about="http://morelab.deusto.es/ontologies/interC4A#WellBeing">
+        <rdfs:subClassOf rdf:resource="http://morelab.deusto.es/ontologies/interC4A#Acontextual"/>
+    </owl:Class>
+    
+
+
+    <!-- http://morelab.deusto.es/ontologies/interC4A#WhatsGoingOn -->
+
+    <owl:Class rdf:about="http://morelab.deusto.es/ontologies/interC4A#WhatsGoingOn">
+        <rdfs:subClassOf rdf:resource="http://morelab.deusto.es/ontologies/interC4A#Background"/>
+    </owl:Class>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Individuals
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://morelab.deusto.es/ontologies/interC4A#Approving -->
+
+    <owl:NamedIndividual rdf:about="http://morelab.deusto.es/ontologies/interC4A#Approving">
+        <rdf:type rdf:resource="http://morelab.deusto.es/ontologies/interC4A#Style"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://morelab.deusto.es/ontologies/interC4A#Comforting -->
+
+    <owl:NamedIndividual rdf:about="http://morelab.deusto.es/ontologies/interC4A#Comforting">
+        <rdf:type rdf:resource="http://morelab.deusto.es/ontologies/interC4A#Style"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://morelab.deusto.es/ontologies/interC4A#Daily -->
+
+    <owl:NamedIndividual rdf:about="http://morelab.deusto.es/ontologies/interC4A#Daily">
+        <rdf:type rdf:resource="http://morelab.deusto.es/ontologies/interC4A#Scheduling"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://morelab.deusto.es/ontologies/interC4A#GoBackHome -->
+
+    <owl:NamedIndividual rdf:about="http://morelab.deusto.es/ontologies/interC4A#GoBackHome">
+        <rdf:type rdf:resource="http://morelab.deusto.es/ontologies/interC4A#Indications"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://morelab.deusto.es/ontologies/interC4A#KeepInTouch -->
+
+    <owl:NamedIndividual rdf:about="http://morelab.deusto.es/ontologies/interC4A#KeepInTouch">
+        <rdf:type rdf:resource="http://morelab.deusto.es/ontologies/interC4A#Goal"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://morelab.deusto.es/ontologies/interC4A#ModifyBehaviour -->
+
+    <owl:NamedIndividual rdf:about="http://morelab.deusto.es/ontologies/interC4A#ModifyBehaviour">
+        <rdf:type rdf:resource="http://morelab.deusto.es/ontologies/interC4A#Goal"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://morelab.deusto.es/ontologies/interC4A#Monthly -->
+
+    <owl:NamedIndividual rdf:about="http://morelab.deusto.es/ontologies/interC4A#Monthly">
+        <rdf:type rdf:resource="http://morelab.deusto.es/ontologies/interC4A#Scheduling"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://morelab.deusto.es/ontologies/interC4A#Reassuring -->
+
+    <owl:NamedIndividual rdf:about="http://morelab.deusto.es/ontologies/interC4A#Reassuring">
+        <rdf:type rdf:resource="http://morelab.deusto.es/ontologies/interC4A#Style"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://morelab.deusto.es/ontologies/interC4A#ReinforcePositiveBehaviour -->
+
+    <owl:NamedIndividual rdf:about="http://morelab.deusto.es/ontologies/interC4A#ReinforcePositiveBehaviour">
+        <rdf:type rdf:resource="http://morelab.deusto.es/ontologies/interC4A#Goal"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://morelab.deusto.es/ontologies/interC4A#StartContinuePositiveBehaviour -->
+
+    <owl:NamedIndividual rdf:about="http://morelab.deusto.es/ontologies/interC4A#StartContinuePositiveBehaviour">
+        <rdf:type rdf:resource="http://morelab.deusto.es/ontologies/interC4A#Goal"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://morelab.deusto.es/ontologies/interC4A#StopDangerousBehaviour -->
+
+    <owl:NamedIndividual rdf:about="http://morelab.deusto.es/ontologies/interC4A#StopDangerousBehaviour">
+        <rdf:type rdf:resource="http://morelab.deusto.es/ontologies/interC4A#Goal"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://morelab.deusto.es/ontologies/interC4A#TakeBusNumber -->
+
+    <owl:NamedIndividual rdf:about="http://morelab.deusto.es/ontologies/interC4A#TakeBusNumber">
+        <rdf:type rdf:resource="http://morelab.deusto.es/ontologies/interC4A#Indications"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://morelab.deusto.es/ontologies/interC4A#TurnLeft -->
+
+    <owl:NamedIndividual rdf:about="http://morelab.deusto.es/ontologies/interC4A#TurnLeft">
+        <rdf:type rdf:resource="http://morelab.deusto.es/ontologies/interC4A#Directions"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://morelab.deusto.es/ontologies/interC4A#TurnRight -->
+
+    <owl:NamedIndividual rdf:about="http://morelab.deusto.es/ontologies/interC4A#TurnRight">
+        <rdf:type rdf:resource="http://morelab.deusto.es/ontologies/interC4A#Directions"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://morelab.deusto.es/ontologies/interC4A#WalkStraight -->
+
+    <owl:NamedIndividual rdf:about="http://morelab.deusto.es/ontologies/interC4A#WalkStraight">
+        <rdf:type rdf:resource="http://morelab.deusto.es/ontologies/interC4A#Directions"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://morelab.deusto.es/ontologies/interC4A#Weekly -->
+
+    <owl:NamedIndividual rdf:about="http://morelab.deusto.es/ontologies/interC4A#Weekly">
+        <rdf:type rdf:resource="http://morelab.deusto.es/ontologies/interC4A#Scheduling"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://morelab.deusto.es/ontologies/interC4A#Worrying -->
+
+    <owl:NamedIndividual rdf:about="http://morelab.deusto.es/ontologies/interC4A#Worrying">
+        <rdf:type rdf:resource="http://morelab.deusto.es/ontologies/interC4A#Style"/>
+    </owl:NamedIndividual>
+</rdf:RDF>
+
+
+
+<!-- Generated by the OWL API (version 4.2.1.20160306-0033) https://github.com/owlcs/owlapi -->
+

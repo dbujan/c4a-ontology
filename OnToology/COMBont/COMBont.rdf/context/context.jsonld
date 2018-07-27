@@ -1,0 +1,146 @@
+{
+  "@context" : {
+    "member" : {
+      "@id" : "http://xmlns.com/foaf/0.1/member"
+    },
+    "ComputerProgramme" : {
+      "@id" : "http://morelab.deusto.es/ontologies/COMBont#ComputerProgramme"
+    },
+    "BroadcastMedia" : {
+      "@id" : "http://morelab.deusto.es/ontologies/COMBont#BroadcastMedia"
+    },
+    "BehaviourComponent" : {
+      "@id" : "http://morelab.deusto.es/ontologies/COMBont#BehaviourComponent"
+    },
+    "Leaflet" : {
+      "@id" : "http://morelab.deusto.es/ontologies/COMBont#Leaflet"
+    },
+    "Thing" : {
+      "@id" : "http://www.w3.org/2002/07/owl#Thing"
+    },
+    "Opportunity" : {
+      "@id" : "http://morelab.deusto.es/ontologies/COMBont#Opportunity"
+    },
+    "Radio" : {
+      "@id" : "http://morelab.deusto.es/ontologies/COMBont#Radio"
+    },
+    "DeliveryMode" : {
+      "@id" : "http://morelab.deusto.es/ontologies/COMBont#DeliveryMode"
+    },
+    "isLinkedTo" : {
+      "@id" : "http://morelab.deusto.es/ontologies/COMBont#isLinkedTo",
+      "@type" : "@id"
+    },
+    "OtherWrittenMaterial" : {
+      "@id" : "http://morelab.deusto.es/ontologies/COMBont#OtherWrittenMaterial"
+    },
+    "label" : {
+      "@id" : "http://www.w3.org/2000/01/rdf-schema#label"
+    },
+    "isRelatedTo" : {
+      "@id" : "http://morelab.deusto.es/ontologies/COMBont#isRelatedTo",
+      "@type" : "@id"
+    },
+    "homepage" : {
+      "@id" : "http://xmlns.com/foaf/0.1/homepage"
+    },
+    "Posters" : {
+      "@id" : "http://morelab.deusto.es/ontologies/COMBont#Posters"
+    },
+    "OutdoorMedia" : {
+      "@id" : "http://morelab.deusto.es/ontologies/COMBont#OutdoorMedia"
+    },
+    "creator" : {
+      "@id" : "http://purl.org/dc/elements/1.1/creator"
+    },
+    "name" : {
+      "@id" : "http://xmlns.com/foaf/0.1/name"
+    },
+    "Individual" : {
+      "@id" : "http://morelab.deusto.es/ontologies/COMBont#Individual"
+    },
+    "PrintMedia" : {
+      "@id" : "http://morelab.deusto.es/ontologies/COMBont#PrintMedia"
+    },
+    "topObjectProperty" : {
+      "@id" : "http://www.w3.org/2002/07/owl#topObjectProperty",
+      "@type" : "@id"
+    },
+    "IndividualLevel" : {
+      "@id" : "http://morelab.deusto.es/ontologies/COMBont#IndividualLevel"
+    },
+    "Capability" : {
+      "@id" : "http://morelab.deusto.es/ontologies/COMBont#Capability"
+    },
+    "PopulationLevel" : {
+      "@id" : "http://morelab.deusto.es/ontologies/COMBont#PopulationLevel"
+    },
+    "DigitalMedia" : {
+      "@id" : "http://morelab.deusto.es/ontologies/COMBont#DigitalMedia"
+    },
+    "Distance" : {
+      "@id" : "http://morelab.deusto.es/ontologies/COMBont#Distance"
+    },
+    "preferredNamespacePrefix" : {
+      "@id" : "http://purl.org/vocab/vann/preferredNamespacePrefix"
+    },
+    "TV" : {
+      "@id" : "http://morelab.deusto.es/ontologies/COMBont#TV"
+    },
+    "FaceToFace" : {
+      "@id" : "http://morelab.deusto.es/ontologies/COMBont#FaceToFace"
+    },
+    "isDefinedBy" : {
+      "@id" : "http://www.w3.org/2000/01/rdf-schema#isDefinedBy"
+    },
+    "Motivation" : {
+      "@id" : "http://morelab.deusto.es/ontologies/COMBont#Motivation"
+    },
+    "title" : {
+      "@id" : "http://purl.org/dc/elements/1.1/title"
+    },
+    "PhoneHelpLine" : {
+      "@id" : "http://morelab.deusto.es/ontologies/COMBont#PhoneHelpLine"
+    },
+    "InterventionFunction" : {
+      "@id" : "http://morelab.deusto.es/ontologies/COMBont#InterventionFunction"
+    },
+    "modified" : {
+      "@id" : "http://purl.org/dc/elements/1.1/modified"
+    },
+    "BehaviourChangeTechnique" : {
+      "@id" : "http://morelab.deusto.es/ontologies/COMBont#BehaviourChangeTechnique"
+    },
+    "Billboards" : {
+      "@id" : "http://morelab.deusto.es/ontologies/COMBont#Billboards"
+    },
+    "Phone" : {
+      "@id" : "http://morelab.deusto.es/ontologies/COMBont#Phone"
+    },
+    "Newspaper" : {
+      "@id" : "http://morelab.deusto.es/ontologies/COMBont#Newspaper"
+    },
+    "hasDeliveryMode" : {
+      "@id" : "http://morelab.deusto.es/ontologies/COMBont#hasDeliveryMode",
+      "@type" : "@id"
+    },
+    "MobilePhoneText" : {
+      "@id" : "http://morelab.deusto.es/ontologies/COMBont#MobilePhoneText"
+    },
+    "page" : {
+      "@id" : "http://xmlns.com/foaf/0.1/page"
+    },
+    "Group" : {
+      "@id" : "http://morelab.deusto.es/ontologies/COMBont#Group"
+    },
+    "Internet" : {
+      "@id" : "http://morelab.deusto.es/ontologies/COMBont#Internet"
+    },
+    "MobilePhoneApp" : {
+      "@id" : "http://morelab.deusto.es/ontologies/COMBont#MobilePhoneApp"
+    },
+    "preferredNamespaceUri" : {
+      "@id" : "http://purl.org/vocab/vann/preferredNamespaceUri"
+    }
+  }
+}

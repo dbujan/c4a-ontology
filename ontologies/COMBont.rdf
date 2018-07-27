@@ -1,0 +1,428 @@
+<?xml version="1.0"?>
+<rdf:RDF xmlns="http://www.morelab.deusto.es/ontologies/COMBont#"
+     xml:base="http://www.morelab.deusto.es/ontologies/COMBont"
+     xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+     xmlns:owl="http://www.w3.org/2002/07/owl#"
+     xmlns:xml="http://www.w3.org/XML/1998/namespace"
+     xmlns:xsd="http://www.w3.org/2001/XMLSchema#"
+     xmlns:COMBont="http://www.morelab.deusto.es/ontologies/COMBont#"
+     xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
+     xmlns:vann="http://purl.org/vocab/vann/"
+     xmlns:foaf="http://xmlns.com/foaf/0.1/"
+     xmlns:dc="http://purl.org/dc/elements/1.1/">
+    <owl:Ontology rdf:about="http://www.morelab.deusto.es/ontologies/COMBont#">
+        <dc:title>COMBONT Vocabulary</dc:title>
+        <vann:preferredNamespaceUri>http://morelab.deusto.es/ontologies/COMBont#</vann:preferredNamespaceUri>
+        <foaf:page rdf:resource="http://www.morelab.deusto.es/ontologies/COMBont.html"/>
+        <vann:preferredNamespacePrefix>COMBont</vann:preferredNamespacePrefix>
+        <dc:creator rdf:resource="http://www.morelab.deusto.es/ontologies/COMBont#david.bujan"/>
+        <dc:modified rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2016-11-09</dc:modified>
+    </owl:Ontology>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Annotation properties
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://xmlns.com/foaf/0.1/homepage -->
+
+    <owl:AnnotationProperty rdf:about="http://xmlns.com/foaf/0.1/homepage"/>
+    
+
+
+    <!-- http://xmlns.com/foaf/0.1/member -->
+
+    <owl:AnnotationProperty rdf:about="http://xmlns.com/foaf/0.1/member"/>
+    
+
+
+    <!-- http://xmlns.com/foaf/0.1/name -->
+
+    <owl:AnnotationProperty rdf:about="http://xmlns.com/foaf/0.1/name"/>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Object Properties
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://morelab.deusto.es/ontologies/COMBont#hasDeliveryMode -->
+
+    <owl:ObjectProperty rdf:about="http://morelab.deusto.es/ontologies/COMBont#hasDeliveryMode">
+        <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topObjectProperty"/>
+        <rdfs:domain rdf:resource="http://morelab.deusto.es/ontologies/COMBont#BehaviourChangeTechnique"/>
+        <rdfs:range rdf:resource="http://morelab.deusto.es/ontologies/COMBont#DeliveryMode"/>
+        <rdfs:isDefinedBy rdf:resource="http://www.morelab.deusto.es/ontologies/COMBont"/>
+        <rdfs:label>hasDeliveryMode</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://morelab.deusto.es/ontologies/COMBont#isLinkedTo -->
+
+    <owl:ObjectProperty rdf:about="http://morelab.deusto.es/ontologies/COMBont#isLinkedTo">
+        <rdfs:domain rdf:resource="http://morelab.deusto.es/ontologies/COMBont#BehaviourComponent"/>
+        <rdfs:range rdf:resource="http://morelab.deusto.es/ontologies/COMBont#InterventionFunction"/>
+        <rdfs:isDefinedBy rdf:resource="http://www.morelab.deusto.es/ontologies/COMBont"/>
+        <rdfs:label>isLinkedTo</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://morelab.deusto.es/ontologies/COMBont#isRelatedTo -->
+
+    <owl:ObjectProperty rdf:about="http://morelab.deusto.es/ontologies/COMBont#isRelatedTo">
+        <rdfs:domain rdf:resource="http://morelab.deusto.es/ontologies/COMBont#InterventionFunction"/>
+        <rdfs:range rdf:resource="http://morelab.deusto.es/ontologies/COMBont#BehaviourChangeTechnique"/>
+        <rdfs:isDefinedBy rdf:resource="http://www.morelab.deusto.es/ontologies/COMBont"/>
+        <rdfs:label>isRelatedTo</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Classes
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://morelab.deusto.es/ontologies/COMBont#BehaviourChangeTechnique -->
+
+    <owl:Class rdf:about="http://morelab.deusto.es/ontologies/COMBont#BehaviourChangeTechnique">
+        <rdfs:isDefinedBy rdf:resource="http://www.morelab.deusto.es/ontologies/COMBont"/>
+        <rdfs:label>BehaviourChangeTechnique</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://morelab.deusto.es/ontologies/COMBont#BehaviourComponent -->
+
+    <owl:Class rdf:about="http://morelab.deusto.es/ontologies/COMBont#BehaviourComponent">
+        <rdfs:subClassOf rdf:resource="http://www.w3.org/2002/07/owl#Thing"/>
+        <rdfs:isDefinedBy rdf:resource="http://www.morelab.deusto.es/ontologies/COMBont"/>
+        <rdfs:label>BehaviourComponent</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://morelab.deusto.es/ontologies/COMBont#Billboards -->
+
+    <owl:Class rdf:about="http://morelab.deusto.es/ontologies/COMBont#Billboards">
+        <rdfs:subClassOf rdf:resource="http://morelab.deusto.es/ontologies/COMBont#OutdoorMedia"/>
+        <rdfs:isDefinedBy rdf:resource="http://www.morelab.deusto.es/ontologies/COMBont"/>
+        <rdfs:label>Billboards</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://morelab.deusto.es/ontologies/COMBont#BroadcastMedia -->
+
+    <owl:Class rdf:about="http://morelab.deusto.es/ontologies/COMBont#BroadcastMedia">
+        <rdfs:subClassOf rdf:resource="http://morelab.deusto.es/ontologies/COMBont#PopulationLevel"/>
+        <rdfs:isDefinedBy rdf:resource="http://www.morelab.deusto.es/ontologies/COMBont"/>
+        <rdfs:label>BroadcastMedia</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://morelab.deusto.es/ontologies/COMBont#Capability -->
+
+    <owl:Class rdf:about="http://morelab.deusto.es/ontologies/COMBont#Capability">
+        <rdfs:subClassOf rdf:resource="http://morelab.deusto.es/ontologies/COMBont#BehaviourComponent"/>
+        <rdfs:isDefinedBy rdf:resource="http://www.morelab.deusto.es/ontologies/COMBont"/>
+        <rdfs:label>Capability</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://morelab.deusto.es/ontologies/COMBont#ComputerProgramme -->
+
+    <owl:Class rdf:about="http://morelab.deusto.es/ontologies/COMBont#ComputerProgramme">
+        <rdfs:subClassOf rdf:resource="http://morelab.deusto.es/ontologies/COMBont#IndividualLevel"/>
+        <rdfs:isDefinedBy rdf:resource="http://www.morelab.deusto.es/ontologies/COMBont"/>
+        <rdfs:label>ComputerProgramme</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://morelab.deusto.es/ontologies/COMBont#DeliveryMode -->
+
+    <owl:Class rdf:about="http://morelab.deusto.es/ontologies/COMBont#DeliveryMode">
+        <rdfs:isDefinedBy rdf:resource="http://www.morelab.deusto.es/ontologies/COMBont"/>
+        <rdfs:label>DeliveryMode</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://morelab.deusto.es/ontologies/COMBont#DigitalMedia -->
+
+    <owl:Class rdf:about="http://morelab.deusto.es/ontologies/COMBont#DigitalMedia">
+        <rdfs:subClassOf rdf:resource="http://morelab.deusto.es/ontologies/COMBont#PopulationLevel"/>
+        <rdfs:isDefinedBy rdf:resource="http://www.morelab.deusto.es/ontologies/COMBont"/>
+        <rdfs:label>DigitalMedia</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://morelab.deusto.es/ontologies/COMBont#Distance -->
+
+    <owl:Class rdf:about="http://morelab.deusto.es/ontologies/COMBont#Distance">
+        <rdfs:subClassOf rdf:resource="http://morelab.deusto.es/ontologies/COMBont#DeliveryMode"/>
+        <rdfs:isDefinedBy rdf:resource="http://www.morelab.deusto.es/ontologies/COMBont"/>
+        <rdfs:label>Distance</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://morelab.deusto.es/ontologies/COMBont#FaceToFace -->
+
+    <owl:Class rdf:about="http://morelab.deusto.es/ontologies/COMBont#FaceToFace">
+        <rdfs:subClassOf rdf:resource="http://morelab.deusto.es/ontologies/COMBont#DeliveryMode"/>
+        <rdfs:isDefinedBy rdf:resource="http://www.morelab.deusto.es/ontologies/COMBont"/>
+        <rdfs:label>FaceToFace</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://morelab.deusto.es/ontologies/COMBont#Group -->
+
+    <owl:Class rdf:about="http://morelab.deusto.es/ontologies/COMBont#Group">
+        <rdfs:subClassOf rdf:resource="http://morelab.deusto.es/ontologies/COMBont#FaceToFace"/>
+        <rdfs:isDefinedBy rdf:resource="http://www.morelab.deusto.es/ontologies/COMBont"/>
+        <rdfs:label>Group</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://morelab.deusto.es/ontologies/COMBont#Individual -->
+
+    <owl:Class rdf:about="http://morelab.deusto.es/ontologies/COMBont#Individual">
+        <rdfs:subClassOf rdf:resource="http://morelab.deusto.es/ontologies/COMBont#FaceToFace"/>
+        <rdfs:isDefinedBy rdf:resource="http://www.morelab.deusto.es/ontologies/COMBont"/>
+        <rdfs:label>Individual</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://morelab.deusto.es/ontologies/COMBont#IndividualLevel -->
+
+    <owl:Class rdf:about="http://morelab.deusto.es/ontologies/COMBont#IndividualLevel">
+        <rdfs:subClassOf rdf:resource="http://morelab.deusto.es/ontologies/COMBont#Distance"/>
+        <rdfs:isDefinedBy rdf:resource="http://www.morelab.deusto.es/ontologies/COMBont"/>
+        <rdfs:label>IndividualLevel</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://morelab.deusto.es/ontologies/COMBont#Internet -->
+
+    <owl:Class rdf:about="http://morelab.deusto.es/ontologies/COMBont#Internet">
+        <rdfs:subClassOf rdf:resource="http://morelab.deusto.es/ontologies/COMBont#DigitalMedia"/>
+        <rdfs:isDefinedBy rdf:resource="http://www.morelab.deusto.es/ontologies/COMBont"/>
+        <rdfs:label>Internet</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://morelab.deusto.es/ontologies/COMBont#InterventionFunction -->
+
+    <owl:Class rdf:about="http://morelab.deusto.es/ontologies/COMBont#InterventionFunction">
+        <rdfs:isDefinedBy rdf:resource="http://www.morelab.deusto.es/ontologies/COMBont"/>
+        <rdfs:label>InterventionFunction</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://morelab.deusto.es/ontologies/COMBont#Leaflet -->
+
+    <owl:Class rdf:about="http://morelab.deusto.es/ontologies/COMBont#Leaflet">
+        <rdfs:subClassOf rdf:resource="http://morelab.deusto.es/ontologies/COMBont#PrintMedia"/>
+        <rdfs:isDefinedBy rdf:resource="http://www.morelab.deusto.es/ontologies/COMBont"/>
+        <rdfs:label>Leaflet</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://morelab.deusto.es/ontologies/COMBont#MobilePhoneApp -->
+
+    <owl:Class rdf:about="http://morelab.deusto.es/ontologies/COMBont#MobilePhoneApp">
+        <rdfs:subClassOf rdf:resource="http://morelab.deusto.es/ontologies/COMBont#DigitalMedia"/>
+        <rdfs:isDefinedBy rdf:resource="http://www.morelab.deusto.es/ontologies/COMBont"/>
+        <rdfs:label>MobilePhoneApp</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://morelab.deusto.es/ontologies/COMBont#MobilePhoneText -->
+
+    <owl:Class rdf:about="http://morelab.deusto.es/ontologies/COMBont#MobilePhoneText">
+        <rdfs:subClassOf rdf:resource="http://morelab.deusto.es/ontologies/COMBont#Phone"/>
+        <rdfs:isDefinedBy rdf:resource="http://www.morelab.deusto.es/ontologies/COMBont"/>
+        <rdfs:label>MobilePhoneText</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://morelab.deusto.es/ontologies/COMBont#Motivation -->
+
+    <owl:Class rdf:about="http://morelab.deusto.es/ontologies/COMBont#Motivation">
+        <rdfs:subClassOf rdf:resource="http://morelab.deusto.es/ontologies/COMBont#BehaviourComponent"/>
+        <rdfs:isDefinedBy rdf:resource="http://www.morelab.deusto.es/ontologies/COMBont"/>
+        <rdfs:label>Motivation</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://morelab.deusto.es/ontologies/COMBont#Newspaper -->
+
+    <owl:Class rdf:about="http://morelab.deusto.es/ontologies/COMBont#Newspaper">
+        <rdfs:subClassOf rdf:resource="http://morelab.deusto.es/ontologies/COMBont#PrintMedia"/>
+        <rdfs:isDefinedBy rdf:resource="http://www.morelab.deusto.es/ontologies/COMBont"/>
+        <rdfs:label>Newspaper</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://morelab.deusto.es/ontologies/COMBont#Opportunity -->
+
+    <owl:Class rdf:about="http://morelab.deusto.es/ontologies/COMBont#Opportunity">
+        <rdfs:subClassOf rdf:resource="http://morelab.deusto.es/ontologies/COMBont#BehaviourComponent"/>
+        <rdfs:isDefinedBy rdf:resource="http://www.morelab.deusto.es/ontologies/COMBont"/>
+        <rdfs:label>Opportunity</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://morelab.deusto.es/ontologies/COMBont#OtherWrittenMaterial -->
+
+    <owl:Class rdf:about="http://morelab.deusto.es/ontologies/COMBont#OtherWrittenMaterial">
+        <rdfs:subClassOf rdf:resource="http://morelab.deusto.es/ontologies/COMBont#PrintMedia"/>
+        <rdfs:isDefinedBy rdf:resource="http://www.morelab.deusto.es/ontologies/COMBont"/>
+        <rdfs:label>OtherWrittenMaterial</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://morelab.deusto.es/ontologies/COMBont#OutdoorMedia -->
+
+    <owl:Class rdf:about="http://morelab.deusto.es/ontologies/COMBont#OutdoorMedia">
+        <rdfs:subClassOf rdf:resource="http://morelab.deusto.es/ontologies/COMBont#PopulationLevel"/>
+        <rdfs:isDefinedBy rdf:resource="http://www.morelab.deusto.es/ontologies/COMBont"/>
+        <rdfs:label>OutdoorMedia</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://morelab.deusto.es/ontologies/COMBont#Phone -->
+
+    <owl:Class rdf:about="http://morelab.deusto.es/ontologies/COMBont#Phone">
+        <rdfs:subClassOf rdf:resource="http://morelab.deusto.es/ontologies/COMBont#IndividualLevel"/>
+        <rdfs:isDefinedBy rdf:resource="http://www.morelab.deusto.es/ontologies/COMBont"/>
+        <rdfs:label>Phone</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://morelab.deusto.es/ontologies/COMBont#PhoneHelpLine -->
+
+    <owl:Class rdf:about="http://morelab.deusto.es/ontologies/COMBont#PhoneHelpLine">
+        <rdfs:subClassOf rdf:resource="http://morelab.deusto.es/ontologies/COMBont#Phone"/>
+        <rdfs:isDefinedBy rdf:resource="http://www.morelab.deusto.es/ontologies/COMBont"/>
+        <rdfs:label>PhoneHelpLine</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://morelab.deusto.es/ontologies/COMBont#PopulationLevel -->
+
+    <owl:Class rdf:about="http://morelab.deusto.es/ontologies/COMBont#PopulationLevel">
+        <rdfs:subClassOf rdf:resource="http://morelab.deusto.es/ontologies/COMBont#Distance"/>
+        <rdfs:isDefinedBy rdf:resource="http://www.morelab.deusto.es/ontologies/COMBont"/>
+        <rdfs:label>PopulationLevel</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://morelab.deusto.es/ontologies/COMBont#Posters -->
+
+    <owl:Class rdf:about="http://morelab.deusto.es/ontologies/COMBont#Posters">
+        <rdfs:subClassOf rdf:resource="http://morelab.deusto.es/ontologies/COMBont#OutdoorMedia"/>
+        <rdfs:isDefinedBy rdf:resource="http://www.morelab.deusto.es/ontologies/COMBont"/>
+        <rdfs:label>Posters</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://morelab.deusto.es/ontologies/COMBont#PrintMedia -->
+
+    <owl:Class rdf:about="http://morelab.deusto.es/ontologies/COMBont#PrintMedia">
+        <rdfs:subClassOf rdf:resource="http://morelab.deusto.es/ontologies/COMBont#PopulationLevel"/>
+        <rdfs:isDefinedBy rdf:resource="http://www.morelab.deusto.es/ontologies/COMBont"/>
+        <rdfs:label>PrintMedia</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://morelab.deusto.es/ontologies/COMBont#Radio -->
+
+    <owl:Class rdf:about="http://morelab.deusto.es/ontologies/COMBont#Radio">
+        <rdfs:subClassOf rdf:resource="http://morelab.deusto.es/ontologies/COMBont#BroadcastMedia"/>
+        <rdfs:isDefinedBy rdf:resource="http://www.morelab.deusto.es/ontologies/COMBont"/>
+        <rdfs:label>Radio</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://morelab.deusto.es/ontologies/COMBont#TV -->
+
+    <owl:Class rdf:about="http://morelab.deusto.es/ontologies/COMBont#TV">
+        <rdfs:subClassOf rdf:resource="http://morelab.deusto.es/ontologies/COMBont#BroadcastMedia"/>
+        <rdfs:isDefinedBy rdf:resource="http://www.morelab.deusto.es/ontologies/COMBont"/>
+        <rdfs:label>TV</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Annotations
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    <rdf:Description rdf:about="http://www.morelab.deusto.es/ontologies/COMBont#david.bujan">
+        <foaf:name>David Buján Carballal</foaf:name>
+        <foaf:homepage rdf:resource="http://paginaspersonales.deusto.es/dbujan/"/>
+    </rdf:Description>
+    <rdf:Description rdf:about="http://www.morelab.deusto.es/ontologies/COMBont#DeustoTech%20-%20Deusto%20Institute%20of%20Technology">
+        <foaf:homepage rdf:resource="http://morelab.deusto.es"/>
+        <foaf:member rdf:resource="http://www.morelab.deusto.es/ontologies/COMBont#david.bujan"/>
+        <foaf:name>DeustoTech - Deusto Institute of Technology</foaf:name>
+    </rdf:Description>
+</rdf:RDF>
+
+
+
+<!-- Generated by the OWL API (version 4.2.8.20170104-2310) https://github.com/owlcs/owlapi -->
+
