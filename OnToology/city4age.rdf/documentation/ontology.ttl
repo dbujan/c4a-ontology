@@ -1,0 +1,2134 @@
+@prefix : <http://www.morelab.deusto.es/ontologies/city4age##> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix xml: <http://www.w3.org/XML/1998/namespace> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@base <http://www.morelab.deusto.es/ontologies/city4age#> .
+
+<http://www.morelab.deusto.es/ontologies/city4age#> rdf:type owl:Ontology ;
+                                                     owl:imports <http://www.morelab.deusto.es/ontologies/interC4A#> ,
+                                                                 <http://www.morelab.deusto.es/ontologies/riskC4A#> .
+
+#################################################################
+#    Datatypes
+#################################################################
+
+###  http://www.w3.org/2001/XMLSchema#time
+xsd:time rdf:type rdfs:Datatype .
+
+
+#################################################################
+#    Object Properties
+#################################################################
+
+###  http://www.morelab.deusto.es/ontologies/city4age#DoesActivity
+<http://www.morelab.deusto.es/ontologies/city4age#DoesActivity> rdf:type owl:ObjectProperty ;
+                                                                rdfs:domain <http://www.morelab.deusto.es/ontologies/city4age#Elderly> ;
+                                                                rdfs:range <http://www.morelab.deusto.es/ontologies/city4age#Activity> .
+
+
+###  http://www.morelab.deusto.es/ontologies/city4age#attachedTo
+<http://www.morelab.deusto.es/ontologies/city4age#attachedTo> rdf:type owl:ObjectProperty ;
+                                                              rdfs:domain <http://www.morelab.deusto.es/ontologies/city4age#Sensor> ;
+                                                              rdfs:range <http://www.morelab.deusto.es/ontologies/city4age#Object> .
+
+
+###  http://www.morelab.deusto.es/ontologies/city4age#cameFrom
+<http://www.morelab.deusto.es/ontologies/city4age#cameFrom> rdf:type owl:ObjectProperty ;
+                                                            rdfs:domain <http://www.morelab.deusto.es/ontologies/city4age#Elderly> ;
+                                                            rdfs:range [ rdf:type owl:Class ;
+                                                                         owl:unionOf ( <http://www.morelab.deusto.es/ontologies/city4age#CityZone>
+                                                                                       <http://www.morelab.deusto.es/ontologies/city4age#Home>
+                                                                                     )
+                                                                       ] .
+
+
+###  http://www.morelab.deusto.es/ontologies/city4age#capturedBy
+<http://www.morelab.deusto.es/ontologies/city4age#capturedBy> rdf:type owl:ObjectProperty ;
+                                                              rdfs:domain <http://www.morelab.deusto.es/ontologies/city4age#ExecutedAction> ;
+                                                              rdfs:range <http://www.morelab.deusto.es/ontologies/city4age#Sensor> .
+
+
+###  http://www.morelab.deusto.es/ontologies/city4age#detectedIn
+<http://www.morelab.deusto.es/ontologies/city4age#detectedIn> rdf:type owl:ObjectProperty ;
+                                                              rdfs:domain <http://www.morelab.deusto.es/ontologies/city4age#Elderly> ;
+                                                              rdfs:range [ rdf:type owl:Class ;
+                                                                           owl:unionOf ( <http://www.morelab.deusto.es/ontologies/city4age#CityZone>
+                                                                                         <http://www.morelab.deusto.es/ontologies/city4age#Home>
+                                                                                       )
+                                                                         ] .
+
+
+###  http://www.morelab.deusto.es/ontologies/city4age#execute
+<http://www.morelab.deusto.es/ontologies/city4age#execute> rdf:type owl:ObjectProperty ;
+                                                           owl:inverseOf <http://www.morelab.deusto.es/ontologies/city4age#isExecutedBy> ;
+                                                           rdfs:domain <http://www.morelab.deusto.es/ontologies/city4age#Elderly> ;
+                                                           rdfs:range <http://www.morelab.deusto.es/ontologies/city4age#ExecutedAction> ,
+                                                                      <http://www.morelab.deusto.es/ontologies/city4age#ExecutedActivity> .
+
+
+###  http://www.morelab.deusto.es/ontologies/city4age#hasBeenHospitalized
+<http://www.morelab.deusto.es/ontologies/city4age#hasBeenHospitalized> rdf:type owl:ObjectProperty ;
+                                                                       rdfs:domain <http://www.morelab.deusto.es/ontologies/city4age#Elderly> ;
+                                                                       rdfs:range <http://www.morelab.deusto.es/ontologies/city4age#Hospitalization> .
+
+
+###  http://www.morelab.deusto.es/ontologies/city4age#hasBehaviourChange
+<http://www.morelab.deusto.es/ontologies/city4age#hasBehaviourChange> rdf:type owl:ObjectProperty ;
+                                                                      rdfs:domain <http://www.morelab.deusto.es/ontologies/city4age#Elderly> ;
+                                                                      rdfs:range [ rdf:type owl:Class ;
+                                                                                   owl:unionOf ( <http://www.morelab.deusto.es/ontologies/city4age#ChangeingBehaviour>
+                                                                                                 <http://www.morelab.deusto.es/ontologies/city4age#NormalBehaviour>
+                                                                                               )
+                                                                                 ] .
+
+
+###  http://www.morelab.deusto.es/ontologies/city4age#hasCaregiver
+<http://www.morelab.deusto.es/ontologies/city4age#hasCaregiver> rdf:type owl:ObjectProperty ;
+                                                                rdfs:domain <http://www.morelab.deusto.es/ontologies/city4age#Elderly> ;
+                                                                rdfs:range <http://www.morelab.deusto.es/ontologies/city4age#Elderly> .
+
+
+###  http://www.morelab.deusto.es/ontologies/city4age#hasCommunicationLanguage
+<http://www.morelab.deusto.es/ontologies/city4age#hasCommunicationLanguage> rdf:type owl:ObjectProperty ;
+                                                                            rdfs:domain <http://www.morelab.deusto.es/ontologies/city4age#Elderly> ;
+                                                                            rdfs:range <http://www.morelab.deusto.es/ontologies/city4age#Language> .
+
+
+###  http://www.morelab.deusto.es/ontologies/city4age#hasCurrentState
+<http://www.morelab.deusto.es/ontologies/city4age#hasCurrentState> rdf:type owl:ObjectProperty ;
+                                                                   rdfs:domain <http://www.morelab.deusto.es/ontologies/city4age#Sensor> ;
+                                                                   rdfs:range <http://www.morelab.deusto.es/ontologies/city4age#SensorState> .
+
+
+###  http://www.morelab.deusto.es/ontologies/city4age#hasDisease
+<http://www.morelab.deusto.es/ontologies/city4age#hasDisease> rdf:type owl:ObjectProperty ;
+                                                              rdfs:domain <http://www.morelab.deusto.es/ontologies/city4age#Elderly> ;
+                                                              rdfs:range <http://www.morelab.deusto.es/ontologies/city4age#Disease> .
+
+
+###  http://www.morelab.deusto.es/ontologies/city4age#hasDiseaseLevel
+<http://www.morelab.deusto.es/ontologies/city4age#hasDiseaseLevel> rdf:type owl:ObjectProperty ;
+                                                                   rdfs:domain <http://www.morelab.deusto.es/ontologies/city4age#Disease> ;
+                                                                   rdfs:range <http://www.morelab.deusto.es/ontologies/city4age#Level> .
+
+
+###  http://www.morelab.deusto.es/ontologies/city4age#hasEducationLevel
+<http://www.morelab.deusto.es/ontologies/city4age#hasEducationLevel> rdf:type owl:ObjectProperty ;
+                                                                     rdfs:domain <http://www.morelab.deusto.es/ontologies/city4age#Elderly> ;
+                                                                     rdfs:range <http://www.morelab.deusto.es/ontologies/city4age#EducationLevel> .
+
+
+###  http://www.morelab.deusto.es/ontologies/city4age#hasEmployment
+<http://www.morelab.deusto.es/ontologies/city4age#hasEmployment> rdf:type owl:ObjectProperty ;
+                                                                 rdfs:domain <http://www.morelab.deusto.es/ontologies/city4age#Elderly> ;
+                                                                 rdfs:range <http://www.morelab.deusto.es/ontologies/city4age#Employment> .
+
+
+###  http://www.morelab.deusto.es/ontologies/city4age#hasFall
+<http://www.morelab.deusto.es/ontologies/city4age#hasFall> rdf:type owl:ObjectProperty ;
+                                                           rdfs:domain <http://www.morelab.deusto.es/ontologies/city4age#Elderly> ;
+                                                           rdfs:range <http://www.morelab.deusto.es/ontologies/city4age#Fall> .
+
+
+###  http://www.morelab.deusto.es/ontologies/city4age#hasFamilyMember
+<http://www.morelab.deusto.es/ontologies/city4age#hasFamilyMember> rdf:type owl:ObjectProperty ;
+                                                                   rdfs:domain <http://www.morelab.deusto.es/ontologies/city4age#Elderly> ;
+                                                                   rdfs:range <http://www.morelab.deusto.es/ontologies/city4age#Elderly> .
+
+
+###  http://www.morelab.deusto.es/ontologies/city4age#hasFriend
+<http://www.morelab.deusto.es/ontologies/city4age#hasFriend> rdf:type owl:ObjectProperty ;
+                                                             rdfs:domain <http://www.morelab.deusto.es/ontologies/city4age#Elderly> ;
+                                                             rdfs:range <http://www.morelab.deusto.es/ontologies/city4age#Elderly> .
+
+
+###  http://www.morelab.deusto.es/ontologies/city4age#hasGendre
+<http://www.morelab.deusto.es/ontologies/city4age#hasGendre> rdf:type owl:ObjectProperty ;
+                                                             rdfs:domain <http://www.morelab.deusto.es/ontologies/city4age#Elderly> ;
+                                                             rdfs:range <http://www.morelab.deusto.es/ontologies/city4age#Gender> .
+
+
+###  http://www.morelab.deusto.es/ontologies/city4age#hasHabit
+<http://www.morelab.deusto.es/ontologies/city4age#hasHabit> rdf:type owl:ObjectProperty ;
+                                                            rdfs:domain <http://www.morelab.deusto.es/ontologies/city4age#Elderly> ;
+                                                            rdfs:range <http://www.morelab.deusto.es/ontologies/city4age#Habit> .
+
+
+###  http://www.morelab.deusto.es/ontologies/city4age#hasMCIIndicator
+<http://www.morelab.deusto.es/ontologies/city4age#hasMCIIndicator> rdf:type owl:ObjectProperty ;
+                                                                   rdfs:domain <http://www.morelab.deusto.es/ontologies/city4age#Elderly> ;
+                                                                   rdfs:range <http://www.morelab.deusto.es/ontologies/city4age#MCIIndicator> .
+
+
+###  http://www.morelab.deusto.es/ontologies/city4age#hasMaritalStatus
+<http://www.morelab.deusto.es/ontologies/city4age#hasMaritalStatus> rdf:type owl:ObjectProperty ;
+                                                                    rdfs:domain <http://www.morelab.deusto.es/ontologies/city4age#Elderly> ;
+                                                                    rdfs:range <http://www.morelab.deusto.es/ontologies/city4age#MaritalState> .
+
+
+###  http://www.morelab.deusto.es/ontologies/city4age#hasPhyiscalCapabilityLevel
+<http://www.morelab.deusto.es/ontologies/city4age#hasPhyiscalCapabilityLevel> rdf:type owl:ObjectProperty ;
+                                                                              rdfs:domain <http://www.morelab.deusto.es/ontologies/city4age#PhysicalCapability> ;
+                                                                              rdfs:range <http://www.morelab.deusto.es/ontologies/city4age#Level> .
+
+
+###  http://www.morelab.deusto.es/ontologies/city4age#hasPhysicalCapability
+<http://www.morelab.deusto.es/ontologies/city4age#hasPhysicalCapability> rdf:type owl:ObjectProperty ;
+                                                                         rdfs:domain <http://www.morelab.deusto.es/ontologies/city4age#Elderly> ;
+                                                                         rdfs:range <http://www.morelab.deusto.es/ontologies/city4age#PhysicalCapability> .
+
+
+###  http://www.morelab.deusto.es/ontologies/city4age#hasPossibleState
+<http://www.morelab.deusto.es/ontologies/city4age#hasPossibleState> rdf:type owl:ObjectProperty ;
+                                                                    rdfs:domain <http://www.morelab.deusto.es/ontologies/city4age#Sensor> ;
+                                                                    rdfs:range <http://www.morelab.deusto.es/ontologies/city4age#SensorState> .
+
+
+###  http://www.morelab.deusto.es/ontologies/city4age#hasPreferedLanguage
+<http://www.morelab.deusto.es/ontologies/city4age#hasPreferedLanguage> rdf:type owl:ObjectProperty ;
+                                                                       rdfs:domain <http://www.morelab.deusto.es/ontologies/city4age#Elderly> ;
+                                                                       rdfs:range <http://www.morelab.deusto.es/ontologies/city4age#Language> .
+
+
+###  http://www.morelab.deusto.es/ontologies/city4age#hasPreference
+<http://www.morelab.deusto.es/ontologies/city4age#hasPreference> rdf:type owl:ObjectProperty ;
+                                                                 rdfs:domain <http://www.morelab.deusto.es/ontologies/city4age#Elderly> ;
+                                                                 rdfs:range <http://www.morelab.deusto.es/ontologies/city4age#Preference> .
+
+
+###  http://www.morelab.deusto.es/ontologies/city4age#hasPreferenceLevel
+<http://www.morelab.deusto.es/ontologies/city4age#hasPreferenceLevel> rdf:type owl:ObjectProperty ;
+                                                                      rdfs:domain <http://www.morelab.deusto.es/ontologies/city4age#Preference> ;
+                                                                      rdfs:range <http://www.morelab.deusto.es/ontologies/city4age#Level> .
+
+
+###  http://www.morelab.deusto.es/ontologies/city4age#hasPreferenceTopic
+<http://www.morelab.deusto.es/ontologies/city4age#hasPreferenceTopic> rdf:type owl:ObjectProperty ;
+                                                                      rdfs:domain <http://www.morelab.deusto.es/ontologies/city4age#Preference> ;
+                                                                      rdfs:range <http://www.morelab.deusto.es/ontologies/city4age#PreferenceTopic> .
+
+
+###  http://www.morelab.deusto.es/ontologies/city4age#hasProfile
+<http://www.morelab.deusto.es/ontologies/city4age#hasProfile> rdf:type owl:ObjectProperty ;
+                                                              owl:inverseOf <http://www.morelab.deusto.es/ontologies/city4age#isProfileOf> ;
+                                                              rdfs:domain <http://www.morelab.deusto.es/ontologies/city4age#Elderly> ;
+                                                              rdfs:range <http://www.morelab.deusto.es/ontologies/city4age#Profile> .
+
+
+###  http://www.morelab.deusto.es/ontologies/city4age#hasRelatedAction
+<http://www.morelab.deusto.es/ontologies/city4age#hasRelatedAction> rdf:type owl:ObjectProperty ;
+                                                                    rdfs:domain <http://www.morelab.deusto.es/ontologies/city4age#ExecutedAction> ;
+                                                                    rdfs:range <http://www.morelab.deusto.es/ontologies/city4age#Action> .
+
+
+###  http://www.morelab.deusto.es/ontologies/city4age#hasRelatedActivity
+<http://www.morelab.deusto.es/ontologies/city4age#hasRelatedActivity> rdf:type owl:ObjectProperty ;
+                                                                      rdfs:domain <http://www.morelab.deusto.es/ontologies/city4age#EAM> ,
+                                                                                  <http://www.morelab.deusto.es/ontologies/city4age#ExecutedActivity> ,
+                                                                                  <http://www.morelab.deusto.es/ontologies/city4age#Habit> ;
+                                                                      rdfs:range <http://www.morelab.deusto.es/ontologies/city4age#Activity> .
+
+
+###  http://www.morelab.deusto.es/ontologies/city4age#hasSensorialCapability
+<http://www.morelab.deusto.es/ontologies/city4age#hasSensorialCapability> rdf:type owl:ObjectProperty ;
+                                                                          rdfs:domain <http://www.morelab.deusto.es/ontologies/city4age#Elderly> ;
+                                                                          rdfs:range <http://www.morelab.deusto.es/ontologies/city4age#SensorialCapability> .
+
+
+###  http://www.morelab.deusto.es/ontologies/city4age#hasSensorialCapabilityLevel
+<http://www.morelab.deusto.es/ontologies/city4age#hasSensorialCapabilityLevel> rdf:type owl:ObjectProperty ;
+                                                                               rdfs:domain <http://www.morelab.deusto.es/ontologies/city4age#Elderly> ;
+                                                                               rdfs:range <http://www.morelab.deusto.es/ontologies/city4age#Level> .
+
+
+###  http://www.morelab.deusto.es/ontologies/city4age#hasSocialState
+<http://www.morelab.deusto.es/ontologies/city4age#hasSocialState> rdf:type owl:ObjectProperty ;
+                                                                  rdfs:domain <http://www.morelab.deusto.es/ontologies/city4age#Elderly> ;
+                                                                  rdfs:range <http://www.morelab.deusto.es/ontologies/city4age#SocialState> .
+
+
+###  http://www.morelab.deusto.es/ontologies/city4age#hasSurgery
+<http://www.morelab.deusto.es/ontologies/city4age#hasSurgery> rdf:type owl:ObjectProperty ;
+                                                              rdfs:domain <http://www.morelab.deusto.es/ontologies/city4age#Elderly> ;
+                                                              rdfs:range <http://www.morelab.deusto.es/ontologies/city4age#Surgery> .
+
+
+###  http://www.morelab.deusto.es/ontologies/city4age#hasType
+<http://www.morelab.deusto.es/ontologies/city4age#hasType> rdf:type owl:ObjectProperty ;
+                                                           rdfs:domain <http://www.morelab.deusto.es/ontologies/city4age#Sensor> ;
+                                                           rdfs:range <http://www.morelab.deusto.es/ontologies/city4age#SensorType> .
+
+
+###  http://www.morelab.deusto.es/ontologies/city4age#isConcurrent
+<http://www.morelab.deusto.es/ontologies/city4age#isConcurrent> rdf:type owl:ObjectProperty ;
+                                                                rdfs:domain <http://www.morelab.deusto.es/ontologies/city4age#ExecutedAction> ;
+                                                                rdfs:range <http://www.morelab.deusto.es/ontologies/city4age#ExecutedAction> .
+
+
+###  http://www.morelab.deusto.es/ontologies/city4age#isExecutedBy
+<http://www.morelab.deusto.es/ontologies/city4age#isExecutedBy> rdf:type owl:ObjectProperty ;
+                                                                rdfs:domain <http://www.morelab.deusto.es/ontologies/city4age#ExecutedAction> ,
+                                                                            <http://www.morelab.deusto.es/ontologies/city4age#ExecutedActivity> ;
+                                                                rdfs:range <http://www.morelab.deusto.es/ontologies/city4age#Elderly> .
+
+
+###  http://www.morelab.deusto.es/ontologies/city4age#isIndicatorOf
+<http://www.morelab.deusto.es/ontologies/city4age#isIndicatorOf> rdf:type owl:ObjectProperty ;
+                                                                 rdfs:domain <http://www.morelab.deusto.es/ontologies/city4age#ChangeingBehaviour> ;
+                                                                 rdfs:range <http://www.morelab.deusto.es/ontologies/city4age#MCIIndicator> .
+
+
+###  http://www.morelab.deusto.es/ontologies/city4age#isInterestedIn
+<http://www.morelab.deusto.es/ontologies/city4age#isInterestedIn> rdf:type owl:ObjectProperty ;
+                                                                  rdfs:domain <http://www.morelab.deusto.es/ontologies/city4age#Elderly> ;
+                                                                  rdfs:range <http://www.morelab.deusto.es/ontologies/city4age#Service> .
+
+
+###  http://www.morelab.deusto.es/ontologies/city4age#isProfileOf
+<http://www.morelab.deusto.es/ontologies/city4age#isProfileOf> rdf:type owl:ObjectProperty ;
+                                                               rdfs:domain <http://www.morelab.deusto.es/ontologies/city4age#Profile> ;
+                                                               rdfs:range <http://www.morelab.deusto.es/ontologies/city4age#Elderly> .
+
+
+###  http://www.morelab.deusto.es/ontologies/city4age#isProvidedOn
+<http://www.morelab.deusto.es/ontologies/city4age#isProvidedOn> rdf:type owl:ObjectProperty ;
+                                                                rdfs:domain <http://www.morelab.deusto.es/ontologies/city4age#Service> ;
+                                                                rdfs:range <http://www.morelab.deusto.es/ontologies/city4age#Device> .
+
+
+###  http://www.morelab.deusto.es/ontologies/city4age#liveIn
+<http://www.morelab.deusto.es/ontologies/city4age#liveIn> rdf:type owl:ObjectProperty ;
+                                                          rdfs:domain <http://www.morelab.deusto.es/ontologies/city4age#Elderly> ;
+                                                          rdfs:range <http://www.morelab.deusto.es/ontologies/city4age#Home> .
+
+
+###  http://www.morelab.deusto.es/ontologies/city4age#locatedIn
+<http://www.morelab.deusto.es/ontologies/city4age#locatedIn> rdf:type owl:ObjectProperty ;
+                                                             rdfs:domain <http://www.morelab.deusto.es/ontologies/city4age#ExecutedAction> ,
+                                                                         <http://www.morelab.deusto.es/ontologies/city4age#Object> ;
+                                                             rdfs:range <http://www.morelab.deusto.es/ontologies/city4age#Environment> ,
+                                                                        [ rdf:type owl:Class ;
+                                                                          owl:unionOf ( <http://www.morelab.deusto.es/ontologies/city4age#CityZone>
+                                                                                        <http://www.morelab.deusto.es/ontologies/city4age#Home>
+                                                                                        <http://www.morelab.deusto.es/ontologies/city4age#Room>
+                                                                                      )
+                                                                        ] .
+
+
+###  http://www.morelab.deusto.es/ontologies/city4age#partOfCity
+<http://www.morelab.deusto.es/ontologies/city4age#partOfCity> rdf:type owl:ObjectProperty ;
+                                                              rdfs:domain [ rdf:type owl:Class ;
+                                                                            owl:unionOf ( <http://www.morelab.deusto.es/ontologies/city4age#Building>
+                                                                                          <http://www.morelab.deusto.es/ontologies/city4age#Park>
+                                                                                          <http://www.morelab.deusto.es/ontologies/city4age#Street>
+                                                                                          <http://www.morelab.deusto.es/ontologies/city4age#TransportationMean>
+                                                                                        )
+                                                                          ] ;
+                                                              rdfs:range <http://www.morelab.deusto.es/ontologies/city4age#CityZone> .
+
+
+###  http://www.morelab.deusto.es/ontologies/city4age#partOfHouse
+<http://www.morelab.deusto.es/ontologies/city4age#partOfHouse> rdf:type owl:ObjectProperty ;
+                                                               rdfs:domain <http://www.morelab.deusto.es/ontologies/city4age#Room> ;
+                                                               rdfs:range <http://www.morelab.deusto.es/ontologies/city4age#Home> .
+
+
+###  http://www.morelab.deusto.es/ontologies/city4age#preferInteractionWith
+<http://www.morelab.deusto.es/ontologies/city4age#preferInteractionWith> rdf:type owl:ObjectProperty ;
+                                                                         rdfs:domain <http://www.morelab.deusto.es/ontologies/city4age#Elderly> ;
+                                                                         rdfs:range <http://www.morelab.deusto.es/ontologies/city4age#Device> .
+
+
+###  http://www.morelab.deusto.es/ontologies/city4age#relatedToHabit
+<http://www.morelab.deusto.es/ontologies/city4age#relatedToHabit> rdf:type owl:ObjectProperty ;
+                                                                  rdfs:domain <http://www.morelab.deusto.es/ontologies/city4age#InterventionBehaviour> ;
+                                                                  rdfs:range <http://www.morelab.deusto.es/ontologies/city4age#Habit> .
+
+
+###  http://www.morelab.deusto.es/ontologies/city4age#relatedToPreference
+<http://www.morelab.deusto.es/ontologies/city4age#relatedToPreference> rdf:type owl:ObjectProperty ;
+                                                                       rdfs:domain <http://www.morelab.deusto.es/ontologies/city4age#InterventionBehaviour> ;
+                                                                       rdfs:range <http://www.morelab.deusto.es/ontologies/city4age#PreferenceTopic> .
+
+
+###  http://www.morelab.deusto.es/ontologies/city4age#requireIntervention
+<http://www.morelab.deusto.es/ontologies/city4age#requireIntervention> rdf:type owl:ObjectProperty ;
+                                                                       rdfs:domain <http://www.morelab.deusto.es/ontologies/city4age#MCIIndicator> ;
+                                                                       rdfs:range <http://www.morelab.deusto.es/ontologies/city4age#InterventionBehaviour> .
+
+
+###  http://www.morelab.deusto.es/ontologies/city4age#useLanguage
+<http://www.morelab.deusto.es/ontologies/city4age#useLanguage> rdf:type owl:ObjectProperty ;
+                                                               rdfs:domain <http://www.morelab.deusto.es/ontologies/city4age#InterventionBehaviour> ;
+                                                               rdfs:range <http://www.morelab.deusto.es/ontologies/city4age#Language> .
+
+
+###  http://www.morelab.deusto.es/ontologies/city4age#useNow
+<http://www.morelab.deusto.es/ontologies/city4age#useNow> rdf:type owl:ObjectProperty ;
+                                                          rdfs:domain <http://www.morelab.deusto.es/ontologies/city4age#Elderly> ;
+                                                          rdfs:range <http://www.morelab.deusto.es/ontologies/city4age#Object> .
+
+
+#################################################################
+#    Data properties
+#################################################################
+
+###  http://www.morelab.deusto.es/ontologies/city4age#doesActivityFor
+<http://www.morelab.deusto.es/ontologies/city4age#doesActivityFor> rdf:type owl:DatatypeProperty ;
+                                                                   rdfs:domain <http://www.morelab.deusto.es/ontologies/city4age#Elderly> ;
+                                                                   rdfs:range xsd:int .
+
+
+###  http://www.morelab.deusto.es/ontologies/city4age#doesActivitySince
+<http://www.morelab.deusto.es/ontologies/city4age#doesActivitySince> rdf:type owl:DatatypeProperty ;
+                                                                     rdfs:domain <http://www.morelab.deusto.es/ontologies/city4age#Elderly> ;
+                                                                     rdfs:range xsd:dateTime .
+
+
+###  http://www.morelab.deusto.es/ontologies/city4age#hasAddress
+<http://www.morelab.deusto.es/ontologies/city4age#hasAddress> rdf:type owl:DatatypeProperty ;
+                                                              rdfs:domain <http://www.morelab.deusto.es/ontologies/city4age#Elderly> ;
+                                                              rdfs:range xsd:string .
+
+
+###  http://www.morelab.deusto.es/ontologies/city4age#hasAge
+<http://www.morelab.deusto.es/ontologies/city4age#hasAge> rdf:type owl:DatatypeProperty ;
+                                                          rdfs:domain <http://www.morelab.deusto.es/ontologies/city4age#Elderly> ;
+                                                          rdfs:range xsd:int .
+
+
+###  http://www.morelab.deusto.es/ontologies/city4age#hasCauseFall
+<http://www.morelab.deusto.es/ontologies/city4age#hasCauseFall> rdf:type owl:DatatypeProperty ;
+                                                                rdfs:domain <http://www.morelab.deusto.es/ontologies/city4age#Fall> ;
+                                                                rdfs:range xsd:string .
+
+
+###  http://www.morelab.deusto.es/ontologies/city4age#hasCauseHospitalisation
+<http://www.morelab.deusto.es/ontologies/city4age#hasCauseHospitalisation> rdf:type owl:DatatypeProperty ;
+                                                                           rdfs:domain <http://www.morelab.deusto.es/ontologies/city4age#Hospitalization> ;
+                                                                           rdfs:range xsd:string .
+
+
+###  http://www.morelab.deusto.es/ontologies/city4age#hasCauseSurgery
+<http://www.morelab.deusto.es/ontologies/city4age#hasCauseSurgery> rdf:type owl:DatatypeProperty ;
+                                                                   rdfs:domain <http://www.morelab.deusto.es/ontologies/city4age#Surgery> ;
+                                                                   rdfs:range xsd:string .
+
+
+###  http://www.morelab.deusto.es/ontologies/city4age#hasDateFall
+<http://www.morelab.deusto.es/ontologies/city4age#hasDateFall> rdf:type owl:DatatypeProperty ;
+                                                               rdfs:domain <http://www.morelab.deusto.es/ontologies/city4age#Fall> ;
+                                                               rdfs:range xsd:dateTime .
+
+
+###  http://www.morelab.deusto.es/ontologies/city4age#hasDateHospitalisation
+<http://www.morelab.deusto.es/ontologies/city4age#hasDateHospitalisation> rdf:type owl:DatatypeProperty ;
+                                                                          rdfs:domain <http://www.morelab.deusto.es/ontologies/city4age#Hospitalization> ;
+                                                                          rdfs:range xsd:dateTime .
+
+
+###  http://www.morelab.deusto.es/ontologies/city4age#hasDateSurgery
+<http://www.morelab.deusto.es/ontologies/city4age#hasDateSurgery> rdf:type owl:DatatypeProperty ;
+                                                                  rdfs:domain <http://www.morelab.deusto.es/ontologies/city4age#Surgery> ;
+                                                                  rdfs:range xsd:dateTime .
+
+
+###  http://www.morelab.deusto.es/ontologies/city4age#hasDuration
+<http://www.morelab.deusto.es/ontologies/city4age#hasDuration> rdf:type owl:DatatypeProperty ;
+                                                               rdfs:domain <http://www.morelab.deusto.es/ontologies/city4age#Habit> ;
+                                                               rdfs:range xsd:time .
+
+
+###  http://www.morelab.deusto.es/ontologies/city4age#hasFrequency
+<http://www.morelab.deusto.es/ontologies/city4age#hasFrequency> rdf:type owl:DatatypeProperty ;
+                                                                rdfs:domain <http://www.morelab.deusto.es/ontologies/city4age#Habit> ;
+                                                                rdfs:range [ rdf:type rdfs:Datatype ;
+                                                                             owl:oneOf [ rdf:type rdf:List ;
+                                                                                         rdf:first "Daily"^^xsd:string ;
+                                                                                         rdf:rest [ rdf:type rdf:List ;
+                                                                                                    rdf:first "Hourly"^^xsd:string ;
+                                                                                                    rdf:rest [ rdf:type rdf:List ;
+                                                                                                               rdf:first "Monthly"^^xsd:string ;
+                                                                                                               rdf:rest [ rdf:type rdf:List ;
+                                                                                                                          rdf:first "Weekly"^^xsd:string ;
+                                                                                                                          rdf:rest [ rdf:type rdf:List ;
+                                                                                                                                     rdf:first "Yearly"^^xsd:string ;
+                                                                                                                                     rdf:rest rdf:nil
+                                                                                                                                   ]
+                                                                                                                        ]
+                                                                                                             ]
+                                                                                                  ]
+                                                                                       ]
+                                                                           ] .
+
+
+###  http://www.morelab.deusto.es/ontologies/city4age#hasHeight
+<http://www.morelab.deusto.es/ontologies/city4age#hasHeight> rdf:type owl:DatatypeProperty ;
+                                                             rdfs:domain <http://www.morelab.deusto.es/ontologies/city4age#Elderly> ,
+                                                                         <http://www.morelab.deusto.es/ontologies/city4age#Profile> ;
+                                                             rdfs:range xsd:int .
+
+
+###  http://www.morelab.deusto.es/ontologies/city4age#hasID
+<http://www.morelab.deusto.es/ontologies/city4age#hasID> rdf:type owl:DatatypeProperty ;
+                                                         rdfs:domain <http://www.morelab.deusto.es/ontologies/city4age#Elderly> ;
+                                                         rdfs:range xsd:int .
+
+
+###  http://www.morelab.deusto.es/ontologies/city4age#hasLastUpdate
+<http://www.morelab.deusto.es/ontologies/city4age#hasLastUpdate> rdf:type owl:DatatypeProperty ;
+                                                                 rdfs:domain <http://www.morelab.deusto.es/ontologies/city4age#Sensor> ;
+                                                                 rdfs:range xsd:boolean .
+
+
+###  http://www.morelab.deusto.es/ontologies/city4age#hasName
+<http://www.morelab.deusto.es/ontologies/city4age#hasName> rdf:type owl:DatatypeProperty ;
+                                                           rdfs:domain <http://www.morelab.deusto.es/ontologies/city4age#Elderly> ;
+                                                           rdfs:range xsd:string .
+
+
+###  http://www.morelab.deusto.es/ontologies/city4age#hasPhoneNumber
+<http://www.morelab.deusto.es/ontologies/city4age#hasPhoneNumber> rdf:type owl:DatatypeProperty ;
+                                                                  rdfs:domain <http://www.morelab.deusto.es/ontologies/city4age#Elderly> ;
+                                                                  rdfs:range xsd:int .
+
+
+###  http://www.morelab.deusto.es/ontologies/city4age#hasTime
+<http://www.morelab.deusto.es/ontologies/city4age#hasTime> rdf:type owl:DatatypeProperty ;
+                                                           rdfs:domain <http://www.morelab.deusto.es/ontologies/city4age#Activity> ,
+                                                                       <http://www.morelab.deusto.es/ontologies/city4age#ExecutedAction> ,
+                                                                       <http://www.morelab.deusto.es/ontologies/city4age#Habit> ,
+                                                                       <http://www.morelab.deusto.es/ontologies/city4age#Profile> ;
+                                                           rdfs:range xsd:dateTime .
+
+
+###  http://www.morelab.deusto.es/ontologies/city4age#hasWeight
+<http://www.morelab.deusto.es/ontologies/city4age#hasWeight> rdf:type owl:DatatypeProperty ;
+                                                             rdfs:domain <http://www.morelab.deusto.es/ontologies/city4age#Elderly> ,
+                                                                         <http://www.morelab.deusto.es/ontologies/city4age#Profile> ;
+                                                             rdfs:range xsd:int .
+
+
+###  http://www.morelab.deusto.es/ontologies/city4age#inEnvironmentFor
+<http://www.morelab.deusto.es/ontologies/city4age#inEnvironmentFor> rdf:type owl:DatatypeProperty ;
+                                                                    rdfs:domain <http://www.morelab.deusto.es/ontologies/city4age#Elderly> ;
+                                                                    rdfs:range xsd:int .
+
+
+###  http://www.morelab.deusto.es/ontologies/city4age#inEnvironmentSince
+<http://www.morelab.deusto.es/ontologies/city4age#inEnvironmentSince> rdf:type owl:DatatypeProperty ;
+                                                                      rdfs:domain <http://www.morelab.deusto.es/ontologies/city4age#Elderly> ;
+                                                                      rdfs:range xsd:dateTime .
+
+
+###  http://www.morelab.deusto.es/ontologies/city4age#indicateLocation
+<http://www.morelab.deusto.es/ontologies/city4age#indicateLocation> rdf:type owl:DatatypeProperty ;
+                                                                    rdfs:domain <http://www.morelab.deusto.es/ontologies/city4age#Sensor> ;
+                                                                    rdfs:range xsd:boolean .
+
+
+###  http://www.morelab.deusto.es/ontologies/city4age#indicateUse
+<http://www.morelab.deusto.es/ontologies/city4age#indicateUse> rdf:type owl:DatatypeProperty ;
+                                                               rdfs:domain <http://www.morelab.deusto.es/ontologies/city4age#Sensor> ;
+                                                               rdfs:range xsd:boolean .
+
+
+###  http://www.morelab.deusto.es/ontologies/city4age#isCaregiver
+<http://www.morelab.deusto.es/ontologies/city4age#isCaregiver> rdf:type owl:DatatypeProperty ;
+                                                               rdfs:domain <http://www.morelab.deusto.es/ontologies/city4age#Elderly> ;
+                                                               rdfs:range xsd:boolean .
+
+
+###  http://www.morelab.deusto.es/ontologies/city4age#isPartOfTheDay
+<http://www.morelab.deusto.es/ontologies/city4age#isPartOfTheDay> rdf:type owl:DatatypeProperty ;
+                                                                  rdfs:domain <http://www.morelab.deusto.es/ontologies/city4age#ExecutedAction> ;
+                                                                  rdfs:range [ rdf:type rdfs:Datatype ;
+                                                                               owl:oneOf [ rdf:type rdf:List ;
+                                                                                           rdf:first "EarlyAfternoon"^^xsd:string ;
+                                                                                           rdf:rest [ rdf:type rdf:List ;
+                                                                                                      rdf:first "EarlyEvening"^^xsd:string ;
+                                                                                                      rdf:rest [ rdf:type rdf:List ;
+                                                                                                                 rdf:first "EarlyMorning"^^xsd:string ;
+                                                                                                                 rdf:rest [ rdf:type rdf:List ;
+                                                                                                                            rdf:first "LateAfternoon"^^xsd:string ;
+                                                                                                                            rdf:rest [ rdf:type rdf:List ;
+                                                                                                                                       rdf:first "LateEvening"^^xsd:string ;
+                                                                                                                                       rdf:rest [ rdf:type rdf:List ;
+                                                                                                                                                  rdf:first "LateMorning"^^xsd:string ;
+                                                                                                                                                  rdf:rest [ rdf:type rdf:List ;
+                                                                                                                                                             rdf:first "Night"^^xsd:string ;
+                                                                                                                                                             rdf:rest rdf:nil
+                                                                                                                                                           ]
+                                                                                                                                                ]
+                                                                                                                                     ]
+                                                                                                                          ]
+                                                                                                               ]
+                                                                                                    ]
+                                                                                         ]
+                                                                             ] .
+
+
+###  http://www.morelab.deusto.es/ontologies/city4age#isPatient
+<http://www.morelab.deusto.es/ontologies/city4age#isPatient> rdf:type owl:DatatypeProperty ;
+                                                             rdfs:domain <http://www.morelab.deusto.es/ontologies/city4age#Elderly> ;
+                                                             rdfs:range xsd:boolean .
+
+
+###  http://www.morelab.deusto.es/ontologies/city4age#lastUsed
+<http://www.morelab.deusto.es/ontologies/city4age#lastUsed> rdf:type owl:DatatypeProperty ;
+                                                            rdfs:domain <http://www.morelab.deusto.es/ontologies/city4age#Object> ;
+                                                            rdfs:range xsd:dateTime .
+
+
+###  http://www.morelab.deusto.es/ontologies/city4age#notUsedFor
+<http://www.morelab.deusto.es/ontologies/city4age#notUsedFor> rdf:type owl:DatatypeProperty ;
+                                                              rdfs:domain <http://www.morelab.deusto.es/ontologies/city4age#Object> ;
+                                                              rdfs:range xsd:int .
+
+
+#################################################################
+#    Classes
+#################################################################
+
+###  http://dbpedia.org/ontology/Activity
+<http://dbpedia.org/ontology/Activity> rdf:type owl:Class .
+
+
+###  http://dbpedia.org/ontology/Place
+<http://dbpedia.org/ontology/Place> rdf:type owl:Class .
+
+
+###  http://geovocab.org/spatial#Feature
+<http://geovocab.org/spatial#Feature> rdf:type owl:Class .
+
+
+###  http://health-lifesci.schema.org/LocalBusiness
+<http://health-lifesci.schema.org/LocalBusiness> rdf:type owl:Class .
+
+
+###  http://health-lifesci.schema.org/MedicalBusiness
+<http://health-lifesci.schema.org/MedicalBusiness> rdf:type owl:Class .
+
+
+###  http://health-lifesci.schema.org/MedicalCondition
+<http://health-lifesci.schema.org/MedicalCondition> rdf:type owl:Class .
+
+
+###  http://health-lifesci.schema.org/Patient
+<http://health-lifesci.schema.org/Patient> rdf:type owl:Class .
+
+
+###  http://health-lifesci.schema.org/Person
+<http://health-lifesci.schema.org/Person> rdf:type owl:Class .
+
+
+###  http://health-lifesci.schema.org/Pharmacy
+<http://health-lifesci.schema.org/Pharmacy> rdf:type owl:Class ;
+                                            owl:equivalentClass <http://www.morelab.deusto.es/ontologies/city4age#Pharmacy> .
+
+
+###  http://schema.org/Patient
+<http://schema.org/Patient> rdf:type owl:Class .
+
+
+###  http://www.morelab.deusto.es/ontologies/city4age#ADLChangeingBehaviour
+<http://www.morelab.deusto.es/ontologies/city4age#ADLChangeingBehaviour> rdf:type owl:Class ;
+                                                                         rdfs:subClassOf <http://www.morelab.deusto.es/ontologies/city4age#ChangeingBehaviour> .
+
+
+###  http://www.morelab.deusto.es/ontologies/city4age#ADLIntervention
+<http://www.morelab.deusto.es/ontologies/city4age#ADLIntervention> rdf:type owl:Class ;
+                                                                   rdfs:subClassOf <http://www.morelab.deusto.es/ontologies/city4age#InterventionBehaviour> .
+
+
+###  http://www.morelab.deusto.es/ontologies/city4age#Action
+<http://www.morelab.deusto.es/ontologies/city4age#Action> rdf:type owl:Class ;
+                                                          rdfs:subClassOf <http://www.morelab.deusto.es/ontologies/city4age#NonVirtual> .
+
+
+###  http://www.morelab.deusto.es/ontologies/city4age#Activity
+<http://www.morelab.deusto.es/ontologies/city4age#Activity> rdf:type owl:Class ;
+                                                            rdfs:subClassOf <http://dbpedia.org/ontology/Activity> ,
+                                                                            <http://www.morelab.deusto.es/ontologies/city4age#NonVirtual> .
+
+
+###  http://www.morelab.deusto.es/ontologies/city4age#Anteroom
+<http://www.morelab.deusto.es/ontologies/city4age#Anteroom> rdf:type owl:Class ;
+                                                            rdfs:subClassOf <http://www.morelab.deusto.es/ontologies/city4age#Room> .
+
+
+###  http://www.morelab.deusto.es/ontologies/city4age#Appliance
+<http://www.morelab.deusto.es/ontologies/city4age#Appliance> rdf:type owl:Class ;
+                                                             rdfs:subClassOf <http://www.morelab.deusto.es/ontologies/city4age#Object> .
+
+
+###  http://www.morelab.deusto.es/ontologies/city4age#Awake
+<http://www.morelab.deusto.es/ontologies/city4age#Awake> rdf:type owl:Class ;
+                                                         rdfs:subClassOf <http://www.morelab.deusto.es/ontologies/city4age#InBed> .
+
+
+###  http://www.morelab.deusto.es/ontologies/city4age#Bathroom
+<http://www.morelab.deusto.es/ontologies/city4age#Bathroom> rdf:type owl:Class ;
+                                                            rdfs:subClassOf <http://www.morelab.deusto.es/ontologies/city4age#Room> .
+
+
+###  http://www.morelab.deusto.es/ontologies/city4age#Bed
+<http://www.morelab.deusto.es/ontologies/city4age#Bed> rdf:type owl:Class ;
+                                                       rdfs:subClassOf <http://www.morelab.deusto.es/ontologies/city4age#Furniture> .
+
+
+###  http://www.morelab.deusto.es/ontologies/city4age#Bedroom
+<http://www.morelab.deusto.es/ontologies/city4age#Bedroom> rdf:type owl:Class ;
+                                                           rdfs:subClassOf <http://www.morelab.deusto.es/ontologies/city4age#Room> .
+
+
+###  http://www.morelab.deusto.es/ontologies/city4age#Behaviour
+<http://www.morelab.deusto.es/ontologies/city4age#Behaviour> rdf:type owl:Class ;
+                                                             rdfs:subClassOf <http://www.morelab.deusto.es/ontologies/city4age#Virtual> .
+
+
+###  http://www.morelab.deusto.es/ontologies/city4age#Being
+<http://www.morelab.deusto.es/ontologies/city4age#Being> rdf:type owl:Class .
+
+
+###  http://www.morelab.deusto.es/ontologies/city4age#Building
+<http://www.morelab.deusto.es/ontologies/city4age#Building> rdf:type owl:Class ;
+                                                            rdfs:subClassOf <http://www.morelab.deusto.es/ontologies/city4age#CityZone> .
+
+
+###  http://www.morelab.deusto.es/ontologies/city4age#Bus
+<http://www.morelab.deusto.es/ontologies/city4age#Bus> rdf:type owl:Class ;
+                                                       rdfs:subClassOf <http://www.morelab.deusto.es/ontologies/city4age#PublicTransportationMean> .
+
+
+###  http://www.morelab.deusto.es/ontologies/city4age#Car
+<http://www.morelab.deusto.es/ontologies/city4age#Car> rdf:type owl:Class ;
+                                                       rdfs:subClassOf <http://www.morelab.deusto.es/ontologies/city4age#PrivateTransportationMean> .
+
+
+###  http://www.morelab.deusto.es/ontologies/city4age#Chair
+<http://www.morelab.deusto.es/ontologies/city4age#Chair> rdf:type owl:Class ;
+                                                         rdfs:subClassOf <http://www.morelab.deusto.es/ontologies/city4age#Furniture> .
+
+
+###  http://www.morelab.deusto.es/ontologies/city4age#ChangeingBehaviour
+<http://www.morelab.deusto.es/ontologies/city4age#ChangeingBehaviour> rdf:type owl:Class ;
+                                                                      rdfs:subClassOf <http://www.morelab.deusto.es/ontologies/city4age#Behaviour> .
+
+
+###  http://www.morelab.deusto.es/ontologies/city4age#Cinema
+<http://www.morelab.deusto.es/ontologies/city4age#Cinema> rdf:type owl:Class ;
+                                                          rdfs:subClassOf <http://www.morelab.deusto.es/ontologies/city4age#Building> ,
+                                                                          <http://www.morelab.deusto.es/ontologies/city4age#CulturalPlace> .
+
+
+###  http://www.morelab.deusto.es/ontologies/city4age#CityZone
+<http://www.morelab.deusto.es/ontologies/city4age#CityZone> rdf:type owl:Class ;
+                                                            rdfs:subClassOf <http://www.morelab.deusto.es/ontologies/city4age#Environment> .
+
+
+###  http://www.morelab.deusto.es/ontologies/city4age#ClimbingStairs
+<http://www.morelab.deusto.es/ontologies/city4age#ClimbingStairs> rdf:type owl:Class ;
+                                                                  rdfs:subClassOf <http://www.morelab.deusto.es/ontologies/city4age#ElderlyState> .
+
+
+###  http://www.morelab.deusto.es/ontologies/city4age#CognitiveChangeingBehaviour
+<http://www.morelab.deusto.es/ontologies/city4age#CognitiveChangeingBehaviour> rdf:type owl:Class ;
+                                                                               rdfs:subClassOf <http://www.morelab.deusto.es/ontologies/city4age#ChangeingBehaviour> .
+
+
+###  http://www.morelab.deusto.es/ontologies/city4age#CognitiveIntervention
+<http://www.morelab.deusto.es/ontologies/city4age#CognitiveIntervention> rdf:type owl:Class ;
+                                                                         rdfs:subClassOf <http://www.morelab.deusto.es/ontologies/city4age#InterventionBehaviour> .
+
+
+###  http://www.morelab.deusto.es/ontologies/city4age#Communication
+<http://www.morelab.deusto.es/ontologies/city4age#Communication> rdf:type owl:Class ;
+                                                                 rdfs:subClassOf <http://www.morelab.deusto.es/ontologies/city4age#PersonalProfile> .
+
+
+###  http://www.morelab.deusto.es/ontologies/city4age#Cooker
+<http://www.morelab.deusto.es/ontologies/city4age#Cooker> rdf:type owl:Class ;
+                                                          rdfs:subClassOf <http://www.morelab.deusto.es/ontologies/city4age#KitchenAppliance> .
+
+
+###  http://www.morelab.deusto.es/ontologies/city4age#Cultural
+<http://www.morelab.deusto.es/ontologies/city4age#Cultural> rdf:type owl:Class ;
+                                                            rdfs:subClassOf <http://www.morelab.deusto.es/ontologies/city4age#PreferenceTopic> .
+
+
+###  http://www.morelab.deusto.es/ontologies/city4age#CulturalAppliance
+<http://www.morelab.deusto.es/ontologies/city4age#CulturalAppliance> rdf:type owl:Class ;
+                                                                     rdfs:subClassOf <http://www.morelab.deusto.es/ontologies/city4age#Appliance> .
+
+
+###  http://www.morelab.deusto.es/ontologies/city4age#CulturalPlace
+<http://www.morelab.deusto.es/ontologies/city4age#CulturalPlace> rdf:type owl:Class ;
+                                                                 rdfs:subClassOf <http://www.morelab.deusto.es/ontologies/city4age#Environment> .
+
+
+###  http://www.morelab.deusto.es/ontologies/city4age#Cupboard
+<http://www.morelab.deusto.es/ontologies/city4age#Cupboard> rdf:type owl:Class ;
+                                                            rdfs:subClassOf <http://www.morelab.deusto.es/ontologies/city4age#KitchenFurniture> .
+
+
+###  http://www.morelab.deusto.es/ontologies/city4age#DeepSleep
+<http://www.morelab.deusto.es/ontologies/city4age#DeepSleep> rdf:type owl:Class ;
+                                                             rdfs:subClassOf <http://www.morelab.deusto.es/ontologies/city4age#Sleeping> .
+
+
+###  http://www.morelab.deusto.es/ontologies/city4age#Desk
+<http://www.morelab.deusto.es/ontologies/city4age#Desk> rdf:type owl:Class ;
+                                                        rdfs:subClassOf <http://www.morelab.deusto.es/ontologies/city4age#Furniture> .
+
+
+###  http://www.morelab.deusto.es/ontologies/city4age#Device
+<http://www.morelab.deusto.es/ontologies/city4age#Device> rdf:type owl:Class ;
+                                                          rdfs:subClassOf <http://www.morelab.deusto.es/ontologies/city4age#Object> .
+
+
+###  http://www.morelab.deusto.es/ontologies/city4age#Disease
+<http://www.morelab.deusto.es/ontologies/city4age#Disease> rdf:type owl:Class ;
+                                                           rdfs:subClassOf <http://www.morelab.deusto.es/ontologies/city4age#HealthProfile> .
+
+
+###  http://www.morelab.deusto.es/ontologies/city4age#Door
+<http://www.morelab.deusto.es/ontologies/city4age#Door> rdf:type owl:Class ;
+                                                        rdfs:subClassOf <http://www.morelab.deusto.es/ontologies/city4age#Furniture> .
+
+
+###  http://www.morelab.deusto.es/ontologies/city4age#Dynamic
+<http://www.morelab.deusto.es/ontologies/city4age#Dynamic> rdf:type owl:Class .
+
+
+###  http://www.morelab.deusto.es/ontologies/city4age#EAM
+<http://www.morelab.deusto.es/ontologies/city4age#EAM> rdf:type owl:Class ;
+                                                       rdfs:subClassOf <http://www.morelab.deusto.es/ontologies/city4age#NonVirtual> .
+
+
+###  http://www.morelab.deusto.es/ontologies/city4age#EducationLevel
+<http://www.morelab.deusto.es/ontologies/city4age#EducationLevel> rdf:type owl:Class ;
+                                                                  rdfs:subClassOf <http://www.morelab.deusto.es/ontologies/city4age#PersonalProfile> .
+
+
+###  http://www.morelab.deusto.es/ontologies/city4age#Elderly
+<http://www.morelab.deusto.es/ontologies/city4age#Elderly> rdf:type owl:Class ;
+                                                           rdfs:subClassOf <http://health-lifesci.schema.org/Patient> ,
+                                                                           <http://www.morelab.deusto.es/ontologies/city4age#Physical> ,
+                                                                           <http://www.morelab.deusto.es/ontologies/demlab#Participant> .
+
+
+###  http://www.morelab.deusto.es/ontologies/city4age#ElderlyState
+<http://www.morelab.deusto.es/ontologies/city4age#ElderlyState> rdf:type owl:Class ;
+                                                                rdfs:subClassOf <http://www.morelab.deusto.es/ontologies/city4age#Virtual> .
+
+
+###  http://www.morelab.deusto.es/ontologies/city4age#Employment
+<http://www.morelab.deusto.es/ontologies/city4age#Employment> rdf:type owl:Class ;
+                                                              rdfs:subClassOf <http://www.morelab.deusto.es/ontologies/city4age#PersonalProfile> .
+
+
+###  http://www.morelab.deusto.es/ontologies/city4age#Environment
+<http://www.morelab.deusto.es/ontologies/city4age#Environment> rdf:type owl:Class ;
+                                                               rdfs:subClassOf <http://dbpedia.org/ontology/Place> ,
+                                                                               <http://geovocab.org/spatial#Feature> .
+
+
+###  http://www.morelab.deusto.es/ontologies/city4age#ExecutedAction
+<http://www.morelab.deusto.es/ontologies/city4age#ExecutedAction> rdf:type owl:Class ;
+                                                                  rdfs:subClassOf <http://www.morelab.deusto.es/ontologies/city4age#NonVirtual> .
+
+
+###  http://www.morelab.deusto.es/ontologies/city4age#ExecutedActivity
+<http://www.morelab.deusto.es/ontologies/city4age#ExecutedActivity> rdf:type owl:Class ;
+                                                                    rdfs:subClassOf <http://www.morelab.deusto.es/ontologies/city4age#NonVirtual> .
+
+
+###  http://www.morelab.deusto.es/ontologies/city4age#Fall
+<http://www.morelab.deusto.es/ontologies/city4age#Fall> rdf:type owl:Class ;
+                                                        rdfs:subClassOf <http://www.morelab.deusto.es/ontologies/city4age#HealthProfile> .
+
+
+###  http://www.morelab.deusto.es/ontologies/city4age#FamilyMemberHome
+<http://www.morelab.deusto.es/ontologies/city4age#FamilyMemberHome> rdf:type owl:Class ;
+                                                                    rdfs:subClassOf <http://www.morelab.deusto.es/ontologies/city4age#Home> ,
+                                                                                    <http://www.morelab.deusto.es/ontologies/city4age#SocializingPlace> .
+
+
+###  http://www.morelab.deusto.es/ontologies/city4age#FoodCourt
+<http://www.morelab.deusto.es/ontologies/city4age#FoodCourt> rdf:type owl:Class ;
+                                                             rdfs:subClassOf <http://www.morelab.deusto.es/ontologies/city4age#Shop> ,
+                                                                             <http://www.morelab.deusto.es/ontologies/city4age#SocializingPlace> .
+
+
+###  http://www.morelab.deusto.es/ontologies/city4age#Fridge
+<http://www.morelab.deusto.es/ontologies/city4age#Fridge> rdf:type owl:Class ;
+                                                          rdfs:subClassOf <http://www.morelab.deusto.es/ontologies/city4age#KitchenFurniture> .
+
+
+###  http://www.morelab.deusto.es/ontologies/city4age#FriendHome
+<http://www.morelab.deusto.es/ontologies/city4age#FriendHome> rdf:type owl:Class ;
+                                                              rdfs:subClassOf <http://www.morelab.deusto.es/ontologies/city4age#Home> ,
+                                                                              <http://www.morelab.deusto.es/ontologies/city4age#SocializingPlace> .
+
+
+###  http://www.morelab.deusto.es/ontologies/city4age#Furniture
+<http://www.morelab.deusto.es/ontologies/city4age#Furniture> rdf:type owl:Class ;
+                                                             rdfs:subClassOf <http://www.morelab.deusto.es/ontologies/city4age#Object> .
+
+
+###  http://www.morelab.deusto.es/ontologies/city4age#GP
+<http://www.morelab.deusto.es/ontologies/city4age#GP> rdf:type owl:Class ;
+                                                      rdfs:subClassOf <http://www.morelab.deusto.es/ontologies/city4age#HealthPlace> .
+
+
+###  http://www.morelab.deusto.es/ontologies/city4age#Gender
+<http://www.morelab.deusto.es/ontologies/city4age#Gender> rdf:type owl:Class ;
+                                                          rdfs:subClassOf <http://www.morelab.deusto.es/ontologies/city4age#PersonalProfile> .
+
+
+###  http://www.morelab.deusto.es/ontologies/city4age#GenericOutdoor
+<http://www.morelab.deusto.es/ontologies/city4age#GenericOutdoor> rdf:type owl:Class ;
+                                                                  rdfs:subClassOf <http://www.morelab.deusto.es/ontologies/city4age#Environment> .
+
+
+###  http://www.morelab.deusto.es/ontologies/city4age#Habit
+<http://www.morelab.deusto.es/ontologies/city4age#Habit> rdf:type owl:Class ;
+                                                         rdfs:subClassOf <http://www.morelab.deusto.es/ontologies/city4age#PersonalProfile> .
+
+
+###  http://www.morelab.deusto.es/ontologies/city4age#HealthPlace
+<http://www.morelab.deusto.es/ontologies/city4age#HealthPlace> rdf:type owl:Class ;
+                                                               rdfs:subClassOf <http://health-lifesci.schema.org/MedicalBusiness> ,
+                                                                               <http://www.morelab.deusto.es/ontologies/city4age#Environment> .
+
+
+###  http://www.morelab.deusto.es/ontologies/city4age#HealthProfile
+<http://www.morelab.deusto.es/ontologies/city4age#HealthProfile> rdf:type owl:Class ;
+                                                                 rdfs:subClassOf <http://www.morelab.deusto.es/ontologies/city4age#Profile> .
+
+
+###  http://www.morelab.deusto.es/ontologies/city4age#Home
+<http://www.morelab.deusto.es/ontologies/city4age#Home> rdf:type owl:Class ;
+                                                        rdfs:subClassOf <http://www.morelab.deusto.es/ontologies/city4age#Environment> .
+
+
+###  http://www.morelab.deusto.es/ontologies/city4age#Hospitalization
+<http://www.morelab.deusto.es/ontologies/city4age#Hospitalization> rdf:type owl:Class ;
+                                                                   rdfs:subClassOf <http://www.morelab.deusto.es/ontologies/city4age#HealthProfile> .
+
+
+###  http://www.morelab.deusto.es/ontologies/city4age#InBed
+<http://www.morelab.deusto.es/ontologies/city4age#InBed> rdf:type owl:Class ;
+                                                         rdfs:subClassOf <http://www.morelab.deusto.es/ontologies/city4age#ElderlyState> .
+
+
+###  http://www.morelab.deusto.es/ontologies/city4age#Indicator
+<http://www.morelab.deusto.es/ontologies/city4age#Indicator> rdf:type owl:Class ;
+                                                             rdfs:subClassOf <http://www.morelab.deusto.es/ontologies/city4age#Virtual> .
+
+
+###  http://www.morelab.deusto.es/ontologies/city4age#InterventionBehaviour
+<http://www.morelab.deusto.es/ontologies/city4age#InterventionBehaviour> rdf:type owl:Class ;
+                                                                         rdfs:subClassOf <http://www.morelab.deusto.es/ontologies/city4age#Virtual> .
+
+
+###  http://www.morelab.deusto.es/ontologies/city4age#Kitchen
+<http://www.morelab.deusto.es/ontologies/city4age#Kitchen> rdf:type owl:Class ;
+                                                           rdfs:subClassOf <http://www.morelab.deusto.es/ontologies/city4age#Room> .
+
+
+###  http://www.morelab.deusto.es/ontologies/city4age#KitchenAppliance
+<http://www.morelab.deusto.es/ontologies/city4age#KitchenAppliance> rdf:type owl:Class ;
+                                                                    rdfs:subClassOf <http://www.morelab.deusto.es/ontologies/city4age#Appliance> .
+
+
+###  http://www.morelab.deusto.es/ontologies/city4age#KitchenFurniture
+<http://www.morelab.deusto.es/ontologies/city4age#KitchenFurniture> rdf:type owl:Class ;
+                                                                    rdfs:subClassOf <http://www.morelab.deusto.es/ontologies/city4age#Furniture> .
+
+
+###  http://www.morelab.deusto.es/ontologies/city4age#Language
+<http://www.morelab.deusto.es/ontologies/city4age#Language> rdf:type owl:Class ;
+                                                            rdfs:subClassOf <http://www.morelab.deusto.es/ontologies/city4age#Communication> .
+
+
+###  http://www.morelab.deusto.es/ontologies/city4age#LaundryAppliance
+<http://www.morelab.deusto.es/ontologies/city4age#LaundryAppliance> rdf:type owl:Class ;
+                                                                    rdfs:subClassOf <http://www.morelab.deusto.es/ontologies/city4age#Appliance> .
+
+
+###  http://www.morelab.deusto.es/ontologies/city4age#Level
+<http://www.morelab.deusto.es/ontologies/city4age#Level> rdf:type owl:Class ;
+                                                         rdfs:subClassOf <http://www.morelab.deusto.es/ontologies/city4age#Virtual> .
+
+
+###  http://www.morelab.deusto.es/ontologies/city4age#LightSleep
+<http://www.morelab.deusto.es/ontologies/city4age#LightSleep> rdf:type owl:Class ;
+                                                              rdfs:subClassOf <http://www.morelab.deusto.es/ontologies/city4age#Sleeping> .
+
+
+###  http://www.morelab.deusto.es/ontologies/city4age#Livingroom
+<http://www.morelab.deusto.es/ontologies/city4age#Livingroom> rdf:type owl:Class ;
+                                                              rdfs:subClassOf <http://www.morelab.deusto.es/ontologies/city4age#Room> .
+
+
+###  http://www.morelab.deusto.es/ontologies/city4age#MCIIndicator
+<http://www.morelab.deusto.es/ontologies/city4age#MCIIndicator> rdf:type owl:Class ;
+                                                                rdfs:subClassOf <http://www.morelab.deusto.es/ontologies/city4age#Indicator> .
+
+
+###  http://www.morelab.deusto.es/ontologies/city4age#MaritalState
+<http://www.morelab.deusto.es/ontologies/city4age#MaritalState> rdf:type owl:Class ;
+                                                                rdfs:subClassOf <http://www.morelab.deusto.es/ontologies/city4age#PersonalProfile> .
+
+
+###  http://www.morelab.deusto.es/ontologies/city4age#Microwave
+<http://www.morelab.deusto.es/ontologies/city4age#Microwave> rdf:type owl:Class ;
+                                                             rdfs:subClassOf <http://www.morelab.deusto.es/ontologies/city4age#Oven> .
+
+
+###  http://www.morelab.deusto.es/ontologies/city4age#MobilityChangeingBehaviour
+<http://www.morelab.deusto.es/ontologies/city4age#MobilityChangeingBehaviour> rdf:type owl:Class ;
+                                                                              rdfs:subClassOf <http://www.morelab.deusto.es/ontologies/city4age#ChangeingBehaviour> .
+
+
+###  http://www.morelab.deusto.es/ontologies/city4age#MobilityIntervention
+<http://www.morelab.deusto.es/ontologies/city4age#MobilityIntervention> rdf:type owl:Class ;
+                                                                        rdfs:subClassOf <http://www.morelab.deusto.es/ontologies/city4age#InterventionBehaviour> .
+
+
+###  http://www.morelab.deusto.es/ontologies/city4age#Museum
+<http://www.morelab.deusto.es/ontologies/city4age#Museum> rdf:type owl:Class ;
+                                                          rdfs:subClassOf <http://www.morelab.deusto.es/ontologies/city4age#Building> ,
+                                                                          <http://www.morelab.deusto.es/ontologies/city4age#CulturalPlace> .
+
+
+###  http://www.morelab.deusto.es/ontologies/city4age#NeighbourHome
+<http://www.morelab.deusto.es/ontologies/city4age#NeighbourHome> rdf:type owl:Class ;
+                                                                 rdfs:subClassOf <http://www.morelab.deusto.es/ontologies/city4age#Home> ,
+                                                                                 <http://www.morelab.deusto.es/ontologies/city4age#SocializingPlace> .
+
+
+###  http://www.morelab.deusto.es/ontologies/city4age#Newsshop
+<http://www.morelab.deusto.es/ontologies/city4age#Newsshop> rdf:type owl:Class ;
+                                                            rdfs:subClassOf <http://www.morelab.deusto.es/ontologies/city4age#CulturalPlace> ,
+                                                                            <http://www.morelab.deusto.es/ontologies/city4age#Shop> .
+
+
+###  http://www.morelab.deusto.es/ontologies/city4age#NonPhysical
+<http://www.morelab.deusto.es/ontologies/city4age#NonPhysical> rdf:type owl:Class ;
+                                                               rdfs:subClassOf <http://www.morelab.deusto.es/ontologies/city4age#Being> .
+
+
+###  http://www.morelab.deusto.es/ontologies/city4age#NonVirtual
+<http://www.morelab.deusto.es/ontologies/city4age#NonVirtual> rdf:type owl:Class ;
+                                                              rdfs:subClassOf <http://www.morelab.deusto.es/ontologies/city4age#Dynamic> .
+
+
+###  http://www.morelab.deusto.es/ontologies/city4age#NormalBehaviour
+<http://www.morelab.deusto.es/ontologies/city4age#NormalBehaviour> rdf:type owl:Class ;
+                                                                   rdfs:subClassOf <http://www.morelab.deusto.es/ontologies/city4age#Behaviour> .
+
+
+###  http://www.morelab.deusto.es/ontologies/city4age#Object
+<http://www.morelab.deusto.es/ontologies/city4age#Object> rdf:type owl:Class ;
+                                                          rdfs:subClassOf owl:Thing .
+
+
+###  http://www.morelab.deusto.es/ontologies/city4age#OrganicProfile
+<http://www.morelab.deusto.es/ontologies/city4age#OrganicProfile> rdf:type owl:Class ;
+                                                                  rdfs:subClassOf <http://www.morelab.deusto.es/ontologies/city4age#Profile> .
+
+
+###  http://www.morelab.deusto.es/ontologies/city4age#OtherSocialPlace
+<http://www.morelab.deusto.es/ontologies/city4age#OtherSocialPlace> rdf:type owl:Class ;
+                                                                    rdfs:subClassOf <http://www.morelab.deusto.es/ontologies/city4age#SocializingPlace> .
+
+
+###  http://www.morelab.deusto.es/ontologies/city4age#Oven
+<http://www.morelab.deusto.es/ontologies/city4age#Oven> rdf:type owl:Class ;
+                                                        rdfs:subClassOf <http://www.morelab.deusto.es/ontologies/city4age#KitchenAppliance> ,
+                                                                        <http://www.morelab.deusto.es/ontologies/city4age#KitchenFurniture> .
+
+
+###  http://www.morelab.deusto.es/ontologies/city4age#PaidVisit
+<http://www.morelab.deusto.es/ontologies/city4age#PaidVisit> rdf:type owl:Class ;
+                                                             rdfs:subClassOf <http://www.morelab.deusto.es/ontologies/city4age#Visiting> .
+
+
+###  http://www.morelab.deusto.es/ontologies/city4age#Park
+<http://www.morelab.deusto.es/ontologies/city4age#Park> rdf:type owl:Class ;
+                                                        rdfs:subClassOf <http://www.morelab.deusto.es/ontologies/city4age#CityZone> .
+
+
+###  http://www.morelab.deusto.es/ontologies/city4age#PersonalProfile
+<http://www.morelab.deusto.es/ontologies/city4age#PersonalProfile> rdf:type owl:Class ;
+                                                                   rdfs:subClassOf <http://health-lifesci.schema.org/Person> ,
+                                                                                   <http://www.morelab.deusto.es/ontologies/city4age#Profile> .
+
+
+###  http://www.morelab.deusto.es/ontologies/city4age#Pharmacy
+<http://www.morelab.deusto.es/ontologies/city4age#Pharmacy> rdf:type owl:Class ;
+                                                            rdfs:subClassOf <http://www.morelab.deusto.es/ontologies/city4age#HealthPlace> ,
+                                                                            <http://www.morelab.deusto.es/ontologies/city4age#Shop> .
+
+
+###  http://www.morelab.deusto.es/ontologies/city4age#Physical
+<http://www.morelab.deusto.es/ontologies/city4age#Physical> rdf:type owl:Class ;
+                                                            rdfs:subClassOf <http://www.morelab.deusto.es/ontologies/city4age#Being> .
+
+
+###  http://www.morelab.deusto.es/ontologies/city4age#PhysicalCapability
+<http://www.morelab.deusto.es/ontologies/city4age#PhysicalCapability> rdf:type owl:Class ;
+                                                                      rdfs:subClassOf <http://www.morelab.deusto.es/ontologies/city4age#OrganicProfile> .
+
+
+###  http://www.morelab.deusto.es/ontologies/city4age#Pilot
+<http://www.morelab.deusto.es/ontologies/city4age#Pilot> rdf:type owl:Class ;
+                                                         rdfs:subClassOf <http://dbpedia.org/ontology/Place> ,
+                                                                         <http://www.w3.org/ns/ssn/Deployment> .
+
+
+###  http://www.morelab.deusto.es/ontologies/city4age#Preference
+<http://www.morelab.deusto.es/ontologies/city4age#Preference> rdf:type owl:Class ;
+                                                              rdfs:subClassOf <http://www.morelab.deusto.es/ontologies/city4age#PersonalProfile> .
+
+
+###  http://www.morelab.deusto.es/ontologies/city4age#PreferenceTopic
+<http://www.morelab.deusto.es/ontologies/city4age#PreferenceTopic> rdf:type owl:Class ;
+                                                                   rdfs:subClassOf <http://www.morelab.deusto.es/ontologies/city4age#Preference> .
+
+
+###  http://www.morelab.deusto.es/ontologies/city4age#PrivateTransportationMean
+<http://www.morelab.deusto.es/ontologies/city4age#PrivateTransportationMean> rdf:type owl:Class ;
+                                                                             rdfs:subClassOf <http://www.morelab.deusto.es/ontologies/city4age#TransportationMean> .
+
+
+###  http://www.morelab.deusto.es/ontologies/city4age#Profile
+<http://www.morelab.deusto.es/ontologies/city4age#Profile> rdf:type owl:Class ;
+                                                           rdfs:subClassOf <http://health-lifesci.schema.org/MedicalCondition> ,
+                                                                           <http://www.morelab.deusto.es/ontologies/city4age#NonPhysical> ,
+                                                                           <http://www.morelab.deusto.es/ontologies/demlab#ClinicalRecord> .
+
+
+###  http://www.morelab.deusto.es/ontologies/city4age#PublicPark
+<http://www.morelab.deusto.es/ontologies/city4age#PublicPark> rdf:type owl:Class ;
+                                                              rdfs:subClassOf <http://www.morelab.deusto.es/ontologies/city4age#Park> ,
+                                                                              <http://www.morelab.deusto.es/ontologies/city4age#SocializingPlace> .
+
+
+###  http://www.morelab.deusto.es/ontologies/city4age#PublicTransportationMean
+<http://www.morelab.deusto.es/ontologies/city4age#PublicTransportationMean> rdf:type owl:Class ;
+                                                                            rdfs:subClassOf <http://www.morelab.deusto.es/ontologies/city4age#TransportationMean> .
+
+
+###  http://www.morelab.deusto.es/ontologies/city4age#ReceivedVisit
+<http://www.morelab.deusto.es/ontologies/city4age#ReceivedVisit> rdf:type owl:Class ;
+                                                                 rdfs:subClassOf <http://www.morelab.deusto.es/ontologies/city4age#Visiting> .
+
+
+###  http://www.morelab.deusto.es/ontologies/city4age#Restaurant
+<http://www.morelab.deusto.es/ontologies/city4age#Restaurant> rdf:type owl:Class ;
+                                                              rdfs:subClassOf <http://www.morelab.deusto.es/ontologies/city4age#Shop> ,
+                                                                              <http://www.morelab.deusto.es/ontologies/city4age#SocializingPlace> .
+
+
+###  http://www.morelab.deusto.es/ontologies/city4age#Restroom
+<http://www.morelab.deusto.es/ontologies/city4age#Restroom> rdf:type owl:Class ;
+                                                            rdfs:subClassOf <http://www.morelab.deusto.es/ontologies/city4age#Room> .
+
+
+###  http://www.morelab.deusto.es/ontologies/city4age#Room
+<http://www.morelab.deusto.es/ontologies/city4age#Room> rdf:type owl:Class ;
+                                                        rdfs:subClassOf <http://www.morelab.deusto.es/ontologies/city4age#Environment> .
+
+
+###  http://www.morelab.deusto.es/ontologies/city4age#SeniorCenter
+<http://www.morelab.deusto.es/ontologies/city4age#SeniorCenter> rdf:type owl:Class ;
+                                                                rdfs:subClassOf <http://www.morelab.deusto.es/ontologies/city4age#SocializingPlace> .
+
+
+###  http://www.morelab.deusto.es/ontologies/city4age#Sensor
+<http://www.morelab.deusto.es/ontologies/city4age#Sensor> rdf:type owl:Class ;
+                                                          rdfs:subClassOf <http://www.morelab.deusto.es/ontologies/city4age#Object> .
+
+
+###  http://www.morelab.deusto.es/ontologies/city4age#SensorState
+<http://www.morelab.deusto.es/ontologies/city4age#SensorState> rdf:type owl:Class ;
+                                                               rdfs:subClassOf <http://www.morelab.deusto.es/ontologies/city4age#Virtual> .
+
+
+###  http://www.morelab.deusto.es/ontologies/city4age#SensorType
+<http://www.morelab.deusto.es/ontologies/city4age#SensorType> rdf:type owl:Class ;
+                                                              rdfs:subClassOf <http://www.morelab.deusto.es/ontologies/city4age#Virtual> .
+
+
+###  http://www.morelab.deusto.es/ontologies/city4age#SensorialCapability
+<http://www.morelab.deusto.es/ontologies/city4age#SensorialCapability> rdf:type owl:Class ;
+                                                                       rdfs:subClassOf <http://www.morelab.deusto.es/ontologies/city4age#OrganicProfile> .
+
+
+###  http://www.morelab.deusto.es/ontologies/city4age#Service
+<http://www.morelab.deusto.es/ontologies/city4age#Service> rdf:type owl:Class ;
+                                                           rdfs:subClassOf <http://www.morelab.deusto.es/ontologies/city4age#Virtual> .
+
+
+###  http://www.morelab.deusto.es/ontologies/city4age#Shop
+<http://www.morelab.deusto.es/ontologies/city4age#Shop> rdf:type owl:Class ;
+                                                        rdfs:subClassOf <http://health-lifesci.schema.org/LocalBusiness> ,
+                                                                        <http://www.morelab.deusto.es/ontologies/city4age#Environment> .
+
+
+###  http://www.morelab.deusto.es/ontologies/city4age#Sleeping
+<http://www.morelab.deusto.es/ontologies/city4age#Sleeping> rdf:type owl:Class ;
+                                                            rdfs:subClassOf <http://www.morelab.deusto.es/ontologies/city4age#InBed> .
+
+
+###  http://www.morelab.deusto.es/ontologies/city4age#SocialChangeingBehaviour
+<http://www.morelab.deusto.es/ontologies/city4age#SocialChangeingBehaviour> rdf:type owl:Class ;
+                                                                            rdfs:subClassOf <http://www.morelab.deusto.es/ontologies/city4age#ChangeingBehaviour> .
+
+
+###  http://www.morelab.deusto.es/ontologies/city4age#SocialIntervention
+<http://www.morelab.deusto.es/ontologies/city4age#SocialIntervention> rdf:type owl:Class ;
+                                                                      rdfs:subClassOf <http://www.morelab.deusto.es/ontologies/city4age#InterventionBehaviour> .
+
+
+###  http://www.morelab.deusto.es/ontologies/city4age#SocialState
+<http://www.morelab.deusto.es/ontologies/city4age#SocialState> rdf:type owl:Class ;
+                                                               rdfs:subClassOf <http://www.morelab.deusto.es/ontologies/city4age#PersonalProfile> .
+
+
+###  http://www.morelab.deusto.es/ontologies/city4age#SocializingPlace
+<http://www.morelab.deusto.es/ontologies/city4age#SocializingPlace> rdf:type owl:Class ;
+                                                                    rdfs:subClassOf <http://www.morelab.deusto.es/ontologies/city4age#Environment> .
+
+
+###  http://www.morelab.deusto.es/ontologies/city4age#StairsUp
+<http://www.morelab.deusto.es/ontologies/city4age#StairsUp> rdf:type owl:Class ;
+                                                            rdfs:subClassOf <http://www.morelab.deusto.es/ontologies/city4age#ClimbingStairs> .
+
+
+###  http://www.morelab.deusto.es/ontologies/city4age#Still
+<http://www.morelab.deusto.es/ontologies/city4age#Still> rdf:type owl:Class ;
+                                                         rdfs:subClassOf <http://www.morelab.deusto.es/ontologies/city4age#ElderlyState> .
+
+
+###  http://www.morelab.deusto.es/ontologies/city4age#Street
+<http://www.morelab.deusto.es/ontologies/city4age#Street> rdf:type owl:Class ;
+                                                          rdfs:subClassOf <http://www.morelab.deusto.es/ontologies/city4age#CityZone> .
+
+
+###  http://www.morelab.deusto.es/ontologies/city4age#Supermarket
+<http://www.morelab.deusto.es/ontologies/city4age#Supermarket> rdf:type owl:Class ;
+                                                               rdfs:subClassOf <http://www.morelab.deusto.es/ontologies/city4age#Shop> .
+
+
+###  http://www.morelab.deusto.es/ontologies/city4age#Surgery
+<http://www.morelab.deusto.es/ontologies/city4age#Surgery> rdf:type owl:Class ;
+                                                           rdfs:subClassOf <http://www.morelab.deusto.es/ontologies/city4age#HealthProfile> .
+
+
+###  http://www.morelab.deusto.es/ontologies/city4age#TVSet
+<http://www.morelab.deusto.es/ontologies/city4age#TVSet> rdf:type owl:Class ;
+                                                         rdfs:subClassOf <http://www.morelab.deusto.es/ontologies/city4age#CulturalAppliance> .
+
+
+###  http://www.morelab.deusto.es/ontologies/city4age#Taxi
+<http://www.morelab.deusto.es/ontologies/city4age#Taxi> rdf:type owl:Class ;
+                                                        rdfs:subClassOf <http://www.morelab.deusto.es/ontologies/city4age#PublicTransportationMean> .
+
+
+###  http://www.morelab.deusto.es/ontologies/city4age#Toilet
+<http://www.morelab.deusto.es/ontologies/city4age#Toilet> rdf:type owl:Class ;
+                                                          rdfs:subClassOf <http://www.morelab.deusto.es/ontologies/city4age#Bathroom> .
+
+
+###  http://www.morelab.deusto.es/ontologies/city4age#Tram
+<http://www.morelab.deusto.es/ontologies/city4age#Tram> rdf:type owl:Class ;
+                                                        rdfs:subClassOf <http://www.morelab.deusto.es/ontologies/city4age#PublicTransportationMean> .
+
+
+###  http://www.morelab.deusto.es/ontologies/city4age#TransportationMean
+<http://www.morelab.deusto.es/ontologies/city4age#TransportationMean> rdf:type owl:Class ;
+                                                                      rdfs:subClassOf <http://www.morelab.deusto.es/ontologies/city4age#CityZone> ,
+                                                                                      <http://www.morelab.deusto.es/ontologies/city4age#Environment> .
+
+
+###  http://www.morelab.deusto.es/ontologies/city4age#Virtual
+<http://www.morelab.deusto.es/ontologies/city4age#Virtual> rdf:type owl:Class ;
+                                                           rdfs:subClassOf <http://www.morelab.deusto.es/ontologies/city4age#Dynamic> .
+
+
+###  http://www.morelab.deusto.es/ontologies/city4age#VisitSocialCentre
+<http://www.morelab.deusto.es/ontologies/city4age#VisitSocialCentre> rdf:type owl:Class ;
+                                                                     rdfs:subClassOf <http://www.morelab.deusto.es/ontologies/city4age#PaidVisit> .
+
+
+###  http://www.morelab.deusto.es/ontologies/city4age#VisitToFamily
+<http://www.morelab.deusto.es/ontologies/city4age#VisitToFamily> rdf:type owl:Class ;
+                                                                 rdfs:subClassOf <http://www.morelab.deusto.es/ontologies/city4age#PaidVisit> .
+
+
+###  http://www.morelab.deusto.es/ontologies/city4age#VisitToFriend
+<http://www.morelab.deusto.es/ontologies/city4age#VisitToFriend> rdf:type owl:Class ;
+                                                                 rdfs:subClassOf <http://www.morelab.deusto.es/ontologies/city4age#PaidVisit> .
+
+
+###  http://www.morelab.deusto.es/ontologies/city4age#VisitToNeighbour
+<http://www.morelab.deusto.es/ontologies/city4age#VisitToNeighbour> rdf:type owl:Class ;
+                                                                    rdfs:subClassOf <http://www.morelab.deusto.es/ontologies/city4age#PaidVisit> .
+
+
+###  http://www.morelab.deusto.es/ontologies/city4age#Visiting
+<http://www.morelab.deusto.es/ontologies/city4age#Visiting> rdf:type owl:Class ;
+                                                            rdfs:subClassOf <http://www.morelab.deusto.es/ontologies/city4age#Action> .
+
+
+###  http://www.morelab.deusto.es/ontologies/city4age#Walking
+<http://www.morelab.deusto.es/ontologies/city4age#Walking> rdf:type owl:Class ;
+                                                           rdfs:subClassOf <http://www.morelab.deusto.es/ontologies/city4age#ElderlyState> .
+
+
+###  http://www.morelab.deusto.es/ontologies/city4age#WashingMachine
+<http://www.morelab.deusto.es/ontologies/city4age#WashingMachine> rdf:type owl:Class ;
+                                                                  rdfs:subClassOf <http://www.morelab.deusto.es/ontologies/city4age#LaundryAppliance> .
+
+
+###  http://www.morelab.deusto.es/ontologies/city4age#Window
+<http://www.morelab.deusto.es/ontologies/city4age#Window> rdf:type owl:Class ;
+                                                          rdfs:subClassOf <http://www.morelab.deusto.es/ontologies/city4age#Furniture> .
+
+
+###  http://www.morelab.deusto.es/ontologies/demlab#ClinicalRecord
+<http://www.morelab.deusto.es/ontologies/demlab#ClinicalRecord> rdf:type owl:Class .
+
+
+###  http://www.morelab.deusto.es/ontologies/demlab#Participant
+<http://www.morelab.deusto.es/ontologies/demlab#Participant> rdf:type owl:Class .
+
+
+###  http://www.w3.org/ns/ssn/Deployment
+<http://www.w3.org/ns/ssn/Deployment> rdf:type owl:Class .
+
+
+#################################################################
+#    Individuals
+#################################################################
+
+###  http://www.morelab.deusto.es/ontologies/city4age#ADLIndicator
+<http://www.morelab.deusto.es/ontologies/city4age#ADLIndicator> rdf:type owl:NamedIndividual ,
+                                                                         <http://www.morelab.deusto.es/ontologies/city4age#MCIIndicator> ;
+                                                                <http://www.morelab.deusto.es/ontologies/city4age#requireIntervention> <http://www.morelab.deusto.es/ontologies/city4age#PerformHabit> ,
+                                                                                                                                       <http://www.morelab.deusto.es/ontologies/city4age#listenMusic> ,
+                                                                                                                                       <http://www.morelab.deusto.es/ontologies/city4age#prepareFood> ,
+                                                                                                                                       <http://www.morelab.deusto.es/ontologies/city4age#proposeRecipe> ,
+                                                                                                                                       <http://www.morelab.deusto.es/ontologies/city4age#readBook> .
+
+
+###  http://www.morelab.deusto.es/ontologies/city4age#ATH
+<http://www.morelab.deusto.es/ontologies/city4age#ATH> rdf:type owl:NamedIndividual ,
+                                                                <http://www.morelab.deusto.es/ontologies/city4age#Pilot> .
+
+
+###  http://www.morelab.deusto.es/ontologies/city4age#BHX
+<http://www.morelab.deusto.es/ontologies/city4age#BHX> rdf:type owl:NamedIndividual ,
+                                                                <http://www.morelab.deusto.es/ontologies/city4age#Pilot> .
+
+
+###  http://www.morelab.deusto.es/ontologies/city4age#English
+<http://www.morelab.deusto.es/ontologies/city4age#English> rdf:type owl:NamedIndividual ,
+                                                                    <http://www.morelab.deusto.es/ontologies/city4age#Language> .
+
+
+###  http://www.morelab.deusto.es/ontologies/city4age#French
+<http://www.morelab.deusto.es/ontologies/city4age#French> rdf:type owl:NamedIndividual ,
+                                                                   <http://www.morelab.deusto.es/ontologies/city4age#Language> .
+
+
+###  http://www.morelab.deusto.es/ontologies/city4age#Greek
+<http://www.morelab.deusto.es/ontologies/city4age#Greek> rdf:type owl:NamedIndividual ,
+                                                                  <http://www.morelab.deusto.es/ontologies/city4age#Language> .
+
+
+###  http://www.morelab.deusto.es/ontologies/city4age#Indian
+<http://www.morelab.deusto.es/ontologies/city4age#Indian> rdf:type owl:NamedIndividual ,
+                                                                   <http://www.morelab.deusto.es/ontologies/city4age#Language> .
+
+
+###  http://www.morelab.deusto.es/ontologies/city4age#Italian
+<http://www.morelab.deusto.es/ontologies/city4age#Italian> rdf:type owl:NamedIndividual ,
+                                                                    <http://www.morelab.deusto.es/ontologies/city4age#Language> .
+
+
+###  http://www.morelab.deusto.es/ontologies/city4age#LCC
+<http://www.morelab.deusto.es/ontologies/city4age#LCC> rdf:type owl:NamedIndividual ,
+                                                                <http://www.morelab.deusto.es/ontologies/city4age#Pilot> .
+
+
+###  http://www.morelab.deusto.es/ontologies/city4age#MAD
+<http://www.morelab.deusto.es/ontologies/city4age#MAD> rdf:type owl:NamedIndividual ,
+                                                                <http://www.morelab.deusto.es/ontologies/city4age#Pilot> .
+
+
+###  http://www.morelab.deusto.es/ontologies/city4age#MCI
+<http://www.morelab.deusto.es/ontologies/city4age#MCI> rdf:type owl:NamedIndividual ,
+                                                                <http://www.morelab.deusto.es/ontologies/city4age#Disease> .
+
+
+###  http://www.morelab.deusto.es/ontologies/city4age#MPL
+<http://www.morelab.deusto.es/ontologies/city4age#MPL> rdf:type owl:NamedIndividual ,
+                                                                <http://www.morelab.deusto.es/ontologies/city4age#Pilot> .
+
+
+###  http://www.morelab.deusto.es/ontologies/city4age#Malay
+<http://www.morelab.deusto.es/ontologies/city4age#Malay> rdf:type owl:NamedIndividual ,
+                                                                  <http://www.morelab.deusto.es/ontologies/city4age#Language> .
+
+
+###  http://www.morelab.deusto.es/ontologies/city4age#Mandarin
+<http://www.morelab.deusto.es/ontologies/city4age#Mandarin> rdf:type owl:NamedIndividual ,
+                                                                     <http://www.morelab.deusto.es/ontologies/city4age#Language> .
+
+
+###  http://www.morelab.deusto.es/ontologies/city4age#Montpellier
+<http://www.morelab.deusto.es/ontologies/city4age#Montpellier> rdf:type owl:NamedIndividual ,
+                                                                        <http://www.morelab.deusto.es/ontologies/city4age#CityZone> .
+
+
+###  http://www.morelab.deusto.es/ontologies/city4age#PerformHabit
+<http://www.morelab.deusto.es/ontologies/city4age#PerformHabit> rdf:type owl:NamedIndividual ,
+                                                                         <http://www.morelab.deusto.es/ontologies/city4age#ADLIntervention> .
+
+
+###  http://www.morelab.deusto.es/ontologies/city4age#Person1
+<http://www.morelab.deusto.es/ontologies/city4age#Person1> rdf:type owl:NamedIndividual ,
+                                                                    <http://www.morelab.deusto.es/ontologies/city4age#Elderly> .
+
+
+###  http://www.morelab.deusto.es/ontologies/city4age#SIN
+<http://www.morelab.deusto.es/ontologies/city4age#SIN> rdf:type owl:NamedIndividual ,
+                                                                <http://www.morelab.deusto.es/ontologies/city4age#Pilot> .
+
+
+###  http://www.morelab.deusto.es/ontologies/city4age#Shopping
+<http://www.morelab.deusto.es/ontologies/city4age#Shopping> rdf:type owl:NamedIndividual ,
+                                                                     <http://www.morelab.deusto.es/ontologies/city4age#Activity> .
+
+
+###  http://www.morelab.deusto.es/ontologies/city4age#SmartWatch
+<http://www.morelab.deusto.es/ontologies/city4age#SmartWatch> rdf:type owl:NamedIndividual ,
+                                                                       <http://www.morelab.deusto.es/ontologies/city4age#Device> .
+
+
+###  http://www.morelab.deusto.es/ontologies/city4age#Smartphone
+<http://www.morelab.deusto.es/ontologies/city4age#Smartphone> rdf:type owl:NamedIndividual ,
+                                                                       <http://www.morelab.deusto.es/ontologies/city4age#Device> .
+
+
+###  http://www.morelab.deusto.es/ontologies/city4age#Spanish
+<http://www.morelab.deusto.es/ontologies/city4age#Spanish> rdf:type owl:NamedIndividual ,
+                                                                    <http://www.morelab.deusto.es/ontologies/city4age#Language> .
+
+
+###  http://www.morelab.deusto.es/ontologies/city4age#TV
+<http://www.morelab.deusto.es/ontologies/city4age#TV> rdf:type owl:NamedIndividual ,
+                                                               <http://www.morelab.deusto.es/ontologies/city4age#Device> .
+
+
+###  http://www.morelab.deusto.es/ontologies/city4age#Tablet
+<http://www.morelab.deusto.es/ontologies/city4age#Tablet> rdf:type owl:NamedIndividual ,
+                                                                   <http://www.morelab.deusto.es/ontologies/city4age#Device> .
+
+
+###  http://www.morelab.deusto.es/ontologies/city4age#a1
+<http://www.morelab.deusto.es/ontologies/city4age#a1> rdf:type owl:NamedIndividual ,
+                                                               <http://www.morelab.deusto.es/ontologies/city4age#Sensor> ;
+                                                      <http://www.morelab.deusto.es/ontologies/city4age#hasPossibleState> <http://www.morelab.deusto.es/ontologies/city4age#a1_off> ,
+                                                                                                                          <http://www.morelab.deusto.es/ontologies/city4age#a1_on> ;
+                                                      <http://www.morelab.deusto.es/ontologies/city4age#hasType> <http://www.morelab.deusto.es/ontologies/city4age#pir> ;
+                                                      <http://www.morelab.deusto.es/ontologies/city4age#locatedIn> <http://www.morelab.deusto.es/ontologies/city4age#kitchen> ;
+                                                      <http://www.morelab.deusto.es/ontologies/city4age#indicateLocation> "true"^^xsd:boolean .
+
+
+###  http://www.morelab.deusto.es/ontologies/city4age#a1_off
+<http://www.morelab.deusto.es/ontologies/city4age#a1_off> rdf:type owl:NamedIndividual ,
+                                                                   <http://www.morelab.deusto.es/ontologies/city4age#SensorState> .
+
+
+###  http://www.morelab.deusto.es/ontologies/city4age#a1_on
+<http://www.morelab.deusto.es/ontologies/city4age#a1_on> rdf:type owl:NamedIndividual ,
+                                                                  <http://www.morelab.deusto.es/ontologies/city4age#SensorState> .
+
+
+###  http://www.morelab.deusto.es/ontologies/city4age#activitySuggestion
+<http://www.morelab.deusto.es/ontologies/city4age#activitySuggestion> rdf:type owl:NamedIndividual ,
+                                                                               <http://www.morelab.deusto.es/ontologies/city4age#Service> .
+
+
+###  http://www.morelab.deusto.es/ontologies/city4age#agenda
+<http://www.morelab.deusto.es/ontologies/city4age#agenda> rdf:type owl:NamedIndividual ,
+                                                                   <http://www.morelab.deusto.es/ontologies/city4age#Service> .
+
+
+###  http://www.morelab.deusto.es/ontologies/city4age#assistiveCommunication
+<http://www.morelab.deusto.es/ontologies/city4age#assistiveCommunication> rdf:type owl:NamedIndividual ,
+                                                                                   <http://www.morelab.deusto.es/ontologies/city4age#Service> .
+
+
+###  http://www.morelab.deusto.es/ontologies/city4age#attendConcert
+<http://www.morelab.deusto.es/ontologies/city4age#attendConcert> rdf:type owl:NamedIndividual ,
+                                                                          <http://www.morelab.deusto.es/ontologies/city4age#SocialIntervention> ;
+                                                                 <http://www.morelab.deusto.es/ontologies/city4age#relatedToPreference> <http://www.morelab.deusto.es/ontologies/city4age#music> .
+
+
+###  http://www.morelab.deusto.es/ontologies/city4age#attentionProblem
+<http://www.morelab.deusto.es/ontologies/city4age#attentionProblem> rdf:type owl:NamedIndividual ,
+                                                                             <http://www.morelab.deusto.es/ontologies/city4age#CognitiveChangeingBehaviour> ;
+                                                                    <http://www.morelab.deusto.es/ontologies/city4age#isIndicatorOf> <http://www.morelab.deusto.es/ontologies/city4age#cognitiveIndicator> .
+
+
+###  http://www.morelab.deusto.es/ontologies/city4age#auditory
+<http://www.morelab.deusto.es/ontologies/city4age#auditory> rdf:type owl:NamedIndividual ,
+                                                                     <http://www.morelab.deusto.es/ontologies/city4age#SensorialCapability> .
+
+
+###  http://www.morelab.deusto.es/ontologies/city4age#b1
+<http://www.morelab.deusto.es/ontologies/city4age#b1> rdf:type owl:NamedIndividual ,
+                                                               <http://www.morelab.deusto.es/ontologies/city4age#Sensor> ;
+                                                      <http://www.morelab.deusto.es/ontologies/city4age#hasPossibleState> <http://www.morelab.deusto.es/ontologies/city4age#beacon_alert> ,
+                                                                                                                          <http://www.morelab.deusto.es/ontologies/city4age#beacon_normal> ;
+                                                      <http://www.morelab.deusto.es/ontologies/city4age#hasType> <http://www.morelab.deusto.es/ontologies/city4age#beacon> ;
+                                                      <http://www.morelab.deusto.es/ontologies/city4age#locatedIn> <http://www.morelab.deusto.es/ontologies/city4age#communityCenter> ;
+                                                      <http://www.morelab.deusto.es/ontologies/city4age#indicateLocation> "true"^^xsd:boolean .
+
+
+###  http://www.morelab.deusto.es/ontologies/city4age#bachelor
+<http://www.morelab.deusto.es/ontologies/city4age#bachelor> rdf:type owl:NamedIndividual ,
+                                                                     <http://www.morelab.deusto.es/ontologies/city4age#EducationLevel> .
+
+
+###  http://www.morelab.deusto.es/ontologies/city4age#bathroom
+<http://www.morelab.deusto.es/ontologies/city4age#bathroom> rdf:type owl:NamedIndividual ,
+                                                                     <http://www.morelab.deusto.es/ontologies/city4age#Bathroom> ;
+                                                            <http://www.morelab.deusto.es/ontologies/city4age#partOfHouse> <http://www.morelab.deusto.es/ontologies/city4age#house1> .
+
+
+###  http://www.morelab.deusto.es/ontologies/city4age#beacon
+<http://www.morelab.deusto.es/ontologies/city4age#beacon> rdf:type owl:NamedIndividual ,
+                                                                   <http://www.morelab.deusto.es/ontologies/city4age#SensorType> .
+
+
+###  http://www.morelab.deusto.es/ontologies/city4age#beacon_alert
+<http://www.morelab.deusto.es/ontologies/city4age#beacon_alert> rdf:type owl:NamedIndividual ,
+                                                                         <http://www.morelab.deusto.es/ontologies/city4age#SensorState> .
+
+
+###  http://www.morelab.deusto.es/ontologies/city4age#beacon_normal
+<http://www.morelab.deusto.es/ontologies/city4age#beacon_normal> rdf:type owl:NamedIndividual ,
+                                                                          <http://www.morelab.deusto.es/ontologies/city4age#SensorState> .
+
+
+###  http://www.morelab.deusto.es/ontologies/city4age#bedroom
+<http://www.morelab.deusto.es/ontologies/city4age#bedroom> rdf:type owl:NamedIndividual ,
+                                                                    <http://www.morelab.deusto.es/ontologies/city4age#Bedroom> ;
+                                                           <http://www.morelab.deusto.es/ontologies/city4age#partOfHouse> <http://www.morelab.deusto.es/ontologies/city4age#house1> .
+
+
+###  http://www.morelab.deusto.es/ontologies/city4age#bedroomActivity
+<http://www.morelab.deusto.es/ontologies/city4age#bedroomActivity> rdf:type owl:NamedIndividual ,
+                                                                            <http://www.morelab.deusto.es/ontologies/city4age#Activity> .
+
+
+###  http://www.morelab.deusto.es/ontologies/city4age#calculationProblem
+<http://www.morelab.deusto.es/ontologies/city4age#calculationProblem> rdf:type owl:NamedIndividual ,
+                                                                               <http://www.morelab.deusto.es/ontologies/city4age#CognitiveChangeingBehaviour> ;
+                                                                      <http://www.morelab.deusto.es/ontologies/city4age#isIndicatorOf> <http://www.morelab.deusto.es/ontologies/city4age#cognitiveIndicator> .
+
+
+###  http://www.morelab.deusto.es/ontologies/city4age#cameHome
+<http://www.morelab.deusto.es/ontologies/city4age#cameHome> rdf:type owl:NamedIndividual ,
+                                                                     <http://www.morelab.deusto.es/ontologies/city4age#Activity> .
+
+
+###  http://www.morelab.deusto.es/ontologies/city4age#car
+<http://www.morelab.deusto.es/ontologies/city4age#car> rdf:type owl:NamedIndividual ,
+                                                                <http://www.morelab.deusto.es/ontologies/city4age#Car> ;
+                                                       <http://www.morelab.deusto.es/ontologies/city4age#partOfCity> <http://www.morelab.deusto.es/ontologies/city4age#Montpellier> .
+
+
+###  http://www.morelab.deusto.es/ontologies/city4age#cinema
+<http://www.morelab.deusto.es/ontologies/city4age#cinema> rdf:type owl:NamedIndividual ,
+                                                                   <http://www.morelab.deusto.es/ontologies/city4age#Cultural> .
+
+
+###  http://www.morelab.deusto.es/ontologies/city4age#coercion
+<http://www.morelab.deusto.es/ontologies/city4age#coercion> rdf:type owl:NamedIndividual ,
+                                                                     <http://www.morelab.deusto.es/ontologies/city4age#Service> .
+
+
+###  http://www.morelab.deusto.es/ontologies/city4age#cognitiveIndicator
+<http://www.morelab.deusto.es/ontologies/city4age#cognitiveIndicator> rdf:type owl:NamedIndividual ,
+                                                                               <http://www.morelab.deusto.es/ontologies/city4age#MCIIndicator> ;
+                                                                      <http://www.morelab.deusto.es/ontologies/city4age#requireIntervention> <http://www.morelab.deusto.es/ontologies/city4age#performMemoryTest> ,
+                                                                                                                                             <http://www.morelab.deusto.es/ontologies/city4age#playCognitiveGames> .
+
+
+###  http://www.morelab.deusto.es/ontologies/city4age#commonLaw
+<http://www.morelab.deusto.es/ontologies/city4age#commonLaw> rdf:type owl:NamedIndividual ,
+                                                                      <http://www.morelab.deusto.es/ontologies/city4age#MaritalState> .
+
+
+###  http://www.morelab.deusto.es/ontologies/city4age#communityCenter
+<http://www.morelab.deusto.es/ontologies/city4age#communityCenter> rdf:type owl:NamedIndividual ,
+                                                                            <http://www.morelab.deusto.es/ontologies/city4age#Building> ;
+                                                                   <http://www.morelab.deusto.es/ontologies/city4age#partOfCity> <http://www.morelab.deusto.es/ontologies/city4age#Montpellier> .
+
+
+###  http://www.morelab.deusto.es/ontologies/city4age#cookMeal
+<http://www.morelab.deusto.es/ontologies/city4age#cookMeal> rdf:type owl:NamedIndividual ,
+                                                                     <http://www.morelab.deusto.es/ontologies/city4age#Activity> .
+
+
+###  http://www.morelab.deusto.es/ontologies/city4age#dementia
+<http://www.morelab.deusto.es/ontologies/city4age#dementia> rdf:type owl:NamedIndividual ,
+                                                                     <http://www.morelab.deusto.es/ontologies/city4age#Disease> .
+
+
+###  http://www.morelab.deusto.es/ontologies/city4age#diabet
+<http://www.morelab.deusto.es/ontologies/city4age#diabet> rdf:type owl:NamedIndividual ,
+                                                                   <http://www.morelab.deusto.es/ontologies/city4age#Disease> .
+
+
+###  http://www.morelab.deusto.es/ontologies/city4age#divorced
+<http://www.morelab.deusto.es/ontologies/city4age#divorced> rdf:type owl:NamedIndividual ,
+                                                                     <http://www.morelab.deusto.es/ontologies/city4age#MaritalState> .
+
+
+###  http://www.morelab.deusto.es/ontologies/city4age#doctoral
+<http://www.morelab.deusto.es/ontologies/city4age#doctoral> rdf:type owl:NamedIndividual ,
+                                                                     <http://www.morelab.deusto.es/ontologies/city4age#EducationLevel> .
+
+
+###  http://www.morelab.deusto.es/ontologies/city4age#eatMeal
+<http://www.morelab.deusto.es/ontologies/city4age#eatMeal> rdf:type owl:NamedIndividual ,
+                                                                    <http://www.morelab.deusto.es/ontologies/city4age#Activity> .
+
+
+###  http://www.morelab.deusto.es/ontologies/city4age#education
+<http://www.morelab.deusto.es/ontologies/city4age#education> rdf:type owl:NamedIndividual ,
+                                                                      <http://www.morelab.deusto.es/ontologies/city4age#Service> .
+
+
+###  http://www.morelab.deusto.es/ontologies/city4age#fall
+<http://www.morelab.deusto.es/ontologies/city4age#fall> rdf:type owl:NamedIndividual ,
+                                                                 <http://www.morelab.deusto.es/ontologies/city4age#Activity> .
+
+
+###  http://www.morelab.deusto.es/ontologies/city4age#fallIncrease
+<http://www.morelab.deusto.es/ontologies/city4age#fallIncrease> rdf:type owl:NamedIndividual ,
+                                                                         <http://www.morelab.deusto.es/ontologies/city4age#MobilityChangeingBehaviour> ;
+                                                                <http://www.morelab.deusto.es/ontologies/city4age#isIndicatorOf> <http://www.morelab.deusto.es/ontologies/city4age#mobilityIndicator> .
+
+
+###  http://www.morelab.deusto.es/ontologies/city4age#female
+<http://www.morelab.deusto.es/ontologies/city4age#female> rdf:type owl:NamedIndividual ,
+                                                                   <http://www.morelab.deusto.es/ontologies/city4age#Gender> .
+
+
+###  http://www.morelab.deusto.es/ontologies/city4age#food
+<http://www.morelab.deusto.es/ontologies/city4age#food> rdf:type owl:NamedIndividual ,
+                                                                 <http://www.morelab.deusto.es/ontologies/city4age#PreferenceTopic> .
+
+
+###  http://www.morelab.deusto.es/ontologies/city4age#getUp
+<http://www.morelab.deusto.es/ontologies/city4age#getUp> rdf:type owl:NamedIndividual ,
+                                                                  <http://www.morelab.deusto.es/ontologies/city4age#Activity> .
+
+
+###  http://www.morelab.deusto.es/ontologies/city4age#goOut
+<http://www.morelab.deusto.es/ontologies/city4age#goOut> rdf:type owl:NamedIndividual ,
+                                                                  <http://www.morelab.deusto.es/ontologies/city4age#Activity> .
+
+
+###  http://www.morelab.deusto.es/ontologies/city4age#goShoping
+<http://www.morelab.deusto.es/ontologies/city4age#goShoping> rdf:type owl:NamedIndividual ,
+                                                                      <http://www.morelab.deusto.es/ontologies/city4age#MobilityIntervention> .
+
+
+###  http://www.morelab.deusto.es/ontologies/city4age#goToLibrary
+<http://www.morelab.deusto.es/ontologies/city4age#goToLibrary> rdf:type owl:NamedIndividual ,
+                                                                        <http://www.morelab.deusto.es/ontologies/city4age#SocialIntervention> ;
+                                                               <http://www.morelab.deusto.es/ontologies/city4age#relatedToPreference> <http://www.morelab.deusto.es/ontologies/city4age#literature> .
+
+
+###  http://www.morelab.deusto.es/ontologies/city4age#goToRestaurant
+<http://www.morelab.deusto.es/ontologies/city4age#goToRestaurant> rdf:type owl:NamedIndividual ,
+                                                                           <http://www.morelab.deusto.es/ontologies/city4age#MobilityIntervention> ;
+                                                                  <http://www.morelab.deusto.es/ontologies/city4age#relatedToPreference> <http://www.morelab.deusto.es/ontologies/city4age#food> .
+
+
+###  http://www.morelab.deusto.es/ontologies/city4age#goToilet
+<http://www.morelab.deusto.es/ontologies/city4age#goToilet> rdf:type owl:NamedIndividual ,
+                                                                     <http://www.morelab.deusto.es/ontologies/city4age#Activity> .
+
+
+###  http://www.morelab.deusto.es/ontologies/city4age#hight
+<http://www.morelab.deusto.es/ontologies/city4age#hight> rdf:type owl:NamedIndividual ,
+                                                                  <http://www.morelab.deusto.es/ontologies/city4age#Level> .
+
+
+###  http://www.morelab.deusto.es/ontologies/city4age#house1
+<http://www.morelab.deusto.es/ontologies/city4age#house1> rdf:type owl:NamedIndividual ,
+                                                                   <http://www.morelab.deusto.es/ontologies/city4age#Home> .
+
+
+###  http://www.morelab.deusto.es/ontologies/city4age#hygiene
+<http://www.morelab.deusto.es/ontologies/city4age#hygiene> rdf:type owl:NamedIndividual ,
+                                                                    <http://www.morelab.deusto.es/ontologies/city4age#Activity> .
+
+
+###  http://www.morelab.deusto.es/ontologies/city4age#incentivisation
+<http://www.morelab.deusto.es/ontologies/city4age#incentivisation> rdf:type owl:NamedIndividual ,
+                                                                            <http://www.morelab.deusto.es/ontologies/city4age#Service> .
+
+
+###  http://www.morelab.deusto.es/ontologies/city4age#judgementProblem
+<http://www.morelab.deusto.es/ontologies/city4age#judgementProblem> rdf:type owl:NamedIndividual ,
+                                                                             <http://www.morelab.deusto.es/ontologies/city4age#CognitiveChangeingBehaviour> ;
+                                                                    <http://www.morelab.deusto.es/ontologies/city4age#isIndicatorOf> <http://www.morelab.deusto.es/ontologies/city4age#cognitiveIndicator> .
+
+
+###  http://www.morelab.deusto.es/ontologies/city4age#kitchen
+<http://www.morelab.deusto.es/ontologies/city4age#kitchen> rdf:type owl:NamedIndividual ,
+                                                                    <http://www.morelab.deusto.es/ontologies/city4age#Kitchen> ;
+                                                           <http://www.morelab.deusto.es/ontologies/city4age#partOfHouse> <http://www.morelab.deusto.es/ontologies/city4age#house1> .
+
+
+###  http://www.morelab.deusto.es/ontologies/city4age#lessActivityOutside
+<http://www.morelab.deusto.es/ontologies/city4age#lessActivityOutside> rdf:type owl:NamedIndividual ,
+                                                                                <http://www.morelab.deusto.es/ontologies/city4age#SocialChangeingBehaviour> ;
+                                                                       <http://www.morelab.deusto.es/ontologies/city4age#isIndicatorOf> <http://www.morelab.deusto.es/ontologies/city4age#socialIndicator> .
+
+
+###  http://www.morelab.deusto.es/ontologies/city4age#lessEngagementADL
+<http://www.morelab.deusto.es/ontologies/city4age#lessEngagementADL> rdf:type owl:NamedIndividual ,
+                                                                              <http://www.morelab.deusto.es/ontologies/city4age#ADLChangeingBehaviour> ;
+                                                                     <http://www.morelab.deusto.es/ontologies/city4age#isIndicatorOf> <http://www.morelab.deusto.es/ontologies/city4age#ADLIndicator> .
+
+
+###  http://www.morelab.deusto.es/ontologies/city4age#lessGoingOutside
+<http://www.morelab.deusto.es/ontologies/city4age#lessGoingOutside> rdf:type owl:NamedIndividual ,
+                                                                             <http://www.morelab.deusto.es/ontologies/city4age#SocialChangeingBehaviour> ;
+                                                                    <http://www.morelab.deusto.es/ontologies/city4age#isIndicatorOf> <http://www.morelab.deusto.es/ontologies/city4age#socialIndicator> .
+
+
+###  http://www.morelab.deusto.es/ontologies/city4age#lessMotivationADL
+<http://www.morelab.deusto.es/ontologies/city4age#lessMotivationADL> rdf:type owl:NamedIndividual ,
+                                                                              <http://www.morelab.deusto.es/ontologies/city4age#ADLChangeingBehaviour> ;
+                                                                     <http://www.morelab.deusto.es/ontologies/city4age#isIndicatorOf> <http://www.morelab.deusto.es/ontologies/city4age#ADLIndicator> .
+
+
+###  http://www.morelab.deusto.es/ontologies/city4age#lessSocialInteraction
+<http://www.morelab.deusto.es/ontologies/city4age#lessSocialInteraction> rdf:type owl:NamedIndividual ,
+                                                                                  <http://www.morelab.deusto.es/ontologies/city4age#SocialChangeingBehaviour> ;
+                                                                         <http://www.morelab.deusto.es/ontologies/city4age#isIndicatorOf> <http://www.morelab.deusto.es/ontologies/city4age#socialIndicator> .
+
+
+###  http://www.morelab.deusto.es/ontologies/city4age#lessVisits
+<http://www.morelab.deusto.es/ontologies/city4age#lessVisits> rdf:type owl:NamedIndividual ,
+                                                                       <http://www.morelab.deusto.es/ontologies/city4age#SocialChangeingBehaviour> ;
+                                                              <http://www.morelab.deusto.es/ontologies/city4age#isIndicatorOf> <http://www.morelab.deusto.es/ontologies/city4age#socialIndicator> .
+
+
+###  http://www.morelab.deusto.es/ontologies/city4age#listenMusic
+<http://www.morelab.deusto.es/ontologies/city4age#listenMusic> rdf:type owl:NamedIndividual ,
+                                                                        <http://www.morelab.deusto.es/ontologies/city4age#ADLIntervention> ;
+                                                               <http://www.morelab.deusto.es/ontologies/city4age#relatedToPreference> <http://www.morelab.deusto.es/ontologies/city4age#music> .
+
+
+###  http://www.morelab.deusto.es/ontologies/city4age#literature
+<http://www.morelab.deusto.es/ontologies/city4age#literature> rdf:type owl:NamedIndividual ,
+                                                                       <http://www.morelab.deusto.es/ontologies/city4age#Cultural> .
+
+
+###  http://www.morelab.deusto.es/ontologies/city4age#livingroom
+<http://www.morelab.deusto.es/ontologies/city4age#livingroom> rdf:type owl:NamedIndividual ,
+                                                                       <http://www.morelab.deusto.es/ontologies/city4age#Livingroom> ;
+                                                              <http://www.morelab.deusto.es/ontologies/city4age#partOfHouse> <http://www.morelab.deusto.es/ontologies/city4age#house1> .
+
+
+###  http://www.morelab.deusto.es/ontologies/city4age#low
+<http://www.morelab.deusto.es/ontologies/city4age#low> rdf:type owl:NamedIndividual ,
+                                                                <http://www.morelab.deusto.es/ontologies/city4age#Level> .
+
+
+###  http://www.morelab.deusto.es/ontologies/city4age#lowerClass
+<http://www.morelab.deusto.es/ontologies/city4age#lowerClass> rdf:type owl:NamedIndividual ,
+                                                                       <http://www.morelab.deusto.es/ontologies/city4age#SocialState> .
+
+
+###  http://www.morelab.deusto.es/ontologies/city4age#male
+<http://www.morelab.deusto.es/ontologies/city4age#male> rdf:type owl:NamedIndividual ,
+                                                                 <http://www.morelab.deusto.es/ontologies/city4age#Gender> .
+
+
+###  http://www.morelab.deusto.es/ontologies/city4age#married
+<http://www.morelab.deusto.es/ontologies/city4age#married> rdf:type owl:NamedIndividual ,
+                                                                    <http://www.morelab.deusto.es/ontologies/city4age#MaritalState> .
+
+
+###  http://www.morelab.deusto.es/ontologies/city4age#master
+<http://www.morelab.deusto.es/ontologies/city4age#master> rdf:type owl:NamedIndividual ,
+                                                                   <http://www.morelab.deusto.es/ontologies/city4age#EducationLevel> .
+
+
+###  http://www.morelab.deusto.es/ontologies/city4age#medicalRecord
+<http://www.morelab.deusto.es/ontologies/city4age#medicalRecord> rdf:type owl:NamedIndividual ,
+                                                                          <http://www.morelab.deusto.es/ontologies/city4age#Service> .
+
+
+###  http://www.morelab.deusto.es/ontologies/city4age#medium
+<http://www.morelab.deusto.es/ontologies/city4age#medium> rdf:type owl:NamedIndividual ,
+                                                                   <http://www.morelab.deusto.es/ontologies/city4age#Level> .
+
+
+###  http://www.morelab.deusto.es/ontologies/city4age#memoryProblem
+<http://www.morelab.deusto.es/ontologies/city4age#memoryProblem> rdf:type owl:NamedIndividual ,
+                                                                          <http://www.morelab.deusto.es/ontologies/city4age#CognitiveChangeingBehaviour> ;
+                                                                 <http://www.morelab.deusto.es/ontologies/city4age#isIndicatorOf> <http://www.morelab.deusto.es/ontologies/city4age#cognitiveIndicator> .
+
+
+###  http://www.morelab.deusto.es/ontologies/city4age#middleClass
+<http://www.morelab.deusto.es/ontologies/city4age#middleClass> rdf:type owl:NamedIndividual ,
+                                                                        <http://www.morelab.deusto.es/ontologies/city4age#SocialState> .
+
+
+###  http://www.morelab.deusto.es/ontologies/city4age#mobilityIndicator
+<http://www.morelab.deusto.es/ontologies/city4age#mobilityIndicator> rdf:type owl:NamedIndividual ,
+                                                                              <http://www.morelab.deusto.es/ontologies/city4age#MCIIndicator> ;
+                                                                     <http://www.morelab.deusto.es/ontologies/city4age#requireIntervention> <http://www.morelab.deusto.es/ontologies/city4age#goShoping> ,
+                                                                                                                                            <http://www.morelab.deusto.es/ontologies/city4age#goToRestaurant> .
+
+
+###  http://www.morelab.deusto.es/ontologies/city4age#moreTimeADL
+<http://www.morelab.deusto.es/ontologies/city4age#moreTimeADL> rdf:type owl:NamedIndividual ,
+                                                                        <http://www.morelab.deusto.es/ontologies/city4age#ADLChangeingBehaviour> ;
+                                                               <http://www.morelab.deusto.es/ontologies/city4age#isIndicatorOf> <http://www.morelab.deusto.es/ontologies/city4age#ADLIndicator> .
+
+
+###  http://www.morelab.deusto.es/ontologies/city4age#mouvementControl
+<http://www.morelab.deusto.es/ontologies/city4age#mouvementControl> rdf:type owl:NamedIndividual ,
+                                                                             <http://www.morelab.deusto.es/ontologies/city4age#PhysicalCapability> .
+
+
+###  http://www.morelab.deusto.es/ontologies/city4age#music
+<http://www.morelab.deusto.es/ontologies/city4age#music> rdf:type owl:NamedIndividual ,
+                                                                  <http://www.morelab.deusto.es/ontologies/city4age#Cultural> .
+
+
+###  http://www.morelab.deusto.es/ontologies/city4age#newsLetter
+<http://www.morelab.deusto.es/ontologies/city4age#newsLetter> rdf:type owl:NamedIndividual ,
+                                                                       <http://www.morelab.deusto.es/ontologies/city4age#Service> .
+
+
+###  http://www.morelab.deusto.es/ontologies/city4age#nutritionProblem
+<http://www.morelab.deusto.es/ontologies/city4age#nutritionProblem> rdf:type owl:NamedIndividual ,
+                                                                             <http://www.morelab.deusto.es/ontologies/city4age#ADLChangeingBehaviour> ;
+                                                                    <http://www.morelab.deusto.es/ontologies/city4age#isIndicatorOf> <http://www.morelab.deusto.es/ontologies/city4age#ADLIndicator> .
+
+
+###  http://www.morelab.deusto.es/ontologies/city4age#partTimeEmployee
+<http://www.morelab.deusto.es/ontologies/city4age#partTimeEmployee> rdf:type owl:NamedIndividual ,
+                                                                             <http://www.morelab.deusto.es/ontologies/city4age#Employment> .
+
+
+###  http://www.morelab.deusto.es/ontologies/city4age#performMemoryTest
+<http://www.morelab.deusto.es/ontologies/city4age#performMemoryTest> rdf:type owl:NamedIndividual ,
+                                                                              <http://www.morelab.deusto.es/ontologies/city4age#CognitiveIntervention> .
+
+
+###  http://www.morelab.deusto.es/ontologies/city4age#persuasion
+<http://www.morelab.deusto.es/ontologies/city4age#persuasion> rdf:type owl:NamedIndividual ,
+                                                                       <http://www.morelab.deusto.es/ontologies/city4age#Service> .
+
+
+###  http://www.morelab.deusto.es/ontologies/city4age#pharmacy
+<http://www.morelab.deusto.es/ontologies/city4age#pharmacy> rdf:type owl:NamedIndividual ,
+                                                                     <http://www.morelab.deusto.es/ontologies/city4age#Building> ;
+                                                            <http://www.morelab.deusto.es/ontologies/city4age#partOfCity> <http://www.morelab.deusto.es/ontologies/city4age#Montpellier> .
+
+
+###  http://www.morelab.deusto.es/ontologies/city4age#pir
+<http://www.morelab.deusto.es/ontologies/city4age#pir> rdf:type owl:NamedIndividual ,
+                                                                <http://www.morelab.deusto.es/ontologies/city4age#SensorType> .
+
+
+###  http://www.morelab.deusto.es/ontologies/city4age#playCognitiveGames
+<http://www.morelab.deusto.es/ontologies/city4age#playCognitiveGames> rdf:type owl:NamedIndividual ,
+                                                                               <http://www.morelab.deusto.es/ontologies/city4age#CognitiveIntervention> .
+
+
+###  http://www.morelab.deusto.es/ontologies/city4age#politic
+<http://www.morelab.deusto.es/ontologies/city4age#politic> rdf:type owl:NamedIndividual ,
+                                                                    <http://www.morelab.deusto.es/ontologies/city4age#PreferenceTopic> .
+
+
+###  http://www.morelab.deusto.es/ontologies/city4age#prepareFood
+<http://www.morelab.deusto.es/ontologies/city4age#prepareFood> rdf:type owl:NamedIndividual ,
+                                                                        <http://www.morelab.deusto.es/ontologies/city4age#ADLIntervention> ;
+                                                               <http://www.morelab.deusto.es/ontologies/city4age#relatedToPreference> <http://www.morelab.deusto.es/ontologies/city4age#food> .
+
+
+###  http://www.morelab.deusto.es/ontologies/city4age#primaryEducation
+<http://www.morelab.deusto.es/ontologies/city4age#primaryEducation> rdf:type owl:NamedIndividual ,
+                                                                             <http://www.morelab.deusto.es/ontologies/city4age#EducationLevel> .
+
+
+###  http://www.morelab.deusto.es/ontologies/city4age#privateWork
+<http://www.morelab.deusto.es/ontologies/city4age#privateWork> rdf:type owl:NamedIndividual ,
+                                                                        <http://www.morelab.deusto.es/ontologies/city4age#Employment> .
+
+
+###  http://www.morelab.deusto.es/ontologies/city4age#problemGettingUp
+<http://www.morelab.deusto.es/ontologies/city4age#problemGettingUp> rdf:type owl:NamedIndividual ,
+                                                                             <http://www.morelab.deusto.es/ontologies/city4age#MobilityChangeingBehaviour> ;
+                                                                    <http://www.morelab.deusto.es/ontologies/city4age#isIndicatorOf> <http://www.morelab.deusto.es/ontologies/city4age#mobilityIndicator> .
+
+
+###  http://www.morelab.deusto.es/ontologies/city4age#problemPerformADL
+<http://www.morelab.deusto.es/ontologies/city4age#problemPerformADL> rdf:type owl:NamedIndividual ,
+                                                                              <http://www.morelab.deusto.es/ontologies/city4age#ADLChangeingBehaviour> ;
+                                                                     <http://www.morelab.deusto.es/ontologies/city4age#isIndicatorOf> <http://www.morelab.deusto.es/ontologies/city4age#ADLIndicator> .
+
+
+###  http://www.morelab.deusto.es/ontologies/city4age#problemUsingTransport
+<http://www.morelab.deusto.es/ontologies/city4age#problemUsingTransport> rdf:type owl:NamedIndividual ,
+                                                                                  <http://www.morelab.deusto.es/ontologies/city4age#MobilityChangeingBehaviour> ;
+                                                                         <http://www.morelab.deusto.es/ontologies/city4age#isIndicatorOf> <http://www.morelab.deusto.es/ontologies/city4age#mobilityIndicator> .
+
+
+###  http://www.morelab.deusto.es/ontologies/city4age#proposeRecipe
+<http://www.morelab.deusto.es/ontologies/city4age#proposeRecipe> rdf:type owl:NamedIndividual ,
+                                                                          <http://www.morelab.deusto.es/ontologies/city4age#ADLIntervention> ;
+                                                                 <http://www.morelab.deusto.es/ontologies/city4age#relatedToPreference> <http://www.morelab.deusto.es/ontologies/city4age#food> .
+
+
+###  http://www.morelab.deusto.es/ontologies/city4age#proposeTravelDestination
+<http://www.morelab.deusto.es/ontologies/city4age#proposeTravelDestination> rdf:type owl:NamedIndividual ,
+                                                                                     <http://www.morelab.deusto.es/ontologies/city4age#SocialIntervention> ;
+                                                                            <http://www.morelab.deusto.es/ontologies/city4age#relatedToPreference> <http://www.morelab.deusto.es/ontologies/city4age#travel> .
+
+
+###  http://www.morelab.deusto.es/ontologies/city4age#publicWorker
+<http://www.morelab.deusto.es/ontologies/city4age#publicWorker> rdf:type owl:NamedIndividual ,
+                                                                         <http://www.morelab.deusto.es/ontologies/city4age#Employment> .
+
+
+###  http://www.morelab.deusto.es/ontologies/city4age#readBook
+<http://www.morelab.deusto.es/ontologies/city4age#readBook> rdf:type owl:NamedIndividual ,
+                                                                     <http://www.morelab.deusto.es/ontologies/city4age#ADLIntervention> ;
+                                                            <http://www.morelab.deusto.es/ontologies/city4age#relatedToPreference> <http://www.morelab.deusto.es/ontologies/city4age#literature> .
+
+
+###  http://www.morelab.deusto.es/ontologies/city4age#regularEmployee
+<http://www.morelab.deusto.es/ontologies/city4age#regularEmployee> rdf:type owl:NamedIndividual ,
+                                                                            <http://www.morelab.deusto.es/ontologies/city4age#Employment> .
+
+
+###  http://www.morelab.deusto.es/ontologies/city4age#retirement
+<http://www.morelab.deusto.es/ontologies/city4age#retirement> rdf:type owl:NamedIndividual ,
+                                                                       <http://www.morelab.deusto.es/ontologies/city4age#Employment> .
+
+
+###  http://www.morelab.deusto.es/ontologies/city4age#riskReaction
+<http://www.morelab.deusto.es/ontologies/city4age#riskReaction> rdf:type owl:NamedIndividual ,
+                                                                         <http://www.morelab.deusto.es/ontologies/city4age#Service> .
+
+
+###  http://www.morelab.deusto.es/ontologies/city4age#secondaryEducation
+<http://www.morelab.deusto.es/ontologies/city4age#secondaryEducation> rdf:type owl:NamedIndividual ,
+                                                                               <http://www.morelab.deusto.es/ontologies/city4age#EducationLevel> .
+
+
+###  http://www.morelab.deusto.es/ontologies/city4age#separeted
+<http://www.morelab.deusto.es/ontologies/city4age#separeted> rdf:type owl:NamedIndividual ,
+                                                                      <http://www.morelab.deusto.es/ontologies/city4age#MaritalState> .
+
+
+###  http://www.morelab.deusto.es/ontologies/city4age#shop
+<http://www.morelab.deusto.es/ontologies/city4age#shop> rdf:type owl:NamedIndividual ,
+                                                                 <http://www.morelab.deusto.es/ontologies/city4age#Building> ;
+                                                        <http://www.morelab.deusto.es/ontologies/city4age#partOfCity> <http://www.morelab.deusto.es/ontologies/city4age#Montpellier> .
+
+
+###  http://www.morelab.deusto.es/ontologies/city4age#single
+<http://www.morelab.deusto.es/ontologies/city4age#single> rdf:type owl:NamedIndividual ,
+                                                                   <http://www.morelab.deusto.es/ontologies/city4age#MaritalState> .
+
+
+###  http://www.morelab.deusto.es/ontologies/city4age#sleep
+<http://www.morelab.deusto.es/ontologies/city4age#sleep> rdf:type owl:NamedIndividual ,
+                                                                  <http://www.morelab.deusto.es/ontologies/city4age#Activity> .
+
+
+###  http://www.morelab.deusto.es/ontologies/city4age#socialIndicator
+<http://www.morelab.deusto.es/ontologies/city4age#socialIndicator> rdf:type owl:NamedIndividual ,
+                                                                            <http://www.morelab.deusto.es/ontologies/city4age#MCIIndicator> ;
+                                                                   <http://www.morelab.deusto.es/ontologies/city4age#requireIntervention> <http://www.morelab.deusto.es/ontologies/city4age#attendConcert> ,
+                                                                                                                                          <http://www.morelab.deusto.es/ontologies/city4age#goToLibrary> ,
+                                                                                                                                          <http://www.morelab.deusto.es/ontologies/city4age#proposeTravelDestination> ,
+                                                                                                                                          <http://www.morelab.deusto.es/ontologies/city4age#visitCommunityCenter> ,
+                                                                                                                                          <http://www.morelab.deusto.es/ontologies/city4age#visitFriend> ,
+                                                                                                                                          <http://www.morelab.deusto.es/ontologies/city4age#watchMovie> ,
+                                                                                                                                          <http://www.morelab.deusto.es/ontologies/city4age#watchTheatre> .
+
+
+###  http://www.morelab.deusto.es/ontologies/city4age#sport
+<http://www.morelab.deusto.es/ontologies/city4age#sport> rdf:type owl:NamedIndividual ,
+                                                                  <http://www.morelab.deusto.es/ontologies/city4age#PreferenceTopic> .
+
+
+###  http://www.morelab.deusto.es/ontologies/city4age#switch
+<http://www.morelab.deusto.es/ontologies/city4age#switch> rdf:type owl:NamedIndividual ,
+                                                                   <http://www.morelab.deusto.es/ontologies/city4age#SensorType> .
+
+
+###  http://www.morelab.deusto.es/ontologies/city4age#takingTransport
+<http://www.morelab.deusto.es/ontologies/city4age#takingTransport> rdf:type owl:NamedIndividual ,
+                                                                            <http://www.morelab.deusto.es/ontologies/city4age#Activity> .
+
+
+###  http://www.morelab.deusto.es/ontologies/city4age#taxi
+<http://www.morelab.deusto.es/ontologies/city4age#taxi> rdf:type owl:NamedIndividual ,
+                                                                 <http://www.morelab.deusto.es/ontologies/city4age#Taxi> ;
+                                                        <http://www.morelab.deusto.es/ontologies/city4age#partOfCity> <http://www.morelab.deusto.es/ontologies/city4age#Montpellier> .
+
+
+###  http://www.morelab.deusto.es/ontologies/city4age#temproryEmployee
+<http://www.morelab.deusto.es/ontologies/city4age#temproryEmployee> rdf:type owl:NamedIndividual ,
+                                                                             <http://www.morelab.deusto.es/ontologies/city4age#Employment> .
+
+
+###  http://www.morelab.deusto.es/ontologies/city4age#theatre
+<http://www.morelab.deusto.es/ontologies/city4age#theatre> rdf:type owl:NamedIndividual ,
+                                                                    <http://www.morelab.deusto.es/ontologies/city4age#Cultural> .
+
+
+###  http://www.morelab.deusto.es/ontologies/city4age#thinkingProblem
+<http://www.morelab.deusto.es/ontologies/city4age#thinkingProblem> rdf:type owl:NamedIndividual ,
+                                                                            <http://www.morelab.deusto.es/ontologies/city4age#CognitiveChangeingBehaviour> ;
+                                                                   <http://www.morelab.deusto.es/ontologies/city4age#isIndicatorOf> <http://www.morelab.deusto.es/ontologies/city4age#cognitiveIndicator> .
+
+
+###  http://www.morelab.deusto.es/ontologies/city4age#toilet
+<http://www.morelab.deusto.es/ontologies/city4age#toilet> rdf:type owl:NamedIndividual ,
+                                                                   <http://www.morelab.deusto.es/ontologies/city4age#Toilet> ;
+                                                          <http://www.morelab.deusto.es/ontologies/city4age#partOfHouse> <http://www.morelab.deusto.es/ontologies/city4age#house1> .
+
+
+###  http://www.morelab.deusto.es/ontologies/city4age#training
+<http://www.morelab.deusto.es/ontologies/city4age#training> rdf:type owl:NamedIndividual ,
+                                                                     <http://www.morelab.deusto.es/ontologies/city4age#Service> .
+
+
+###  http://www.morelab.deusto.es/ontologies/city4age#tramway
+<http://www.morelab.deusto.es/ontologies/city4age#tramway> rdf:type owl:NamedIndividual ,
+                                                                    <http://www.morelab.deusto.es/ontologies/city4age#Tram> ;
+                                                           <http://www.morelab.deusto.es/ontologies/city4age#partOfCity> <http://www.morelab.deusto.es/ontologies/city4age#Montpellier> .
+
+
+###  http://www.morelab.deusto.es/ontologies/city4age#travel
+<http://www.morelab.deusto.es/ontologies/city4age#travel> rdf:type owl:NamedIndividual ,
+                                                                   <http://www.morelab.deusto.es/ontologies/city4age#PreferenceTopic> .
+
+
+###  http://www.morelab.deusto.es/ontologies/city4age#unemployment
+<http://www.morelab.deusto.es/ontologies/city4age#unemployment> rdf:type owl:NamedIndividual ,
+                                                                         <http://www.morelab.deusto.es/ontologies/city4age#Employment> .
+
+
+###  http://www.morelab.deusto.es/ontologies/city4age#unneducated
+<http://www.morelab.deusto.es/ontologies/city4age#unneducated> rdf:type owl:NamedIndividual ,
+                                                                        <http://www.morelab.deusto.es/ontologies/city4age#EducationLevel> .
+
+
+###  http://www.morelab.deusto.es/ontologies/city4age#upperClass
+<http://www.morelab.deusto.es/ontologies/city4age#upperClass> rdf:type owl:NamedIndividual ,
+                                                                       <http://www.morelab.deusto.es/ontologies/city4age#SocialState> .
+
+
+###  http://www.morelab.deusto.es/ontologies/city4age#verbal
+<http://www.morelab.deusto.es/ontologies/city4age#verbal> rdf:type owl:NamedIndividual ,
+                                                                   <http://www.morelab.deusto.es/ontologies/city4age#SensorialCapability> .
+
+
+###  http://www.morelab.deusto.es/ontologies/city4age#visitCommunityCenter
+<http://www.morelab.deusto.es/ontologies/city4age#visitCommunityCenter> rdf:type owl:NamedIndividual ,
+                                                                                 <http://www.morelab.deusto.es/ontologies/city4age#SocialIntervention> .
+
+
+###  http://www.morelab.deusto.es/ontologies/city4age#visitFriend
+<http://www.morelab.deusto.es/ontologies/city4age#visitFriend> rdf:type owl:NamedIndividual ,
+                                                                        <http://www.morelab.deusto.es/ontologies/city4age#SocialIntervention> .
+
+
+###  http://www.morelab.deusto.es/ontologies/city4age#visitingFriend
+<http://www.morelab.deusto.es/ontologies/city4age#visitingFriend> rdf:type owl:NamedIndividual ,
+                                                                           <http://www.morelab.deusto.es/ontologies/city4age#VisitToFriend> .
+
+
+###  http://www.morelab.deusto.es/ontologies/city4age#visitingSocialCenter
+<http://www.morelab.deusto.es/ontologies/city4age#visitingSocialCenter> rdf:type owl:NamedIndividual ,
+                                                                                 <http://www.morelab.deusto.es/ontologies/city4age#VisitSocialCentre> .
+
+
+###  http://www.morelab.deusto.es/ontologies/city4age#visual
+<http://www.morelab.deusto.es/ontologies/city4age#visual> rdf:type owl:NamedIndividual ,
+                                                                   <http://www.morelab.deusto.es/ontologies/city4age#SensorialCapability> .
+
+
+###  http://www.morelab.deusto.es/ontologies/city4age#walk
+<http://www.morelab.deusto.es/ontologies/city4age#walk> rdf:type owl:NamedIndividual ,
+                                                                 <http://www.morelab.deusto.es/ontologies/city4age#PhysicalCapability> .
+
+
+###  http://www.morelab.deusto.es/ontologies/city4age#walkingPatternChange
+<http://www.morelab.deusto.es/ontologies/city4age#walkingPatternChange> rdf:type owl:NamedIndividual ,
+                                                                                 <http://www.morelab.deusto.es/ontologies/city4age#MobilityChangeingBehaviour> ;
+                                                                        <http://www.morelab.deusto.es/ontologies/city4age#isIndicatorOf> <http://www.morelab.deusto.es/ontologies/city4age#mobilityIndicator> .
+
+
+###  http://www.morelab.deusto.es/ontologies/city4age#watchMovie
+<http://www.morelab.deusto.es/ontologies/city4age#watchMovie> rdf:type owl:NamedIndividual ,
+                                                                       <http://www.morelab.deusto.es/ontologies/city4age#SocialIntervention> ;
+                                                              <http://www.morelab.deusto.es/ontologies/city4age#relatedToPreference> <http://www.morelab.deusto.es/ontologies/city4age#cinema> .
+
+
+###  http://www.morelab.deusto.es/ontologies/city4age#watchTV
+<http://www.morelab.deusto.es/ontologies/city4age#watchTV> rdf:type owl:NamedIndividual ,
+                                                                    <http://www.morelab.deusto.es/ontologies/city4age#Activity> .
+
+
+###  http://www.morelab.deusto.es/ontologies/city4age#watchTheatre
+<http://www.morelab.deusto.es/ontologies/city4age#watchTheatre> rdf:type owl:NamedIndividual ,
+                                                                         <http://www.morelab.deusto.es/ontologies/city4age#SocialIntervention> ;
+                                                                <http://www.morelab.deusto.es/ontologies/city4age#relatedToPreference> <http://www.morelab.deusto.es/ontologies/city4age#theatre> .
+
+
+###  http://www.morelab.deusto.es/ontologies/city4age#widowed
+<http://www.morelab.deusto.es/ontologies/city4age#widowed> rdf:type owl:NamedIndividual ,
+                                                                    <http://www.morelab.deusto.es/ontologies/city4age#MaritalState> .
+
+
+#################################################################
+#    Annotations
+#################################################################
+
+<http://dbpedia.org/property/> rdfs:label "4 "@en .
+
+
+###  Generated by the OWL API (version 5.1.0) https://github.com/owlcs/owlapi/
