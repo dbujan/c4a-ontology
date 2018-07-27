@@ -1,0 +1,12 @@
+digraph ar2dtool_diagram { 
+rankdir=LR;
+size="1501"
+node [shape = rectangle, color="orange"]; "riskC4A:Instrument" "riskC4A:Item" "riskC4A:Model" "riskC4A:Category" "riskC4A:Score" "riskC4A:Value" ; /*classes style*/
+	"riskC4A:Instrument" -> "riskC4A:Score" [ label = "riskC4A:hasScore" ];
+	"riskC4A:Instrument" -> "riskC4A:Category" [ label = "riskC4A:hasCategories" ];
+	"riskC4A:Model" -> "riskC4A:Value" [ label = "riskC4A:hasValues" ];
+	"riskC4A:Item" -> "riskC4A:Value" [ label = "riskC4A:hasValue" ];
+	"riskC4A:Category" -> "riskC4A:Item" [ label = "riskC4A:hasItems" ];
+	"riskC4A:Instrument" -> "riskC4A:Model" [ label = "riskC4A:hasModel" ];
+
+}

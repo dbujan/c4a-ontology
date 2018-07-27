@@ -1,0 +1,10 @@
+digraph ar2dtool_diagram { 
+rankdir=LR;
+size="1000"
+node [shape = rectangle, color="black"]; "riskC4A:Ratio" "riskC4A:Score" "riskC4A:Nominal" "riskC4A:Ordinal" "riskC4A:Interval" ; /*classes style*/
+	"riskC4A:Ordinal" -> "riskC4A:Score" [ label = "rdfs:subClassOf" ];
+	"riskC4A:Interval" -> "riskC4A:Score" [ label = "rdfs:subClassOf" ];
+	"riskC4A:Nominal" -> "riskC4A:Score" [ label = "rdfs:subClassOf" ];
+	"riskC4A:Ratio" -> "riskC4A:Score" [ label = "rdfs:subClassOf" ];
+
+}
